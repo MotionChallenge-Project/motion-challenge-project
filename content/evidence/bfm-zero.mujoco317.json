@@ -2121,5 +2121,21 @@
     "full_suite": true,
     "source_unchanged_during_run": true,
     "finished_utc": "2026-10-23T10:40:16.184606+00:00"
+  },
+  "reproduction": {
+    "adapter_commit": "9c785e19bde9f38901c1090c9622c4a3e7c4d195",
+    "core_commit": "7ba33e4d355d51ad46ecc0737558750362b478a7",
+    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-bfm-zero",
+    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-bfm-zero/tree/9c785e19bde9f38901c1090c9622c4a3e7c4d195",
+    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/7ba33e4d355d51ad46ecc0737558750362b478a7",
+    "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+    "commands": [
+      "git clone https://github.com/motion-challenge-project/motion-challenge-bfm-zero.git",
+      "cd motion-challenge-bfm-zero",
+      "git checkout 9c785e19bde9f38901c1090c9622c4a3e7c4d195",
+      "git submodule update --init --recursive",
+      "uv sync --locked",
+      "uv run evaluate.py"
+    ]
   }
 }

@@ -2104,5 +2104,21 @@
     "full_suite": true,
     "source_unchanged_during_run": true,
     "finished_utc": "2026-10-23T11:03:25.449874+00:00"
+  },
+  "reproduction": {
+    "adapter_commit": "c4349a4cd49ee19e493af6cc7664e92f067f4b97",
+    "core_commit": "7ba33e4d355d51ad46ecc0737558750362b478a7",
+    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-holomotion",
+    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-holomotion/tree/c4349a4cd49ee19e493af6cc7664e92f067f4b97",
+    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/7ba33e4d355d51ad46ecc0737558750362b478a7",
+    "checkpoint_sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe",
+    "commands": [
+      "git clone https://github.com/motion-challenge-project/motion-challenge-holomotion.git",
+      "cd motion-challenge-holomotion",
+      "git checkout c4349a4cd49ee19e493af6cc7664e92f067f4b97",
+      "git submodule update --init --recursive",
+      "uv sync --locked",
+      "uv run evaluate.py"
+    ]
   }
 }

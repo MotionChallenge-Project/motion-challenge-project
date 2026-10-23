@@ -2078,5 +2078,21 @@
     "full_suite": true,
     "source_unchanged_during_run": true,
     "finished_utc": "2026-10-23T11:00:35.453833+00:00"
+  },
+  "reproduction": {
+    "adapter_commit": "9b923fba001f8260cceb2b0abf7f13c7782bcde1",
+    "core_commit": "7ba33e4d355d51ad46ecc0737558750362b478a7",
+    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-heft",
+    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-heft/tree/9b923fba001f8260cceb2b0abf7f13c7782bcde1",
+    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/7ba33e4d355d51ad46ecc0737558750362b478a7",
+    "checkpoint_sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
+    "commands": [
+      "git clone https://github.com/motion-challenge-project/motion-challenge-heft.git",
+      "cd motion-challenge-heft",
+      "git checkout 9b923fba001f8260cceb2b0abf7f13c7782bcde1",
+      "git submodule update --init --recursive",
+      "uv sync --locked",
+      "uv run evaluate.py"
+    ]
   }
 }

@@ -805,5 +805,135 @@
       "notes": "Official generalist v2 distilled from eight teachers. The downloaded configuration declares 156 observations and 29 actions. It was trained on all 40 LAFAN1 motions using a different retargeting pipeline; this is a known-data tracking comparison, not an unseen-motion generalization claim. Author-reported 40/40 uses the author setup and is not a Motion Challenge score.",
       "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator"
     }
+  },
+  "sonic-v1-1": {
+    "display_name": "SONIC v1.1",
+    "family": "sonic",
+    "organization": "NVIDIA",
+    "version": "v1.1",
+    "organization_source": "https://huggingface.co/nvidia/GEAR-SONIC",
+    "version_kind": "Author release",
+    "repository_available": true,
+    "runtime": {
+      "id": "sonic-v1-1-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.9,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "weights": "checkpoints/policy.onnx",
+      "weights_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/model_decoder.onnx",
+      "weights_sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "95658b72ee56239d10749ace3f67d1b53be6150fd8d164d8c72c5fe29da9ac11",
+      "source_repository": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+      "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
+      "official": false,
+      "artifacts": {
+        "encoder": {
+          "path": "checkpoints/encoder.onnx",
+          "sha256": "fb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae",
+          "url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/model_encoder.onnx"
+        }
+      }
+    },
+    "provenance": {
+      "model": "sonic-v1-1",
+      "display_name": "SONIC v1.1",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+      "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
+      "checkpoint_sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509",
+      "author_inference_review": "passed: 160 randomized C++ gatherer comparisons, 4 resets, native encoder/decoder and motor-target parity",
+      "notes": "G1 encoder mode 0 with the author release observation configuration, history order, PD gains and unclipped actions.",
+      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator",
+      "encoder_sha256": "fb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae",
+      "inference_adaptations": [
+        "CPU ONNX Runtime executes the author encoder and decoder; no weight conversion.",
+        "Native cold StateLogger zero padding; no pre-roll simulation.",
+        "G1 encoder mode 0; unused teleop/SMPL fields remain zero.",
+        "Canonical benchmark physics is separate from author training physics."
+      ],
+      "parity_scope": "Author observation gatherers and history padding are compiled from pinned upstream C++; both inference paths use CPU ONNX Runtime with original encoder and decoder. This does not establish TensorRT numerical equivalence or match author training physics."
+    }
+  },
+  "sonic-low-latency": {
+    "display_name": "SONIC Low-Latency",
+    "family": "sonic",
+    "organization": "NVIDIA",
+    "version": "Low-Latency \u00b7 2026-06-16",
+    "organization_source": "https://huggingface.co/nvidia/GEAR-SONIC",
+    "version_kind": "Author release",
+    "repository_available": true,
+    "runtime": {
+      "id": "sonic-low-latency-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.18,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "weights": "checkpoints/policy.onnx",
+      "weights_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/model_decoder.onnx",
+      "weights_sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "9613e85f236b9dc6a5d8d520e100b9921d2a5b2b1d400cca6366c41070099193",
+      "source_repository": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+      "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
+      "official": false,
+      "artifacts": {
+        "encoder": {
+          "path": "checkpoints/encoder.onnx",
+          "sha256": "60be43157f57d812f38bdbb740a5de5d5d070e8840d9edc16f02a91a6d06255b",
+          "url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/model_encoder.onnx"
+        }
+      }
+    },
+    "provenance": {
+      "model": "sonic-low-latency",
+      "display_name": "SONIC Low-Latency",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+      "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
+      "checkpoint_sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab",
+      "author_inference_review": "passed: 160 randomized C++ gatherer comparisons, 4 resets, native encoder/decoder and motor-target parity",
+      "notes": "G1 encoder mode 0 with the author release observation configuration, history order, PD gains and unclipped actions.",
+      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator",
+      "encoder_sha256": "60be43157f57d812f38bdbb740a5de5d5d070e8840d9edc16f02a91a6d06255b",
+      "inference_adaptations": [
+        "CPU ONNX Runtime executes the author encoder and decoder; no weight conversion.",
+        "Native cold StateLogger zero padding; no pre-roll simulation.",
+        "G1 encoder mode 0; unused teleop/SMPL fields remain zero.",
+        "Canonical benchmark physics is separate from author training physics."
+      ],
+      "parity_scope": "Author observation gatherers and history padding are compiled from pinned upstream C++; both inference paths use CPU ONNX Runtime with original encoder and decoder. This does not establish TensorRT numerical equivalence or match author training physics."
+    }
   }
 }

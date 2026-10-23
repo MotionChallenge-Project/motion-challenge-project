@@ -2123,5 +2123,21 @@
     "full_suite": true,
     "source_unchanged_during_run": true,
     "finished_utc": "2026-10-23T10:29:35.546432+00:00"
+  },
+  "reproduction": {
+    "adapter_commit": "56dc11ad31ae8d6739a79a38911ba75621fef3a9",
+    "core_commit": "7ba33e4d355d51ad46ecc0737558750362b478a7",
+    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-any2track-v2",
+    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-any2track-v2/tree/56dc11ad31ae8d6739a79a38911ba75621fef3a9",
+    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/7ba33e4d355d51ad46ecc0737558750362b478a7",
+    "checkpoint_sha256": "1320bddd4b981876e84243c0d336c8eaef57e202499b694cfbdc626fab3972c1",
+    "commands": [
+      "git clone https://github.com/motion-challenge-project/motion-challenge-any2track-v2.git",
+      "cd motion-challenge-any2track-v2",
+      "git checkout 56dc11ad31ae8d6739a79a38911ba75621fef3a9",
+      "git submodule update --init --recursive",
+      "uv sync --locked",
+      "uv run evaluate.py"
+    ]
   }
 }

@@ -31,7 +31,7 @@
   $('#sort-caption').textContent='Sorted by '+sortingLabel+' · '+(descending?'High → low':'Low → high');
   const trackData=data.filter(r=>r.track_id===track.id&&(r.termination_mode||'early_termination')==='early_termination').map(r=>{
    const full=data.find(f=>f.track_id===track.id&&f.model===r.model&&f.termination_mode==='no_termination'&&f.checkpoint_sha256===r.checkpoint_sha256);
-   return {...r,full_evidence_file:full?.evidence_file,...Object.fromEntries(['mpjpe_xy_yaw_aligned_m','mpjpe_xy_aligned_m','mpjpe_world_m'].map(k=>['full_'+k,full?.[k]??null]))};
+   return {...r,full_evidence_file:full?.evidence_file,full_adapter_code_url:full?.adapter_code_url,...Object.fromEntries(['mpjpe_xy_yaw_aligned_m','mpjpe_xy_aligned_m','mpjpe_world_m'].map(k=>['full_'+k,full?.[k]??null]))};
   });
   $('#track-caption').textContent=`${track.benchmark_label} · ${track.robot_label} · ${track.label} · ${track.clip_count} full motions`;
   $('#track-details').href=base+'/benchmarks/'+encodeURIComponent(track.benchmark_id)+'/';
@@ -49,7 +49,7 @@
   for(const [rowIndex,r] of rows.entries()){const tr=document.createElement('tr');
    [start+rowIndex+1,r.label,r.organization||'Not listed',r.passed,r.completion_pct,r.mpjpe_xy_yaw_aligned_m,r.mpjpe_xy_aligned_m,r.mpjpe_world_m,r.full_mpjpe_xy_yaw_aligned_m,r.full_mpjpe_xy_aligned_m,r.full_mpjpe_world_m].forEach((v,i)=>{const td=document.createElement('td');
     if(i===0){td.className='rank';td.textContent=String(v).padStart(2,'0');}
-    else if(i===1){const a=document.createElement('a');a.href=base+'/models/'+r.model+'/';a.textContent=v;td.append(a);}
+    else if(i===1){const a=document.createElement('a');a.href=base+'/models/'+r.model+'/';a.textContent=v;td.append(a);const links=document.createElement('small');for(const [label,url] of [['Eval code',r.adapter_code_url],['No-term code',r.full_adapter_code_url]]){if(!url)continue;const code=document.createElement('a');code.href=url;code.textContent=label+' ↗';links.append(code,document.createTextNode(' '));}td.append(links);}
     else if(i===3){td.className='score';td.textContent=(v/track.clip_count*100).toFixed(1)+'%';const small=document.createElement('small');small.textContent=v+' / '+track.clip_count+' clips';td.append(small);}
     else if(i===4)td.textContent=v.toFixed(2)+'%';else if(i>=5){
      if(v==null){td.textContent='—';td.className='pending';td.title='Full-motion evaluation not yet published';}
