@@ -55,7 +55,8 @@
    }else{header.removeAttribute('aria-sort');button.title='Sort by '+label;}
   });
   $('#sort-caption').textContent='Sorted by '+sortingLabel+' · '+(descending?'High → low':'Low → high');
-  const trackData=data.filter(r=>r.track_id===track.id&&(r.termination_mode||'early_termination')==='early_termination').map(r=>{
+  const trackData=data.filter(r=>r.track_id===track.id&&['early_termination','unified'].includes(r.termination_mode||'early_termination')).map(r=>{
+   if(r.termination_mode==='unified')return r;
    const full=data.find(f=>f.track_id===track.id&&f.model===r.model&&f.termination_mode==='no_termination'&&f.checkpoint_sha256===r.checkpoint_sha256);
    return {...r,full_evidence_file:full?.evidence_file,full_adapter_code_url:full?.adapter_code_url,...Object.fromEntries(['mpjpe_xy_yaw_aligned_m','mpjpe_xy_aligned_m','mpjpe_world_m'].map(k=>['full_'+k,full?.[k]??null]))};
   });
