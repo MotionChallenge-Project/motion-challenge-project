@@ -19,6 +19,9 @@ RESULTS=json.loads((CONTENT/'results.json').read_text())
 RESULTS_REVISION=str(RESULTS['generated_unix'])
 ASSET_REVISION=hashlib.sha256((ROOT/'style.css').read_bytes()+(ROOT/'app.js').read_bytes()).hexdigest()[:12]
 rows=RESULTS['rows']
+POLICY=json.loads((CONTENT/'publication_policy.json').read_text())
+EXCLUDED=POLICY.get('excluded_models', {})
+assert not any(r['model'] in EXCLUDED and not EXCLUDED[r['model']].get('publish_results',True) for r in rows), 'Withdrawn results cannot be republished'
 assert all(r['mujoco_version']=='3.17.0' and r.get('adapter_code_url') and r.get('core_code_url') for r in rows), 'Only batch 3.17 results with pinned code may be published'
 EVALUATED=len(set(r['model'] for r in rows))
 for r in rows:

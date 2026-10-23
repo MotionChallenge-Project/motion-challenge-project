@@ -59,7 +59,7 @@
       "official": false,
       "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
       "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
-      "weights_url": "https://drive.usercontent.google.com/download?id=10HGpqRJPDjITq9DmyORJeWpNHlC0oA8l&export=download"
+      "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx"
     },
     "provenance": {
       "model": "grit",
@@ -71,16 +71,27 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/README.md",
+        "author_release_label": "mrzuang/GRIT_teleop_deploy",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+        "original_filename": "sim2real/checkpoints/policy.onnx",
+        "verification": "Downloaded directly from the pinned author repository. Its SHA256 exactly matches both the author checksum and the former Drive mirror; the evaluated bytes are unchanged.",
+        "download_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+        "sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9"
+      }
     },
     "repository_available": true,
-    "version": "99k \u00b7 39d573e9",
+    "version": "99k · 39d573e9",
     "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
     "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
     "family": "grit",
     "display_name": "GRIT 99k",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "heft": {
@@ -163,7 +174,19 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/Axellwppr/motion_tracking/blob/0d5ba31e33397f3543d350d98b637e26d92f470a/README.md",
+        "author_release_label": "Axellwppr/motion_tracking",
+        "kind": "verified_input_wrapper",
+        "kind_label": "Author weights with verified input wrapper",
+        "artifact_page_url": "https://github.com/Axellwppr/motion_tracking/tree/0d5ba31e33397f3543d350d98b637e26d92f470a/sim2real/config/g1/ckpts/G1_PMG",
+        "original_filename": "G1_PMG/policy.onnx + policy.onnx.data",
+        "verification": "The distributed single-file ONNX adds one input Concat. All 33 initializer tensors and all 29 native graph nodes are preserved exactly; action outputs matched on 100 random input cases (maximum absolute error 0). This checks the checkpoint wrapper, not full controller/reset parity.",
+        "download_url": "https://drive.usercontent.google.com/download?id=1yZybFGcaU77QMi24Syc7iXaTlzdLpWkA&export=download",
+        "sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
+        "verification_url": "https://github.com/motion-challenge-project/motion-challenge-heft/blob/main/validation/checkpoint-origin.json"
+      }
     },
     "repository_available": true,
     "version": "SHA 192aaacc",
@@ -172,7 +195,7 @@
     "family": "heft",
     "display_name": "HEFT PMG",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "sonic": {
@@ -249,16 +272,28 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/README.md",
+        "author_release_label": "NVlabs/GR00T-WholeBodyControl",
+        "kind": "third_party_export",
+        "kind_label": "Third-party export; equivalence not established",
+        "artifact_page_url": "https://drive.google.com/file/d/1dRMw3SUUXPr4yFI0e8fcO9xGlVKtQxZI/view",
+        "original_filename": "policy.onnx (converted deployment artifact)",
+        "verification": "This adapter uses an ONNX export from a shared deployment archive. The upstream project link alone does not authenticate this converted file; the original-to-export conversion and equivalence evidence are not yet complete. Results are withheld.",
+        "download_url": "https://drive.usercontent.google.com/download?id=1dRMw3SUUXPr4yFI0e8fcO9xGlVKtQxZI&export=download",
+        "sha256": "3e1914f136a0a85e91d42fa0531ffbfdd2f5999f7019a01bfdb9ff8788992070",
+        "original_author_artifacts_url": "https://huggingface.co/nvidia/GEAR-SONIC"
+      }
     },
     "repository_available": true,
-    "version": "Fused \u00b7 3e1914f1",
+    "version": "Fused · 3e1914f1",
     "version_kind": "checkpoint SHA256; author version not verified",
     "version_source": "https://github.com/NVlabs/GR00T-WholeBodyControl",
     "family": "sonic",
     "display_name": "SONIC Fused",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "mimic-lite": {
@@ -331,7 +366,18 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/EGalahad/mimic-lite/blob/3253810ce21dbcc05d8f4942a017ea3eaffc6cf1/README.md",
+        "author_release_label": "EGalahad/mimic-lite",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://drive.google.com/drive/folders/1xRmcOX0l-YIpqxUuCmW4s6Dl0HStbJSL",
+        "original_filename": "PPO / policy.onnx",
+        "verification": "The author README links this PPO Drive folder, whose recorded listing contains the exact policy file ID used by the adapter. The download host is Google Drive, not a separate model publisher.",
+        "download_url": "https://drive.usercontent.google.com/download?id=1UsdiBBQuhFcLSXvITjjhuSY-vhMrxYuy&export=download",
+        "sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b"
+      }
     },
     "repository_available": true,
     "version": "SHA 031b8d67",
@@ -340,7 +386,7 @@
     "family": "mimic-lite",
     "display_name": "MimicLite 031b8d67",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "scalebfm": {
@@ -409,7 +455,19 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/zengweishuai/ScaleBFM/blob/abd6f17c02fe0baabc14709feb8d9ea4959aa621/README.md",
+        "author_release_label": "zengweishuai/ScaleBFM",
+        "kind": "third_party_export",
+        "kind_label": "Third-party export; equivalence not established",
+        "artifact_page_url": "https://drive.google.com/file/d/1SkwI11KeKQm0res-x6Ty9cOUaTxkLWlz/view",
+        "original_filename": "policy.onnx (converted deployment artifact)",
+        "verification": "This adapter uses an ONNX export from a shared deployment archive. The upstream project link alone does not authenticate this converted file; the original-to-export conversion and equivalence evidence are not yet complete. Results are withheld.",
+        "download_url": "https://drive.usercontent.google.com/download?id=1SkwI11KeKQm0res-x6Ty9cOUaTxkLWlz&export=download",
+        "sha256": "19628312a3fc6ff4c7f9e5ced5ec0739edef28fe52449d0127c1f9cc7eb6b25d",
+        "original_author_artifacts_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM"
+      }
     },
     "repository_available": true,
     "version": "SHA 19628312",
@@ -418,7 +476,7 @@
     "family": "scalebfm",
     "display_name": "ScaleBFM 19628312",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "holomotion": {
@@ -485,7 +543,7 @@
       "official": false,
       "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "fcb8d4d8e96af9535c2adcc2b53e267019f865a2",
-      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/v1.4.0/exported/model_14000.onnx"
+      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/exported/model_14000.onnx"
     },
     "provenance": {
       "model": "holomotion",
@@ -497,16 +555,27 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/blob/fcb8d4d8e96af9535c2adcc2b53e267019f865a2/README.md",
+        "author_release_label": "HorizonRobotics/HoloMotion",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/exported/model_14000.onnx",
+        "original_filename": "model_14000.onnx",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/exported/model_14000.onnx",
+        "sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe"
+      }
     },
     "repository_available": true,
-    "version": "v1.4.0 \u00b7 14k",
+    "version": "v1.4.0 · 14k",
     "version_kind": "author checkpoint",
     "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
     "family": "holomotion",
     "display_name": "HoloMotion v1.4.0",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "humanoid-gpt": {
@@ -567,7 +636,18 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md",
+        "author_release_label": "GalaxyGeneralRobotics/Humanoid-GPT",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx",
+        "original_filename": "pns_wo_priv216.onnx",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx",
+        "sha256": "1ca1f475dc647afb736f4cdbd55d45103c36b7f5059d830b05d6aef3a5fc3a1e"
+      }
     },
     "repository_available": true,
     "version": "PNS wo-priv216",
@@ -576,7 +656,7 @@
     "family": "humanoid-gpt",
     "display_name": "Humanoid-GPT PNS216",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "protomotions": {
@@ -602,7 +682,7 @@
       "action_history_semantics": "previous final joint position targets, matching official deployment/test_tracker_mujoco.py",
       "provenance_status": "author-inference review in progress",
       "source_repository": "https://github.com/NVlabs/ProtoMotions",
-      "weights_url": "https://raw.githubusercontent.com/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx",
+      "weights_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx",
       "inference_config": "policy.yaml"
     },
     "provenance": {
@@ -615,7 +695,18 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/README.md",
+        "author_release_label": "NVlabs/ProtoMotions",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx",
+        "original_filename": "unified_pipeline.onnx",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx",
+        "sha256": "a59baa3e04a951e5cf0b4cc68f24ebaafa9272714226618b99a5017dfc805b4c"
+      }
     },
     "repository_available": true,
     "version": "G1 BONES deploy",
@@ -624,7 +715,7 @@
     "family": "protomotions",
     "display_name": "ProtoMotions G1 BONES",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "bfm-zero": {
@@ -671,7 +762,19 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/LeCAR-Lab/BFM-Zero/blob/df9c4a9633aa155c727419e82c906010b1e1845f/README.md",
+        "author_release_label": "LeCAR-Lab/BFM-Zero",
+        "kind": "maintainer_export",
+        "kind_label": "Motion Challenge conversion; publication incomplete",
+        "artifact_page_url": "https://huggingface.co/LeCAR-Lab/BFM-Zero/blob/62b4206d68e026de5e5dc7efb1529bccfb95164c/model/checkpoint/model/model.safetensors",
+        "original_filename": "model/checkpoint/model/model.safetensors → policy.onnx",
+        "verification": "Motion Challenge exported the actor/backward map from the original safetensors checkpoint. The public conversion chain is incomplete and the configured release download currently returns 404; results are withheld.",
+        "download_url": "https://github.com/motion-challenge-project/motion-challenge-bfm-zero/releases/download/checkpoint-v1/policy.onnx",
+        "sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+        "original_sha256": "d8d07d7b83ad030286f44d55a48899dc42db4b48000132fffad063653a6eb49e"
+      }
     },
     "repository_available": true,
     "version": "SHA cdc9d645",
@@ -680,7 +783,7 @@
     "family": "bfm-zero",
     "display_name": "BFM-Zero cdc9d645",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "twist2": {
@@ -739,21 +842,32 @@
       "author_inference_review": "pending",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/amazon-far/TWIST2/blob/b06178f19a22f2138cbd31f60c6d494bc263f67d/README.md",
+        "author_release_label": "amazon-far/TWIST2",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://github.com/amazon-far/TWIST2/blob/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
+        "original_filename": "twist2_1017_20k.onnx",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
+        "sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061"
+      }
     },
     "repository_available": true,
-    "version": "1017 \u00b7 20k",
+    "version": "1017 · 20k",
     "version_kind": "author checkpoint filename",
     "version_source": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
     "family": "twist2",
     "display_name": "TWIST2 1017-20k",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "teleopit": {
     "organization": "Westlake / SII",
-    "version": "track_g1 \u00b7 1ebd341d",
+    "version": "track_g1 · 1ebd341d",
     "version_kind": "author checkpoint or pinned source revision",
     "family": "teleopit",
     "display_name": "TeleopIT G1",
@@ -790,10 +904,21 @@
       "checkpoint_sha256": "1ebd341d9193e1c49a986450f6043ba1a9473ad46636ce0bcb1c7755c856e0de",
       "author_inference_review": "pending",
       "notes": "The released base G1 29DoF policy is paired with g1_29dof.xml. Neck and hand variants use separate checkpoints.",
-      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator"
+      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/BotRunner64/Teleopit/blob/f9263865c581802ad531854b8e547e2403a945f3/README.md",
+        "author_release_label": "BotRunner64/Teleopit",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/12e21/Teleopit-models/blob/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx",
+        "original_filename": "track_g1.onnx",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/12e21/Teleopit-models/resolve/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx",
+        "sha256": "1ebd341d9193e1c49a986450f6043ba1a9473ad46636ce0bcb1c7755c856e0de"
+      }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "any2track-v2": {
@@ -836,10 +961,21 @@
       "checkpoint_sha256": "1320bddd4b981876e84243c0d336c8eaef57e202499b694cfbdc626fab3972c1",
       "author_inference_review": "pending",
       "notes": "Official generalist v2 distilled from eight teachers. The downloaded configuration declares 156 observations and 29 actions. It was trained on all 40 LAFAN1 motions using a different retargeting pipeline; this is a known-data tracking comparison, not an unseen-motion generalization claim. Author-reported 40/40 uses the author setup and is not a Motion Challenge score.",
-      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator"
+      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/GalaxyGeneralRobotics/OpenTrack/blob/cb9b751993a2483e5d1805a2565ddbfe950c04c9/README.md#play-pretrained-checkpoints",
+        "author_release_label": "GalaxyGeneralRobotics/OpenTrack",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://drive.google.com/drive/folders/1wDL4Chr6sGQiCx1tbvhf9DowN73cP_PF",
+        "original_filename": "LAFAN1 generalist v2 / checkpoints/model.onnx",
+        "verification": "The author README links the release folder. Its recorded v2 subfolder contains Drive file 1XG_-GP5svz_4TGh484X900dbctibZGAm; SHA256 pins the downloaded model.",
+        "download_url": "https://drive.usercontent.google.com/download?id=1XG_-GP5svz_4TGh484X900dbctibZGAm&export=download",
+        "sha256": "1320bddd4b981876e84243c0d336c8eaef57e202499b694cfbdc626fab3972c1"
+      }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "description": "A generalist motion tracker distilled from eight specialist teachers.",
     "training_data": {
@@ -909,17 +1045,28 @@
         "G1 encoder mode 0; unused teleop/SMPL fields remain zero.",
         "Canonical benchmark physics is separate from author training physics."
       ],
-      "parity_scope": "Author observation gatherers and history padding are compiled from pinned upstream C++; both inference paths use CPU ONNX Runtime with original encoder and decoder. This does not establish TensorRT numerical equivalence or match author training physics."
+      "parity_scope": "Author observation gatherers and history padding are compiled from pinned upstream C++; both inference paths use CPU ONNX Runtime with original encoder and decoder. This does not establish TensorRT numerical equivalence or match author training physics.",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/README.md",
+        "author_release_label": "NVlabs/GR00T-WholeBodyControl",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/nvidia/GEAR-SONIC/blob/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/model_decoder.onnx",
+        "original_filename": "model_decoder.onnx",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/model_decoder.onnx",
+        "sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509"
+      }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "sonic-low-latency": {
     "display_name": "SONIC Low-Latency",
     "family": "sonic",
     "organization": "NVIDIA",
-    "version": "Low-Latency \u00b7 2026-06-16",
+    "version": "Low-Latency · 2026-06-16",
     "organization_source": "https://huggingface.co/nvidia/GEAR-SONIC",
     "version_kind": "Author release",
     "repository_available": true,
@@ -977,17 +1124,28 @@
         "G1 encoder mode 0; unused teleop/SMPL fields remain zero.",
         "Canonical benchmark physics is separate from author training physics."
       ],
-      "parity_scope": "Author observation gatherers and history padding are compiled from pinned upstream C++; both inference paths use CPU ONNX Runtime with original encoder and decoder. This does not establish TensorRT numerical equivalence or match author training physics."
+      "parity_scope": "Author observation gatherers and history padding are compiled from pinned upstream C++; both inference paths use CPU ONNX Runtime with original encoder and decoder. This does not establish TensorRT numerical equivalence or match author training physics.",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/README.md",
+        "author_release_label": "NVlabs/GR00T-WholeBodyControl",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/nvidia/GEAR-SONIC/blob/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/model_decoder.onnx",
+        "original_filename": "model_decoder.onnx",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/model_decoder.onnx",
+        "sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab"
+      }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "pmt-flat": {
     "display_name": "PMT Flat MLP 20k",
     "family": "pmt",
     "organization": "Mondo Robotics / HKUST & collaborators",
-    "version": "Flat MLP \u00b7 20k",
+    "version": "Flat MLP · 20k",
     "version_kind": "author checkpoint or pinned source revision",
     "organization_source": "https://acodedog.github.io/perceptive-bfm/",
     "repository_available": true,
@@ -1013,7 +1171,7 @@
     },
     "provenance": {
       "model": "pmt-flat",
-      "display_name": "PMT Flat \u00b7 iteration 19999",
+      "display_name": "PMT Flat · iteration 19999",
       "submitter": "Motion Challenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
@@ -1044,10 +1202,21 @@
           "native_pd_default_action_scale": true,
           "canonical_pelvis_com": true
         }
+      },
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
+        "author_release_label": "Mondo-Robotics/PMT",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
+        "original_filename": "multimotionv2_flat.pt",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
+        "sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26"
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   }
 }

@@ -59,10 +59,20 @@ def render(models, rows, tracks, content, github, page, intro):
         artifacts = [('Policy checkpoint', rt['weights_url'], rt['weights_sha256'])]
         artifacts += [(name, a['url'], a['sha256']) for name, a in rt.get('artifacts', {}).items() if a.get('url')]
         detail += '<section class="section model-artifacts"><h2>Checkpoint artifacts</h2>'
+        origin = provenance.get('checkpoint_origin', {})
+        if origin:
+            detail += facts([
+                ('Author release', link(origin['author_release_url'], origin['author_release_label'] + ' ↗')),
+                ('Artifact type', esc(origin['kind_label'])),
+                ('Original file', link(origin['artifact_page_url'], origin['original_filename'] + ' ↗')),
+            ])
+            detail += '<p class="small">' + esc(origin['verification']) + '</p>'
+            if origin.get('verification_url'):
+                detail += link(origin['verification_url'], 'Checkpoint comparison ↗', 'text-link')
         detail += ''.join('<p class="small">' + esc(note) + '</p>' for note in model.get('artifact_notes', []))
-        detail += '<p class="small">URLs identify the recorded distribution source. SHA256 identifies the exact file used by the adapter.</p>'
+        detail += '<p class="small">Download links deliver the adapter files. The author release above establishes their origin; SHA256 identifies the bytes used.</p>'
         for name, url, sha in artifacts:
-            detail += f'<div class="artifact-row"><div>{link(url, name + " ↗")}</div><code>{esc(sha)}</code></div>'
+            detail += f'<div class="artifact-row"><div>{esc(name)}<br>{link(url, "Download ↗")}</div><code>{esc(sha)}</code></div>'
         detail += '</section><section class="section split"><div><h2>Inference interface</h2><p>The adapter declares its control clock and reference window below. Source and configuration describe the observation and action transforms.</p><div class="actions">'
         detail += link(repo + '/blob/main/adapter.py', 'Inference implementation ↗', 'text-link')
         detail += link(repo + '/blob/main/provenance.json', 'Provenance ↗', 'text-link') + '</div></div>'

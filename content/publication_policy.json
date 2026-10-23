@@ -1,0 +1,24 @@
+{
+  "excluded_models": {
+    "any2track-v2": {
+      "reason": "Evaluation withdrawn at maintainer request: the author uses a different LAFAN1 retargeting; no further evaluation in the current LAFAN40 track.",
+      "evaluate": false,
+      "publish_results": false
+    },
+    "sonic": {
+      "reason": "This adapter uses an ONNX export from a shared deployment archive. The upstream project link alone does not authenticate this converted file; the original-to-export conversion and equivalence evidence are not yet complete. Results are withheld.",
+      "evaluate": false,
+      "publish_results": false
+    },
+    "scalebfm": {
+      "reason": "This adapter uses an ONNX export from a shared deployment archive. The upstream project link alone does not authenticate this converted file; the original-to-export conversion and equivalence evidence are not yet complete. Results are withheld.",
+      "evaluate": false,
+      "publish_results": false
+    },
+    "bfm-zero": {
+      "reason": "Motion Challenge exported the actor/backward map from the original safetensors checkpoint. The public conversion chain is incomplete and the configured release download currently returns 404; results are withheld.",
+      "evaluate": false,
+      "publish_results": false
+    }
+  }
+}

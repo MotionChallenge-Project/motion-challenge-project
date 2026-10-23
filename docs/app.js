@@ -75,7 +75,7 @@
   for(const [rowIndex,r] of rows.entries()){const tr=document.createElement('tr');
    [start+rowIndex+1,r.label,r.organization||'Not listed',r.passed,r.completion_pct,r.mpjpe_xy_yaw_aligned_m,r.mpjpe_xy_aligned_m,r.mpjpe_world_m,r.full_mpjpe_xy_yaw_aligned_m,r.full_mpjpe_xy_aligned_m,r.full_mpjpe_world_m].forEach((v,i)=>{const td=document.createElement('td');
     if(i===0){td.className='rank';td.textContent=String(v).padStart(2,'0');}
-    else if(i===1){const a=document.createElement('a');a.href=base+'/models/'+r.model+'/';a.textContent=v;td.append(a);const links=document.createElement('small');links.className='eval-code-links';const code=document.createElement('a');code.href=r.full_adapter_code_url||r.adapter_code_url;code.textContent='Eval code ↗';links.append(code);td.append(links);}
+    else if(i===1){const a=document.createElement('a');a.href=base+'/models/'+r.model+'/';a.textContent=v;td.append(a);const links=document.createElement('small');links.className='eval-code-links';const details=document.createElement('a');details.href=base+'/evaluations/'+encodeURIComponent(track.id)+'/'+r.model+'/';details.textContent='Detailed results ↗';links.append(details);td.append(links);}
     else if(i===3){td.className='score';td.textContent=(v/track.clip_count*100).toFixed(1)+'%';const small=document.createElement('small');small.textContent=v+' / '+track.clip_count+' clips';td.append(small);}
     else if(i===4)td.textContent=v.toFixed(2)+'%';else if(i>=5){
      if(v==null){td.textContent='—';td.className='pending';td.title='Full-motion evaluation not yet published';}
