@@ -21,7 +21,8 @@
     "checked_date": "2026-10-23",
     "family": "teleopit",
     "version": "track_g1 · 1ebd341d",
-    "version_kind": "author checkpoint or pinned source revision"
+    "version_kind": "author checkpoint or pinned source revision",
+    "display_name": "TeleopIT G1"
   },
   {
     "id": "omnixtreme",
@@ -52,7 +53,8 @@
     "checked_date": "2026-10-23",
     "family": "omnixtreme",
     "version": "commit 6f2716d",
-    "version_kind": "author checkpoint or pinned source revision"
+    "version_kind": "author checkpoint or pinned source revision",
+    "display_name": "OmniXtreme 6f2716d"
   },
   {
     "id": "pmt-flat",
@@ -76,7 +78,8 @@
     "checked_date": "2026-10-23",
     "family": "pmt",
     "version": "Flat MLP · 20k",
-    "version_kind": "author checkpoint or pinned source revision"
+    "version_kind": "author checkpoint or pinned source revision",
+    "display_name": "PMT Flat MLP 20k"
   },
   {
     "id": "pmt-rgmt",
@@ -100,7 +103,8 @@
     "checked_date": "2026-10-23",
     "family": "pmt",
     "version": "RGMT · 20k",
-    "version_kind": "author checkpoint or pinned source revision"
+    "version_kind": "author checkpoint or pinned source revision",
+    "display_name": "PMT RGMT 20k"
   },
   {
     "id": "ufo",
@@ -129,7 +133,8 @@
     "checked_date": "2026-10-23",
     "family": "ufo",
     "version": "G1 FB · fe58bf17",
-    "version_kind": "author checkpoint or pinned source revision"
+    "version_kind": "author checkpoint or pinned source revision",
+    "display_name": "UFO G1 FB"
   },
   {
     "id": "sonic-v1-1",
@@ -162,7 +167,8 @@
       }
     ],
     "artifact_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
-    "config_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/observation_config.yaml"
+    "config_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/observation_config.yaml",
+    "display_name": "SONIC v1.1"
   },
   {
     "id": "sonic-low-latency",
@@ -195,7 +201,8 @@
       }
     ],
     "artifact_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
-    "config_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/observation_config.yaml"
+    "config_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/observation_config.yaml",
+    "display_name": "SONIC Low-Latency"
   },
   {
     "id": "holomotion-v1-4-1",
@@ -222,7 +229,8 @@
       }
     ],
     "artifact_revision": "e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a",
-    "config_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/config.yaml"
+    "config_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/config.yaml",
+    "display_name": "HoloMotion v1.4.1"
   },
   {
     "id": "holomotion-v2-0-0",
@@ -249,7 +257,8 @@
       }
     ],
     "artifact_revision": "e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a",
-    "config_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/config.yaml"
+    "config_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/config.yaml",
+    "display_name": "HoloMotion v2.0.0"
   },
   {
     "id": "any2track-v2",
@@ -279,6 +288,7 @@
     "robot_id": "g1-29dof",
     "benchmark_id": "lafan40",
     "status": "Public checkpoint; adapter integration pending",
-    "checked_date": "2026-10-23"
+    "checked_date": "2026-10-23",
+    "display_name": "Any2Track Generalist v2"
   }
 ]

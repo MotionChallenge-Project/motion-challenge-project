@@ -25,11 +25,11 @@
   body.replaceChildren();table.hidden=!rows.length;empty.hidden=!!rows.length;empty.textContent='No models match your search.';
   range.textContent=filtered.length?`${start+1}–${Math.min(start+limit,filtered.length)} of ${filtered.length} · Page ${page}/${pages}`:'0 models';prev.disabled=page<=1;next.disabled=page>=pages;
   for(const r of rows){const tr=document.createElement('tr');
-   [ranks.get(r.model),r.label,r.version||'Not versioned',r.organization||'Not listed',r.passed,r.completion_pct,r.mpjpe_xy_yaw_aligned_m,r.mpjpe_xy_aligned_m,r.mpjpe_world_m].forEach((v,i)=>{const td=document.createElement('td');
+   [ranks.get(r.model),r.label,r.organization||'Not listed',r.passed,r.completion_pct,r.mpjpe_xy_yaw_aligned_m,r.mpjpe_xy_aligned_m,r.mpjpe_world_m].forEach((v,i)=>{const td=document.createElement('td');
     if(i===0){td.className='rank';td.textContent=String(v).padStart(2,'0');}
     else if(i===1){const a=document.createElement('a');a.href=base+'/models/'+r.model+'/';a.textContent=v;td.append(a);}
-    else if(i===4){td.className='score';td.textContent=(v/track.clip_count*100).toFixed(1)+'%';const small=document.createElement('small');small.textContent=v+' / '+track.clip_count+' clips';td.append(small);}
-    else if(i===5)td.textContent=v.toFixed(2)+'%';else if(i>=6)td.textContent=(v*1000).toFixed(2);else td.textContent=v;
+    else if(i===3){td.className='score';td.textContent=(v/track.clip_count*100).toFixed(1)+'%';const small=document.createElement('small');small.textContent=v+' / '+track.clip_count+' clips';td.append(small);}
+    else if(i===4)td.textContent=v.toFixed(2)+'%';else if(i>=5)td.textContent=(v*1000).toFixed(2);else td.textContent=v;
     tr.append(td);
    });body.append(tr);
   }

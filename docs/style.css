@@ -6,4 +6,4 @@
 
 @media(max-width:1100px){header{flex-wrap:wrap;gap:18px}.github{display:block;margin-left:auto;order:2}header .brand{order:1}header nav{order:3;width:100%;overflow-x:auto}}
 
-.model-version{font-family:var(--mono,monospace);font-size:13px;color:#145b51}.facts code{overflow-wrap:anywhere}#leaderboard td:nth-child(3){font-size:12px;white-space:nowrap}
+.model-version{font-family:var(--mono,monospace);font-size:13px;color:#145b51}.facts code{overflow-wrap:anywhere}

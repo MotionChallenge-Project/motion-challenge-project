@@ -77,7 +77,8 @@
     "version": "99k · 39d573e9",
     "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
     "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
-    "family": "grit"
+    "family": "grit",
+    "display_name": "GRIT 99k"
   },
   "heft": {
     "organization": "Tsinghua / RobotEra / SQZ",
@@ -165,7 +166,8 @@
     "version": "SHA 192aaacc",
     "version_kind": "checkpoint SHA256; author version not verified",
     "version_source": "https://github.com/Axellwppr/motion_tracking",
-    "family": "heft"
+    "family": "heft",
+    "display_name": "HEFT PMG"
   },
   "sonic": {
     "organization": "NVIDIA",
@@ -247,7 +249,8 @@
     "version": "Fused · 3e1914f1",
     "version_kind": "checkpoint SHA256; author version not verified",
     "version_source": "https://github.com/NVlabs/GR00T-WholeBodyControl",
-    "family": "sonic"
+    "family": "sonic",
+    "display_name": "SONIC Fused"
   },
   "mimic-lite": {
     "organization": "RoboParty",
@@ -325,7 +328,8 @@
     "version": "SHA 031b8d67",
     "version_kind": "checkpoint SHA256; author version not verified",
     "version_source": "https://github.com/EGalahad/mimic-lite",
-    "family": "mimic-lite"
+    "family": "mimic-lite",
+    "display_name": "MimicLite 031b8d67"
   },
   "scalebfm": {
     "organization": "Shanghai AI Lab & collaborators",
@@ -399,7 +403,8 @@
     "version": "SHA 19628312",
     "version_kind": "checkpoint SHA256; author version not verified",
     "version_source": "https://github.com/zengweishuai/ScaleBFM",
-    "family": "scalebfm"
+    "family": "scalebfm",
+    "display_name": "ScaleBFM 19628312"
   },
   "holomotion": {
     "organization": "Horizon Robotics",
@@ -483,7 +488,8 @@
     "version": "v1.4.0 · 14k",
     "version_kind": "author checkpoint",
     "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
-    "family": "holomotion"
+    "family": "holomotion",
+    "display_name": "HoloMotion v1.4.0"
   },
   "humanoid-gpt": {
     "organization": "Galaxy General Robotics",
@@ -549,7 +555,8 @@
     "version": "PNS wo-priv216",
     "version_kind": "author checkpoint filename",
     "version_source": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx",
-    "family": "humanoid-gpt"
+    "family": "humanoid-gpt",
+    "display_name": "Humanoid-GPT PNS216"
   },
   "protomotions": {
     "organization": "NVIDIA",
@@ -593,7 +600,8 @@
     "version": "G1 BONES deploy",
     "version_kind": "author checkpoint directory",
     "version_source": "https://raw.githubusercontent.com/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx",
-    "family": "protomotions"
+    "family": "protomotions",
+    "display_name": "ProtoMotions G1 BONES"
   },
   "bfm-zero": {
     "organization": "CMU / Meta",
@@ -645,7 +653,8 @@
     "version": "SHA cdc9d645",
     "version_kind": "checkpoint SHA256; author version not verified",
     "version_source": "https://github.com/LeCAR-Lab/BFM-Zero",
-    "family": "bfm-zero"
+    "family": "bfm-zero",
+    "display_name": "BFM-Zero cdc9d645"
   },
   "twist2": {
     "organization": "Amazon FAR",
@@ -709,6 +718,7 @@
     "version": "1017 · 20k",
     "version_kind": "author checkpoint filename",
     "version_source": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
-    "family": "twist2"
+    "family": "twist2",
+    "display_name": "TWIST2 1017-20k"
   }
 }
