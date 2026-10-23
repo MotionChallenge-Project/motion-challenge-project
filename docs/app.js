@@ -9,7 +9,7 @@
  const query=new URLSearchParams(location.search);
  function options(select,entries,preferred){select.replaceChildren();for(const [value,label] of new Map(entries)){const option=document.createElement('option');option.value=value;option.textContent=label;select.append(option);}if([...select.options].some(o=>o.value===preferred))select.value=preferred;}
  options(benchmark,tracks.map(t=>[t.benchmark_id,t.benchmark_label]),query.get('benchmark'));
- function setProtocols(preferred){options(protocol,tracks.filter(t=>t.benchmark_id===benchmark.value&&t.robot_id===robot.value).map(t=>[t.id,t.label]),preferred);}
+ function setProtocols(preferred){const available=tracks.filter(t=>t.benchmark_id===benchmark.value&&t.robot_id===robot.value);options(protocol,available.map(t=>[t.id,t.label]),preferred||available.at(-1)?.id);}
  function setRobots(preferred){options(robot,tracks.filter(t=>t.benchmark_id===benchmark.value).map(t=>[t.robot_id,t.robot_label]),preferred);setProtocols(query.get('track'));}
  setRobots(query.get('robot'));
  function render(){
