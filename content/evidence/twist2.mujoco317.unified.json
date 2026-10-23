@@ -1,19 +1,19 @@
 {
   "model": "twist2",
   "submitter": "Motion Challenge",
-  "result_sha256": "5873df157fe5282e705e55c43dae49e90b90d67f57c9e75a457780b08d2a2b4b",
+  "result_sha256": "4cb8db370c200bb5776422dbfd13989547489bcd00f5d3774dc60c82d6d608db",
   "result": {
     "schema": "motion-challenge/unified-result-v1",
     "status": "trace_verified",
     "source": {
-      "adapter_commit": "b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
+      "adapter_commit": "355ddfca2e565e35b320d61a62f5285ec71506e6",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
         ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
         ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
         "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
-        "README.md": "607bd8192565fc2da0e51478492aacd94eedec8b22b975f3bb750938e1c70f8d",
+        "README.md": "62b851f5c6f9b75c1ed2967ff673c5729749c3b3fb8a312ce0417288055f490e",
         "THIRD_PARTY_NOTICES.md": "a9a51209cda01ba1022c93640797aba08ad586754fb3b587894b5f824a6357cd",
         "adapter.py": "32b37e06789c471e58f70041202c93fdb6f83948ccc912a48e8979cf425c5f47",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
@@ -23,7 +23,7 @@
         "runtime.json": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
         "uv.lock": "be7d089279b46ed9c42f4dffed872cb6e14649937926ad03ec98dd1399fa5f06"
       },
-      "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+      "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
       "core_dirty": false
     },
     "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
@@ -1989,18 +1989,19 @@
         }
       }
     ],
+    "execution": "single_full_rollout",
     "components": {
       "early": {
-        "result": "early/result.json",
-        "result_sha256": "49f5bd50b29f30347423d717ce74bbbafa77895bc0fee6575c9aa044392ef68e",
-        "receipt": "early/receipt.json",
-        "receipt_sha256": "b7e0da907de7d7e40766c938a0ade6eb149f5f8a2143403416002e7ee2971cce"
+        "result": "rollout/prefix-result.json",
+        "result_sha256": "04340b08929d286f737907ed0fc32a287a54aa5c54290b2366b2a798029b4f90",
+        "receipt": "rollout/receipt.json",
+        "receipt_sha256": "6d280634af1fdbae8eb6e23d7125fa74104f633508eb38c02e46af12b6c50c41"
       },
       "none": {
-        "result": "none/result.json",
-        "result_sha256": "eca6e660f444621e3047fce76dca4e5b32f64b1ecd0e530981d81de79baeb945",
-        "receipt": "none/receipt.json",
-        "receipt_sha256": "0628de2033563918451f272d6fb833ddf81e2af37083b33bd3c413f80cacbae5"
+        "result": "rollout/result.json",
+        "result_sha256": "b1372a3bd5d08281179fb4c6d5303bbe355eec91b984d62689f31b3d8d37d0a5",
+        "receipt": "rollout/receipt.json",
+        "receipt_sha256": "6d280634af1fdbae8eb6e23d7125fa74104f633508eb38c02e46af12b6c50c41"
       }
     }
   },
@@ -2008,14 +2009,14 @@
     "early": {
       "submitter": "local-run",
       "source": {
-        "adapter_commit": "b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
+        "adapter_commit": "355ddfca2e565e35b320d61a62f5285ec71506e6",
         "adapter_dirty": false,
         "tracked_files_sha256": {
           ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
           ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
           ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
           "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
-          "README.md": "607bd8192565fc2da0e51478492aacd94eedec8b22b975f3bb750938e1c70f8d",
+          "README.md": "62b851f5c6f9b75c1ed2967ff673c5729749c3b3fb8a312ce0417288055f490e",
           "THIRD_PARTY_NOTICES.md": "a9a51209cda01ba1022c93640797aba08ad586754fb3b587894b5f824a6357cd",
           "adapter.py": "32b37e06789c471e58f70041202c93fdb6f83948ccc912a48e8979cf425c5f47",
           "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
@@ -2025,88 +2026,109 @@
           "runtime.json": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
           "uv.lock": "be7d089279b46ed9c42f4dffed872cb6e14649937926ad03ec98dd1399fa5f06"
         },
-        "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+        "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
         "core_dirty": false
       },
       "source_runtime_sha256": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
-      "resolved_runtime_sha256": "241de0eb8ca5c853e845961051d31717fe0413c091af034bb011d7097569d65b",
+      "resolved_runtime_sha256": "a662db8d85bd1383a3c50c5e8320c9d23972e9d716b4ba1d75760fd6521416e5",
       "suite": "lafan40",
-      "started_utc": "20261023T165546.807664Z",
-      "author_inference_review": "not_granted_by_runner",
-      "status": "trace_verified",
-      "backend": "batch",
-      "termination_mode": "early_termination",
-      "batch_size": 8,
-      "verification": {
-        "verification": "trace_consistent",
-        "official": false,
-        "clips": 40,
-        "samples": 62081,
-        "full_suite": true,
-        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation"
-      },
-      "full_suite": true,
-      "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-23T17:01:18.433619+00:00"
-    },
-    "none": {
-      "submitter": "local-run",
-      "source": {
-        "adapter_commit": "b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
-        "adapter_dirty": false,
-        "tracked_files_sha256": {
-          ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
-          ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
-          ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
-          "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
-          "README.md": "607bd8192565fc2da0e51478492aacd94eedec8b22b975f3bb750938e1c70f8d",
-          "THIRD_PARTY_NOTICES.md": "a9a51209cda01ba1022c93640797aba08ad586754fb3b587894b5f824a6357cd",
-          "adapter.py": "32b37e06789c471e58f70041202c93fdb6f83948ccc912a48e8979cf425c5f47",
-          "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
-          "policy.json": "cd22080d4d6586062eec6fa52afa20280a56a4e80ef586431a79d737acd92956",
-          "provenance.json": "119937def0630f59decee4d08dfb331db36157c908c60101c30326e110b7009d",
-          "pyproject.toml": "b6247f150446af0a3c601ca01790fb3160cce6c9308d9dc4f547d621733194b4",
-          "runtime.json": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
-          "uv.lock": "be7d089279b46ed9c42f4dffed872cb6e14649937926ad03ec98dd1399fa5f06"
-        },
-        "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
-        "core_dirty": false
-      },
-      "source_runtime_sha256": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
-      "resolved_runtime_sha256": "241de0eb8ca5c853e845961051d31717fe0413c091af034bb011d7097569d65b",
-      "suite": "lafan40",
-      "started_utc": "20261023T165546.807664Z",
+      "started_utc": "20261023T174226.745269Z",
       "author_inference_review": "not_granted_by_runner",
       "status": "trace_verified",
       "backend": "batch",
       "termination_mode": "no_termination",
       "batch_size": 8,
+      "timings_s": {
+        "rollout": 898.4714259915054,
+        "verification": 74.33052417263389,
+        "total": 972.8264451101422
+      },
       "verification": {
         "verification": "trace_consistent",
         "official": false,
         "clips": 40,
         "samples": 441120,
         "full_suite": true,
-        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation"
+        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
+        "derived_prefix": {
+          "result": "prefix-result.json",
+          "result_sha256": "04340b08929d286f737907ed0fc32a287a54aa5c54290b2366b2a798029b4f90",
+          "samples": 62081
+        }
       },
       "full_suite": true,
       "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-23T17:26:23.757834+00:00"
+      "finished_utc": "2026-10-23T17:58:42.711001+00:00"
+    },
+    "none": {
+      "submitter": "local-run",
+      "source": {
+        "adapter_commit": "355ddfca2e565e35b320d61a62f5285ec71506e6",
+        "adapter_dirty": false,
+        "tracked_files_sha256": {
+          ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
+          ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
+          ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+          "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
+          "README.md": "62b851f5c6f9b75c1ed2967ff673c5729749c3b3fb8a312ce0417288055f490e",
+          "THIRD_PARTY_NOTICES.md": "a9a51209cda01ba1022c93640797aba08ad586754fb3b587894b5f824a6357cd",
+          "adapter.py": "32b37e06789c471e58f70041202c93fdb6f83948ccc912a48e8979cf425c5f47",
+          "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+          "policy.json": "cd22080d4d6586062eec6fa52afa20280a56a4e80ef586431a79d737acd92956",
+          "provenance.json": "119937def0630f59decee4d08dfb331db36157c908c60101c30326e110b7009d",
+          "pyproject.toml": "b6247f150446af0a3c601ca01790fb3160cce6c9308d9dc4f547d621733194b4",
+          "runtime.json": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
+          "uv.lock": "be7d089279b46ed9c42f4dffed872cb6e14649937926ad03ec98dd1399fa5f06"
+        },
+        "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+        "core_dirty": false
+      },
+      "source_runtime_sha256": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
+      "resolved_runtime_sha256": "a662db8d85bd1383a3c50c5e8320c9d23972e9d716b4ba1d75760fd6521416e5",
+      "suite": "lafan40",
+      "started_utc": "20261023T174226.745269Z",
+      "author_inference_review": "not_granted_by_runner",
+      "status": "trace_verified",
+      "backend": "batch",
+      "termination_mode": "no_termination",
+      "batch_size": 8,
+      "timings_s": {
+        "rollout": 898.4714259915054,
+        "verification": 74.33052417263389,
+        "total": 972.8264451101422
+      },
+      "verification": {
+        "verification": "trace_consistent",
+        "official": false,
+        "clips": 40,
+        "samples": 441120,
+        "full_suite": true,
+        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
+        "derived_prefix": {
+          "result": "prefix-result.json",
+          "result_sha256": "04340b08929d286f737907ed0fc32a287a54aa5c54290b2366b2a798029b4f90",
+          "samples": 62081
+        }
+      },
+      "full_suite": true,
+      "source_unchanged_during_run": true,
+      "finished_utc": "2026-10-23T17:58:42.711001+00:00"
     }
   },
   "summary": {
     "schema": "motion-challenge/paired-evaluation-v1",
     "status": "trace_verified",
-    "started_utc": "20261023T165546.807664Z",
+    "execution": "single_full_rollout",
+    "started_utc": "20261023T174226.745269Z",
     "source": {
-      "adapter_commit": "b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
+      "adapter_commit": "355ddfca2e565e35b320d61a62f5285ec71506e6",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
         ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
         ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
         "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
-        "README.md": "607bd8192565fc2da0e51478492aacd94eedec8b22b975f3bb750938e1c70f8d",
+        "README.md": "62b851f5c6f9b75c1ed2967ff673c5729749c3b3fb8a312ce0417288055f490e",
         "THIRD_PARTY_NOTICES.md": "a9a51209cda01ba1022c93640797aba08ad586754fb3b587894b5f824a6357cd",
         "adapter.py": "32b37e06789c471e58f70041202c93fdb6f83948ccc912a48e8979cf425c5f47",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
@@ -2116,15 +2138,15 @@
         "runtime.json": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
         "uv.lock": "be7d089279b46ed9c42f4dffed872cb6e14649937926ad03ec98dd1399fa5f06"
       },
-      "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+      "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
       "core_dirty": false
     },
     "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
     "modes": {
       "early": {
         "status": "trace_verified",
-        "receipt": "early/receipt.json",
-        "result": "early/result.json",
+        "receipt": "rollout/receipt.json",
+        "result": "rollout/prefix-result.json",
         "success_count": 1,
         "macro_completion": 0.14437662425580566,
         "metrics": {
@@ -2142,13 +2164,12 @@
           "root_height_error_m": 0.014272340296377226,
           "root_yaw_correction_abs_rad": 0.4123003895079857,
           "yaw_alignment_degenerate_fraction": 0.0
-        },
-        "metric_scope": "observed_prefix"
+        }
       },
       "none": {
         "status": "trace_verified",
-        "receipt": "none/receipt.json",
-        "result": "none/result.json",
+        "receipt": "rollout/receipt.json",
+        "result": "rollout/result.json",
         "success_count": 1,
         "macro_completion": 0.14437662425580566,
         "metrics": {
@@ -2166,12 +2187,11 @@
           "root_height_error_m": 0.48184033506353685,
           "root_yaw_correction_abs_rad": 1.4276228474865127,
           "yaw_alignment_degenerate_fraction": 0.0
-        },
-        "metric_scope": "full_motion"
+        }
       }
     },
-    "finished_utc": "2026-10-23T17:26:23.760272+00:00",
-    "result": "result.json"
+    "result": "result.json",
+    "finished_utc": "2026-10-23T17:58:42.721145+00:00"
   },
   "repeatability": {
     "status": "passed",
@@ -2180,9 +2200,9 @@
     "modes": {
       "early": {
         "previous_result_sha256": "2e955c85ccdc6b5c407ea16929be03256a3f362908b73205056bfac75e975533",
-        "new_result_sha256": "49f5bd50b29f30347423d717ce74bbbafa77895bc0fee6575c9aa044392ef68e",
+        "new_result_sha256": "04340b08929d286f737907ed0fc32a287a54aa5c54290b2366b2a798029b4f90",
         "previous_receipt_sha256": "09bcf3c7f7ecef8af9351650cc3336f1fbc46ec9431560d04602c47b31e3958b",
-        "new_receipt_sha256": "b7e0da907de7d7e40766c938a0ade6eb149f5f8a2143403416002e7ee2971cce",
+        "new_receipt_sha256": "6d280634af1fdbae8eb6e23d7125fa74104f633508eb38c02e46af12b6c50c41",
         "previous_source": {
           "adapter_commit": "66ec1522d8f0d0d4bf5345e61f5be3dc92aecb2e",
           "adapter_dirty": false,
@@ -2205,14 +2225,14 @@
           "core_dirty": false
         },
         "new_source": {
-          "adapter_commit": "b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
+          "adapter_commit": "355ddfca2e565e35b320d61a62f5285ec71506e6",
           "adapter_dirty": false,
           "tracked_files_sha256": {
             ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
             ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
             ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
             "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
-            "README.md": "607bd8192565fc2da0e51478492aacd94eedec8b22b975f3bb750938e1c70f8d",
+            "README.md": "62b851f5c6f9b75c1ed2967ff673c5729749c3b3fb8a312ce0417288055f490e",
             "THIRD_PARTY_NOTICES.md": "a9a51209cda01ba1022c93640797aba08ad586754fb3b587894b5f824a6357cd",
             "adapter.py": "32b37e06789c471e58f70041202c93fdb6f83948ccc912a48e8979cf425c5f47",
             "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
@@ -2222,7 +2242,7 @@
             "runtime.json": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
             "uv.lock": "be7d089279b46ed9c42f4dffed872cb6e14649937926ad03ec98dd1399fa5f06"
           },
-          "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+          "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
           "core_dirty": false
         },
         "max_absolute_difference": 0.0,
@@ -2231,9 +2251,9 @@
       },
       "none": {
         "previous_result_sha256": "e8e88793ad9f20340859c348b11a6e9b128ef197ee7496fde1501839828f9ad4",
-        "new_result_sha256": "eca6e660f444621e3047fce76dca4e5b32f64b1ecd0e530981d81de79baeb945",
+        "new_result_sha256": "b1372a3bd5d08281179fb4c6d5303bbe355eec91b984d62689f31b3d8d37d0a5",
         "previous_receipt_sha256": "a9d2faf4eef97bcfb779f84e4bcfcda2c3533d42768d2ab1aa00fa5da1973a9f",
-        "new_receipt_sha256": "0628de2033563918451f272d6fb833ddf81e2af37083b33bd3c413f80cacbae5",
+        "new_receipt_sha256": "6d280634af1fdbae8eb6e23d7125fa74104f633508eb38c02e46af12b6c50c41",
         "previous_source": {
           "adapter_commit": "f9b6d4c1f21ac56150adaabbaf923b6abfced030",
           "adapter_dirty": false,
@@ -2256,14 +2276,14 @@
           "core_dirty": false
         },
         "new_source": {
-          "adapter_commit": "b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
+          "adapter_commit": "355ddfca2e565e35b320d61a62f5285ec71506e6",
           "adapter_dirty": false,
           "tracked_files_sha256": {
             ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
             ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
             ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
             "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
-            "README.md": "607bd8192565fc2da0e51478492aacd94eedec8b22b975f3bb750938e1c70f8d",
+            "README.md": "62b851f5c6f9b75c1ed2967ff673c5729749c3b3fb8a312ce0417288055f490e",
             "THIRD_PARTY_NOTICES.md": "a9a51209cda01ba1022c93640797aba08ad586754fb3b587894b5f824a6357cd",
             "adapter.py": "32b37e06789c471e58f70041202c93fdb6f83948ccc912a48e8979cf425c5f47",
             "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
@@ -2273,7 +2293,7 @@
             "runtime.json": "fb038f0d192e61d2453e1e280e0514dfcdeb5cfeb8bc17b663f1d07c4adc9296",
             "uv.lock": "be7d089279b46ed9c42f4dffed872cb6e14649937926ad03ec98dd1399fa5f06"
           },
-          "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+          "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
           "core_dirty": false
         },
         "max_absolute_difference": 0.0,
@@ -2283,16 +2303,16 @@
     }
   },
   "reproduction": {
-    "adapter_commit": "b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+    "adapter_commit": "355ddfca2e565e35b320d61a62f5285ec71506e6",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-twist2",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-twist2/tree/b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-twist2/tree/355ddfca2e565e35b320d61a62f5285ec71506e6",
+    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
     "commands": [
       "git clone https://github.com/motion-challenge-project/motion-challenge-twist2.git",
       "cd motion-challenge-twist2",
-      "git checkout b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
+      "git checkout 355ddfca2e565e35b320d61a62f5285ec71506e6",
       "git submodule update --init --recursive",
       "uv sync --locked",
       "uv run evaluate.py"
