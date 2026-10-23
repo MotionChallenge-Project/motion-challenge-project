@@ -52,7 +52,7 @@
       "links": [
         {
           "label": "Robot definition",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/5d23b6b31668ccd468a4d94d82099090c4d3aa73/robots/g1-29dof-cpu-v0.json"
+          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/robots/g1-29dof-cpu-v0.json"
         }
       ]
     },
@@ -76,7 +76,7 @@
           ],
           [
             "Torso tilt",
-            "Absolute difference between the Z components of unit gravity projected into actual and reference torso frames.",
+            "Difference in the torso’s inclination to gravity: compare the local Z component of unit gravity in the actual and reference torso frames.",
             "> {tilt:g} · dimensionless"
           ],
           [
@@ -89,25 +89,25 @@
       "notes": [
         "Any condition is sufficient. Threshold equality does not fail; a failure at the final timestamp still counts.",
         "Height is relative to the reference, not a minimum standing height. Lying down or touching the floor is not automatically a failure.",
-        "Gravity is g = (0, 0, −1). For local-to-world rotation R, projection is Rᵀg. The tilt check compares its Z components; the threshold is not an angle.",
+        "With local-to-world torso rotations R_actual and R_ref and unit gravity g = (0, 0, −1), tilt error is |(R_actualᵀg)_z − (R_refᵀg)_z|. It measures inclination to gravity, not yaw or the full relative rotation. Equal inclination can produce zero error even with different leaning directions.",
         "End effectors: {end_effectors}.",
-        "XY / yaw alignment applies to reporting only. No additional XY, yaw, contact or keybody-distance threshold affects success."
+        "No XY or yaw alignment is applied to success checks. The three alignments are used only for reporting tracking errors; they do not change success or completion."
       ]
     },
     {
       "id": "rollout-modes",
-      "title": "04 · Rollout modes",
+      "title": "04 · One rollout, two metric ranges",
       "table": {
         "headers": [
           "Rule",
-          "Early termination",
-          "No termination"
+          "Until first failure",
+          "Entire motion"
         ],
         "rows": [
           [
             "After first failure",
-            "Stop the rollout.",
-            "Keep running to the exact endpoint, with no reset or reference change."
+            "End this metric range after including the failure frame.",
+            "Continue the same rollout without resetting or changing the reference."
           ],
           [
             "Success",
@@ -127,18 +127,21 @@
         ]
       },
       "notes": [
-        "The two modes require separate runs using the same checkpoint. Prefix scores are never substituted for full-motion scores.",
+        "Success and completion use the first failure. All six MPBPE values share one checkpoint, source revision and trajectory; no mode switch or second rollout is needed.",
         "Invalid numerical states, inference errors and truncated smoke runs cannot produce a successful full-suite result."
       ],
       "links": [
         {
           "label": "Early-termination protocol",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/5d23b6b31668ccd468a4d94d82099090c4d3aa73/suites/lafan/protocol.mujoco317-v1.json"
+          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/suites/lafan/protocol.mujoco317-v1.json"
         },
         {
           "label": "No-termination protocol",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/5d23b6b31668ccd468a4d94d82099090c4d3aa73/suites/lafan/protocol.mujoco317-no-termination-v1.json"
+          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/suites/lafan/protocol.mujoco317-no-termination-v1.json"
         }
+      ],
+      "paragraphs": [
+        "One uv run evaluate.py command runs each motion through its exact endpoint. The core records the first failure, then derives both metric ranges from the same verified trajectory."
       ]
     },
     {
@@ -169,7 +172,7 @@
         ]
       },
       "paragraphs": [
-        "MPBPE is reported in both rollout modes under each alignment below: six distinct views of tracking accuracy."
+        "MPBPE is reported over both time ranges under each alignment below: six views of tracking accuracy from one trajectory."
       ],
       "notes": [
         "XY + yaw: remove pelvis XY translation and the closest relative world-Z rotation. Preserve absolute height and tilt.",
@@ -181,11 +184,11 @@
       "links": [
         {
           "label": "Alignment formulas",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/5d23b6b31668ccd468a4d94d82099090c4d3aa73/suites/lafan/protocol.mujoco317-v1.json"
+          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/suites/lafan/protocol.mujoco317-v1.json"
         },
         {
           "label": "Metric implementation",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/5d23b6b31668ccd468a4d94d82099090c4d3aa73/src/motion_challenge/metrics.py"
+          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/src/motion_challenge/metrics.py"
         }
       ]
     },
@@ -206,7 +209,7 @@
         },
         {
           "label": "Failure implementation",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/5d23b6b31668ccd468a4d94d82099090c4d3aa73/src/motion_challenge/physics.py"
+          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/src/motion_challenge/physics.py"
         }
       ]
     }
