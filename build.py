@@ -3,6 +3,10 @@ import json,html,shutil,os,re,hashlib
 import benchmark_pages
 import model_pages
 ROOT=Path(__file__).parent;D=ROOT/'docs';D.mkdir(exist_ok=True)
+# These folders contain only generated pages and exported evidence.
+for generated in ('models','evaluations','data/evidence'):
+ path=D/generated
+ if path.exists():shutil.rmtree(path)
 GH='https://github.com/motion-challenge-project'
 BASE=os.environ.get('SITE_BASE_PATH','/motion-challenge-project').rstrip('/')
 SITE_URL='https://motion-challenge-project.github.io'+BASE

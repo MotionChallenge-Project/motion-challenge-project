@@ -1,99 +1,4 @@
 {
-  "grit": {
-    "organization": "GRIT Team",
-    "organization_source": "https://github.com/mrzuang/GRIT_teleop_deploy",
-    "runtime": {
-      "id": "grit-g1-development-v1",
-      "entrypoint": "adapter:create",
-      "control_period_s": 0.02,
-      "reference_step_s": 0.02,
-      "reference_steps": [
-        0,
-        2,
-        3,
-        5,
-        7,
-        8,
-        10,
-        12,
-        13
-      ],
-      "reference_offsets_s": [
-        0.0,
-        0.04,
-        0.06,
-        0.1,
-        0.14,
-        0.16,
-        0.2,
-        0.24,
-        0.26
-      ],
-      "reference_history_s": 0,
-      "reference_preview_s": 0.26,
-      "state_access": "privileged-state-v0",
-      "action_mode": "joint-pd-feedforward",
-      "inference_config": "policy.json",
-      "inference_config_sha256": "b15f84e0669c3d1e9046699c7ec9b37a76100d002c4086c21de6a0e4aad0c6ee",
-      "weights": "checkpoints/policy.onnx",
-      "weights_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
-      "virtual_bodies": {
-        "left_toe_link": {
-          "parent": "left_ankle_roll_link",
-          "position_parent_m": [
-            0.1,
-            0.0,
-            -0.02
-          ]
-        },
-        "right_toe_link": {
-          "parent": "right_ankle_roll_link",
-          "position_parent_m": [
-            0.1,
-            0.0,
-            -0.02
-          ]
-        }
-      },
-      "provenance_status": "author-inference review in progress",
-      "official": false,
-      "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
-      "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
-      "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx"
-    },
-    "provenance": {
-      "model": "grit",
-      "submitter": "Motion Challenge",
-      "submission_type": "maintainer reproduction, not author submission",
-      "upstream": "https://github.com/mrzuang/GRIT_teleop_deploy",
-      "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
-      "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
-      "author_inference_review": "pending",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
-      "checkpoint_origin": {
-        "author_release_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/README.md",
-        "author_release_label": "mrzuang/GRIT_teleop_deploy",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
-        "original_filename": "sim2real/checkpoints/policy.onnx",
-        "verification": "Downloaded directly from the pinned author repository. Its SHA256 exactly matches both the author checksum and the former Drive mirror; the evaluated bytes are unchanged.",
-        "download_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
-        "sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9"
-      }
-    },
-    "repository_available": true,
-    "version": "99k \u00b7 39d573e9",
-    "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
-    "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
-    "family": "grit",
-    "display_name": "GRIT 99k",
-    "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
-    ]
-  },
   "heft": {
     "organization": "Tsinghua / RobotEra / SQZ",
     "organization_source": "https://heft.axell.top/",
@@ -364,7 +269,7 @@
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "fcb8d4d8e96af9535c2adcc2b53e267019f865a2",
       "checkpoint_sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe",
-      "author_inference_review": "pending",
+      "author_inference_review": "Native-source parity passed: 160 cases and 4 resets; observation, recurrent inference, cache rollover and motor targets.",
       "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
       "legacy_results": "not transferable to this adapter revision without rerunning",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
@@ -378,7 +283,9 @@
         "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
         "download_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/exported/model_14000.onnx",
         "sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe"
-      }
+      },
+      "inference_validation": "validation/native-parity.json",
+      "native_validation_source_commit": "5b51cc24eff71b67fe7e5acd539c06329137dc80"
     },
     "repository_available": true,
     "version": "v1.4.0 \u00b7 14k",
@@ -386,87 +293,6 @@
     "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
     "family": "holomotion",
     "display_name": "HoloMotion v1.4.0",
-    "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
-    ]
-  },
-  "humanoid-gpt": {
-    "organization": "Galaxy General Robotics",
-    "organization_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
-    "runtime": {
-      "id": "humanoid-gpt-g1-development-v1",
-      "entrypoint": "adapter:create",
-      "control_period_s": 0.02,
-      "reference_step_s": 0.02,
-      "reference_steps": [
-        0,
-        1
-      ],
-      "reference_offsets_s": [
-        0.0,
-        0.02
-      ],
-      "reference_history_s": 0,
-      "reference_preview_s": 0.02,
-      "state_access": "privileged-state-v0",
-      "action_mode": "joint-pd-feedforward",
-      "inference_config": "policy.json",
-      "inference_config_sha256": "78803b1126d2867f9b3e852ba32e37ce956962fe7df66922d2ea6462d6ef32ed",
-      "weights": "checkpoints/policy.onnx",
-      "weights_sha256": "1ca1f475dc647afb736f4cdbd55d45103c36b7f5059d830b05d6aef3a5fc3a1e",
-      "virtual_bodies": {
-        "left_toe_link": {
-          "parent": "left_ankle_roll_link",
-          "position_parent_m": [
-            0.1,
-            0.0,
-            -0.02
-          ]
-        },
-        "right_toe_link": {
-          "parent": "right_ankle_roll_link",
-          "position_parent_m": [
-            0.1,
-            0.0,
-            -0.02
-          ]
-        }
-      },
-      "provenance_status": "author-inference review in progress",
-      "official": false,
-      "source_repository": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
-      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
-      "weights_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx"
-    },
-    "provenance": {
-      "model": "humanoid-gpt",
-      "submitter": "Motion Challenge",
-      "submission_type": "maintainer reproduction, not author submission",
-      "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
-      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
-      "checkpoint_sha256": "1ca1f475dc647afb736f4cdbd55d45103c36b7f5059d830b05d6aef3a5fc3a1e",
-      "author_inference_review": "pending",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
-      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
-      "checkpoint_origin": {
-        "author_release_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md",
-        "author_release_label": "GalaxyGeneralRobotics/Humanoid-GPT",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx",
-        "original_filename": "pns_wo_priv216.onnx",
-        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
-        "download_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx",
-        "sha256": "1ca1f475dc647afb736f4cdbd55d45103c36b7f5059d830b05d6aef3a5fc3a1e"
-      }
-    },
-    "repository_available": true,
-    "version": "PNS wo-priv216",
-    "version_kind": "author checkpoint filename",
-    "version_source": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx",
-    "family": "humanoid-gpt",
-    "display_name": "Humanoid-GPT PNS216",
     "supported_robots": [
       "Unitree G1 \u00b7 29 DoF"
     ]

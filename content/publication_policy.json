@@ -19,6 +19,14 @@
       "reason": "Motion Challenge exported the actor/backward map from the original safetensors checkpoint. The public conversion chain is incomplete and the configured release download currently returns 404; results are withheld.",
       "evaluate": false,
       "publish_results": false
+    },
+    "humanoid-gpt": {
+      "reason": "Full-motion MuJoCo 3.17 batch rollout triggers numerical reset; no valid unified LAFAN40 result. Kept for native-inference diagnosis, without a public ranking.",
+      "evaluate": true,
+      "publish_results": false
     }
+  },
+  "required_adapter_commits": {
+    "grit": "6f04b73653abe8a819cd19245b869b72f5d81b36"
   }
 }
