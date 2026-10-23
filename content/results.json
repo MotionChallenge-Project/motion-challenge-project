@@ -1,5 +1,5 @@
 {
-  "generated_unix": 1792792343.3705394,
+  "generated_unix": 1792792774.397853,
   "rows": [
     {
       "model": "holomotion",
@@ -270,51 +270,6 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "teleopit.mujoco317.unified.json"
-    },
-    {
-      "model": "twist2",
-      "adapter_commit": "355ddfca2e565e35b320d61a62f5285ec71506e6",
-      "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-      "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-twist2",
-      "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-twist2/tree/355ddfca2e565e35b320d61a62f5285ec71506e6",
-      "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-      "passed": 1,
-      "total": 40,
-      "completion_pct": 14.437662425580566,
-      "joint_mae_rad": 0.09019696326358734,
-      "root_position_error_m": 1.01894465875452,
-      "root_orientation_error_rad": 0.4388226884139838,
-      "mpjpe_world_m": 1.0268505593378596,
-      "mpjpe_root_relative_world_axes_m": 0.07095142703100935,
-      "anchor_height_error_m": 0.014390693144532233,
-      "anchor_gravity_z_error": 0.014610647522149777,
-      "end_effector_height_error_m": 0.04121859284457142,
-      "mpjpe_xy_aligned_m": 0.07506430681816051,
-      "mpjpe_xy_yaw_aligned_m": 0.03503340685411896,
-      "root_xy_error_m": 1.01760599590768,
-      "root_height_error_m": 0.014272340296377226,
-      "root_yaw_correction_abs_rad": 0.4123003895079857,
-      "yaw_alignment_degenerate_fraction": 0.0,
-      "full_joint_mae_rad": 0.3506465682870762,
-      "full_root_position_error_m": 4.217981997641258,
-      "full_root_orientation_error_rad": 1.935486125529014,
-      "full_mpjpe_world_m": 4.200315268700922,
-      "full_mpjpe_root_relative_world_axes_m": 0.39437245193862136,
-      "full_anchor_height_error_m": 0.5156050088491445,
-      "full_anchor_gravity_z_error": 0.8080396879497099,
-      "full_end_effector_height_error_m": 0.4984014661629512,
-      "full_mpjpe_xy_aligned_m": 0.5634834124377986,
-      "full_mpjpe_xy_yaw_aligned_m": 0.5186115639253203,
-      "full_root_xy_error_m": 4.162399666952623,
-      "full_root_height_error_m": 0.48184033506353685,
-      "full_root_yaw_correction_abs_rad": 1.4276228474865127,
-      "full_yaw_alignment_degenerate_fraction": 0.0,
-      "verification": "trace_consistent_and_repeatable",
-      "termination_mode": "unified",
-      "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
-      "mujoco_version": "3.17.0",
-      "track_id": "lafan40-g1-mujoco317-v1",
-      "evidence_file": "twist2.mujoco317.unified.json"
     }
   ]
 }
