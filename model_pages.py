@@ -70,7 +70,7 @@ def render(models, rows, tracks, content, github, page, intro):
             if origin.get('verification_url'):
                 detail += link(origin['verification_url'], 'Checkpoint comparison ↗', 'text-link')
         detail += ''.join('<p class="small">' + esc(note) + '</p>' for note in model.get('artifact_notes', []))
-        detail += '<p class="small">Download links deliver the adapter files. The author release above establishes their origin; SHA256 identifies the bytes used.</p>'
+        detail += '<p class="small">Download links deliver the adapter files. The release links and verification notes distinguish author files from conversions; SHA256 identifies the bytes used.</p>'
         for name, url, sha in artifacts:
             detail += f'<div class="artifact-row"><div>{esc(name)}<br>{link(url, "Download ↗")}</div><code>{esc(sha)}</code></div>'
         detail += '</section><section class="section split"><div><h2>Inference interface</h2><p>The adapter declares its control clock and reference window below. Source and configuration describe the observation and action transforms.</p><div class="actions">'
