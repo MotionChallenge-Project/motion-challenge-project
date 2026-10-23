@@ -1,5 +1,5 @@
 {
-  "generated_unix": 1792754585.3631759,
+  "generated_unix": 1792754641.5227466,
   "rows": [
     {
       "model": "any2track-v2",
@@ -204,6 +204,40 @@
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "humanoid-gpt.mujoco317.json",
       "first_failure_s": 4.3199999999997445
+    },
+    {
+      "model": "mimic-lite",
+      "adapter_commit": "d9d568dfd31f5f16a642638cc7da199e4c20154b",
+      "core_commit": "7ba33e4d355d51ad46ecc0737558750362b478a7",
+      "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-mimic-lite",
+      "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-mimic-lite/tree/d9d568dfd31f5f16a642638cc7da199e4c20154b",
+      "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/7ba33e4d355d51ad46ecc0737558750362b478a7",
+      "passed": 15,
+      "total": 40,
+      "completion_pct": 61.45962647150826,
+      "joint_mae_rad": 0.06831800400904454,
+      "root_position_error_m": 0.31335161726490884,
+      "root_orientation_error_rad": 0.08614209307004832,
+      "mpjpe_world_m": 0.31560013169910867,
+      "mpjpe_root_relative_world_axes_m": 0.025768229175296177,
+      "anchor_height_error_m": 0.011476128708612516,
+      "anchor_gravity_z_error": 0.011955833048534622,
+      "end_effector_height_error_m": 0.03491734201562639,
+      "mpjpe_xy_aligned_m": 0.029518410412138645,
+      "mpjpe_xy_yaw_aligned_m": 0.02860553251735179,
+      "root_xy_error_m": 0.31240978859850926,
+      "root_height_error_m": 0.011327755279088131,
+      "root_yaw_correction_abs_rad": 0.03688920766675609,
+      "yaw_alignment_degenerate_fraction": 0.0,
+      "verification": "trace_consistent",
+      "termination_mode": "early_termination",
+      "metric_scope": "observed_prefix",
+      "protocol_id": null,
+      "checkpoint_sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b",
+      "mujoco_version": "3.17.0",
+      "track_id": "lafan40-g1-mujoco317-v1",
+      "evidence_file": "mimic-lite.mujoco317.json",
+      "first_failure_s": 3.3199999999998546
     },
     {
       "model": "protomotions",
