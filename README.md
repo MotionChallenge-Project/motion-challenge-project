@@ -1,12 +1,11 @@
-# Motion Challenge
+![Motion Challenge — Measure motion. Make it reproducible.](assets/banner.svg)
 
-Open, reproducible benchmarks for motion controllers.
+<p align="center">
+  <a href="https://motion-challenge-project.github.io/motion-challenge-project/leaderboard/">🏆 <b>Leaderboard</b></a> &nbsp; · &nbsp;
+  <a href="https://github.com/motion-challenge-project/motion-challenge">⚙️ <b>Evaluation core</b></a> &nbsp; · &nbsp;
+  <a href="https://motion-challenge-project.github.io/motion-challenge-project/models/">🤖 <b>Models</b></a>
+</p>
 
-**[Website & leaderboard](https://motion-challenge-project.github.io/motion-challenge-project)** · **[Evaluation core](https://github.com/motion-challenge-project/motion-challenge)** · **[Model directory](https://motion-challenge-project.github.io/motion-challenge-project/models/)**
+<p align="center">Open benchmarks for motion controllers.<br>📏 Shared rules &nbsp; · &nbsp; 🔍 Public code &nbsp; · &nbsp; 🔁 Reproducible evaluation</p>
 
-A shared evaluation core and independent model adapters. Compare full-motion success,
-completion and tracking accuracy across clearly identified datasets, robots and protocols.
-Open code, pinned checkpoints and per-motion evidence make results inspectable and reproducible.
-
-To participate, bring a checkpoint, preserve its author's inference behavior, and add an adapter.
-[Run or contribute a model →](https://motion-challenge-project.github.io/motion-challenge-project/submit/)
+<p align="center">Compare success, completion and tracking accuracy.<br>Bring a checkpoint. Keep its native inference. <a href="https://motion-challenge-project.github.io/motion-challenge-project/submit/">Join the benchmark →</a></p>
