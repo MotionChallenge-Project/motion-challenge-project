@@ -450,5 +450,393 @@
     "supported_robots": [
       "Unitree G1 \u00b7 29 DoF"
     ]
+  },
+  "twist2": {
+    "organization": "Amazon FAR",
+    "organization_source": "https://github.com/amazon-far/TWIST2",
+    "runtime": {
+      "id": "twist2-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.01,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0
+      ],
+      "reference_offsets_s": [
+        0.0
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.0,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "57d7d9c1f4b793ccf076f0260c9d249a7cdb99560814b7f0f4ad316f7655b17a",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference parity passed",
+      "official": false,
+      "source_repository": "https://github.com/amazon-far/TWIST2",
+      "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
+      "weights_url": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx"
+    },
+    "provenance": {
+      "model": "twist2",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/amazon-far/TWIST2",
+      "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
+      "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
+      "author_inference_review": "passed: 160 cases, 4 resets, original command/observation/history, ONNX, action clipping and PD gains",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/amazon-far/TWIST2/blob/b06178f19a22f2138cbd31f60c6d494bc263f67d/README.md",
+        "author_release_label": "amazon-far/TWIST2",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://github.com/amazon-far/TWIST2/blob/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
+        "original_filename": "twist2_1017_20k.onnx",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
+        "sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061"
+      },
+      "native_validation": "validation/native-parity.json",
+      "correction": "Wrist PD gains match the original author sim2sim release: Kp 4 and Kd 0.2, replacing 40 and 5. Full benchmark rerun is required."
+    },
+    "repository_available": true,
+    "version": "1017 \u00b7 20k",
+    "version_kind": "author checkpoint filename",
+    "version_source": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
+    "family": "twist2",
+    "display_name": "TWIST2 1017-20k",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ]
+  },
+  "grit": {
+    "organization": "GRIT Team",
+    "organization_source": "https://github.com/mrzuang/GRIT_teleop_deploy",
+    "runtime": {
+      "id": "grit-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        13
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.04,
+        0.06,
+        0.1,
+        0.14,
+        0.16,
+        0.2,
+        0.24,
+        0.26
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.26,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "79fcb076d49b8989c587cbbf5589d2073e5d3ecf785ad92025859b7a7fa94fac",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "native-source inference parity passed",
+      "official": false,
+      "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
+      "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+      "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx"
+    },
+    "provenance": {
+      "model": "grit",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/mrzuang/GRIT_teleop_deploy",
+      "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+      "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+      "author_inference_review": "Passed native observation, history/reset, ONNX and motor-target comparison: 160 cases, 4 resets, plus out-of-range raw-action conversion.",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/README.md",
+        "author_release_label": "mrzuang/GRIT_teleop_deploy",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+        "original_filename": "sim2real/checkpoints/policy.onnx",
+        "verification": "Downloaded directly from the pinned author repository. Its SHA256 exactly matches both the author checksum and the former Drive mirror; the evaluated bytes are unchanged.",
+        "download_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+        "sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9"
+      },
+      "inference_validation": "validation/native-parity.json",
+      "corrections": [
+        {
+          "reason": "Removed adapter-only action clipping at +/-10; the pinned author action path does not clip raw output.",
+          "evidence": "validation/before-correction.json",
+          "effect": "Complete evaluations are rerun under this source revision; old scores are not inherited."
+        }
+      ]
+    },
+    "repository_available": true,
+    "version": "99k \u00b7 39d573e9",
+    "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
+    "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
+    "family": "grit",
+    "display_name": "GRIT 99k",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ]
+  },
+  "heft": {
+    "organization": "Tsinghua / RobotEra / SQZ",
+    "organization_source": "https://heft.axell.top/",
+    "runtime": {
+      "id": "heft-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        -16,
+        -12,
+        -8,
+        -4,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "reference_offsets_s": [
+        -0.32,
+        -0.24,
+        -0.16,
+        -0.08,
+        -0.04,
+        -0.02,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12
+      ],
+      "reference_history_s": 0.32,
+      "reference_preview_s": 0.12,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "a7ca0ceb7d5c0ee31dc901b1ab4beb40546dcd21f46809456438f9e64fc3528e",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference parity passed",
+      "official": false,
+      "source_repository": "https://github.com/Axellwppr/motion_tracking",
+      "source_commit": "0d5ba31e33397f3543d350d98b637e26d92f470a",
+      "weights_url": "https://drive.usercontent.google.com/download?id=1yZybFGcaU77QMi24Syc7iXaTlzdLpWkA&export=download"
+    },
+    "provenance": {
+      "model": "heft",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/Axellwppr/motion_tracking",
+      "source_commit": "0d5ba31e33397f3543d350d98b637e26d92f470a",
+      "checkpoint_sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
+      "author_inference_review": "passed: 160 observation/action cases, 4 resets, original author ONNX and synthetic clipped-action history",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/Axellwppr/motion_tracking/blob/0d5ba31e33397f3543d350d98b637e26d92f470a/README.md",
+        "author_release_label": "Axellwppr/motion_tracking",
+        "kind": "verified_input_wrapper",
+        "kind_label": "Author weights with verified input wrapper",
+        "artifact_page_url": "https://github.com/Axellwppr/motion_tracking/tree/0d5ba31e33397f3543d350d98b637e26d92f470a/sim2real/config/g1/ckpts/G1_PMG",
+        "original_filename": "G1_PMG/policy.onnx + policy.onnx.data",
+        "verification": "The distributed single-file ONNX adds one input Concat. All 33 initializer tensors and all 29 native graph nodes are preserved exactly; action outputs matched on 100 random input cases (maximum absolute error 0). This checks the checkpoint wrapper, not full controller/reset parity.",
+        "download_url": "https://drive.usercontent.google.com/download?id=1yZybFGcaU77QMi24Syc7iXaTlzdLpWkA&export=download",
+        "sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
+        "verification_url": "https://github.com/motion-challenge-project/motion-challenge-heft/blob/main/validation/checkpoint-origin.json"
+      },
+      "native_validation": "validation/native-parity.json",
+      "correction": "Previous adapter stored unclipped raw actions in history. The author stores clipped actions; this revision follows that contract. Full benchmark rerun is required."
+    },
+    "repository_available": true,
+    "version": "SHA 192aaacc",
+    "version_kind": "checkpoint SHA256; author version not verified",
+    "version_source": "https://github.com/Axellwppr/motion_tracking",
+    "family": "heft",
+    "display_name": "HEFT PMG",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ]
+  },
+  "mimic-lite": {
+    "organization": "RoboParty",
+    "organization_source": "https://github.com/Roboparty/MimicLite",
+    "runtime": {
+      "id": "mimic-lite-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        -8,
+        -4,
+        -2,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "reference_offsets_s": [
+        -0.16,
+        -0.08,
+        -0.04,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08
+      ],
+      "reference_history_s": 0.16,
+      "reference_preview_s": 0.08,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "05f0211249ba531cf7382559a3a27e0fbefbbfbb51da131e417c9a24a6e6aec4",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference parity passed",
+      "official": false,
+      "source_repository": "https://github.com/EGalahad/mimic-lite",
+      "source_commit": "3253810ce21dbcc05d8f4942a017ea3eaffc6cf1",
+      "weights_url": "https://drive.usercontent.google.com/download?id=1UsdiBBQuhFcLSXvITjjhuSY-vhMrxYuy&export=download",
+      "author_inference_repository": "https://github.com/EGalahad/sim2real",
+      "author_inference_commit": "287ac157e6a7143340da7a9fc2fa5ff552031bc8"
+    },
+    "provenance": {
+      "model": "mimic-lite",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/EGalahad/mimic-lite",
+      "source_commit": "3253810ce21dbcc05d8f4942a017ea3eaffc6cf1",
+      "checkpoint_sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b",
+      "author_inference_review": "passed: 160 cases, 4 resets, near-vertical heading fallback and raw action target",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/EGalahad/mimic-lite/blob/3253810ce21dbcc05d8f4942a017ea3eaffc6cf1/README.md",
+        "author_release_label": "EGalahad/mimic-lite",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://drive.google.com/drive/folders/1xRmcOX0l-YIpqxUuCmW4s6Dl0HStbJSL",
+        "original_filename": "PPO / policy.onnx",
+        "verification": "The author README links this PPO Drive folder, whose recorded listing contains the exact policy file ID used by the adapter. The download host is Google Drive, not a separate model publisher.",
+        "download_url": "https://drive.usercontent.google.com/download?id=1UsdiBBQuhFcLSXvITjjhuSY-vhMrxYuy&export=download",
+        "sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b"
+      },
+      "author_inference_repository": "https://github.com/EGalahad/sim2real",
+      "author_inference_commit": "287ac157e6a7143340da7a9fc2fa5ff552031bc8",
+      "native_validation": "validation/native-parity.json",
+      "correction": "Use the author horizontal x-axis heading with signed z-axis fallback near vertical poses, replacing quaternion w/z projection. Full benchmark rerun is required."
+    },
+    "repository_available": true,
+    "version": "SHA 031b8d67",
+    "version_kind": "checkpoint SHA256; author version not verified",
+    "version_source": "https://github.com/EGalahad/mimic-lite",
+    "family": "mimic-lite",
+    "display_name": "MimicLite 031b8d67",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ]
   }
 }
