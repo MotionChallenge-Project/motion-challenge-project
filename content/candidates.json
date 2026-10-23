@@ -1,0 +1,284 @@
+[
+  {
+    "id": "teleopit",
+    "label": "TeleopIT",
+    "organization": "Not listed",
+    "upstream": "https://github.com/BotRunner64/Teleopit",
+    "project_url": "https://botrunner64.github.io/Teleopit/",
+    "source_commit": "f9263865c581802ad531854b8e547e2403a945f3",
+    "architecture": "Temporal history controller",
+    "artifacts": [
+      {
+        "name": "track_g1.onnx",
+        "url": "https://huggingface.co/12e21/Teleopit-models/resolve/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx",
+        "sha256": "1ebd341d9193e1c49a986450f6043ba1a9473ad46636ce0bcb1c7755c856e0de"
+      }
+    ],
+    "notes": "The released base G1 29DoF policy is paired with g1_29dof.xml. Neck and hand variants use separate checkpoints.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23",
+    "family": "teleopit",
+    "version": "track_g1 · 1ebd341d",
+    "version_kind": "author checkpoint or pinned source revision"
+  },
+  {
+    "id": "omnixtreme",
+    "label": "OmniXtreme",
+    "organization": "BIGAI / Unitree & collaborators",
+    "upstream": "https://github.com/Perkins729/OmniXtreme",
+    "project_url": "https://extreme-humanoid.github.io/",
+    "source_commit": "6f2716d1b1d1132d513d86beb2193f5b18f11fcd",
+    "architecture": "Flow base policy + residual controller",
+    "artifacts": [
+      {
+        "name": "base_policy_trt.onnx",
+        "url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/base_policy_trt.onnx"
+      },
+      {
+        "name": "residual_policy.onnx",
+        "url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/residual_policy.onnx"
+      },
+      {
+        "name": "fk_trt.onnx",
+        "url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/fk_trt.onnx"
+      }
+    ],
+    "notes": "The author deployment specifies 29 actuated joints and three ONNX components. Adaptation must preserve the base/residual composition and native action processing.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23",
+    "family": "omnixtreme",
+    "version": "commit 6f2716d",
+    "version_kind": "author checkpoint or pinned source revision"
+  },
+  {
+    "id": "pmt-flat",
+    "label": "PMT · Flat MLP",
+    "organization": "Mondo Robotics / HKUST & collaborators",
+    "upstream": "https://github.com/Mondo-Robotics/PMT",
+    "project_url": "https://acodedog.github.io/perceptive-bfm/",
+    "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+    "architecture": "ActorCritic MLP · 20k update checkpoint",
+    "artifacts": [
+      {
+        "name": "multimotionv2_flat.pt",
+        "url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
+        "sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26"
+      }
+    ],
+    "notes": "This entry identifies the flat-ground multi-motion MLP released by the PMT project. It is separate from its perceptive terrain policy.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23",
+    "family": "pmt",
+    "version": "Flat MLP · 20k",
+    "version_kind": "author checkpoint or pinned source revision"
+  },
+  {
+    "id": "pmt-rgmt",
+    "label": "PMT · RGMT",
+    "organization": "Mondo Robotics / HKUST & collaborators",
+    "upstream": "https://github.com/Mondo-Robotics/PMT",
+    "project_url": "https://github.com/Mondo-Robotics/PMT/blob/main/checkpoints/pretrained/README.md",
+    "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+    "architecture": "TransformerActorCritic · 20k update checkpoint",
+    "artifacts": [
+      {
+        "name": "rgmt_flat.pt",
+        "url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/rgmt_flat.pt",
+        "sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12"
+      }
+    ],
+    "notes": "A distinct transformer checkpoint from the same PMT release. It is attributed to the PMT implementation and is not presented as an independent author submission by another project.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23",
+    "family": "pmt",
+    "version": "RGMT · 20k",
+    "version_kind": "author checkpoint or pinned source revision"
+  },
+  {
+    "id": "ufo",
+    "label": "UFO · G1 FB",
+    "organization": "RoboParty",
+    "upstream": "https://github.com/Roboparty/UFO",
+    "project_url": "https://roboparty.github.io/UFO/",
+    "source_commit": "4f1a6f6d31a8e62fb0baef6c7ad0b110d7c3fb82",
+    "architecture": "Forward-backward behavioral model",
+    "artifacts": [
+      {
+        "name": "FBcprAuxModel.onnx",
+        "url": "https://huggingface.co/xuewang/ufo-g1-policy/resolve/da3727034a058eae588a16af142764ee34bdada4/g1_policy/exported/FBcprAuxModel.onnx",
+        "sha256": "fe58bf17427679a0f0a22ad5f05d7579373a365936154770f31e815e8f0e4ad7"
+      },
+      {
+        "name": "backward_encoder.onnx",
+        "url": "https://huggingface.co/xuewang/ufo-g1-policy/resolve/da3727034a058eae588a16af142764ee34bdada4/g1_policy/exported/backward_encoder.onnx",
+        "sha256": "4333441ba4a393f9493545f5c8a706fa912e8ec358dae1c05c09e31aaae00d4b"
+      }
+    ],
+    "notes": "Official G1 release with a 29-joint control order, actor ONNX and backward encoder. Tracking latents must be computed from each supplied reference using the author inference procedure.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23",
+    "family": "ufo",
+    "version": "G1 FB · fe58bf17",
+    "version_kind": "author checkpoint or pinned source revision"
+  },
+  {
+    "id": "sonic-v1-1",
+    "label": "SONIC",
+    "version": "v1.1",
+    "version_kind": "author release",
+    "family": "sonic",
+    "organization": "NVIDIA",
+    "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+    "project_url": "https://huggingface.co/nvidia/GEAR-SONIC",
+    "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
+    "architecture": "Universal-token encoder + decoder",
+    "notes": "Official NVIDIA release with heading-normalized references and wrist-pose augmentation. Its observation configuration and deployment gains must be preserved. Distinct weights within the SONIC family.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23",
+    "artifacts": [
+      {
+        "name": "sonic_v1_1/model_decoder.onnx",
+        "url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/model_decoder.onnx",
+        "sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509",
+        "size_bytes": 149778638
+      },
+      {
+        "name": "sonic_v1_1/model_encoder.onnx",
+        "url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/model_encoder.onnx",
+        "sha256": "fb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae",
+        "size_bytes": 50117796
+      }
+    ],
+    "artifact_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+    "config_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/observation_config.yaml"
+  },
+  {
+    "id": "sonic-low-latency",
+    "label": "SONIC",
+    "version": "Low-Latency · 2026-06-16",
+    "version_kind": "author release",
+    "family": "sonic",
+    "organization": "NVIDIA",
+    "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+    "project_url": "https://huggingface.co/nvidia/GEAR-SONIC",
+    "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
+    "architecture": "Universal-token encoder + decoder",
+    "notes": "Official NVIDIA low-latency release with shorter reference context. Reference offsets must follow the selected G1 observation configuration. Distinct weights within the SONIC family.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23",
+    "artifacts": [
+      {
+        "name": "low_latency/model_decoder.onnx",
+        "url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/model_decoder.onnx",
+        "sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab",
+        "size_bytes": 149763762
+      },
+      {
+        "name": "low_latency/model_encoder.onnx",
+        "url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/model_encoder.onnx",
+        "sha256": "60be43157f57d812f38bdbb740a5de5d5d070e8840d9edc16f02a91a6d06255b",
+        "size_bytes": 45933505
+      }
+    ],
+    "artifact_revision": "6733128a3d8a523b1418b06bca3cdf61c8b0987f",
+    "config_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/observation_config.yaml"
+  },
+  {
+    "id": "holomotion-v1-4-1",
+    "label": "HoloMotion",
+    "version": "v1.4.1 · 16.2k",
+    "version_kind": "author release",
+    "family": "holomotion",
+    "organization": "Horizon Robotics",
+    "upstream": "https://github.com/HorizonRobotics/HoloMotion",
+    "project_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
+    "source_commit": "cf2018a282249a04df1db4fa639760884f97b41b",
+    "architecture": "Released G1 motion-tracking policy",
+    "notes": "Official G1 29DoF motion-tracking release; configuration declares 29 actions. This checkpoint is separate from the v1.4.0 checkpoint already evaluated.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23",
+    "artifacts": [
+      {
+        "name": "HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
+        "url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
+        "sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7",
+        "size_bytes": 1640343676
+      }
+    ],
+    "artifact_revision": "e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a",
+    "config_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/config.yaml"
+  },
+  {
+    "id": "holomotion-v2-0-0",
+    "label": "HoloMotion",
+    "version": "v2.0.0 · 10.5k",
+    "version_kind": "author release",
+    "family": "holomotion",
+    "organization": "Horizon Robotics",
+    "upstream": "https://github.com/HorizonRobotics/HoloMotion",
+    "project_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
+    "source_commit": "ebb3747ad3b6dab57e4b621611efef87317bdc3b",
+    "architecture": "Released G1 motion-tracking policy",
+    "notes": "Official G1 29DoF release with link-command modes. Its reference interface requires a separate adaptation; v1.4 results do not transfer to this checkpoint.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23",
+    "artifacts": [
+      {
+        "name": "HoloMotion_motion_tracking_model_v2.0.0/exported/model_10500.onnx",
+        "url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/exported/model_10500.onnx",
+        "sha256": "b0681976135eed572d1d20aefc52ec65c149bdc636f2594a6436fa7136a3fc86",
+        "size_bytes": 1647887681
+      }
+    ],
+    "artifact_revision": "e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a",
+    "config_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/config.yaml"
+  },
+  {
+    "id": "any2track-v2",
+    "label": "Any2Track / OpenTrack",
+    "version": "LAFAN1 generalist v2",
+    "version_kind": "author release",
+    "family": "any2track",
+    "organization": "Galbot / Tsinghua",
+    "upstream": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
+    "project_url": "https://zzk273.github.io/Any2Track/",
+    "source_commit": "cb9b751993a2483e5d1805a2565ddbfe950c04c9",
+    "architecture": "DAgger generalist · MLP · 29 actions",
+    "artifacts": [
+      {
+        "name": "general_tracker_lafan1_v2/model.onnx",
+        "url": "https://drive.usercontent.google.com/download?id=1XG_-GP5svz_4TGh484X900dbctibZGAm&export=download",
+        "sha256": "1320bddd4b981876e84243c0d336c8eaef57e202499b694cfbdc626fab3972c1",
+        "size_bytes": 8588031
+      },
+      {
+        "name": "general_tracker_lafan1_v2/config.json",
+        "url": "https://drive.usercontent.google.com/download?id=1eQctJ9-pdzcEIDuQyb_2U0GSjz1BRfWX&export=download",
+        "sha256": "3dac8c821f0b2326fc1644a8d4626e84a27b23cf74762f7d04881bf8b7082c86"
+      }
+    ],
+    "notes": "Official generalist v2 distilled from eight teachers. The downloaded configuration declares 156 observations and 29 actions. It was trained on all 40 LAFAN1 motions using a different retargeting pipeline; this is a known-data tracking comparison, not an unseen-motion generalization claim. Author-reported 40/40 uses the author setup and is not a Motion Challenge score.",
+    "robot_id": "g1-29dof",
+    "benchmark_id": "lafan40",
+    "status": "Public checkpoint; adapter integration pending",
+    "checked_date": "2026-10-23"
+  }
+]

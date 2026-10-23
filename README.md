@@ -1,12 +1,12 @@
-# Motion Challenge
+# Motion Challenge website
 
-Open, reproducible benchmarks for motion controllers.
+[Website & leaderboard](https://motion-challenge-project.github.io/motion-challenge-project/) · [Evaluation core](https://github.com/motion-challenge-project/motion-challenge)
 
-**[Website & leaderboard](https://motion-challenge-project.epiccabin1025.chatgpt.site)** · **[Evaluation core](https://github.com/motion-challenge-project/motion-challenge)** · **[Model directory](https://motion-challenge-project.epiccabin1025.chatgpt.site/models/)**
+```sh
+python3 build.py
+python3 -m http.server 8768 --directory docs
+```
 
-A shared evaluation core and independent model adapters. Compare full-motion success,
-completion and tracking accuracy across clearly identified datasets, robots and protocols.
-Open code, pinned checkpoints and per-motion evidence make results inspectable and reproducible.
+GitHub Pages serves `website:/docs`. Build with `SITE_BASE_PATH=''` for a root-level local preview.
 
-To participate, bring a checkpoint, preserve its author's inference behavior, and add an adapter.
-[Run or contribute a model →](https://motion-challenge-project.epiccabin1025.chatgpt.site/submit/)
+`content/` contains published model records, result summaries and trace receipts. Full traces, weights and datasets remain outside Git. Each checkpoint version has a separate entry; scores never transfer between versions. The evaluation kernel and model adapters remain independent repositories.

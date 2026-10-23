@@ -1,0 +1,127 @@
+{
+  "generated_unix": 1792742656.7009025,
+  "rows": [
+    {
+      "model": "grit",
+      "passed": 29,
+      "total": 40,
+      "completion_pct": 83.66542826067378,
+      "mpjpe_xy_yaw_aligned_m": 0.040332517820417885,
+      "mpjpe_xy_aligned_m": 0.04241897181647547,
+      "mpjpe_world_m": 1.2837903358849947,
+      "joint_mae_rad": 0.09905602077720863,
+      "verification": null,
+      "first_failure_s": 12.02
+    },
+    {
+      "model": "heft",
+      "passed": 23,
+      "total": 40,
+      "completion_pct": 76.7314846314053,
+      "mpjpe_xy_yaw_aligned_m": 0.026686573421342195,
+      "mpjpe_xy_aligned_m": 0.031025535487476684,
+      "mpjpe_world_m": 0.8176954092753265,
+      "joint_mae_rad": 0.046684810885931266,
+      "verification": null,
+      "first_failure_s": 9.779999999999934
+    },
+    {
+      "model": "sonic",
+      "passed": 19,
+      "total": 40,
+      "completion_pct": 73.94897471340768,
+      "mpjpe_xy_yaw_aligned_m": 0.03688938534268114,
+      "mpjpe_xy_aligned_m": 0.0390880457377732,
+      "mpjpe_world_m": 1.5485782459005728,
+      "joint_mae_rad": 0.1182709595947565,
+      "verification": null,
+      "first_failure_s": 6.479999999999507
+    },
+    {
+      "model": "mimic-lite",
+      "passed": 16,
+      "total": 40,
+      "completion_pct": 64.71460732282961,
+      "mpjpe_xy_yaw_aligned_m": 0.029922974686898716,
+      "mpjpe_xy_aligned_m": 0.03143417722499141,
+      "mpjpe_world_m": 0.31336994328772605,
+      "joint_mae_rad": 0.0714838237977082,
+      "verification": null,
+      "first_failure_s": 3.3199999999998546
+    },
+    {
+      "model": "scalebfm",
+      "passed": 10,
+      "total": 40,
+      "completion_pct": 46.439742335337385,
+      "mpjpe_xy_yaw_aligned_m": 0.04033172092935836,
+      "mpjpe_xy_aligned_m": 0.04067092574840005,
+      "mpjpe_world_m": 0.834546380992769,
+      "joint_mae_rad": 0.1050993454164437,
+      "verification": null,
+      "first_failure_s": 4.339999999999742
+    },
+    {
+      "model": "holomotion",
+      "passed": 8,
+      "total": 40,
+      "completion_pct": 45.820946078689076,
+      "mpjpe_xy_yaw_aligned_m": 0.034247097245824795,
+      "mpjpe_xy_aligned_m": 0.0448257324405037,
+      "mpjpe_world_m": 0.8639861302669555,
+      "joint_mae_rad": 0.0773088373181491,
+      "verification": null,
+      "first_failure_s": 4.35999999999974
+    },
+    {
+      "model": "humanoid-gpt",
+      "passed": 7,
+      "total": 40,
+      "completion_pct": 36.139437526859595,
+      "mpjpe_xy_yaw_aligned_m": 0.03905498811613562,
+      "mpjpe_xy_aligned_m": 0.045443114422068845,
+      "mpjpe_world_m": 1.2082126222952667,
+      "joint_mae_rad": 0.07723913701478839,
+      "verification": null,
+      "first_failure_s": 4.3199999999997445
+    },
+    {
+      "model": "protomotions",
+      "passed": 4,
+      "total": 40,
+      "completion_pct": 34.86263841308279,
+      "mpjpe_xy_yaw_aligned_m": 0.05409588839976476,
+      "mpjpe_xy_aligned_m": 0.05771218675040818,
+      "mpjpe_world_m": 1.5679633508751225,
+      "joint_mae_rad": 0.16230479324603142,
+      "verification": null,
+      "first_failure_s": 3.879999999999793
+    },
+    {
+      "model": "bfm-zero",
+      "passed": 1,
+      "total": 40,
+      "completion_pct": 17.49136036018309,
+      "mpjpe_xy_yaw_aligned_m": 0.04376072534272482,
+      "mpjpe_xy_aligned_m": 0.10400140050858486,
+      "mpjpe_world_m": 2.0582829523823536,
+      "joint_mae_rad": 0.10239797748398331,
+      "verification": null,
+      "first_failure_s": 2.199999999999978
+    },
+    {
+      "model": "twist2",
+      "passed": 1,
+      "total": 40,
+      "completion_pct": 15.078545355087636,
+      "mpjpe_xy_yaw_aligned_m": 0.035273716260426455,
+      "mpjpe_xy_aligned_m": 0.07812816990676294,
+      "mpjpe_world_m": 1.0343002691449092,
+      "joint_mae_rad": 0.09019722438171116,
+      "verification": null,
+      "first_failure_s": 3.379999999999848
+    }
+  ],
+  "full_motion_evaluations": 400,
+  "aggregation": "equal-motion observed-prefix means; failures included; success then completion"
+}

@@ -1,0 +1,714 @@
+{
+  "grit": {
+    "organization": "Not listed",
+    "organization_source": "https://github.com/mrzuang/GRIT_teleop_deploy",
+    "runtime": {
+      "id": "grit-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        13
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.04,
+        0.06,
+        0.1,
+        0.14,
+        0.16,
+        0.2,
+        0.24,
+        0.26
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.26,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "b15f84e0669c3d1e9046699c7ec9b37a76100d002c4086c21de6a0e4aad0c6ee",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference review in progress",
+      "official": false,
+      "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
+      "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+      "weights_url": "https://drive.usercontent.google.com/download?id=10HGpqRJPDjITq9DmyORJeWpNHlC0oA8l&export=download"
+    },
+    "provenance": {
+      "model": "grit",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/mrzuang/GRIT_teleop_deploy",
+      "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
+      "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": true,
+    "version": "99k · 39d573e9",
+    "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
+    "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
+    "family": "grit"
+  },
+  "heft": {
+    "organization": "Tsinghua / RobotEra / SQZ",
+    "organization_source": "https://heft.axell.top/",
+    "runtime": {
+      "id": "heft-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        -16,
+        -12,
+        -8,
+        -4,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "reference_offsets_s": [
+        -0.32,
+        -0.24,
+        -0.16,
+        -0.08,
+        -0.04,
+        -0.02,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12
+      ],
+      "reference_history_s": 0.32,
+      "reference_preview_s": 0.12,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "a7ca0ceb7d5c0ee31dc901b1ab4beb40546dcd21f46809456438f9e64fc3528e",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference review in progress",
+      "official": false,
+      "source_repository": "https://github.com/Axellwppr/motion_tracking",
+      "source_commit": "0d5ba31e33397f3543d350d98b637e26d92f470a",
+      "weights_url": "https://drive.usercontent.google.com/download?id=1yZybFGcaU77QMi24Syc7iXaTlzdLpWkA&export=download"
+    },
+    "provenance": {
+      "model": "heft",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/Axellwppr/motion_tracking",
+      "source_commit": "0d5ba31e33397f3543d350d98b637e26d92f470a",
+      "checkpoint_sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": true,
+    "version": "SHA 192aaacc",
+    "version_kind": "checkpoint SHA256; author version not verified",
+    "version_source": "https://github.com/Axellwppr/motion_tracking",
+    "family": "heft"
+  },
+  "sonic": {
+    "organization": "NVIDIA",
+    "organization_source": "https://nvlabs.github.io/GEAR-SONIC/",
+    "runtime": {
+      "id": "sonic-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.9,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "901cf0f0af7c81f80eaa012d29d5ec0367778ec1f7be4b22e66e8571305070cb",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "3e1914f136a0a85e91d42fa0531ffbfdd2f5999f7019a01bfdb9ff8788992070",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference review in progress",
+      "official": false,
+      "source_repository": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+      "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
+      "weights_url": "https://drive.usercontent.google.com/download?id=1dRMw3SUUXPr4yFI0e8fcO9xGlVKtQxZI&export=download"
+    },
+    "provenance": {
+      "model": "sonic",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+      "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
+      "checkpoint_sha256": "3e1914f136a0a85e91d42fa0531ffbfdd2f5999f7019a01bfdb9ff8788992070",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": true,
+    "version": "Fused · 3e1914f1",
+    "version_kind": "checkpoint SHA256; author version not verified",
+    "version_source": "https://github.com/NVlabs/GR00T-WholeBodyControl",
+    "family": "sonic"
+  },
+  "mimic-lite": {
+    "organization": "RoboParty",
+    "organization_source": "https://github.com/Roboparty/MimicLite",
+    "runtime": {
+      "id": "mimic-lite-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        -8,
+        -4,
+        -2,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "reference_offsets_s": [
+        -0.16,
+        -0.08,
+        -0.04,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08
+      ],
+      "reference_history_s": 0.16,
+      "reference_preview_s": 0.08,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "05f0211249ba531cf7382559a3a27e0fbefbbfbb51da131e417c9a24a6e6aec4",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference review in progress",
+      "official": false,
+      "source_repository": "https://github.com/EGalahad/mimic-lite",
+      "source_commit": null,
+      "weights_url": "https://drive.usercontent.google.com/download?id=1UsdiBBQuhFcLSXvITjjhuSY-vhMrxYuy&export=download"
+    },
+    "provenance": {
+      "model": "mimic-lite",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/EGalahad/mimic-lite",
+      "source_commit": null,
+      "checkpoint_sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": true,
+    "version": "SHA 031b8d67",
+    "version_kind": "checkpoint SHA256; author version not verified",
+    "version_source": "https://github.com/EGalahad/mimic-lite",
+    "family": "mimic-lite"
+  },
+  "scalebfm": {
+    "organization": "Shanghai AI Lab & collaborators",
+    "organization_source": "https://scalebfm.github.io/",
+    "runtime": {
+      "id": "scalebfm-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.1,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "657d4214c73345e6716a55eb489e856725c6f2ccb8712b079aa54cd65a6d3065",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "19628312a3fc6ff4c7f9e5ced5ec0739edef28fe52449d0127c1f9cc7eb6b25d",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference review in progress",
+      "official": false,
+      "source_repository": "https://github.com/zengweishuai/ScaleBFM",
+      "source_commit": "abd6f17c02fe0baabc14709feb8d9ea4959aa621",
+      "weights_url": "https://drive.usercontent.google.com/download?id=1SkwI11KeKQm0res-x6Ty9cOUaTxkLWlz&export=download"
+    },
+    "provenance": {
+      "model": "scalebfm",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/zengweishuai/ScaleBFM",
+      "source_commit": "abd6f17c02fe0baabc14709feb8d9ea4959aa621",
+      "checkpoint_sha256": "19628312a3fc6ff4c7f9e5ced5ec0739edef28fe52449d0127c1f9cc7eb6b25d",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": true,
+    "version": "SHA 19628312",
+    "version_kind": "checkpoint SHA256; author version not verified",
+    "version_source": "https://github.com/zengweishuai/ScaleBFM",
+    "family": "scalebfm"
+  },
+  "holomotion": {
+    "organization": "Horizon Robotics",
+    "organization_source": "https://github.com/HorizonRobotics/HoloMotion",
+    "runtime": {
+      "id": "holomotion-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.2,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "7974f78f380877c9b2266e80c9f22ba7789c7f29e2b75a5d5226c623aaa6bf07",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference review in progress",
+      "official": false,
+      "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
+      "source_commit": "fcb8d4d8e96af9535c2adcc2b53e267019f865a2",
+      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/v1.4.0/exported/model_14000.onnx"
+    },
+    "provenance": {
+      "model": "holomotion",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/HorizonRobotics/HoloMotion",
+      "source_commit": "fcb8d4d8e96af9535c2adcc2b53e267019f865a2",
+      "checkpoint_sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": true,
+    "version": "v1.4.0 · 14k",
+    "version_kind": "author checkpoint",
+    "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
+    "family": "holomotion"
+  },
+  "humanoid-gpt": {
+    "organization": "Galaxy General Robotics",
+    "organization_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+    "runtime": {
+      "id": "humanoid-gpt-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        1
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.02
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.02,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "78803b1126d2867f9b3e852ba32e37ce956962fe7df66922d2ea6462d6ef32ed",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "1ca1f475dc647afb736f4cdbd55d45103c36b7f5059d830b05d6aef3a5fc3a1e",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference review in progress",
+      "official": false,
+      "source_repository": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "weights_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx"
+    },
+    "provenance": {
+      "model": "humanoid-gpt",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "checkpoint_sha256": "1ca1f475dc647afb736f4cdbd55d45103c36b7f5059d830b05d6aef3a5fc3a1e",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": false,
+    "version": "PNS wo-priv216",
+    "version_kind": "author checkpoint filename",
+    "version_source": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx",
+    "family": "humanoid-gpt"
+  },
+  "protomotions": {
+    "organization": "NVIDIA",
+    "organization_source": "https://github.com/NVlabs/ProtoMotions",
+    "runtime": {
+      "id": "protomotions-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.02,
+        0.04,
+        0.08,
+        0.16
+      ],
+      "reference_history_s": 0.0,
+      "reference_preview_s": 0.16,
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "a59baa3e04a951e5cf0b4cc68f24ebaafa9272714226618b99a5017dfc805b4c",
+      "inference_config_sha256": "9b7896f3355a9d9d5e7d3139b83924eeb2e45c62c30bfda44afe996cfc6cf01c",
+      "source_commit": "f69fdcaabff31846b4d2247207417b57dc788828",
+      "official": false,
+      "action_history_semantics": "previous final joint position targets, matching official deployment/test_tracker_mujoco.py",
+      "provenance_status": "author-inference review in progress",
+      "source_repository": "https://github.com/NVlabs/ProtoMotions",
+      "weights_url": "https://raw.githubusercontent.com/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx",
+      "inference_config": "policy.yaml"
+    },
+    "provenance": {
+      "model": "protomotions",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/NVlabs/ProtoMotions",
+      "source_commit": "f69fdcaabff31846b4d2247207417b57dc788828",
+      "checkpoint_sha256": "a59baa3e04a951e5cf0b4cc68f24ebaafa9272714226618b99a5017dfc805b4c",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": true,
+    "version": "G1 BONES deploy",
+    "version_kind": "author checkpoint directory",
+    "version_source": "https://raw.githubusercontent.com/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx",
+    "family": "protomotions"
+  },
+  "bfm-zero": {
+    "organization": "CMU / Meta",
+    "organization_source": "https://lecar-lab.github.io/BFM-Zero/",
+    "runtime": {
+      "id": "bfm-zero-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_offsets_s": [
+        -0.02,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14
+      ],
+      "reference_history_s": 0.02,
+      "reference_preview_s": 0.14,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "39e4605b2a0dbb99379203fddc007d8b0ca23d4e1f9796569889097b78be71bf",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+      "provenance_status": "author-inference review in progress",
+      "source_repository": "https://github.com/LeCAR-Lab/BFM-Zero",
+      "source_commit": "df9c4a9633aa155c727419e82c906010b1e1845f",
+      "tracking_inference": "official uniform 8-frame latent mean, not notebook customized discount variant",
+      "official": false,
+      "weights_url": "https://github.com/motion-challenge-project/motion-challenge-bfm-zero/releases/download/checkpoint-v1/policy.onnx"
+    },
+    "provenance": {
+      "model": "bfm-zero",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/LeCAR-Lab/BFM-Zero",
+      "source_commit": "df9c4a9633aa155c727419e82c906010b1e1845f",
+      "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": false,
+    "version": "SHA cdc9d645",
+    "version_kind": "checkpoint SHA256; author version not verified",
+    "version_source": "https://github.com/LeCAR-Lab/BFM-Zero",
+    "family": "bfm-zero"
+  },
+  "twist2": {
+    "organization": "Amazon FAR",
+    "organization_source": "https://github.com/amazon-far/TWIST2",
+    "runtime": {
+      "id": "twist2-g1-development-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.01,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0
+      ],
+      "reference_offsets_s": [
+        0.0
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.0,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "cd22080d4d6586062eec6fa52afa20280a56a4e80ef586431a79d737acd92956",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "provenance_status": "author-inference review in progress",
+      "official": false,
+      "source_repository": "https://github.com/amazon-far/TWIST2",
+      "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
+      "weights_url": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx"
+    },
+    "provenance": {
+      "model": "twist2",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/amazon-far/TWIST2",
+      "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
+      "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
+      "author_inference_review": "pending",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+    },
+    "repository_available": true,
+    "version": "1017 · 20k",
+    "version_kind": "author checkpoint filename",
+    "version_source": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
+    "family": "twist2"
+  }
+}
