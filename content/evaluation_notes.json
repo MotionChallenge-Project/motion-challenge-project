@@ -1,0 +1,16 @@
+{
+  "lafan40-g1-mujoco317-v1": {
+    "any2track-v2": [
+      {
+        "text": "This track uses lvhaidong/LAFAN1_Retargeting_Dataset, while the author checkpoint uses LocoMuJoCo-retargeted LAFAN1. The motion names overlap, but the robot trajectories are not identical.",
+        "source": "https://github.com/GalaxyGeneralRobotics/OpenTrack#prepare"
+      },
+      {
+        "text": "Shared canonical physics differs from the author setup, including contact geometry, joint damping and friction. The current score measures this benchmark configuration; it does not reproduce the author-reported 40/40."
+      },
+      {
+        "text": "The low success rate is being investigated. Existing randomized observation and motor-target comparisons do not cover the complete reset and closed-loop pipeline; they cannot rule out an adapter error."
+      }
+    ]
+  }
+}

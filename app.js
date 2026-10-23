@@ -79,7 +79,7 @@
     else if(i===3){td.className='score';td.textContent=(v/track.clip_count*100).toFixed(1)+'%';const small=document.createElement('small');small.textContent=v+' / '+track.clip_count+' clips';td.append(small);}
     else if(i===4)td.textContent=v.toFixed(2)+'%';else if(i>=5){
      if(v==null){td.textContent='—';td.className='pending';td.title='Full-motion evaluation not yet published';}
-     else{const a=document.createElement('a');a.className='metric-evidence';a.href=base+'/data/evidence/'+(i>=8?r.full_evidence_file:r.evidence_file);a.textContent=(v*1000).toFixed(2);a.title='Per-motion metrics and verification receipt';td.append(a);}
+     else{const a=document.createElement('a');a.className='metric-evidence';a.href=base+'/evaluations/'+encodeURIComponent(track.id)+'/'+r.model+'/'+(i>=8?'#none':'#early');a.textContent=(v*1000).toFixed(2);a.title='Evaluation record, per-motion metrics and verification receipt';td.append(a);}
     }else td.textContent=v;
     tr.append(td);
    });body.append(tr);
