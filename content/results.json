@@ -1,5 +1,5 @@
 {
-  "generated_unix": 1792755423.1062815,
+  "generated_unix": 1792756229.8436997,
   "rows": [
     {
       "model": "any2track-v2",
@@ -306,6 +306,40 @@
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "scalebfm.mujoco317.json",
       "first_failure_s": 4.339999999999742
+    },
+    {
+      "model": "sonic",
+      "adapter_commit": "de49e3b2c63cde7492e51c693e77988e1d6ac490",
+      "core_commit": "7ba33e4d355d51ad46ecc0737558750362b478a7",
+      "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-sonic",
+      "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-sonic/tree/de49e3b2c63cde7492e51c693e77988e1d6ac490",
+      "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/7ba33e4d355d51ad46ecc0737558750362b478a7",
+      "passed": 22,
+      "total": 40,
+      "completion_pct": 76.03425500708622,
+      "joint_mae_rad": 0.11861243709834121,
+      "root_position_error_m": 1.5807519039048639,
+      "root_orientation_error_rad": 0.08189994878054278,
+      "mpjpe_world_m": 1.5821662724385932,
+      "mpjpe_root_relative_world_axes_m": 0.03377529172369259,
+      "anchor_height_error_m": 0.016332531991162656,
+      "anchor_gravity_z_error": 0.051491416261307266,
+      "end_effector_height_error_m": 0.042002630770569885,
+      "mpjpe_xy_aligned_m": 0.03920250291497381,
+      "mpjpe_xy_yaw_aligned_m": 0.03697413709679282,
+      "root_xy_error_m": 1.5796656285228166,
+      "root_height_error_m": 0.01624066929135875,
+      "root_yaw_correction_abs_rad": 0.048313759421409676,
+      "yaw_alignment_degenerate_fraction": 0.0,
+      "verification": "trace_consistent",
+      "termination_mode": "early_termination",
+      "metric_scope": "observed_prefix",
+      "protocol_id": null,
+      "checkpoint_sha256": "3e1914f136a0a85e91d42fa0531ffbfdd2f5999f7019a01bfdb9ff8788992070",
+      "mujoco_version": "3.17.0",
+      "track_id": "lafan40-g1-mujoco317-v1",
+      "evidence_file": "sonic.mujoco317.json",
+      "first_failure_s": 6.479999999999507
     },
     {
       "model": "teleopit",

@@ -4,12 +4,15 @@
     "benchmark_id": "lafan40",
     "benchmark_label": "LAFAN40",
     "robot_id": "g1-29dof",
-    "robot_label": "Unitree G1 \u00b7 29 DoF",
-    "label": "Nominal \u00b7 MuJoCo 3.17.0 batch",
+    "robot_label": "Unitree G1 · 29 DoF",
+    "label": "Nominal · MuJoCo 3.17.0 batch",
     "protocol_id": "lafan-g1-29dof/nominal/mujoco317-v1",
     "clip_count": 40,
     "mujoco_version": "3.17.0",
     "status": "running",
-    "no_termination_protocol_id": "lafan-g1-29dof/nominal/mujoco317-no-termination-v1"
+    "no_termination_protocol_id": "lafan-g1-29dof/nominal/mujoco317-no-termination-v1",
+    "documentation": "benchmarks/lafan40-g1.json",
+    "protocol_file": "lafan40-protocol.json",
+    "robot_short_label": "G1 29DoF"
   }
 ]

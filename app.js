@@ -1,5 +1,31 @@
 (async()=>{
  const base=document.querySelector('meta[name="site-base-path"]')?.content||'';
+ const benchmarkControls=document.querySelector('.benchmark-controls');
+ if(benchmarkControls){
+  const robotChoice=document.querySelector('#benchmark-robot'),protocolChoice=document.querySelector('#benchmark-protocol');
+  const templates=[...document.querySelectorAll('template[data-benchmark-track]')];
+  const query=new URLSearchParams(location.search);
+  if([...robotChoice.options].some(o=>o.value===query.get('robot')))robotChoice.value=query.get('robot');
+  function showBenchmark(){
+   const chosen=templates.find(t=>t.dataset.benchmarkTrack===protocolChoice.value);if(!chosen)return;
+   document.querySelector('#benchmark-document').replaceChildren(chosen.content.cloneNode(true));
+   document.querySelector('#benchmark-robot-title').textContent=chosen.dataset.robotLabel;
+   document.title=benchmarkControls.dataset.benchmarkLabel+' × '+chosen.dataset.robotLabel+' · Motion Challenge';
+   const params=new URLSearchParams({benchmark:benchmarkControls.dataset.benchmarkId,robot:chosen.dataset.robotId,track:chosen.dataset.benchmarkTrack});
+   document.querySelector('#benchmark-results').href=base+'/leaderboard/?'+params;
+   const url=new URL(location.href);url.searchParams.set('robot',chosen.dataset.robotId);url.searchParams.set('track',chosen.dataset.benchmarkTrack);history.replaceState(null,'',url);
+  }
+  function chooseRobot(preferred){
+   protocolChoice.replaceChildren();
+   for(const t of templates.filter(t=>t.dataset.robotId===robotChoice.value)){
+    const option=document.createElement('option');option.value=t.dataset.benchmarkTrack;option.textContent=t.dataset.trackLabel;protocolChoice.append(option);
+   }
+   if([...protocolChoice.options].some(o=>o.value===preferred))protocolChoice.value=preferred;
+   showBenchmark();
+  }
+  robotChoice.addEventListener('change',()=>chooseRobot());protocolChoice.addEventListener('change',showBenchmark);
+  chooseRobot(query.get('track'));
+ }
  const table=document.querySelector('#leaderboard');if(!table)return;
  const $=s=>document.querySelector(s),body=table.querySelector('tbody'),search=$('#model-search'),empty=$('#empty'),size=$('#page-size'),prev=$('#previous-page'),next=$('#next-page'),range=$('#page-range');
  const benchmark=$('#benchmark-select'),robot=$('#robot-select'),protocol=$('#protocol-select');
