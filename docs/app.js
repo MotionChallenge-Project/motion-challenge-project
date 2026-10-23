@@ -14,6 +14,21 @@
  setRobots(query.get('robot'));
  function render(){
   const track=tracks.find(t=>t.id===protocol.value);if(!track)return;
+  let sortingLabel='';
+  document.querySelectorAll('[data-sort]').forEach(button=>{
+   const label=button.dataset.label||(button.dataset.label=button.textContent.replace(/\s*[↑↓↕]\s*$/,'').trim());
+   const active=button.dataset.sort===sort;
+   button.textContent=label+' '+(active?(descending?'↓':'↑'):'↕');
+   button.setAttribute('aria-pressed',String(active));
+   const header=button.closest('th');
+   if(active){
+    header.setAttribute('aria-sort',descending?'descending':'ascending');
+    const metric=sort.includes('mpjpe_');
+    sortingLabel=(metric?'MPBPE · '+(sort.startsWith('full_')?'No termination':'Early termination')+' · ':'')+label;
+    button.title='Sorted '+(descending?'high to low':'low to high')+'. Click to reverse.';
+   }else{header.removeAttribute('aria-sort');button.title='Sort by '+label;}
+  });
+  $('#sort-caption').textContent='Sorted by '+sortingLabel+' · '+(descending?'High → low':'Low → high');
   const trackData=data.filter(r=>r.track_id===track.id&&(r.termination_mode||'early_termination')==='early_termination').map(r=>{
    const full=data.find(f=>f.track_id===track.id&&f.model===r.model&&f.termination_mode==='no_termination'&&f.checkpoint_sha256===r.checkpoint_sha256);
    return {...r,full_evidence_file:full?.evidence_file,...Object.fromEntries(['mpjpe_xy_yaw_aligned_m','mpjpe_xy_aligned_m','mpjpe_world_m'].map(k=>['full_'+k,full?.[k]??null]))};
@@ -46,5 +61,5 @@
  }
  benchmark.addEventListener('change',()=>{setRobots(robot.value);page=1;render()});robot.addEventListener('change',()=>{setProtocols();page=1;render()});protocol.addEventListener('change',()=>{page=1;render()});
  search.addEventListener('input',()=>{page=1;render()});size.addEventListener('change',()=>{page=1;render()});prev.addEventListener('click',()=>{page--;render()});next.addEventListener('click',()=>{page++;render()});
- document.querySelectorAll('[data-sort]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.sort;descending=sort===key?!descending:['passed','completion_pct'].includes(key);sort=key;page=1;document.querySelectorAll('th').forEach(x=>x.removeAttribute('aria-sort'));b.closest('th').setAttribute('aria-sort',descending?'descending':'ascending');render();}));render();
+ document.querySelectorAll('[data-sort]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.sort;descending=sort===key?!descending:['passed','completion_pct'].includes(key);sort=key;page=1;render();}));render();
 })();
