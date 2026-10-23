@@ -935,5 +935,69 @@
       ],
       "parity_scope": "Author observation gatherers and history padding are compiled from pinned upstream C++; both inference paths use CPU ONNX Runtime with original encoder and decoder. This does not establish TensorRT numerical equivalence or match author training physics."
     }
+  },
+  "pmt-flat": {
+    "display_name": "PMT Flat MLP 20k",
+    "family": "pmt",
+    "organization": "Mondo Robotics / HKUST & collaborators",
+    "version": "Flat MLP \u00b7 20k",
+    "version_kind": "author checkpoint or pinned source revision",
+    "organization_source": "https://acodedog.github.io/perceptive-bfm/",
+    "repository_available": true,
+    "runtime": {
+      "id": "pmt-flat-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.0
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "weights": "checkpoints/multimotionv2_flat.pt",
+      "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
+      "weights_sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
+      "source_repository": "https://github.com/Mondo-Robotics/PMT",
+      "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+      "official": false
+    },
+    "provenance": {
+      "model": "pmt-flat",
+      "display_name": "PMT Flat \u00b7 iteration 19999",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer adaptation, not author submission",
+      "upstream": "https://github.com/Mondo-Robotics/PMT",
+      "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+      "checkpoint_sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26",
+      "author_inference_review": "Maintainer native-source parity passed; not an author endorsement",
+      "notes": "Original 286D PyTorch ActorCritic,512/256/128 ELU; normalizer epsilon0.01 from native class (mjlab demo differs). No action clipping. State body transforms relative to actual torso; actual root COM linear velocity and angular velocity in pelvis link frame; convert packet link-origin velocity with the canonical pelvis COM offset. Current reference at control time. Canonical benchmark physics, not IsaacLab training physics.",
+      "inference_validation": {
+        "cases": 160,
+        "resets": 4,
+        "max_abs_error": {
+          "observation": 5.91278076171875e-05,
+          "normalized": 0.0001220703125,
+          "network": 0.0,
+          "action": 5.91278076171875e-05,
+          "motor_target": 2.574920654296875e-05,
+          "reset_history": 0.0
+        },
+        "limits": {
+          "observation": 0.0002,
+          "normalized": 0.002,
+          "network": 1e-06,
+          "action": 0.0002,
+          "motor_target": 0.0002,
+          "reset_history": 0.0
+        },
+        "config_checks": {
+          "native_pd_default_action_scale": true,
+          "canonical_pelvis_com": true
+        }
+      }
+    }
   }
 }
