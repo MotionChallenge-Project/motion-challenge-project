@@ -27,6 +27,7 @@
     }
   },
   "required_adapter_commits": {
-    "grit": "6f04b73653abe8a819cd19245b869b72f5d81b36"
+    "grit": "6f04b73653abe8a819cd19245b869b72f5d81b36",
+    "heft": "6604e4815965d13ea248785deebde4632e9aa632"
   }
 }
