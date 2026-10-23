@@ -29,7 +29,7 @@
       "label": "GRIT 99k",
       "version": "99k \u00b7 39d573e9",
       "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
-      "organization": "Not listed",
+      "organization": "GRIT Team",
       "organization_source": "https://github.com/mrzuang/GRIT_teleop_deploy",
       "submitter": "Motion Challenge",
       "status": "Inference review pending",

@@ -1,6 +1,6 @@
 {
   "grit": {
-    "organization": "Not listed",
+    "organization": "GRIT Team",
     "organization_source": "https://github.com/mrzuang/GRIT_teleop_deploy",
     "runtime": {
       "id": "grit-g1-development-v1",
