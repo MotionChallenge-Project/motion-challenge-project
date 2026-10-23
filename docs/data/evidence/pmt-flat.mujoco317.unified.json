@@ -1,19 +1,19 @@
 {
   "model": "pmt-flat",
   "submitter": "Motion Challenge",
-  "result_sha256": "7f9c0e6d016cf2a9ac8fa7c73560f7f5c03d047ed1b1355796ac912c6c0b368a",
+  "result_sha256": "410809ee241dbd8e7e92690bda824b73856e12521a5adc3f1c89c28558678fab",
   "result": {
     "schema": "motion-challenge/unified-result-v1",
     "status": "trace_verified",
     "source": {
-      "adapter_commit": "df0b318ffa09fb243d4c173a467da8572f30da74",
+      "adapter_commit": "e85017d151e8aefa002a868c20f43653c05429dd",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
         ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
         "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
         "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-        "README.md": "d2d56cf06b77d3f3605e638a6e19ba9439726116210200cfa879dcefa7b00c4b",
+        "README.md": "3cf5aa9d04ad79102259379b309706639ae7d0210134e53e6821759dde0c5778",
         "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
         "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
         "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
@@ -25,7 +25,7 @@
         "uv.lock": "6ba039e16a8e1fd89be775bba2a1ec0298e3950e775c5f5214b2fbc382779f09",
         "validate_inference.py": "b17f22dde2da9443abcb8ec91d8a315fd5ef1fbb019a37f88128e880e9d1999c"
       },
-      "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+      "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
       "core_dirty": false
     },
     "checkpoint_sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26",
@@ -1977,18 +1977,19 @@
         }
       }
     ],
+    "execution": "single_full_rollout",
     "components": {
       "early": {
-        "result": "early/result.json",
-        "result_sha256": "8c15fedf840abdd878bf607e86cace531a06b35b04e52b50887b9b270f6d9413",
-        "receipt": "early/receipt.json",
-        "receipt_sha256": "317090e09c57b8b35d394880c773eacc122b9aaeb52ef0e368b2cda1280421b1"
+        "result": "rollout/prefix-result.json",
+        "result_sha256": "fcc7a60b67cd00ee6e8033de8c6e05b05b34b583c0455d2412889ae78b48af71",
+        "receipt": "rollout/receipt.json",
+        "receipt_sha256": "fead47784c4215c97b529d92c3996eec196a4a815597efb8843db6d4dfdb359a"
       },
       "none": {
-        "result": "none/result.json",
-        "result_sha256": "5a8e10ac166b4c92d96e2372d279c809f4ed9a866865370b848a8a8229aa8f1d",
-        "receipt": "none/receipt.json",
-        "receipt_sha256": "069c1c85cfe232c501ca7f2b1492b43b063836f745e35c30e090e66fe3df54b1"
+        "result": "rollout/result.json",
+        "result_sha256": "9295d1fcc9d3f5eb18d9b18c283f7e01c754acf48d55f843deb17a568d1fcd89",
+        "receipt": "rollout/receipt.json",
+        "receipt_sha256": "fead47784c4215c97b529d92c3996eec196a4a815597efb8843db6d4dfdb359a"
       }
     }
   },
@@ -1996,14 +1997,14 @@
     "early": {
       "submitter": "local-run",
       "source": {
-        "adapter_commit": "df0b318ffa09fb243d4c173a467da8572f30da74",
+        "adapter_commit": "e85017d151e8aefa002a868c20f43653c05429dd",
         "adapter_dirty": false,
         "tracked_files_sha256": {
           ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
           ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
           "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
           "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-          "README.md": "d2d56cf06b77d3f3605e638a6e19ba9439726116210200cfa879dcefa7b00c4b",
+          "README.md": "3cf5aa9d04ad79102259379b309706639ae7d0210134e53e6821759dde0c5778",
           "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
           "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
           "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
@@ -2015,90 +2016,111 @@
           "uv.lock": "6ba039e16a8e1fd89be775bba2a1ec0298e3950e775c5f5214b2fbc382779f09",
           "validate_inference.py": "b17f22dde2da9443abcb8ec91d8a315fd5ef1fbb019a37f88128e880e9d1999c"
         },
-        "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+        "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
         "core_dirty": false
       },
       "source_runtime_sha256": "915429fa927a21fcc9ac59293f5db686fdca0ff1a3a7f509578ccf7099a3e804",
-      "resolved_runtime_sha256": "35143c1e6b7ff5e416adf1a30292139e7a1ccb12cc3f7a5fa76386edf045559f",
+      "resolved_runtime_sha256": "6c3e50c4b01466ae7a10291c4873e1e9222c9181b08b52730e100401d4b59396",
       "suite": "lafan40",
-      "started_utc": "20261023T165550.157764Z",
-      "author_inference_review": "not_granted_by_runner",
-      "status": "trace_verified",
-      "backend": "batch",
-      "termination_mode": "early_termination",
-      "batch_size": 8,
-      "verification": {
-        "verification": "trace_consistent",
-        "official": false,
-        "clips": 40,
-        "samples": 217374,
-        "full_suite": true,
-        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation"
-      },
-      "full_suite": true,
-      "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-23T17:06:42.062068+00:00"
-    },
-    "none": {
-      "submitter": "local-run",
-      "source": {
-        "adapter_commit": "df0b318ffa09fb243d4c173a467da8572f30da74",
-        "adapter_dirty": false,
-        "tracked_files_sha256": {
-          ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
-          ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
-          "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
-          "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-          "README.md": "d2d56cf06b77d3f3605e638a6e19ba9439726116210200cfa879dcefa7b00c4b",
-          "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
-          "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
-          "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
-          "native-sources.json": "8929bd2726559e3aca6e425e0f1896a7a8172c9c445a52f895d192ea9343af5d",
-          "policy.json": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
-          "provenance.json": "b4ba1a22c0ecc014bad5261dbfeb11177278e3b4d89106b5748739f8cd32d4f3",
-          "pyproject.toml": "c973e683c83762d4d6510f9eb1cfaabe7da5be85670bad64cdf240e1f82cd3a1",
-          "runtime.json": "915429fa927a21fcc9ac59293f5db686fdca0ff1a3a7f509578ccf7099a3e804",
-          "uv.lock": "6ba039e16a8e1fd89be775bba2a1ec0298e3950e775c5f5214b2fbc382779f09",
-          "validate_inference.py": "b17f22dde2da9443abcb8ec91d8a315fd5ef1fbb019a37f88128e880e9d1999c"
-        },
-        "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
-        "core_dirty": false
-      },
-      "source_runtime_sha256": "915429fa927a21fcc9ac59293f5db686fdca0ff1a3a7f509578ccf7099a3e804",
-      "resolved_runtime_sha256": "35143c1e6b7ff5e416adf1a30292139e7a1ccb12cc3f7a5fa76386edf045559f",
-      "suite": "lafan40",
-      "started_utc": "20261023T165550.157764Z",
+      "started_utc": "20261023T174230.493384Z",
       "author_inference_review": "not_granted_by_runner",
       "status": "trace_verified",
       "backend": "batch",
       "termination_mode": "no_termination",
       "batch_size": 8,
+      "timings_s": {
+        "rollout": 606.9021926820278,
+        "verification": 73.07268486917019,
+        "total": 679.9943494908512
+      },
       "verification": {
         "verification": "trace_consistent",
         "official": false,
         "clips": 40,
         "samples": 441120,
         "full_suite": true,
-        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation"
+        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
+        "derived_prefix": {
+          "result": "prefix-result.json",
+          "result_sha256": "fcc7a60b67cd00ee6e8033de8c6e05b05b34b583c0455d2412889ae78b48af71",
+          "samples": 217374
+        }
       },
       "full_suite": true,
       "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-23T17:25:56.973650+00:00"
+      "finished_utc": "2026-10-23T17:53:53.690392+00:00"
+    },
+    "none": {
+      "submitter": "local-run",
+      "source": {
+        "adapter_commit": "e85017d151e8aefa002a868c20f43653c05429dd",
+        "adapter_dirty": false,
+        "tracked_files_sha256": {
+          ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
+          ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
+          "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
+          "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
+          "README.md": "3cf5aa9d04ad79102259379b309706639ae7d0210134e53e6821759dde0c5778",
+          "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
+          "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
+          "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
+          "native-sources.json": "8929bd2726559e3aca6e425e0f1896a7a8172c9c445a52f895d192ea9343af5d",
+          "policy.json": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
+          "provenance.json": "b4ba1a22c0ecc014bad5261dbfeb11177278e3b4d89106b5748739f8cd32d4f3",
+          "pyproject.toml": "c973e683c83762d4d6510f9eb1cfaabe7da5be85670bad64cdf240e1f82cd3a1",
+          "runtime.json": "915429fa927a21fcc9ac59293f5db686fdca0ff1a3a7f509578ccf7099a3e804",
+          "uv.lock": "6ba039e16a8e1fd89be775bba2a1ec0298e3950e775c5f5214b2fbc382779f09",
+          "validate_inference.py": "b17f22dde2da9443abcb8ec91d8a315fd5ef1fbb019a37f88128e880e9d1999c"
+        },
+        "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+        "core_dirty": false
+      },
+      "source_runtime_sha256": "915429fa927a21fcc9ac59293f5db686fdca0ff1a3a7f509578ccf7099a3e804",
+      "resolved_runtime_sha256": "6c3e50c4b01466ae7a10291c4873e1e9222c9181b08b52730e100401d4b59396",
+      "suite": "lafan40",
+      "started_utc": "20261023T174230.493384Z",
+      "author_inference_review": "not_granted_by_runner",
+      "status": "trace_verified",
+      "backend": "batch",
+      "termination_mode": "no_termination",
+      "batch_size": 8,
+      "timings_s": {
+        "rollout": 606.9021926820278,
+        "verification": 73.07268486917019,
+        "total": 679.9943494908512
+      },
+      "verification": {
+        "verification": "trace_consistent",
+        "official": false,
+        "clips": 40,
+        "samples": 441120,
+        "full_suite": true,
+        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
+        "derived_prefix": {
+          "result": "prefix-result.json",
+          "result_sha256": "fcc7a60b67cd00ee6e8033de8c6e05b05b34b583c0455d2412889ae78b48af71",
+          "samples": 217374
+        }
+      },
+      "full_suite": true,
+      "source_unchanged_during_run": true,
+      "finished_utc": "2026-10-23T17:53:53.690392+00:00"
     }
   },
   "summary": {
     "schema": "motion-challenge/paired-evaluation-v1",
     "status": "trace_verified",
-    "started_utc": "20261023T165550.157764Z",
+    "execution": "single_full_rollout",
+    "started_utc": "20261023T174230.493384Z",
     "source": {
-      "adapter_commit": "df0b318ffa09fb243d4c173a467da8572f30da74",
+      "adapter_commit": "e85017d151e8aefa002a868c20f43653c05429dd",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
         ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
         "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
         "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-        "README.md": "d2d56cf06b77d3f3605e638a6e19ba9439726116210200cfa879dcefa7b00c4b",
+        "README.md": "3cf5aa9d04ad79102259379b309706639ae7d0210134e53e6821759dde0c5778",
         "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
         "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
         "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
@@ -2110,15 +2132,15 @@
         "uv.lock": "6ba039e16a8e1fd89be775bba2a1ec0298e3950e775c5f5214b2fbc382779f09",
         "validate_inference.py": "b17f22dde2da9443abcb8ec91d8a315fd5ef1fbb019a37f88128e880e9d1999c"
       },
-      "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+      "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
       "core_dirty": false
     },
     "checkpoint_sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26",
     "modes": {
       "early": {
         "status": "trace_verified",
-        "receipt": "early/receipt.json",
-        "result": "early/result.json",
+        "receipt": "rollout/receipt.json",
+        "result": "rollout/prefix-result.json",
         "success_count": 8,
         "macro_completion": 0.46297031042100967,
         "metrics": {
@@ -2136,13 +2158,12 @@
           "root_height_error_m": 0.017586983479155226,
           "root_yaw_correction_abs_rad": 0.09045049929414174,
           "yaw_alignment_degenerate_fraction": 0.0
-        },
-        "metric_scope": "observed_prefix"
+        }
       },
       "none": {
         "status": "trace_verified",
-        "receipt": "none/receipt.json",
-        "result": "none/result.json",
+        "receipt": "rollout/receipt.json",
+        "result": "rollout/result.json",
         "success_count": 8,
         "macro_completion": 0.46297031042100967,
         "metrics": {
@@ -2160,12 +2181,11 @@
           "root_height_error_m": 0.10836682775582103,
           "root_yaw_correction_abs_rad": 0.3938508583165676,
           "yaw_alignment_degenerate_fraction": 0.0
-        },
-        "metric_scope": "full_motion"
+        }
       }
     },
-    "finished_utc": "2026-10-23T17:25:56.976301+00:00",
-    "result": "result.json"
+    "result": "result.json",
+    "finished_utc": "2026-10-23T17:53:53.698017+00:00"
   },
   "repeatability": {
     "status": "passed",
@@ -2174,9 +2194,9 @@
     "modes": {
       "early": {
         "previous_result_sha256": "4d365d55c2643e8f2828d87012f95a15415f1a33ce1b2eb733ea81f9cf90928f",
-        "new_result_sha256": "8c15fedf840abdd878bf607e86cace531a06b35b04e52b50887b9b270f6d9413",
+        "new_result_sha256": "fcc7a60b67cd00ee6e8033de8c6e05b05b34b583c0455d2412889ae78b48af71",
         "previous_receipt_sha256": "080460ff0070ddb4979c6064efb8bf4468b019a639a94f2bc98a518419e968a6",
-        "new_receipt_sha256": "317090e09c57b8b35d394880c773eacc122b9aaeb52ef0e368b2cda1280421b1",
+        "new_receipt_sha256": "fead47784c4215c97b529d92c3996eec196a4a815597efb8843db6d4dfdb359a",
         "previous_source": {
           "adapter_commit": "952f146d03f0a6048d6a593e4fd5314b85616138",
           "adapter_dirty": false,
@@ -2201,14 +2221,14 @@
           "core_dirty": false
         },
         "new_source": {
-          "adapter_commit": "df0b318ffa09fb243d4c173a467da8572f30da74",
+          "adapter_commit": "e85017d151e8aefa002a868c20f43653c05429dd",
           "adapter_dirty": false,
           "tracked_files_sha256": {
             ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
             ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
             "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
             "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-            "README.md": "d2d56cf06b77d3f3605e638a6e19ba9439726116210200cfa879dcefa7b00c4b",
+            "README.md": "3cf5aa9d04ad79102259379b309706639ae7d0210134e53e6821759dde0c5778",
             "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
             "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
             "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
@@ -2220,7 +2240,7 @@
             "uv.lock": "6ba039e16a8e1fd89be775bba2a1ec0298e3950e775c5f5214b2fbc382779f09",
             "validate_inference.py": "b17f22dde2da9443abcb8ec91d8a315fd5ef1fbb019a37f88128e880e9d1999c"
           },
-          "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+          "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
           "core_dirty": false
         },
         "max_absolute_difference": 0.0,
@@ -2229,9 +2249,9 @@
       },
       "none": {
         "previous_result_sha256": "dcbb49a393ca2d0a0a31a2e5c0dfe9b17c77ce1add3fa15263d5c8d1c35a84db",
-        "new_result_sha256": "5a8e10ac166b4c92d96e2372d279c809f4ed9a866865370b848a8a8229aa8f1d",
+        "new_result_sha256": "9295d1fcc9d3f5eb18d9b18c283f7e01c754acf48d55f843deb17a568d1fcd89",
         "previous_receipt_sha256": "53729c5739216d683618905f35f4c14aeb14deb055bebadf44e2ab77cd66ee25",
-        "new_receipt_sha256": "069c1c85cfe232c501ca7f2b1492b43b063836f745e35c30e090e66fe3df54b1",
+        "new_receipt_sha256": "fead47784c4215c97b529d92c3996eec196a4a815597efb8843db6d4dfdb359a",
         "previous_source": {
           "adapter_commit": "952f146d03f0a6048d6a593e4fd5314b85616138",
           "adapter_dirty": false,
@@ -2256,14 +2276,14 @@
           "core_dirty": false
         },
         "new_source": {
-          "adapter_commit": "df0b318ffa09fb243d4c173a467da8572f30da74",
+          "adapter_commit": "e85017d151e8aefa002a868c20f43653c05429dd",
           "adapter_dirty": false,
           "tracked_files_sha256": {
             ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
             ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
             "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
             "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-            "README.md": "d2d56cf06b77d3f3605e638a6e19ba9439726116210200cfa879dcefa7b00c4b",
+            "README.md": "3cf5aa9d04ad79102259379b309706639ae7d0210134e53e6821759dde0c5778",
             "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
             "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
             "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
@@ -2275,7 +2295,7 @@
             "uv.lock": "6ba039e16a8e1fd89be775bba2a1ec0298e3950e775c5f5214b2fbc382779f09",
             "validate_inference.py": "b17f22dde2da9443abcb8ec91d8a315fd5ef1fbb019a37f88128e880e9d1999c"
           },
-          "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+          "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
           "core_dirty": false
         },
         "max_absolute_difference": 0.0,
@@ -2285,16 +2305,16 @@
     }
   },
   "reproduction": {
-    "adapter_commit": "df0b318ffa09fb243d4c173a467da8572f30da74",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+    "adapter_commit": "e85017d151e8aefa002a868c20f43653c05429dd",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-pmt-flat",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-pmt-flat/tree/df0b318ffa09fb243d4c173a467da8572f30da74",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-pmt-flat/tree/e85017d151e8aefa002a868c20f43653c05429dd",
+    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26",
     "commands": [
       "git clone https://github.com/motion-challenge-project/motion-challenge-pmt-flat.git",
       "cd motion-challenge-pmt-flat",
-      "git checkout df0b318ffa09fb243d4c173a467da8572f30da74",
+      "git checkout e85017d151e8aefa002a868c20f43653c05429dd",
       "git submodule update --init --recursive",
       "uv sync --locked",
       "uv run evaluate.py"
