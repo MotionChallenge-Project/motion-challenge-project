@@ -1,68 +1,68 @@
 {
   "grit": {
     "model": "motion-challenge-grit",
-    "commit": "a66cacb17207dadb08c2e075b4d96bf83a969d88",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+    "commit": "a90dbaf4139f2238cfc8716a800e3b752d1ed28e",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "pushed": true
   },
   "heft": {
     "model": "motion-challenge-heft",
-    "commit": "1acc0a17cea8ae9ac94d6c1216b793303f55a0f4",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
-    "pushed": true
-  },
-  "holomotion": {
-    "model": "motion-challenge-holomotion",
-    "commit": "81ec7fe0e776235ea377549e80ec8698ab04a3c9",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
-    "pushed": true
-  },
-  "humanoid-gpt": {
-    "model": "motion-challenge-humanoid-gpt",
-    "commit": "065ff70d9f071350e6c5ef56cfaf31f8ed62741b",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+    "commit": "daed9f4dab8fb6f072495bfc10a4a7d20b0252ee",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "pushed": true
   },
   "mimic-lite": {
     "model": "motion-challenge-mimic-lite",
-    "commit": "6037690acdad849f572a88309522e8ce5c1dd135",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+    "commit": "c680770c5eaeb718310517c9f44adfa713f95b63",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "pushed": true
   },
-  "pmt-flat": {
-    "model": "motion-challenge-pmt-flat",
-    "commit": "df0b318ffa09fb243d4c173a467da8572f30da74",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+  "holomotion": {
+    "model": "motion-challenge-holomotion",
+    "commit": "555f40dd820858fc31402fc92f0f50bea020524c",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "pushed": true
+  },
+  "humanoid-gpt": {
+    "model": "motion-challenge-humanoid-gpt",
+    "commit": "5c7e1de5c2d361651dc4496dad99a495fd9466e0",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "pushed": true
   },
   "protomotions": {
     "model": "motion-challenge-protomotions",
-    "commit": "d6e17cfec132731e6b173a0e13dad1b0fd5e97ec",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
-    "pushed": true
-  },
-  "sonic-low-latency": {
-    "model": "motion-challenge-sonic-low-latency",
-    "commit": "f5d1672c9edbaf3974e42c8d543c20810c8c7987",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
-    "pushed": true
-  },
-  "sonic-v1-1": {
-    "model": "motion-challenge-sonic-v1-1",
-    "commit": "a54d031f8c6de4064b99093037ff77cc441a77e5",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
-    "pushed": true
-  },
-  "teleopit": {
-    "model": "motion-challenge-teleopit",
-    "commit": "8b83a83fcbe9f63e3bc6d79f12a0bcfb20d566a5",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+    "commit": "1389b7e99fde95a6206222974a45f26947e40f95",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "pushed": true
   },
   "twist2": {
     "model": "motion-challenge-twist2",
-    "commit": "b6e260a2ccbaf085bb04a22efd1eb8599c285f1b",
-    "core_commit": "1c5636536ad8cd70d1fe1084d364cb0d373d7af1",
+    "commit": "355ddfca2e565e35b320d61a62f5285ec71506e6",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "pushed": true
+  },
+  "teleopit": {
+    "model": "motion-challenge-teleopit",
+    "commit": "f88b8b7d17b375c8db706bd98c2865cfb0531946",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "pushed": true
+  },
+  "sonic-v1-1": {
+    "model": "motion-challenge-sonic-v1-1",
+    "commit": "a27706418b72697ef90faba37f67d9d0c2ad8495",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "pushed": true
+  },
+  "sonic-low-latency": {
+    "model": "motion-challenge-sonic-low-latency",
+    "commit": "288660d68eaebbdeb7a581a82099b1869643807d",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "pushed": true
+  },
+  "pmt-flat": {
+    "model": "motion-challenge-pmt-flat",
+    "commit": "e85017d151e8aefa002a868c20f43653c05429dd",
+    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "pushed": true
   }
 }
