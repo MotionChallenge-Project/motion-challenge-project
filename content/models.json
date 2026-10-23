@@ -91,13 +91,13 @@
       "native_validation_source_commit": "5b51cc24eff71b67fe7e5acd539c06329137dc80"
     },
     "repository_available": true,
-    "version": "v1.4.0 \u00b7 14k",
+    "version": "v1.4.0 · 14k",
     "version_kind": "author checkpoint",
     "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
     "family": "holomotion",
     "display_name": "HoloMotion v1.4.0",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "protomotions": {
@@ -156,12 +156,12 @@
     "family": "protomotions",
     "display_name": "ProtoMotions G1 BONES",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "teleopit": {
     "organization": "Westlake / SII",
-    "version": "track_g1 \u00b7 1ebd341d",
+    "version": "track_g1 · 1ebd341d",
     "version_kind": "author checkpoint or pinned source revision",
     "family": "teleopit",
     "display_name": "TeleopIT G1",
@@ -212,7 +212,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "sonic-v1-1": {
@@ -291,14 +291,14 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "sonic-low-latency": {
     "display_name": "SONIC Low-Latency",
     "family": "sonic",
     "organization": "NVIDIA",
-    "version": "Low-Latency \u00b7 2026-06-16",
+    "version": "Low-Latency · 2026-06-16",
     "organization_source": "https://huggingface.co/nvidia/GEAR-SONIC",
     "version_kind": "Author release",
     "repository_available": true,
@@ -370,14 +370,14 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "pmt-flat": {
     "display_name": "PMT Flat MLP 20k",
     "family": "pmt",
     "organization": "Mondo Robotics / HKUST & collaborators",
-    "version": "Flat MLP \u00b7 20k",
+    "version": "Flat MLP · 20k",
     "version_kind": "author checkpoint or pinned source revision",
     "organization_source": "https://acodedog.github.io/perceptive-bfm/",
     "repository_available": true,
@@ -403,7 +403,7 @@
     },
     "provenance": {
       "model": "pmt-flat",
-      "display_name": "PMT Flat \u00b7 iteration 19999",
+      "display_name": "PMT Flat · iteration 19999",
       "submitter": "Motion Challenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
@@ -448,7 +448,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "twist2": {
@@ -523,13 +523,13 @@
       "correction": "Wrist PD gains match the original author sim2sim release: Kp 4 and Kd 0.2, replacing 40 and 5. Full benchmark rerun is required."
     },
     "repository_available": true,
-    "version": "1017 \u00b7 20k",
+    "version": "1017 · 20k",
     "version_kind": "author checkpoint filename",
     "version_source": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
     "family": "twist2",
     "display_name": "TWIST2 1017-20k",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "grit": {
@@ -625,13 +625,13 @@
       ]
     },
     "repository_available": true,
-    "version": "99k \u00b7 39d573e9",
+    "version": "99k · 39d573e9",
     "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
     "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
     "family": "grit",
     "display_name": "GRIT 99k",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "heft": {
@@ -737,7 +737,7 @@
     "family": "heft",
     "display_name": "HEFT PMG",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ]
   },
   "mimic-lite": {
@@ -836,7 +836,241 @@
     "family": "mimic-lite",
     "display_name": "MimicLite 031b8d67",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
+    ]
+  },
+  "pmt-adaptive": {
+    "display_name": "PMT Adaptive MLP 20k",
+    "family": "pmt",
+    "organization": "Mondo Robotics / HKUST & collaborators",
+    "version": "Adaptive MLP 20k",
+    "version_kind": "author checkpoint or pinned source revision",
+    "organization_source": "https://acodedog.github.io/perceptive-bfm/",
+    "repository_available": true,
+    "runtime": {
+      "id": "pmt-adaptive-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.0
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "weights": "checkpoints/multimotionv2_adaptive_flat.pt",
+      "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_adaptive_flat.pt",
+      "weights_sha256": "48b267f01a632b90577148ea1801d291e2e1f3d5321807153a26f38cd4104b25",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
+      "source_repository": "https://github.com/Mondo-Robotics/PMT",
+      "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+      "official": false
+    },
+    "provenance": {
+      "model": "pmt-adaptive",
+      "display_name": "PMT Adaptive MLP 20k",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer adaptation, not author submission",
+      "upstream": "https://github.com/Mondo-Robotics/PMT",
+      "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+      "checkpoint_sha256": "48b267f01a632b90577148ea1801d291e2e1f3d5321807153a26f38cd4104b25",
+      "author_inference_review": "Maintainer native-source parity passed; not an author endorsement",
+      "notes": "Original 286D PyTorch ActorCritic,512/256/128 ELU; normalizer epsilon0.01 from native class (mjlab demo differs). No action clipping. State body transforms relative to actual torso; actual root COM linear velocity and angular velocity in pelvis link frame; convert packet link-origin velocity with the canonical pelvis COM offset. Current reference at control time. Canonical benchmark physics, not IsaacLab training physics.",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
+        "author_release_label": "Mondo-Robotics/PMT",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_adaptive_flat.pt",
+        "original_filename": "multimotionv2_adaptive_flat.pt",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_adaptive_flat.pt",
+        "sha256": "48b267f01a632b90577148ea1801d291e2e1f3d5321807153a26f38cd4104b25"
+      },
+      "inference_validation": {
+        "cases": 160,
+        "resets": 4,
+        "max_abs_error": {
+          "observation": 4.673004150390625e-05,
+          "normalized": 0.0001220703125,
+          "network": 0.0,
+          "action": 4.673004150390625e-05,
+          "motor_target": 2.288818359375e-05,
+          "reset_history": 0.0
+        },
+        "limits": {
+          "observation": 0.0002,
+          "normalized": 0.002,
+          "network": 1e-06,
+          "action": 0.0002,
+          "motor_target": 0.0002,
+          "reset_history": 0.0
+        },
+        "config_checks": {
+          "native_pd_default_action_scale": true,
+          "canonical_pelvis_com": true
+        }
+      }
+    },
+    "supported_robots": [
+      "Unitree G1 · 29 DoF"
+    ]
+  },
+  "pmt-streaming": {
+    "display_name": "PMT Streaming MLP 20k",
+    "family": "pmt",
+    "organization": "Mondo Robotics / HKUST & collaborators",
+    "version": "Streaming MLP 20k",
+    "version_kind": "author checkpoint or pinned source revision",
+    "organization_source": "https://acodedog.github.io/perceptive-bfm/",
+    "repository_available": true,
+    "runtime": {
+      "id": "pmt-streaming-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.0
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "weights": "checkpoints/multimotionv2_streaming_flat.pt",
+      "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_streaming_flat.pt",
+      "weights_sha256": "4a13d0e41ad868acf88c5599821b1e983dd845f89d4e2fee1c106f7a6b46337f",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
+      "source_repository": "https://github.com/Mondo-Robotics/PMT",
+      "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+      "official": false
+    },
+    "provenance": {
+      "model": "pmt-streaming",
+      "display_name": "PMT Streaming MLP 20k",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer adaptation, not author submission",
+      "upstream": "https://github.com/Mondo-Robotics/PMT",
+      "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+      "checkpoint_sha256": "4a13d0e41ad868acf88c5599821b1e983dd845f89d4e2fee1c106f7a6b46337f",
+      "author_inference_review": "Maintainer native-source parity passed; not an author endorsement",
+      "notes": "Original 286D PyTorch ActorCritic,512/256/128 ELU; normalizer epsilon0.01 from native class (mjlab demo differs). No action clipping. State body transforms relative to actual torso; actual root COM linear velocity and angular velocity in pelvis link frame; convert packet link-origin velocity with the canonical pelvis COM offset. Current reference at control time. Canonical benchmark physics, not IsaacLab training physics.",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
+        "author_release_label": "Mondo-Robotics/PMT",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_streaming_flat.pt",
+        "original_filename": "multimotionv2_streaming_flat.pt",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_streaming_flat.pt",
+        "sha256": "4a13d0e41ad868acf88c5599821b1e983dd845f89d4e2fee1c106f7a6b46337f"
+      },
+      "inference_validation": {
+        "cases": 160,
+        "resets": 4,
+        "max_abs_error": {
+          "observation": 6.103515625e-05,
+          "normalized": 0.0001220703125,
+          "network": 0.0,
+          "action": 6.103515625e-05,
+          "motor_target": 2.6702880859375e-05,
+          "reset_history": 0.0
+        },
+        "limits": {
+          "observation": 0.0002,
+          "normalized": 0.002,
+          "network": 1e-06,
+          "action": 0.0002,
+          "motor_target": 0.0002,
+          "reset_history": 0.0
+        },
+        "config_checks": {
+          "native_pd_default_action_scale": true,
+          "canonical_pelvis_com": true
+        }
+      }
+    },
+    "supported_robots": [
+      "Unitree G1 · 29 DoF"
+    ]
+  },
+  "pmt-uniform": {
+    "display_name": "PMT Uniform MLP 20k",
+    "family": "pmt",
+    "organization": "Mondo Robotics / HKUST & collaborators",
+    "version": "Uniform MLP 20k",
+    "version_kind": "author checkpoint or pinned source revision",
+    "organization_source": "https://acodedog.github.io/perceptive-bfm/",
+    "repository_available": true,
+    "runtime": {
+      "id": "pmt-uniform-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.0
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "weights": "checkpoints/multimotionv2_uniform_flat.pt",
+      "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_uniform_flat.pt",
+      "weights_sha256": "349471acdddcc497a83d397eb540ace4eb4222c7f7a2a3243b1f42d4b538a6a1",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
+      "source_repository": "https://github.com/Mondo-Robotics/PMT",
+      "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+      "official": false
+    },
+    "provenance": {
+      "model": "pmt-uniform",
+      "display_name": "PMT Uniform MLP 20k",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer adaptation, not author submission",
+      "upstream": "https://github.com/Mondo-Robotics/PMT",
+      "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+      "checkpoint_sha256": "349471acdddcc497a83d397eb540ace4eb4222c7f7a2a3243b1f42d4b538a6a1",
+      "author_inference_review": "Maintainer native-source parity passed; not an author endorsement",
+      "notes": "Original 286D PyTorch ActorCritic,512/256/128 ELU; normalizer epsilon0.01 from native class (mjlab demo differs). No action clipping. State body transforms relative to actual torso; actual root COM linear velocity and angular velocity in pelvis link frame; convert packet link-origin velocity with the canonical pelvis COM offset. Current reference at control time. Canonical benchmark physics, not IsaacLab training physics.",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
+        "author_release_label": "Mondo-Robotics/PMT",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_uniform_flat.pt",
+        "original_filename": "multimotionv2_uniform_flat.pt",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_uniform_flat.pt",
+        "sha256": "349471acdddcc497a83d397eb540ace4eb4222c7f7a2a3243b1f42d4b538a6a1"
+      },
+      "inference_validation": {
+        "cases": 160,
+        "resets": 4,
+        "max_abs_error": {
+          "observation": 6.866455078125e-05,
+          "normalized": 0.0001220703125,
+          "network": 0.0,
+          "action": 6.866455078125e-05,
+          "motor_target": 3.0517578125e-05,
+          "reset_history": 0.0
+        },
+        "limits": {
+          "observation": 0.0002,
+          "normalized": 0.002,
+          "network": 1e-06,
+          "action": 0.0002,
+          "motor_target": 0.0002,
+          "reset_history": 0.0
+        },
+        "config_checks": {
+          "native_pd_default_action_scale": true,
+          "canonical_pelvis_com": true
+        }
+      }
+    },
+    "supported_robots": [
+      "Unitree G1 · 29 DoF"
     ]
   }
 }
