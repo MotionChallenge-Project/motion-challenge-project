@@ -21,6 +21,7 @@
     "protocol_id": "lafan-g1-29dof/nominal/mujoco317-v1",
     "clip_count": 40,
     "mujoco_version": "3.17.0",
-    "status": "running"
+    "status": "running",
+    "no_termination_protocol_id": "lafan-g1-29dof/nominal/mujoco317-no-termination-v1"
   }
 ]
