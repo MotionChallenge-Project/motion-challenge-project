@@ -1,6 +1,31 @@
 {
-  "generated_unix": 1792751253.388616,
+  "generated_unix": 1792751482.6717699,
   "rows": [
+    {
+      "model": "any2track-v2",
+      "passed": 0,
+      "total": 40,
+      "completion_pct": 4.144853162218902,
+      "joint_mae_rad": 0.09061539257522286,
+      "root_position_error_m": 1.7393178004580974,
+      "root_orientation_error_rad": 0.8081575214942351,
+      "mpjpe_world_m": 1.73629753796078,
+      "mpjpe_root_relative_world_axes_m": 0.14198758844668707,
+      "anchor_height_error_m": 0.02560647881306379,
+      "anchor_gravity_z_error": 0.02822663157613805,
+      "end_effector_height_error_m": 0.06094025761128358,
+      "mpjpe_xy_aligned_m": 0.14568345481092498,
+      "mpjpe_xy_yaw_aligned_m": 0.06821373746872074,
+      "root_xy_error_m": 1.738273918346382,
+      "root_height_error_m": 0.024226304185840843,
+      "root_yaw_correction_abs_rad": 0.7567669343966827,
+      "yaw_alignment_degenerate_fraction": 0.0,
+      "verification": "trace_consistent",
+      "mujoco_version": "3.17.0",
+      "track_id": "lafan40-g1-mujoco317-v1",
+      "evidence_file": "any2track-v2.mujoco317.json",
+      "first_failure_s": 1.24
+    },
     {
       "model": "any2track-v2",
       "passed": 0,
@@ -23,6 +48,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "any2track-v2.json",
       "first_failure_s": 1.24
     },
     {
@@ -47,6 +73,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "teleopit.json",
       "first_failure_s": 8.799999999999606
     },
     {
@@ -71,6 +98,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "bfm-zero.json",
       "first_failure_s": 2.199999999999978
     },
     {
@@ -95,6 +123,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "grit.json",
       "first_failure_s": 12.02
     },
     {
@@ -119,6 +148,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "heft.json",
       "first_failure_s": 9.419999999999813
     },
     {
@@ -143,6 +173,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "holomotion.json",
       "first_failure_s": 4.35999999999974
     },
     {
@@ -167,6 +198,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "humanoid-gpt.json",
       "first_failure_s": 4.3199999999997445
     },
     {
@@ -191,6 +223,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "mimic-lite.json",
       "first_failure_s": 3.3199999999998546
     },
     {
@@ -215,6 +248,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "protomotions.json",
       "first_failure_s": 3.879999999999793
     },
     {
@@ -239,6 +273,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "scalebfm.json",
       "first_failure_s": 4.339999999999742
     },
     {
@@ -263,6 +298,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "sonic.json",
       "first_failure_s": 6.479999999999507
     },
     {
@@ -287,6 +323,7 @@
       "verification": "trace_consistent",
       "mujoco_version": "3.16.0",
       "track_id": "lafan40-g1-nominal-v1",
+      "evidence_file": "twist2.json",
       "first_failure_s": 3.3199999999998546
     }
   ]
