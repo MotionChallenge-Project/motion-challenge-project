@@ -22,7 +22,7 @@
   const filtered=trackData.filter(r=>(r.label+' '+(r.version||'')+' '+(r.organization||'')).toLowerCase().includes(needle)).sort((a,b)=>(descending?b[sort]-a[sort]:a[sort]-b[sort])||b.completion_pct-a.completion_pct);
   const pages=Math.max(1,Math.ceil(filtered.length/limit));page=Math.min(page,pages);
   const start=(page-1)*limit,rows=filtered.slice(start,start+limit);
-  body.replaceChildren();table.hidden=!rows.length;empty.hidden=!!rows.length;empty.textContent='No models match your search.';
+  body.replaceChildren();table.hidden=!rows.length;empty.hidden=!!rows.length;empty.textContent=trackData.length?'No models match your search.':'No completed results for this protocol yet. Batch evaluation is in progress.';
   range.textContent=filtered.length?`${start+1}–${Math.min(start+limit,filtered.length)} of ${filtered.length} · Page ${page}/${pages}`:'0 models';prev.disabled=page<=1;next.disabled=page>=pages;
   for(const r of rows){const tr=document.createElement('tr');
    [ranks.get(r.model),r.label,r.organization||'Not listed',r.passed,r.completion_pct,r.mpjpe_xy_yaw_aligned_m,r.mpjpe_xy_aligned_m,r.mpjpe_world_m].forEach((v,i)=>{const td=document.createElement('td');

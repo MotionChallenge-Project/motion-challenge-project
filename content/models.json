@@ -74,7 +74,7 @@
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
     },
     "repository_available": true,
-    "version": "99k · 39d573e9",
+    "version": "99k \u00b7 39d573e9",
     "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
     "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
     "family": "grit",
@@ -246,7 +246,7 @@
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
     },
     "repository_available": true,
-    "version": "Fused · 3e1914f1",
+    "version": "Fused \u00b7 3e1914f1",
     "version_kind": "checkpoint SHA256; author version not verified",
     "version_source": "https://github.com/NVlabs/GR00T-WholeBodyControl",
     "family": "sonic",
@@ -485,7 +485,7 @@
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
     },
     "repository_available": true,
-    "version": "v1.4.0 · 14k",
+    "version": "v1.4.0 \u00b7 14k",
     "version_kind": "author checkpoint",
     "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
     "family": "holomotion",
@@ -551,7 +551,7 @@
       "legacy_results": "not transferable to this adapter revision without rerunning",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
     },
-    "repository_available": false,
+    "repository_available": true,
     "version": "PNS wo-priv216",
     "version_kind": "author checkpoint filename",
     "version_source": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx",
@@ -649,7 +649,7 @@
       "legacy_results": "not transferable to this adapter revision without rerunning",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
     },
-    "repository_available": false,
+    "repository_available": true,
     "version": "SHA cdc9d645",
     "version_kind": "checkpoint SHA256; author version not verified",
     "version_source": "https://github.com/LeCAR-Lab/BFM-Zero",
@@ -715,10 +715,95 @@
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
     },
     "repository_available": true,
-    "version": "1017 · 20k",
+    "version": "1017 \u00b7 20k",
     "version_kind": "author checkpoint filename",
     "version_source": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
     "family": "twist2",
     "display_name": "TWIST2 1017-20k"
+  },
+  "teleopit": {
+    "organization": "Not listed",
+    "version": "track_g1 \u00b7 1ebd341d",
+    "version_kind": "author checkpoint or pinned source revision",
+    "family": "teleopit",
+    "display_name": "TeleopIT G1",
+    "organization_source": "https://github.com/BotRunner64/Teleopit",
+    "version_source": "https://github.com/BotRunner64/Teleopit",
+    "repository_available": true,
+    "runtime": {
+      "id": "teleopit-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.0
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.0,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "weights": "checkpoints/policy.onnx",
+      "weights_url": "https://huggingface.co/12e21/Teleopit-models/resolve/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx",
+      "weights_sha256": "1ebd341d9193e1c49a986450f6043ba1a9473ad46636ce0bcb1c7755c856e0de",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "078b79be54dbc0b7eab919cc843ac6774ef23e1c15aca01afe1c584ff6cd3c02",
+      "source_repository": "https://github.com/BotRunner64/Teleopit",
+      "source_commit": "f9263865c581802ad531854b8e547e2403a945f3",
+      "official": false
+    },
+    "provenance": {
+      "model": "teleopit",
+      "display_name": "TeleopIT G1",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/BotRunner64/Teleopit",
+      "source_commit": "f9263865c581802ad531854b8e547e2403a945f3",
+      "checkpoint_sha256": "1ebd341d9193e1c49a986450f6043ba1a9473ad46636ce0bcb1c7755c856e0de",
+      "author_inference_review": "pending",
+      "notes": "The released base G1 29DoF policy is paired with g1_29dof.xml. Neck and hand variants use separate checkpoints.",
+      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator"
+    }
+  },
+  "any2track-v2": {
+    "organization": "Galbot / Tsinghua",
+    "version": "LAFAN1 generalist v2",
+    "version_kind": "author release",
+    "family": "any2track",
+    "display_name": "Any2Track Generalist v2",
+    "organization_source": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
+    "version_source": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
+    "repository_available": true,
+    "runtime": {
+      "id": "any2track-v2-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.0,
+        0.02
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.02,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "weights": "checkpoints/policy.onnx",
+      "weights_url": "https://drive.usercontent.google.com/download?id=1XG_-GP5svz_4TGh484X900dbctibZGAm&export=download",
+      "weights_sha256": "1320bddd4b981876e84243c0d336c8eaef57e202499b694cfbdc626fab3972c1",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "b8a51b1bbe6582a866ad710d7207528081b624b2ff72baed13bc8583b5d4b52e",
+      "source_repository": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
+      "source_commit": "cb9b751993a2483e5d1805a2565ddbfe950c04c9",
+      "official": false
+    },
+    "provenance": {
+      "model": "any2track-v2",
+      "display_name": "Any2Track Generalist v2",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
+      "source_commit": "cb9b751993a2483e5d1805a2565ddbfe950c04c9",
+      "checkpoint_sha256": "1320bddd4b981876e84243c0d336c8eaef57e202499b694cfbdc626fab3972c1",
+      "author_inference_review": "pending",
+      "notes": "Official generalist v2 distilled from eight teachers. The downloaded configuration declares 156 observations and 29 actions. It was trained on all 40 LAFAN1 motions using a different retargeting pipeline; this is a known-data tracking comparison, not an unseen-motion generalization claim. Author-reported 40/40 uses the author setup and is not a Motion Challenge score.",
+      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator"
+    }
   }
 }

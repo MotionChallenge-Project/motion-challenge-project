@@ -1,30 +1,5 @@
 [
   {
-    "id": "teleopit",
-    "label": "TeleopIT",
-    "organization": "Not listed",
-    "upstream": "https://github.com/BotRunner64/Teleopit",
-    "project_url": "https://botrunner64.github.io/Teleopit/",
-    "source_commit": "f9263865c581802ad531854b8e547e2403a945f3",
-    "architecture": "Temporal history controller",
-    "artifacts": [
-      {
-        "name": "track_g1.onnx",
-        "url": "https://huggingface.co/12e21/Teleopit-models/resolve/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx",
-        "sha256": "1ebd341d9193e1c49a986450f6043ba1a9473ad46636ce0bcb1c7755c856e0de"
-      }
-    ],
-    "notes": "The released base G1 29DoF policy is paired with g1_29dof.xml. Neck and hand variants use separate checkpoints.",
-    "robot_id": "g1-29dof",
-    "benchmark_id": "lafan40",
-    "status": "Public checkpoint; adapter integration pending",
-    "checked_date": "2026-10-23",
-    "family": "teleopit",
-    "version": "track_g1 · 1ebd341d",
-    "version_kind": "author checkpoint or pinned source revision",
-    "display_name": "TeleopIT G1"
-  },
-  {
     "id": "omnixtreme",
     "label": "OmniXtreme",
     "organization": "BIGAI / Unitree & collaborators",
@@ -58,12 +33,12 @@
   },
   {
     "id": "pmt-flat",
-    "label": "PMT · Flat MLP",
+    "label": "PMT \u00b7 Flat MLP",
     "organization": "Mondo Robotics / HKUST & collaborators",
     "upstream": "https://github.com/Mondo-Robotics/PMT",
     "project_url": "https://acodedog.github.io/perceptive-bfm/",
     "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-    "architecture": "ActorCritic MLP · 20k update checkpoint",
+    "architecture": "ActorCritic MLP \u00b7 20k update checkpoint",
     "artifacts": [
       {
         "name": "multimotionv2_flat.pt",
@@ -77,18 +52,18 @@
     "status": "Public checkpoint; adapter integration pending",
     "checked_date": "2026-10-23",
     "family": "pmt",
-    "version": "Flat MLP · 20k",
+    "version": "Flat MLP \u00b7 20k",
     "version_kind": "author checkpoint or pinned source revision",
     "display_name": "PMT Flat MLP 20k"
   },
   {
     "id": "pmt-rgmt",
-    "label": "PMT · RGMT",
+    "label": "PMT \u00b7 RGMT",
     "organization": "Mondo Robotics / HKUST & collaborators",
     "upstream": "https://github.com/Mondo-Robotics/PMT",
     "project_url": "https://github.com/Mondo-Robotics/PMT/blob/main/checkpoints/pretrained/README.md",
     "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-    "architecture": "TransformerActorCritic · 20k update checkpoint",
+    "architecture": "TransformerActorCritic \u00b7 20k update checkpoint",
     "artifacts": [
       {
         "name": "rgmt_flat.pt",
@@ -102,13 +77,13 @@
     "status": "Public checkpoint; adapter integration pending",
     "checked_date": "2026-10-23",
     "family": "pmt",
-    "version": "RGMT · 20k",
+    "version": "RGMT \u00b7 20k",
     "version_kind": "author checkpoint or pinned source revision",
     "display_name": "PMT RGMT 20k"
   },
   {
     "id": "ufo",
-    "label": "UFO · G1 FB",
+    "label": "UFO \u00b7 G1 FB",
     "organization": "RoboParty",
     "upstream": "https://github.com/Roboparty/UFO",
     "project_url": "https://roboparty.github.io/UFO/",
@@ -132,7 +107,7 @@
     "status": "Public checkpoint; adapter integration pending",
     "checked_date": "2026-10-23",
     "family": "ufo",
-    "version": "G1 FB · fe58bf17",
+    "version": "G1 FB \u00b7 fe58bf17",
     "version_kind": "author checkpoint or pinned source revision",
     "display_name": "UFO G1 FB"
   },
@@ -173,7 +148,7 @@
   {
     "id": "sonic-low-latency",
     "label": "SONIC",
-    "version": "Low-Latency · 2026-06-16",
+    "version": "Low-Latency \u00b7 2026-06-16",
     "version_kind": "author release",
     "family": "sonic",
     "organization": "NVIDIA",
@@ -207,7 +182,7 @@
   {
     "id": "holomotion-v1-4-1",
     "label": "HoloMotion",
-    "version": "v1.4.1 · 16.2k",
+    "version": "v1.4.1 \u00b7 16.2k",
     "version_kind": "author release",
     "family": "holomotion",
     "organization": "Horizon Robotics",
@@ -235,7 +210,7 @@
   {
     "id": "holomotion-v2-0-0",
     "label": "HoloMotion",
-    "version": "v2.0.0 · 10.5k",
+    "version": "v2.0.0 \u00b7 10.5k",
     "version_kind": "author release",
     "family": "holomotion",
     "organization": "Horizon Robotics",
@@ -259,36 +234,5 @@
     "artifact_revision": "e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a",
     "config_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/config.yaml",
     "display_name": "HoloMotion v2.0.0"
-  },
-  {
-    "id": "any2track-v2",
-    "label": "Any2Track / OpenTrack",
-    "version": "LAFAN1 generalist v2",
-    "version_kind": "author release",
-    "family": "any2track",
-    "organization": "Galbot / Tsinghua",
-    "upstream": "https://github.com/GalaxyGeneralRobotics/OpenTrack",
-    "project_url": "https://zzk273.github.io/Any2Track/",
-    "source_commit": "cb9b751993a2483e5d1805a2565ddbfe950c04c9",
-    "architecture": "DAgger generalist · MLP · 29 actions",
-    "artifacts": [
-      {
-        "name": "general_tracker_lafan1_v2/model.onnx",
-        "url": "https://drive.usercontent.google.com/download?id=1XG_-GP5svz_4TGh484X900dbctibZGAm&export=download",
-        "sha256": "1320bddd4b981876e84243c0d336c8eaef57e202499b694cfbdc626fab3972c1",
-        "size_bytes": 8588031
-      },
-      {
-        "name": "general_tracker_lafan1_v2/config.json",
-        "url": "https://drive.usercontent.google.com/download?id=1eQctJ9-pdzcEIDuQyb_2U0GSjz1BRfWX&export=download",
-        "sha256": "3dac8c821f0b2326fc1644a8d4626e84a27b23cf74762f7d04881bf8b7082c86"
-      }
-    ],
-    "notes": "Official generalist v2 distilled from eight teachers. The downloaded configuration declares 156 observations and 29 actions. It was trained on all 40 LAFAN1 motions using a different retargeting pipeline; this is a known-data tracking comparison, not an unseen-motion generalization claim. Author-reported 40/40 uses the author setup and is not a Motion Challenge score.",
-    "robot_id": "g1-29dof",
-    "benchmark_id": "lafan40",
-    "status": "Public checkpoint; adapter integration pending",
-    "checked_date": "2026-10-23",
-    "display_name": "Any2Track Generalist v2"
   }
 ]

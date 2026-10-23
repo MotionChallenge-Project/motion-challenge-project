@@ -1,0 +1,26 @@
+[
+  {
+    "id": "lafan40-g1-nominal-v1",
+    "benchmark_id": "lafan40",
+    "benchmark_label": "LAFAN40",
+    "robot_id": "g1-29dof",
+    "robot_label": "Unitree G1 \u00b7 29 DoF",
+    "label": "Nominal \u00b7 MuJoCo 3.16.0",
+    "protocol_id": "lafan-g1-29dof/nominal/cpu-development-v1",
+    "clip_count": 40,
+    "mujoco_version": "3.16.0",
+    "status": "complete"
+  },
+  {
+    "id": "lafan40-g1-mujoco317-v1",
+    "benchmark_id": "lafan40",
+    "benchmark_label": "LAFAN40",
+    "robot_id": "g1-29dof",
+    "robot_label": "Unitree G1 \u00b7 29 DoF",
+    "label": "Nominal \u00b7 MuJoCo 3.17.0 batch",
+    "protocol_id": "lafan-g1-29dof/nominal/mujoco317-v1",
+    "clip_count": 40,
+    "mujoco_version": "3.17.0",
+    "status": "running"
+  }
+]
