@@ -108,6 +108,7 @@ def render(models, rows, tracks, content, github, page, intro):
         source_url = source.rstrip('/') + '/tree/' + revision if revision else source
         model_facts = [
             ('Organization', link(model['organization_source'], model['organization'])),
+            ('Type', link(model['controller_type']['source'], model['controller_type']['label']) + '<br><span class="small">' + esc(model['controller_type']['description']) + '</span>'),
             ('Version', esc(model['version']) + '<br><span class="small">' + esc(model['version_kind']) + '</span>'),
             ('Robot support', esc(' · '.join(model.get('supported_robots', ['Unitree G1 · 29 DoF'])))),
             ('Author source revision', link(source_url, revision or 'Not recorded')),

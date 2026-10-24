@@ -72,6 +72,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "holomotion.mujoco317.unified.json",
+      "controller_type": {
+        "id": "moe",
+        "label": "MoE",
+        "description": "Reference-routed mixture-of-experts Transformer policy.",
+        "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/config.yaml"
+      },
       "label": "HoloMotion v1.4.0",
       "version": "v1.4.0 \u00b7 14k",
       "organization": "Horizon Robotics",
@@ -127,6 +133,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-flat.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Continuous dense MLP motion-tracking policy.",
+        "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt"
+      },
       "label": "PMT Flat MLP 20k",
       "version": "Flat MLP \u00b7 20k",
       "organization": "Mondo Robotics / HKUST & collaborators",
@@ -182,6 +194,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "protomotions.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Dense MLP motion-tracking policy.",
+        "source": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx"
+      },
       "label": "ProtoMotions G1 BONES",
       "version": "G1 BONES deploy",
       "organization": "NVIDIA",
@@ -237,6 +255,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "sonic-low-latency.mujoco317.unified.json",
+      "controller_type": {
+        "id": "fsq",
+        "label": "FSQ",
+        "description": "Quantized latent control using finite scalar quantization (FSQ), with a motion encoder and a conditioned decoder.",
+        "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/gear_sonic/config/actor_critic/quantizers/fsq.yaml"
+      },
       "label": "SONIC Low-Latency",
       "version": "Low-Latency \u00b7 2026-06-16",
       "organization": "NVIDIA",
@@ -292,6 +316,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "sonic-v1-1.mujoco317.unified.json",
+      "controller_type": {
+        "id": "fsq",
+        "label": "FSQ",
+        "description": "Quantized latent control using finite scalar quantization (FSQ), with a motion encoder and a conditioned decoder.",
+        "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/gear_sonic/config/actor_critic/quantizers/fsq.yaml"
+      },
       "label": "SONIC v1.1",
       "version": "v1.1",
       "organization": "NVIDIA",
@@ -347,6 +377,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "teleopit.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Temporal convolutional encoder and dense policy head.",
+        "source": "https://huggingface.co/12e21/Teleopit-models/blob/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx"
+      },
       "label": "TeleopIT G1",
       "version": "track_g1 \u00b7 1ebd341d",
       "organization": "Westlake / SII",
@@ -402,6 +438,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "grit.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Graph-based reference encoder and dense policy head.",
+        "source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx"
+      },
       "label": "GRIT 99k",
       "version": "99k \u00b7 39d573e9",
       "organization": "GRIT Team",
@@ -457,6 +499,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "heft.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Dense policy with fully connected layers and normalized hidden features.",
+        "source": "https://github.com/Axellwppr/motion_tracking/tree/0d5ba31e33397f3543d350d98b637e26d92f470a/sim2real/config/g1/ckpts/G1_PMG"
+      },
       "label": "HEFT PMG",
       "version": "SHA 192aaacc",
       "organization": "Tsinghua / RobotEra / SQZ",
@@ -512,6 +560,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "mimic-lite.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Dense MLP policy with normalized hidden features.",
+        "source": "https://drive.google.com/drive/folders/1xRmcOX0l-YIpqxUuCmW4s6Dl0HStbJSL"
+      },
       "label": "MimicLite 031b8d67",
       "version": "SHA 031b8d67",
       "organization": "RoboParty",
@@ -567,6 +621,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "twist2.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Convolutional history encoder and dense policy layers.",
+        "source": "https://github.com/amazon-far/TWIST2/blob/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx"
+      },
       "label": "TWIST2 1017-20k",
       "version": "1017 \u00b7 20k",
       "organization": "Amazon FAR",
@@ -622,6 +682,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-adaptive.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Continuous dense MLP motion-tracking policy.",
+        "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_adaptive_flat.pt"
+      },
       "label": "PMT Adaptive MLP 20k",
       "version": "Adaptive MLP 20k",
       "organization": "Mondo Robotics / HKUST & collaborators",
@@ -677,6 +743,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-bpo.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Continuous dense MLP motion-tracking policy.",
+        "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/bpo_multimotionv2_flat.pt"
+      },
       "label": "PMT BPO MLP 20k",
       "version": "BPO MLP 20k",
       "organization": "Mondo Robotics / HKUST & collaborators",
@@ -732,6 +804,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-streaming.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Continuous dense MLP motion-tracking policy.",
+        "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_streaming_flat.pt"
+      },
       "label": "PMT Streaming MLP 20k",
       "version": "Streaming MLP 20k",
       "organization": "Mondo Robotics / HKUST & collaborators",
@@ -787,6 +865,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-uniform.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Continuous dense MLP motion-tracking policy.",
+        "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_uniform_flat.pt"
+      },
       "label": "PMT Uniform MLP 20k",
       "version": "Uniform MLP 20k",
       "organization": "Mondo Robotics / HKUST & collaborators",
@@ -842,6 +926,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-add.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Continuous dense MLP motion-tracking policy.",
+        "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/add_multimotion_flat.pt"
+      },
       "label": "PMT ADD MLP 20k",
       "version": "ADD MLP 20k",
       "organization": "Mondo Robotics / HKUST & collaborators",
@@ -897,6 +987,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-rgmt.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Dense Transformer attention and MLP policy head.",
+        "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/rgmt_flat.pt"
+      },
       "label": "PMT RGMT Transformer 20k",
       "version": "RGMT Transformer 20k",
       "organization": "Mondo Robotics / HKUST & collaborators",
@@ -952,6 +1048,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "sonic-original.mujoco317.unified.json",
+      "controller_type": {
+        "id": "fsq",
+        "label": "FSQ",
+        "description": "Quantized latent control using finite scalar quantization (FSQ), with a motion encoder and a conditioned decoder.",
+        "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/gear_sonic/config/actor_critic/quantizers/fsq.yaml"
+      },
       "label": "SONIC Original",
       "version": "Original",
       "organization": "NVIDIA",
@@ -1007,6 +1109,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "holomotion-v1-3-2.mujoco317.unified.json",
+      "controller_type": {
+        "id": "moe",
+        "label": "MoE",
+        "description": "Reference-routed mixture-of-experts Transformer policy.",
+        "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.2/config.yaml"
+      },
       "label": "HoloMotion v1.3.2",
       "version": "v1.3.2",
       "organization": "Horizon Robotics",
@@ -1062,6 +1170,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "holomotion-v1-4-1.mujoco317.unified.json",
+      "controller_type": {
+        "id": "moe",
+        "label": "MoE",
+        "description": "Reference-routed mixture-of-experts Transformer policy.",
+        "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/config.yaml"
+      },
       "label": "HoloMotion v1.4.1",
       "version": "v1.4.1",
       "organization": "Horizon Robotics",
@@ -1117,6 +1231,12 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "textop.mujoco317.unified.json",
+      "controller_type": {
+        "id": "dense",
+        "label": "Dense",
+        "description": "Dense MLP Tracker; the upstream text-to-motion generator is not evaluated.",
+        "source": "https://huggingface.co/datasets/Yochish/TextOp-Data/blob/bb9604ce36ad4c0a77b5cccde89ebbb7c3ca93c9/TextOpTracker/logs/rsl_rl/Pretrained/checkpoints/latest.onnx"
+      },
       "label": "TextOp Tracker 75k",
       "version": "Tracker 75k \u00b7 8df6371c",
       "organization": "TeleAI / SJTU / ECUST",

@@ -91,14 +91,20 @@
       "native_validation_source_commit": "5b51cc24eff71b67fe7e5acd539c06329137dc80"
     },
     "repository_available": true,
-    "version": "v1.4.0 · 14k",
+    "version": "v1.4.0 \u00b7 14k",
     "version_kind": "author checkpoint",
     "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
     "family": "holomotion",
     "display_name": "HoloMotion v1.4.0",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "moe",
+      "label": "MoE",
+      "description": "Reference-routed mixture-of-experts Transformer policy.",
+      "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/config.yaml"
+    }
   },
   "protomotions": {
     "organization": "NVIDIA",
@@ -157,12 +163,18 @@
     "family": "protomotions",
     "display_name": "ProtoMotions G1 BONES",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Dense MLP motion-tracking policy.",
+      "source": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx"
+    }
   },
   "teleopit": {
     "organization": "Westlake / SII",
-    "version": "track_g1 · 1ebd341d",
+    "version": "track_g1 \u00b7 1ebd341d",
     "version_kind": "author checkpoint or pinned source revision",
     "family": "teleopit",
     "display_name": "TeleopIT G1",
@@ -215,8 +227,14 @@
       "parity_scope": "Offline VelCmdHistory playback defaults, shared canonical robot FK, original weights on CPU ONNX Runtime; hardware, retargeting and online transport excluded. No inference changes were needed."
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Temporal convolutional encoder and dense policy head.",
+      "source": "https://huggingface.co/12e21/Teleopit-models/blob/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx"
+    }
   },
   "sonic-v1-1": {
     "display_name": "SONIC v1.1",
@@ -294,14 +312,20 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "fsq",
+      "label": "FSQ",
+      "description": "Quantized latent control using finite scalar quantization (FSQ), with a motion encoder and a conditioned decoder.",
+      "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/gear_sonic/config/actor_critic/quantizers/fsq.yaml"
+    }
   },
   "sonic-low-latency": {
     "display_name": "SONIC Low-Latency",
     "family": "sonic",
     "organization": "NVIDIA",
-    "version": "Low-Latency · 2026-06-16",
+    "version": "Low-Latency \u00b7 2026-06-16",
     "organization_source": "https://huggingface.co/nvidia/GEAR-SONIC",
     "version_kind": "Author release",
     "repository_available": true,
@@ -373,14 +397,20 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "fsq",
+      "label": "FSQ",
+      "description": "Quantized latent control using finite scalar quantization (FSQ), with a motion encoder and a conditioned decoder.",
+      "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/gear_sonic/config/actor_critic/quantizers/fsq.yaml"
+    }
   },
   "pmt-flat": {
     "display_name": "PMT Flat MLP 20k",
     "family": "pmt",
     "organization": "Mondo Robotics / HKUST & collaborators",
-    "version": "Flat MLP · 20k",
+    "version": "Flat MLP \u00b7 20k",
     "version_kind": "author checkpoint or pinned source revision",
     "organization_source": "https://acodedog.github.io/perceptive-bfm/",
     "repository_available": true,
@@ -406,7 +436,7 @@
     },
     "provenance": {
       "model": "pmt-flat",
-      "display_name": "PMT Flat · iteration 19999",
+      "display_name": "PMT Flat \u00b7 iteration 19999",
       "submitter": "Motion Challenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
@@ -451,8 +481,14 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Continuous dense MLP motion-tracking policy.",
+      "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt"
+    }
   },
   "twist2": {
     "organization": "Amazon FAR",
@@ -526,14 +562,20 @@
       "correction": "Wrist PD gains match the original author sim2sim release: Kp 4 and Kd 0.2, replacing 40 and 5. Full benchmark rerun is required."
     },
     "repository_available": true,
-    "version": "1017 · 20k",
+    "version": "1017 \u00b7 20k",
     "version_kind": "author checkpoint filename",
     "version_source": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
     "family": "twist2",
     "display_name": "TWIST2 1017-20k",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Convolutional history encoder and dense policy layers.",
+      "source": "https://github.com/amazon-far/TWIST2/blob/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx"
+    }
   },
   "grit": {
     "organization": "GRIT Team",
@@ -628,14 +670,20 @@
       ]
     },
     "repository_available": true,
-    "version": "99k · 39d573e9",
+    "version": "99k \u00b7 39d573e9",
     "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
     "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
     "family": "grit",
     "display_name": "GRIT 99k",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Graph-based reference encoder and dense policy head.",
+      "source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx"
+    }
   },
   "heft": {
     "organization": "Tsinghua / RobotEra / SQZ",
@@ -740,8 +788,14 @@
     "family": "heft",
     "display_name": "HEFT PMG",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Dense policy with fully connected layers and normalized hidden features.",
+      "source": "https://github.com/Axellwppr/motion_tracking/tree/0d5ba31e33397f3543d350d98b637e26d92f470a/sim2real/config/g1/ckpts/G1_PMG"
+    }
   },
   "mimic-lite": {
     "organization": "RoboParty",
@@ -839,8 +893,14 @@
     "family": "mimic-lite",
     "display_name": "MimicLite 031b8d67",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Dense MLP policy with normalized hidden features.",
+      "source": "https://drive.google.com/drive/folders/1xRmcOX0l-YIpqxUuCmW4s6Dl0HStbJSL"
+    }
   },
   "pmt-adaptive": {
     "display_name": "PMT Adaptive MLP 20k",
@@ -917,8 +977,14 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Continuous dense MLP motion-tracking policy.",
+      "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_adaptive_flat.pt"
+    }
   },
   "pmt-streaming": {
     "display_name": "PMT Streaming MLP 20k",
@@ -995,8 +1061,14 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Continuous dense MLP motion-tracking policy.",
+      "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_streaming_flat.pt"
+    }
   },
   "pmt-uniform": {
     "display_name": "PMT Uniform MLP 20k",
@@ -1073,8 +1145,14 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Continuous dense MLP motion-tracking policy.",
+      "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_uniform_flat.pt"
+    }
   },
   "pmt-bpo": {
     "display_name": "PMT BPO MLP 20k",
@@ -1151,8 +1229,14 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Continuous dense MLP motion-tracking policy.",
+      "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/bpo_multimotionv2_flat.pt"
+    }
   },
   "pmt-add": {
     "display_name": "PMT ADD MLP 20k",
@@ -1206,8 +1290,14 @@
       "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Continuous dense MLP motion-tracking policy.",
+      "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/add_multimotion_flat.pt"
+    }
   },
   "pmt-rgmt": {
     "display_name": "PMT RGMT Transformer 20k",
@@ -1304,8 +1394,14 @@
       "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Dense Transformer attention and MLP policy head.",
+      "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/rgmt_flat.pt"
+    }
   },
   "sonic-original": {
     "display_name": "SONIC Original",
@@ -1384,8 +1480,14 @@
       "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "fsq",
+      "label": "FSQ",
+      "description": "Quantized latent control using finite scalar quantization (FSQ), with a motion encoder and a conditioned decoder.",
+      "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/gear_sonic/config/actor_critic/quantizers/fsq.yaml"
+    }
   },
   "holomotion-v1-3-2": {
     "organization": "Horizon Robotics",
@@ -1483,8 +1585,14 @@
     "family": "holomotion",
     "display_name": "HoloMotion v1.3.2",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "moe",
+      "label": "MoE",
+      "description": "Reference-routed mixture-of-experts Transformer policy.",
+      "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.2/config.yaml"
+    }
   },
   "holomotion-v1-4-1": {
     "organization": "Horizon Robotics",
@@ -1582,21 +1690,27 @@
     "family": "holomotion",
     "display_name": "HoloMotion v1.4.1",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
-    ]
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "moe",
+      "label": "MoE",
+      "description": "Reference-routed mixture-of-experts Transformer policy.",
+      "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/config.yaml"
+    }
   },
   "textop": {
     "organization": "TeleAI / SJTU / ECUST",
     "organization_source": "https://text-op.github.io/",
     "family": "textop",
     "display_name": "TextOp Tracker 75k",
-    "version": "Tracker 75k · 8df6371c",
+    "version": "Tracker 75k \u00b7 8df6371c",
     "version_kind": "author-released ONNX checkpoint",
     "version_source": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/USAGE.md",
     "repository_available": true,
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-textop",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "description": "The released low-level universal motion tracker from TextOp. This entry evaluates reference-motion tracking, without the high-level text-to-motion generator.",
     "training_data": {
@@ -1649,6 +1763,12 @@
         "sha256": "8df6371cce677a6ef8fd7124d082fbf98df11735b9e1aa5808f1bf9d3152b582",
         "verification": "The author usage guide links this artifact repository. Checkpoint identity and inference parity are independently verified."
       }
+    },
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Dense MLP Tracker; the upstream text-to-motion generator is not evaluated.",
+      "source": "https://huggingface.co/datasets/Yochish/TextOp-Data/blob/bb9604ce36ad4c0a77b5cccde89ebbb7c3ca93c9/TextOpTracker/logs/rsl_rl/Pretrained/checkpoints/latest.onnx"
     }
   }
 }

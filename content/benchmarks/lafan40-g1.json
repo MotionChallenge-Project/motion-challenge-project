@@ -25,7 +25,7 @@
           ],
           [
             "Engine",
-            "MuJoCo 3.17.0 · official CPU batch · 2 ms physics step"
+            "MuJoCo 3.17.0 · 2 ms physics step"
           ],
           [
             "Initialization",
@@ -96,39 +96,25 @@
     },
     {
       "id": "rollout-modes",
-      "title": "04 · One rollout, two metric ranges",
+      "title": "04 · Tracking-error coverage",
       "table": {
         "headers": [
-          "Rule",
-          "Until first failure",
-          "Entire motion"
+          "Time range",
+          "Frames included"
         ],
         "rows": [
           [
-            "After first failure",
-            "End this metric range after including the failure frame.",
-            "Continue the same rollout without resetting or changing the reference."
+            "Early termination",
+            "From the first frame through the first failing sample, including that sample. If no failure occurs, use the entire motion."
           ],
           [
-            "Success",
-            "Failed if any condition fires.",
-            "Same first-failure definition; recovery does not restore success."
-          ],
-          [
-            "Completion",
-            "Last valid sample time / full duration.",
-            "Same value, frozen at the first failure."
-          ],
-          [
-            "Tracking-error coverage",
-            "Observed prefix, including the failing sample.",
-            "Entire motion, including post-failure states."
+            "No termination",
+            "All evaluation samples through the exact final reference timestamp, including states after failure. The robot is not reset after a failure."
           ]
         ]
       },
       "notes": [
-        "Success and completion use the first failure. All six MPBPE values share one checkpoint, source revision and trajectory; no mode switch or second rollout is needed.",
-        "Invalid numerical states, inference errors and truncated smoke runs cannot produce a successful full-suite result."
+        "Both ranges use the same three alignment definitions below. Read tracking errors together with success and completion."
       ],
       "links": [
         {
@@ -141,7 +127,7 @@
         }
       ],
       "paragraphs": [
-        "One uv run evaluate.py command runs each motion through its exact endpoint. The core records the first failure, then derives both metric ranges from the same verified trajectory."
+        "Tracking errors are reported over two time ranges. Success and completion always use the first failure; recovering later does not turn a failed motion into a success."
       ]
     },
     {
@@ -172,7 +158,7 @@
         ]
       },
       "paragraphs": [
-        "MPBPE is reported over both time ranges under each alignment below: six views of tracking accuracy from one trajectory."
+        "MPBPE is reported for each time range under three alignment settings, giving six tracking-error measurements."
       ],
       "notes": [
         "XY + yaw: remove pelvis XY translation and the closest relative world-Z rotation. Preserve absolute height and tilt.",
