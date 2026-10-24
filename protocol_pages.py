@@ -15,7 +15,7 @@ def render(content, page, intro, github):
 <a href="#evidence">Model requirements</a>
 </aside><article class="docs">
 <section id="contract"><h2>Evaluation</h2>
-<p>The Core fixes data, robot, physics, reset, failures and scoring. Each controller keeps its author's inference, history and control timing.</p>
+<p>The Core fixes data, robot, physics, reset, failures and scoring. Each controller uses its released checkpoint and documented inference path, history and control timing.</p>
 <p>Each benchmark declares its motion set, robot, simulator settings, initialization and failure conditions. Evaluate every declared motion with one checkpoint, from first frame to endpoint; record the first failure and continue without resetting.</p>
 <p><a class="text-link" href="/benchmarks/">Dataset &amp; benchmark conditions ↗</a></p>
 </section>
