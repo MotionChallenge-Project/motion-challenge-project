@@ -54,6 +54,7 @@
     button.title='Sorted '+(descending?'high to low':'low to high')+'. Click to reverse.';
    }else{header.removeAttribute('aria-sort');button.title='Sort by '+label;}
   });
+  const sortColumn=['passed','completion_pct','mpjpe_xy_yaw_aligned_m','mpjpe_xy_aligned_m','mpjpe_world_m','full_mpjpe_xy_yaw_aligned_m','full_mpjpe_xy_aligned_m','full_mpjpe_world_m'].indexOf(sort)+4;
   const bestFirst=['passed','completion_pct'].includes(sort)?descending:!descending;
   $('#sort-caption').textContent='Sorted by '+sortingLabel+' · '+(descending?'High → low':'Low → high')+(bestFirst?' · Best first':'');
   const trackData=data.filter(r=>r.track_id===track.id&&['early_termination','unified'].includes(r.termination_mode||'early_termination')).map(r=>{
@@ -79,13 +80,14 @@
    if(medal)tr.className='podium-'+medal;
    [rank,r.label,r.controller_type,r.organization||'Not listed',r.passed,r.completion_pct,r.mpjpe_xy_yaw_aligned_m,r.mpjpe_xy_aligned_m,r.mpjpe_world_m,r.full_mpjpe_xy_yaw_aligned_m,r.full_mpjpe_xy_aligned_m,r.full_mpjpe_world_m].forEach((v,i)=>{const td=document.createElement('td');
     if(i===0){td.className='rank';td.setAttribute('aria-label','Rank '+v);const badge=document.createElement('span');badge.className='rank-badge';if(medal){const icon=document.createElement('span');icon.className='rank-medal';icon.setAttribute('aria-hidden','true');icon.textContent=['🥇','🥈','🥉'][rank-1];badge.append(icon);td.title='Top '+rank+' by '+sortingLabel;}const number=document.createElement('span');number.className='rank-number';number.textContent=String(v);badge.append(number);td.append(badge);}
-    else if(i===1){const a=document.createElement('a');a.href=base+'/models/'+r.model+'/';a.textContent=v;td.append(a);const links=document.createElement('small');links.className='eval-code-links';const details=document.createElement('a');details.href=base+'/evaluations/'+encodeURIComponent(track.id)+'/'+r.model+'/';details.textContent='Detailed results ↗';links.append(details);td.append(links);}
+    else if(i===1){const entry=document.createElement('div');entry.className='model-entry';const icon=document.createElement('img');icon.className='model-icon';icon.src=base+r.icon;icon.alt='';icon.width=32;icon.height=32;const text=document.createElement('div');text.className='model-entry-text';const a=document.createElement('a');a.href=base+'/models/'+r.model+'/';a.textContent=v;text.append(a);const links=document.createElement('small');links.className='eval-code-links';const details=document.createElement('a');details.href=base+'/evaluations/'+encodeURIComponent(track.id)+'/'+r.model+'/';details.textContent='Detailed results ↗';links.append(details);text.append(links);entry.append(icon,text);td.append(entry);}
     else if(i===2){const tag=document.createElement('a');tag.className='type-tag type-'+v.id;tag.href=v.source;tag.textContent=v.label;tag.title=v.description;td.append(tag);}
     else if(i===4){td.className='score';td.textContent=(v/track.clip_count*100).toFixed(1)+'%';const small=document.createElement('small');small.textContent=v+' / '+track.clip_count+' clips';td.append(small);}
     else if(i===5)td.textContent=v.toFixed(2)+'%';else if(i>=6){
      if(v==null){td.textContent='—';td.className='pending';td.title='Full-motion evaluation not yet published';}
      else{const a=document.createElement('a');a.className='metric-evidence';a.href=base+'/evaluations/'+encodeURIComponent(track.id)+'/'+r.model+'/'+(i>=9?'#none':'#early');a.textContent=(v*1000).toFixed(2);a.title='Evaluation record, per-motion metrics and verification receipt';td.append(a);}
     }else td.textContent=v;
+    if(i===sortColumn)td.classList.add('sorted-column');
     tr.append(td);
    });body.append(tr);
   }

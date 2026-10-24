@@ -104,7 +104,8 @@
       "label": "MoE",
       "description": "Reference-routed mixture-of-experts Transformer policy.",
       "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/config.yaml"
-    }
+    },
+    "icon": "/assets/model-icons/holomotion.svg"
   },
   "protomotions": {
     "organization": "NVIDIA",
@@ -170,7 +171,8 @@
       "label": "Dense",
       "description": "Dense MLP motion-tracking policy.",
       "source": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx"
-    }
+    },
+    "icon": "/assets/model-icons/protomotions.svg"
   },
   "teleopit": {
     "organization": "Westlake / SII",
@@ -234,7 +236,8 @@
       "label": "Dense",
       "description": "Temporal convolutional encoder and dense policy head.",
       "source": "https://huggingface.co/12e21/Teleopit-models/blob/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx"
-    }
+    },
+    "icon": "/assets/model-icons/teleopit.svg"
   },
   "sonic-v1-1": {
     "display_name": "SONIC v1.1",
@@ -319,7 +322,8 @@
       "label": "FSQ",
       "description": "Quantized latent control using finite scalar quantization (FSQ), with a motion encoder and a conditioned decoder.",
       "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/gear_sonic/config/actor_critic/quantizers/fsq.yaml"
-    }
+    },
+    "icon": "/assets/model-icons/sonic.svg"
   },
   "sonic-low-latency": {
     "display_name": "SONIC Low-Latency",
@@ -404,7 +408,8 @@
       "label": "FSQ",
       "description": "Quantized latent control using finite scalar quantization (FSQ), with a motion encoder and a conditioned decoder.",
       "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/gear_sonic/config/actor_critic/quantizers/fsq.yaml"
-    }
+    },
+    "icon": "/assets/model-icons/sonic.svg"
   },
   "pmt-flat": {
     "display_name": "PMT Flat MLP 20k",
@@ -488,7 +493,8 @@
       "label": "Dense",
       "description": "Continuous dense MLP motion-tracking policy.",
       "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt"
-    }
+    },
+    "icon": "/assets/model-icons/pmt.svg"
   },
   "twist2": {
     "organization": "Amazon FAR",
@@ -575,7 +581,8 @@
       "label": "Dense",
       "description": "Convolutional history encoder and dense policy layers.",
       "source": "https://github.com/amazon-far/TWIST2/blob/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx"
-    }
+    },
+    "icon": "/assets/model-icons/twist2.svg"
   },
   "grit": {
     "organization": "GRIT Team",
@@ -683,7 +690,8 @@
       "label": "Dense",
       "description": "Graph-based reference encoder and dense policy head.",
       "source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx"
-    }
+    },
+    "icon": "/assets/model-icons/grit.svg"
   },
   "heft": {
     "organization": "Tsinghua / RobotEra / SQZ",
@@ -795,7 +803,8 @@
       "label": "Dense",
       "description": "Dense policy with fully connected layers and normalized hidden features.",
       "source": "https://github.com/Axellwppr/motion_tracking/tree/0d5ba31e33397f3543d350d98b637e26d92f470a/sim2real/config/g1/ckpts/G1_PMG"
-    }
+    },
+    "icon": "/assets/model-icons/heft.svg"
   },
   "mimic-lite": {
     "organization": "RoboParty",
@@ -900,7 +909,8 @@
       "label": "Dense",
       "description": "Dense MLP policy with normalized hidden features.",
       "source": "https://drive.google.com/drive/folders/1xRmcOX0l-YIpqxUuCmW4s6Dl0HStbJSL"
-    }
+    },
+    "icon": "/assets/model-icons/mimic-lite.svg"
   },
   "pmt-adaptive": {
     "display_name": "PMT Adaptive MLP 20k",
@@ -984,7 +994,8 @@
       "label": "Dense",
       "description": "Continuous dense MLP motion-tracking policy.",
       "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_adaptive_flat.pt"
-    }
+    },
+    "icon": "/assets/model-icons/pmt.svg"
   },
   "pmt-streaming": {
     "display_name": "PMT Streaming MLP 20k",
@@ -1068,7 +1079,8 @@
       "label": "Dense",
       "description": "Continuous dense MLP motion-tracking policy.",
       "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_streaming_flat.pt"
-    }
+    },
+    "icon": "/assets/model-icons/pmt.svg"
   },
   "pmt-uniform": {
     "display_name": "PMT Uniform MLP 20k",
@@ -1152,7 +1164,8 @@
       "label": "Dense",
       "description": "Continuous dense MLP motion-tracking policy.",
       "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_uniform_flat.pt"
-    }
+    },
+    "icon": "/assets/model-icons/pmt.svg"
   },
   "pmt-bpo": {
     "display_name": "PMT BPO MLP 20k",
@@ -1236,7 +1249,8 @@
       "label": "Dense",
       "description": "Continuous dense MLP motion-tracking policy.",
       "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/bpo_multimotionv2_flat.pt"
-    }
+    },
+    "icon": "/assets/model-icons/pmt.svg"
   },
   "pmt-add": {
     "display_name": "PMT ADD MLP 20k",
@@ -1297,7 +1311,8 @@
       "label": "Dense",
       "description": "Continuous dense MLP motion-tracking policy.",
       "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/add_multimotion_flat.pt"
-    }
+    },
+    "icon": "/assets/model-icons/pmt.svg"
   },
   "pmt-rgmt": {
     "display_name": "PMT RGMT Transformer 20k",
@@ -1401,7 +1416,8 @@
       "label": "Dense",
       "description": "Dense Transformer attention and MLP policy head.",
       "source": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/rgmt_flat.pt"
-    }
+    },
+    "icon": "/assets/model-icons/pmt.svg"
   },
   "sonic-original": {
     "display_name": "SONIC Original",
@@ -1487,7 +1503,8 @@
       "label": "FSQ",
       "description": "Quantized latent control using finite scalar quantization (FSQ), with a motion encoder and a conditioned decoder.",
       "source": "https://github.com/NVlabs/GR00T-WholeBodyControl/blob/45c03facbf848e0c743091b7d9c17952096ff908/gear_sonic/config/actor_critic/quantizers/fsq.yaml"
-    }
+    },
+    "icon": "/assets/model-icons/sonic.svg"
   },
   "holomotion-v1-3-2": {
     "organization": "Horizon Robotics",
@@ -1592,7 +1609,8 @@
       "label": "MoE",
       "description": "Reference-routed mixture-of-experts Transformer policy.",
       "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.2/config.yaml"
-    }
+    },
+    "icon": "/assets/model-icons/holomotion.svg"
   },
   "holomotion-v1-4-1": {
     "organization": "Horizon Robotics",
@@ -1697,7 +1715,8 @@
       "label": "MoE",
       "description": "Reference-routed mixture-of-experts Transformer policy.",
       "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/config.yaml"
-    }
+    },
+    "icon": "/assets/model-icons/holomotion.svg"
   },
   "textop": {
     "organization": "TeleAI / SJTU / ECUST",
@@ -1769,6 +1788,7 @@
       "label": "Dense",
       "description": "Dense MLP Tracker; the upstream text-to-motion generator is not evaluated.",
       "source": "https://huggingface.co/datasets/Yochish/TextOp-Data/blob/bb9604ce36ad4c0a77b5cccde89ebbb7c3ca93c9/TextOpTracker/logs/rsl_rl/Pretrained/checkpoints/latest.onnx"
-    }
+    },
+    "icon": "/assets/model-icons/textop.svg"
   }
 }

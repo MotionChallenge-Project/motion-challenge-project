@@ -92,7 +92,7 @@ def render(models, rows, tracks, content, github, page, intro):
     notes = json.loads(notes_path.read_text()) if notes_path.exists() else {}
 
     cards = ''.join(
-        f'<a class="model-card" href="/models/{esc(k)}/"><span class="tag">CHECKPOINT</span>'
+        f'<a class="model-card" href="/models/{esc(k)}/"><div class="model-card-label"><img class="model-icon" src="{esc(m["icon"])}" width="40" height="40" alt=""><span class="tag">CHECKPOINT</span></div>'
         f'<h2>{esc(m["display_name"])}<span>↗</span></h2><p>{esc(m["organization"])}</p></a>'
         for k, m in models.items()
     )

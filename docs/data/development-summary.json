@@ -72,6 +72,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "holomotion.mujoco317.unified.json",
+      "icon": "/assets/model-icons/holomotion.svg",
       "controller_type": {
         "id": "moe",
         "label": "MoE",
@@ -133,6 +134,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-flat.mujoco317.unified.json",
+      "icon": "/assets/model-icons/pmt.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -194,6 +196,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "protomotions.mujoco317.unified.json",
+      "icon": "/assets/model-icons/protomotions.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -255,6 +258,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "sonic-low-latency.mujoco317.unified.json",
+      "icon": "/assets/model-icons/sonic.svg",
       "controller_type": {
         "id": "fsq",
         "label": "FSQ",
@@ -316,6 +320,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "sonic-v1-1.mujoco317.unified.json",
+      "icon": "/assets/model-icons/sonic.svg",
       "controller_type": {
         "id": "fsq",
         "label": "FSQ",
@@ -377,6 +382,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "teleopit.mujoco317.unified.json",
+      "icon": "/assets/model-icons/teleopit.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -438,6 +444,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "grit.mujoco317.unified.json",
+      "icon": "/assets/model-icons/grit.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -499,6 +506,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "heft.mujoco317.unified.json",
+      "icon": "/assets/model-icons/heft.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -560,6 +568,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "mimic-lite.mujoco317.unified.json",
+      "icon": "/assets/model-icons/mimic-lite.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -621,6 +630,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "twist2.mujoco317.unified.json",
+      "icon": "/assets/model-icons/twist2.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -682,6 +692,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-adaptive.mujoco317.unified.json",
+      "icon": "/assets/model-icons/pmt.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -743,6 +754,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-bpo.mujoco317.unified.json",
+      "icon": "/assets/model-icons/pmt.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -804,6 +816,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-streaming.mujoco317.unified.json",
+      "icon": "/assets/model-icons/pmt.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -865,6 +878,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-uniform.mujoco317.unified.json",
+      "icon": "/assets/model-icons/pmt.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -926,6 +940,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-add.mujoco317.unified.json",
+      "icon": "/assets/model-icons/pmt.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -987,6 +1002,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "pmt-rgmt.mujoco317.unified.json",
+      "icon": "/assets/model-icons/pmt.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
@@ -1048,6 +1064,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "sonic-original.mujoco317.unified.json",
+      "icon": "/assets/model-icons/sonic.svg",
       "controller_type": {
         "id": "fsq",
         "label": "FSQ",
@@ -1109,6 +1126,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "holomotion-v1-3-2.mujoco317.unified.json",
+      "icon": "/assets/model-icons/holomotion.svg",
       "controller_type": {
         "id": "moe",
         "label": "MoE",
@@ -1170,6 +1188,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "holomotion-v1-4-1.mujoco317.unified.json",
+      "icon": "/assets/model-icons/holomotion.svg",
       "controller_type": {
         "id": "moe",
         "label": "MoE",
@@ -1231,6 +1250,7 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "textop.mujoco317.unified.json",
+      "icon": "/assets/model-icons/textop.svg",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
