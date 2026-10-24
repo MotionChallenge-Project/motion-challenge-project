@@ -170,7 +170,7 @@ def render(models, rows, tracks, content, github, page, intro):
         detail = '<section class="section evaluation-overview"><div class="actions">'
         detail += link('/models/' + key + '/', 'Model card ↗', 'text-link')
         detail += link('/benchmarks/' + track['benchmark_id'] + '/?robot=' + track['robot_id'] + '&track=' + track_id, 'Benchmark conditions ↗', 'text-link')
-        detail += link('/leaderboard/?track=' + track_id + '&benchmark=' + track['benchmark_id'] + '&robot=' + track['robot_id'], 'Leaderboard ↗', 'text-link') + '</div>'
+        detail += link('/?track=' + track_id + '&benchmark=' + track['benchmark_id'] + '&robot=' + track['robot_id'], 'Leaderboard ↗', 'text-link') + '</div>'
         detail += '<p class="small">Evaluated by Motion Challenge using the shared protocol. This is an independent evaluation, not an author submission.</p></section>'
         key_notes = notes.get(track_id, {}).get(key, [])
         if key_notes:
