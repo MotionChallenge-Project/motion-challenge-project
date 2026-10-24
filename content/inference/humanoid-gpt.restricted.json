@@ -1,0 +1,24 @@
+{
+  "model": "humanoid-gpt",
+  "status": "passed",
+  "method": "author_deployment_parity",
+  "cases": 160,
+  "resets": 4,
+  "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "validation_script": "validate_inference.py",
+  "tolerance_abs": 2e-05,
+  "max_abs_error": {
+    "reference_qpos": 0.0,
+    "reference_cvel": 5.960464477539063e-08,
+    "observation": 6.67572021484375e-06,
+    "action": 6.67572021484375e-06,
+    "motor_target": 2.9206275939941406e-06,
+    "history": 6.67572021484375e-06,
+    "same_action_motor_target": 0.0
+  },
+  "handling": "Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and action history. No measured robot position or position integration.",
+  "reports": {
+    "native-parity.json": "b207a51f52037ed7cfc32382c695a0725358c92c6dbef71ca74f805179c93181",
+    "native-parity-linux.json": "bf3e9b5d1db1ef5850026128b13db1e8a22b088d73ab7deadb24e6c2c2da5b7c"
+  }
+}

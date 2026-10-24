@@ -362,14 +362,14 @@
     },
     "humanoid-gpt": {
       "status": "passed",
-      "evaluated_adapter_commit": "77420f069e9ab0daea3e0204d365bfbec1dec63e",
-      "checked_adapter_commit": "e3c7372ee1f3ae6d05cd025a8f1fa0bcf03b98d5",
+      "evaluated_adapter_commit": "9af642326b949643974365331824342cfabb8f5b",
+      "checked_adapter_commit": "9af642326b949643974365331824342cfabb8f5b",
       "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
-      "report_file": "humanoid-gpt.json",
-      "report_sha256": "5bde150d548cf953fc46ffb4af0abf038d9936905e112bcadeebac7641850c83",
-      "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/e3c7372ee1f3ae6d05cd025a8f1fa0bcf03b98d5/validation/native-parity.json",
-      "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/e3c7372ee1f3ae6d05cd025a8f1fa0bcf03b98d5/validate_inference.py",
-      "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/e3c7372ee1f3ae6d05cd025a8f1fa0bcf03b98d5/runtime.json",
+      "report_file": "humanoid-gpt.author.json",
+      "report_sha256": "bf3e9b5d1db1ef5850026128b13db1e8a22b088d73ab7deadb24e6c2c2da5b7c",
+      "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/9af642326b949643974365331824342cfabb8f5b/validation/native-parity-linux.json",
+      "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/9af642326b949643974365331824342cfabb8f5b/validate_inference.py",
+      "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/9af642326b949643974365331824342cfabb8f5b/runtime.json",
       "production_inference_alignment": "identical",
       "limits": 2e-05
     },
@@ -1105,6 +1105,33 @@
             "history": 0.0,
             "position_independence": 0.0
           }
+        }
+      },
+      "humanoid-gpt": {
+        "status": "passed",
+        "evaluated_adapter_commit": "9af642326b949643974365331824342cfabb8f5b",
+        "checked_adapter_commit": "9af642326b949643974365331824342cfabb8f5b",
+        "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+        "report_file": "humanoid-gpt.restricted.json",
+        "report_sha256": "9721b0bb85913035d20d967bedde51366e166dca139b9acfcbcd72ba29d2db59",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/9af642326b949643974365331824342cfabb8f5b/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/9af642326b949643974365331824342cfabb8f5b/validate_inference.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/9af642326b949643974365331824342cfabb8f5b/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Inference comparison",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "9af642326b949643974365331824342cfabb8f5b",
+          "checked_adapter_commit": "9af642326b949643974365331824342cfabb8f5b",
+          "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+          "report_file": "humanoid-gpt.author.json",
+          "report_sha256": "bf3e9b5d1db1ef5850026128b13db1e8a22b088d73ab7deadb24e6c2c2da5b7c",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/9af642326b949643974365331824342cfabb8f5b/validation/native-parity-linux.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/9af642326b949643974365331824342cfabb8f5b/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/9af642326b949643974365331824342cfabb8f5b/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": 2e-05
         }
       }
     }

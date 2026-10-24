@@ -378,7 +378,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "9af642326b949643974365331824342cfabb8f5b"
+      "published_adapter_commit": "9af642326b949643974365331824342cfabb8f5b",
+      "evaluation_progress": "accepted"
     },
     "pmt-rgmt": {
       "schema": "MotionChallenge/observation-admission-v1",

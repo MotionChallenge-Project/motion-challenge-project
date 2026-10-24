@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "cases": 160,
+  "resets": 4,
+  "endpoint_cases": 32,
+  "shuffled_joint_order": true,
+  "quaternion_sign_flips": true,
+  "max_abs_errors": {
+    "reference_qpos": 0.0,
+    "reference_cvel": 5.960464477539063e-08,
+    "observation": 6.67572021484375e-06,
+    "action": 6.67572021484375e-06,
+    "motor_target": 2.9206275939941406e-06,
+    "history": 6.67572021484375e-06,
+    "same_action_motor_target": 0.0
+  },
+  "tolerance": 2e-05,
+  "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "comparison": "Unmodified author infer_onnx_real, EMA, reference FK, observation, CPU ONNX inference and motor mapping; independently maintained action histories. Adapter receives only the Core proprioceptive packet.",
+  "deployment": "Author offline-motion hardware route: fixed synthetic root [0,0,0.78], no robot position or position integration.",
+  "adaptations": "Canonical reference arrives at50Hz; EMA is policy-input-only. Fresh inference instance per clip; hold the final feature at endpoint. Author FK inertials retained, benchmark physics unchanged."
+}

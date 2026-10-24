@@ -1793,7 +1793,7 @@
       "inference_config_sha256": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
       "weights": "checkpoints/policy.onnx",
       "weights_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
-      "provenance_status": "native 264 inference comparison passed",
+      "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
       "official": false,
       "source_repository": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
       "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
@@ -1802,7 +1802,7 @@
       "kinematics_sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "bf8983077b8efe762817ebb724970d36d833c27d72d2abb3f53ac2c48f90aa4f"
+        "admission_sha256": "a019dd5e8f36a5b7da7b4375af9b86c8429f7b49a471172ceb8d190ba425c0b9"
       }
     },
     "provenance": {
