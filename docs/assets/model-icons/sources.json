@@ -47,5 +47,13 @@
     "image_url": "https://www.robotera.com/icon.png",
     "sha256": "9e14b0e249f22a77ae030c8b3a2af2bb5db1dbdaea2d0b5287c2c5af221bf96a",
     "bytes": 2197
+  },
+  {
+    "file": "westlake.png",
+    "source": "https://www.urongda.com/logos/4133014626",
+    "verification_source": "https://en.westlake.edu.cn/about/VIS/",
+    "provided_by": "User attachment; unmodified PNG",
+    "sha256": "6d60c98e7ecf6aad692cbfeda76daf9c8d5be710211d53f6fb558639bd1e493d",
+    "bytes": 56016
   }
 ]

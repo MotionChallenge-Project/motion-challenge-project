@@ -243,9 +243,9 @@
       "description": "Temporal convolutional encoder and dense policy head.",
       "source": "https://huggingface.co/12e21/Teleopit-models/blob/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx"
     },
-    "icon": null,
-    "icon_label": "TeleopIT",
-    "icon_source": null,
+    "icon": "/assets/model-icons/westlake.png",
+    "icon_label": "Westlake University",
+    "icon_source": "https://www.urongda.com/logos/4133014626",
     "project_url": "https://botrunner64.github.io/teleopit-page/"
   },
   "sonic-v1-1": {

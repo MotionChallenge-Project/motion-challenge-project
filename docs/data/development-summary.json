@@ -392,9 +392,9 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "teleopit.mujoco317.unified.json",
-      "icon": null,
-      "icon_label": "TeleopIT",
-      "icon_source": null,
+      "icon": "/assets/model-icons/westlake.png",
+      "icon_label": "Westlake University",
+      "icon_source": "https://www.urongda.com/logos/4133014626",
       "controller_type": {
         "id": "dense",
         "label": "Dense",
