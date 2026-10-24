@@ -12,7 +12,11 @@ def render(content, models, page, intro):
     body+=f'<section class="section docs"><p>{len(models)} evaluated checkpoint versions across {families} model families. Updated {esc(catalog["updated"])}.</p>'
     body+='<p>'+esc(catalog['scope'])+'</p><p>'+esc(catalog['selection'])+'</p>'
     body+='<p>Ranked results use one versioned protocol, public inference code and trace verification. Author attribution does not imply that the authors submitted or endorsed these evaluations.</p></section>'
-    body+='<section class="section docs"><h2>Remaining work</h2>'
+    body+='<section class="section docs">'
+    if catalog['entries']:
+        body+='<h2>Remaining work</h2>'
+    else:
+        body+='<p>All releases in the current evaluation set have completed full-suite verification and repeatability checks.</p>'
     for item in catalog['entries']:
         body+=f'<article class="metric-box"><h3>{esc(item["name"])}</h3><p><strong>{esc(item["status"])}</strong> · {esc(item["gap"])}</p><p>Next: {esc(item["next_step"])}</p>'
         body+=f'<p><a href="{esc(item["author_source"],quote=True)}">Author source ↗</a>'

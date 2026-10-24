@@ -2395,5 +2395,355 @@
     "icon": "/assets/model-icons/bigai.png",
     "icon_label": "BIGAI",
     "icon_source": "https://www.bigai.ai/"
+  },
+  "humanoid-gpt-transformer-216": {
+    "organization": "Galbot / Tsinghua & collaborators",
+    "organization_source": "https://qizekun.github.io/Humanoid-GPT/",
+    "display_name": "Humanoid-GPT Transformer 216",
+    "family": "humanoid-gpt",
+    "version": "Transformer 216 \u00b7 82313c76",
+    "version_kind": "author-released Transformer checkpoint",
+    "version_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+    "project_url": "https://qizekun.github.io/Humanoid-GPT/",
+    "description": "The original 216 Transformer checkpoint with sixteen chronological observation frames and the author reference preprocessing.",
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Continuous-action Transformer conditioned on sixteen136D observations; this is a separate checkpoint from the264 MLP.",
+      "source": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216/blob/main/validation/checkpoint-graph.json"
+    },
+    "artifact_notes": [
+      "Original pns_wo_priv216_trans.onnx; history length16 follows the released model input shape. Scores do not transfer from the264 MLP."
+    ],
+    "icon": "/assets/model-icons/galbot.jpg",
+    "icon_label": "Galbot",
+    "icon_source": "https://github.com/GalaxyGeneralRobotics",
+    "runtime": {
+      "id": "humanoid-gpt-transformer-216-g1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        1
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.02
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.02,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+      "provenance_status": "author inference comparison passed on macOS and Linux",
+      "official": false,
+      "source_repository": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "weights_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+      "kinematics": "assets/g1_5010_kinematics.xml",
+      "kinematics_sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6",
+      "history_len": 16
+    },
+    "provenance": {
+      "model": "humanoid-gpt-transformer-216",
+      "submitter": "MotionChallenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "checkpoint_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+      "author_inference_review": "160 matched-input cases, 4 resets and 32 endpoint cases passed the fixed 2e-5 tolerance on macOS and Linux. macOS comparisons were exact; Linux maximum observation/action difference was 4.95e-6 and motor-target difference 2.17e-6 rad. Full-suite verification is separate.",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md",
+        "author_release_label": "GalaxyGeneralRobotics/Humanoid-GPT",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+        "original_filename": "pns_wo_priv216_trans.onnx",
+        "verification": "Original author Transformer 216 ONNX without conversion or weight changes. SHA256 and author Git blob 82ed6796c50b53d3fc260741dbb676b09ac0084f verified.",
+        "download_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+        "sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
+        "bytes": 42977083
+      },
+      "display_name": "Humanoid-GPT Transformer 216",
+      "inference_validation": "validation/native-parity.json",
+      "deployment": {
+        "route": "Author Transformer inference class, privileged=false, history_len=16, G1_VERSION=5010, HAND=Default, 50Hz.",
+        "reference_preprocessing": "Causal author EMA alpha0.8 with quaternion sign continuity and normalization, then author world-frame finite-difference qvel and5010 FK. Only policy input is filtered; scoring still uses unmodified canonical reference.",
+        "reference_window": "Current filtered reference supplies XY/yaw error; next filtered reference supplies joints,height,gravity,cvel. Endpoints reuse the final filtered feature rather than applying repeated EMA updates.",
+        "kinematics": "assets/g1_5010_kinematics.xml derives from pinned author XML by removing mesh assets/geoms only. All30 explicit inertials and body/joint transforms preserved. Used for reference features only, never simulation or scoring.",
+        "reset": "Fresh reference filter and zero last action for each clip. Author history initialization repeats the first measured observation across all 16 slots, then shifts oldest to newest.",
+        "output": "Author gain/scaling constants without decimal truncation; float32 motor-target assignment; no additional action clipping. Native PD torque and canonical actuator limits remain kernel-owned.",
+        "legacy": "This Transformer checkpoint is separate from the 264 MLP. No scores or trajectories are inherited from another checkpoint.",
+        "history": "Sixteen 136D frames in oldest-to-newest order. This length follows the released ONNX shape, overriding the incompatible author script default of four frames."
+      },
+      "inference_validation_platforms": {
+        "macOS": "validation/native-parity.json",
+        "Linux": "validation/native-parity-linux.json"
+      },
+      "checkpoint_architecture": "Original 216_trans ONNX: 16-frame history of 136D observations, 29-action output. The artifact input requires 16 frames; the author Transformer class accepts this history length explicitly. See validation/checkpoint-graph.json."
+    },
+    "repository_available": true,
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ]
+  },
+  "holomotion-v1-3-1": {
+    "organization": "Horizon Robotics",
+    "organization_source": "https://github.com/HorizonRobotics/HoloMotion",
+    "runtime": {
+      "id": "holomotion-v1-3-1-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.2,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "d2ac75219c227385f271f8746a8e55392a1dae879c7dc3f67570ed9015cbe540",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
+      "virtual_bodies": {
+        "left_toe_link": {
+          "parent": "left_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        },
+        "right_toe_link": {
+          "parent": "right_ankle_roll_link",
+          "position_parent_m": [
+            0.1,
+            0.0,
+            -0.02
+          ]
+        }
+      },
+      "official": false,
+      "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
+      "source_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
+      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
+      "motion_rope_max_seq_len": 8192,
+      "motion_rope_reset_margin": 64
+    },
+    "provenance": {
+      "model": "holomotion-v1-3-1",
+      "submitter": "MotionChallenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/HorizonRobotics/HoloMotion",
+      "source_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
+      "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
+      "author_inference_review": "160 matched inputs and4 resets passed on macOS and Linux, including author legacy KV window reset transitions. Maximum motor-target difference 2.15e-6 rad on macOS and8.35e-7 rad on Linux. Full-suite verification is separate.",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/8e39874f63351ad74467c1c01082fcaada31885d",
+        "author_release_label": "HorizonRobotics/HoloMotion",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
+        "original_filename": "HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
+        "sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe"
+      },
+      "display_name": "HoloMotion v1.3.1",
+      "inference_validation": "validation/native-parity.json",
+      "deployment": {
+        "legacy_rope": "The original checkpoint has an 8192-position RoPE table but no rope_max_seq_len metadata. The pinned author runtime explicitly supports a legacy maximum-length override. Set max length8192 and its default margin64; zero KV cache and local step index at8128 without changing the reference frame or simulation state.",
+        "observation": "Original v1.3.1 author config, 522D input, current state plus 10 future references at50Hz. Matched against current author observation evaluator.",
+        "reset": "Independent motion starts clear KV cache, step index and last action. Cache-window resets retain action history and reference time.",
+        "output": "Author float32 scale and default-pose PD target; no model-specific change to benchmark physics."
+      },
+      "inference_validation_platforms": {
+        "macOS": "validation/native-parity.json",
+        "Linux": "validation/native-parity-linux.json"
+      }
+    },
+    "repository_available": true,
+    "version": "v1.3.1",
+    "version_kind": "author checkpoint",
+    "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
+    "family": "holomotion",
+    "display_name": "HoloMotion v1.3.1",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "controller_type": {
+      "id": "moe",
+      "label": "MoE",
+      "description": "Reference-routed mixture-of-experts Transformer policy.",
+      "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/config.yaml"
+    },
+    "icon": "/assets/model-icons/horizon.jpg",
+    "icon_label": "Horizon Robotics",
+    "icon_source": "https://github.com/HorizonRobotics",
+    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/",
+    "description": "The original v1.3.1 checkpoint using the author runtime legacy RoPE window handling.",
+    "artifact_notes": [
+      "Original checkpoint with8192-position RoPE table. Author runtime resets its KV cache at8128 steps while retaining reference time and physical state."
+    ],
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-1"
+  },
+  "scalebfm-m": {
+    "organization": "Shanghai AI Lab & collaborators",
+    "organization_source": "https://scalebfm.github.io/",
+    "display_name": "ScaleBFM M",
+    "family": "scalebfm",
+    "version": "M \u00b7 model22200",
+    "version_kind": "author raw PyTorch checkpoint",
+    "project_url": "https://scalebfm.github.io/",
+    "description": "Original medium Humanoid Transformer checkpoint with the author whole-body control mode and CPU inference.",
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Continuous-action Humanoid Transformer with cross-attention to future body targets; three history frames and six reference frames.",
+      "source": "https://github.com/zengweishuai/ScaleBFM/blob/abd6f17c02fe0baabc14709feb8d9ea4959aa621/ScaleTrack/source/my_rsl_rl/my_rsl_rl/networks/humanoid_transformer.py"
+    },
+    "artifact_notes": [
+      "Original raw M checkpoint, strictly loaded without conversion. Author default whole-body mode7 and reference_forcing=True. CPU inference is verified; TensorRT/CUDA numerical equivalence is not implied."
+    ],
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "repository_available": true,
+    "runtime": {
+      "id": "scalebfm-m-g1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.1,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "a8d4a72064e7e14a3889d28cf1f7a8d380501468f6d93cc2d9863b57f139e10f",
+      "weights": "checkpoints/model_22200.pt",
+      "weights_sha256": "88d5a79946c03ed25503f48b2af71d16290844ef066ca9b6c8fa8dc3837422e3",
+      "weights_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM/resolve/2eec74e0f326076a706702654168efc489ef604a/checkpoint/humanoid_transformer_m/model_22200.pt",
+      "artifacts": {
+        "network": {
+          "path": "checkpoints/humanoid_transformer.py",
+          "sha256": "0f09be3a6c5a7396ef7f28ea8a5365b9c723bb896eb4da71cc8809c840dccdec",
+          "url": "https://raw.githubusercontent.com/zengweishuai/ScaleBFM/abd6f17c02fe0baabc14709feb8d9ea4959aa621/ScaleTrack/source/my_rsl_rl/my_rsl_rl/networks/humanoid_transformer.py"
+        },
+        "export": {
+          "path": "checkpoints/play_export_check_humanoid_transformer.py",
+          "sha256": "cc95d2b63a211219b4e5f6911b6bf790c7a33754b81fc293c7f51c3b5e007154",
+          "url": "https://raw.githubusercontent.com/zengweishuai/ScaleBFM/abd6f17c02fe0baabc14709feb8d9ea4959aa621/ScaleTrack/scripts/pretrain/rsl_rl/play_export_check_humanoid_transformer.py"
+        },
+        "robot": {
+          "path": "checkpoints/g1_29dof.xml",
+          "sha256": "3773fff8e969da20c9c76ad82666a08877be04f94676911d913f33e981149f4c",
+          "url": "https://raw.githubusercontent.com/zengweishuai/ScaleBFM/abd6f17c02fe0baabc14709feb8d9ea4959aa621/ScaleTrack/source/scaletrack/scaletrack/assets/robots/g1_29dof/g1_29dof.xml"
+        },
+        "metadata": {
+          "path": "checkpoints/model_22200_tensorrt_metadata.json",
+          "sha256": "3024f18136314fade2676e22d6eafb1a8b2befa388da55b0885a53fcb1368d16",
+          "url": "https://huggingface.co/WeishuaiZeng/ScaleBFM/resolve/2eec74e0f326076a706702654168efc489ef604a/compiled_checkpoint/humanoid_transformer_m/linux/model_22200_tensorrt_metadata.json"
+        },
+        "mode_table": {
+          "path": "checkpoints/mode_table.pt",
+          "sha256": "fca11f2399bced32517b51c7f9dcf13c97117ca469b0b32e207d8f7d664fbde9",
+          "url": "https://huggingface.co/WeishuaiZeng/ScaleBFM/resolve/2eec74e0f326076a706702654168efc489ef604a/compiled_checkpoint/humanoid_transformer_m/linux/mode_table.pt"
+        }
+      },
+      "source_repository": "https://github.com/zengweishuai/ScaleBFM",
+      "source_commit": "abd6f17c02fe0baabc14709feb8d9ea4959aa621",
+      "official": false
+    },
+    "provenance": {
+      "model": "scalebfm-m",
+      "display_name": "ScaleBFM M",
+      "submitter": "MotionChallenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/zengweishuai/ScaleBFM",
+      "source_commit": "abd6f17c02fe0baabc14709feb8d9ea4959aa621",
+      "checkpoint_sha256": "88d5a79946c03ed25503f48b2af71d16290844ef066ca9b6c8fa8dc3837422e3",
+      "author_inference_review": "160 matched inputs and4 resets passed with zero measured difference on both macOS and Linux using the original float32 reference FK operation order. Fixed2e-5 tolerance unchanged; initial MuJoCo-FK mismatch retained in validation/diagnostics. TensorRT/CUDA equivalence and full-suite verification are separate.",
+      "inference_validation": "validation/native-parity.json",
+      "benchmark_physics": "shared G1 canonical profile, not author training simulator",
+      "checkpoint_origin": {
+        "author_release_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM",
+        "author_release_label": "Official ScaleBFM Hugging Face release",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM/blob/2eec74e0f326076a706702654168efc489ef604a/checkpoint/humanoid_transformer_m/model_22200.pt",
+        "download_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM/resolve/2eec74e0f326076a706702654168efc489ef604a/checkpoint/humanoid_transformer_m/model_22200.pt",
+        "original_filename": "checkpoint/humanoid_transformer_m/model_22200.pt",
+        "sha256": "88d5a79946c03ed25503f48b2af71d16290844ef066ca9b6c8fa8dc3837422e3",
+        "bytes": 72856655,
+        "verification": "Original raw PyTorch M checkpoint, strict actor/task-embedder loading. No conversion or modified weights; unrelated shared ONNX is not used."
+      },
+      "deployment": {
+        "backend": "Original author PyTorch network and export functions on CPU. TensorRT/CUDA equivalence is not implied. Author source and metadata are downloaded at pinned revisions with SHA256 validation.",
+        "mode": "Author default whole-body control mode7, reference_forcing=True. Reference root position is substituted only in observation buffers after initialization; simulator state is never changed.",
+        "history": "Three chronological frames, initialized by broadcasting actual initial state; zero last actions. Future reference offsets0..5 at50Hz.",
+        "reference": "Original author XML and float32 quaternion FK operation order applied to canonical root/joint reference, input-only. No change to dataset or scoring.",
+        "initialization": "Core canonical initial state replaces author interactive calibration; same author reset history rules. First reference root/heading already align with initial actual root.",
+        "action": "Original float32 network PD targets and author gains. Core motor limits, failure and scoring unchanged."
+      },
+      "inference_validation_platforms": {
+        "macOS": "validation/native-parity.json",
+        "Linux": "validation/native-parity-linux.json"
+      }
+    },
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-scalebfm-m",
+    "version_source": "https://huggingface.co/WeishuaiZeng/ScaleBFM/blob/2eec74e0f326076a706702654168efc489ef604a/checkpoint/humanoid_transformer_m/model_22200.pt",
+    "icon": null,
+    "icon_label": "S",
+    "icon_source": null
   }
 }
