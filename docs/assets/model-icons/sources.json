@@ -1,0 +1,58 @@
+[
+  {
+    "file": "horizon.jpg",
+    "source": "https://github.com/HorizonRobotics",
+    "image_url": "https://avatars.githubusercontent.com/u/46703330?v=4&s=128",
+    "sha256": "4b244a38993dc03370403c97e57f6db7fdaca2e4b6354316ce2e4ecced2014d1",
+    "bytes": 3993
+  },
+  {
+    "file": "mondo.png",
+    "source": "https://github.com/Mondo-Robotics",
+    "image_url": "https://avatars.githubusercontent.com/u/207355878?v=4&s=128",
+    "sha256": "f761b7c93404c925127fee9aab60bc71f6ce5c3fd805ef30288db21b7573e485",
+    "bytes": 1005
+  },
+  {
+    "file": "amazon-far.png",
+    "source": "https://github.com/amazon-far",
+    "image_url": "https://avatars.githubusercontent.com/u/234477354?v=4&s=128",
+    "sha256": "ca807aaaca2a57600346ecbd6c81b51029e522c631b400beaeeb224ad94dd5f3",
+    "bytes": 3038
+  },
+  {
+    "file": "roboparty.png",
+    "source": "https://github.com/Roboparty",
+    "image_url": "https://avatars.githubusercontent.com/u/210536682?v=4&s=128",
+    "sha256": "184060a0d411e4dd47e46c4adb5bb63b177f719a3f7400ada4193041febe700b",
+    "bytes": 15358
+  },
+  {
+    "file": "robotera.jpg",
+    "source": "https://github.com/roboterax",
+    "image_url": "https://avatars.githubusercontent.com/u/161814278?v=4&s=128",
+    "sha256": "77db57a3dab29770e22e67e3665bc8de69dbbbd4f37c7716bae47e49a9e3a93f",
+    "bytes": 2704
+  },
+  {
+    "file": "textop.png",
+    "source": "https://text-op.github.io/",
+    "image_url": "https://text-op.github.io/static/images/logo-small-nobg.png",
+    "sha256": "bd85c6aa70b7426cefb26a69e23901db1f6087a7946ae75912612e458da769e3",
+    "bytes": 524815
+  },
+  {
+    "file": "teleopit.png",
+    "source": "https://botrunner64.github.io/teleopit-page/",
+    "image_url": "https://botrunner64.github.io/teleopit-page/assets/images/apple-touch-icon.png",
+    "sha256": "0fb4911173a6cbe076d4be82b145b12b958a7253124fefa55c6d3f36c9945181",
+    "bytes": 66722
+  },
+  {
+    "file": "nvidia.png",
+    "source": "https://huggingface.co/nvidia",
+    "image_url": "https://cdn-avatars.huggingface.co/v1/production/uploads/65df9200dc3292a8983e5017/Vs5FPVCH-VZBipV3qKTuy.png",
+    "sha256": "75f85aa1b5c95694f9199ae163b0a42ccd45c8ef2870d7dc494c1733b869444d",
+    "bytes": 3568
+  }
+]

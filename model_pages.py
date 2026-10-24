@@ -21,6 +21,12 @@ def link(url, label, css=''):
     return f'<a class="{css}" href="{esc(repository_location(url))}">{esc(label)}</a>'
 
 
+def model_icon(model):
+    if model.get('icon'):
+        return f'<img class="model-icon" src="{esc(model["icon"])}" width="40" height="40" alt="" title="{esc(model["icon_label"])}">'
+    return f'<span class="model-icon model-initial" aria-hidden="true">{esc(model["display_name"][0].upper())}</span>'
+
+
 def facts(items):
     return '<dl class="facts">' + ''.join(f'<div><dt>{esc(k)}</dt><dd>{v}</dd></div>' for k, v in items) + '</dl>'
 
@@ -92,7 +98,7 @@ def render(models, rows, tracks, content, github, page, intro):
     notes = json.loads(notes_path.read_text()) if notes_path.exists() else {}
 
     cards = ''.join(
-        f'<a class="model-card" href="/models/{esc(k)}/"><div class="model-card-label"><img class="model-icon" src="{esc(m["icon"])}" width="40" height="40" alt=""><span class="tag">CHECKPOINT</span></div>'
+        f'<a class="model-card" href="/models/{esc(k)}/"><div class="model-card-label">{model_icon(m)}<span class="tag">CHECKPOINT</span></div>'
         f'<h2>{esc(m["display_name"])}<span>↗</span></h2><p>{esc(m["organization"])}</p></a>'
         for k, m in models.items()
     )
