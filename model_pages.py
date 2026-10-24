@@ -71,7 +71,8 @@ def evaluation_record(results, track, key, content, github):
                        + link(check['report_url'], 'Report ↗') + ' · '
                        + link(check['code_url'], 'Comparison code ↗')))
         commands = ['git clone --recurse-submodules '+repo+'.git',
-                    'cd '+repo.rsplit('/', 1)[-1], 'uv sync', 'uv run evaluate.py']
+                    'cd '+repo.rsplit('/', 1)[-1], 'uv sync',
+                    'uv run evaluate.py --track '+('ideal-proprioception' if track.get('state_access')=='ideal-proprioceptive-no-position-v1' else 'privileged')]
         downloads = link('/data/evidence/'+unified['evidence_file'], 'Complete results, source & verification (JSON) ↗', 'text-link')
         title = 'Reproduce this run'
         note = 'Runs the maintained main branch. The evaluated source commits and complete result remain linked alongside.'
@@ -161,6 +162,7 @@ def render(models, rows, tracks, content, github, page, intro):
             ('Output interface', esc(rt.get('action_mode', 'See runtime contract'))),
             ('Configuration', link(repo + '/blob/main/' + rt['inference_config'], rt['inference_config'])),
         ]) + '</section>'
+        detail += '<p class="small"><a href="/admission/#'+esc(key)+'">Observation admission &amp; model-specific handling →</a></p>'
         related = [(track_by_id[tid], evaluation_path(tid, key)) for tid, mid in groups if mid == key]
         detail += '<section class="section model-evaluations"><h2>Evaluations</h2>'
         if related:

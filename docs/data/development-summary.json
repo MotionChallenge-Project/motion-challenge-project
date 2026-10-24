@@ -16,7 +16,7 @@
       "benchmark_label": "LAFAN40",
       "robot_id": "g1-29dof",
       "robot_label": "Unitree G1 \u00b7 29 DoF",
-      "label": "Nominal \u00b7 MuJoCo 3.17.0 batch",
+      "label": "Privileged state \u00b7 MuJoCo 3.17.0 batch",
       "protocol_id": "lafan-g1-29dof/nominal/mujoco317-v1",
       "clip_count": 40,
       "mujoco_version": "3.17.0",
@@ -26,7 +26,27 @@
       "protocol_file": "lafan40-protocol.json",
       "robot_short_label": "G1 29DoF",
       "suite_sha256": "113b15cbb133fc1f8f873ad310a13c433d552f77137bde1b43426a2b55af1060",
-      "robot_profile_sha256": "27a89860a47c730b73156d945be9eb28736001afc16530165eccb31d1513b432"
+      "robot_profile_sha256": "27a89860a47c730b73156d945be9eb28736001afc16530165eccb31d1513b432",
+      "state_access": "privileged-state-v0"
+    },
+    {
+      "id": "lafan40-g1-ideal-proprioception-v1",
+      "benchmark_id": "lafan40",
+      "benchmark_label": "LAFAN40",
+      "robot_id": "g1-29dof",
+      "robot_label": "Unitree G1 \u00b7 29 DoF",
+      "label": "Ideal proprioception \u00b7 no global position",
+      "protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-v1",
+      "clip_count": 40,
+      "mujoco_version": "3.17.0",
+      "status": "evaluating",
+      "no_termination_protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-no-termination-v1",
+      "documentation": "benchmarks/lafan40-g1-ideal-proprioception.json",
+      "protocol_file": "lafan40-ideal-proprioception-protocol.json",
+      "robot_short_label": "G1 29DoF",
+      "suite_sha256": "113b15cbb133fc1f8f873ad310a13c433d552f77137bde1b43426a2b55af1060",
+      "robot_profile_sha256": "27a89860a47c730b73156d945be9eb28736001afc16530165eccb31d1513b432",
+      "state_access": "ideal-proprioceptive-no-position-v1"
     }
   ],
   "rows": [
