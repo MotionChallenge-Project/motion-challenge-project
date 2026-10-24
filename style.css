@@ -48,9 +48,24 @@
 @media(max-width:760px){.benchmark-controls{padding:25px 5%;gap:18px}.benchmark-controls label{width:100%}.benchmark-controls select{width:100%;min-width:0}.benchmark-controls .button{margin-left:0}.benchmark-layout{grid-template-columns:1fr;padding:25px 5%;gap:30px}.benchmark-layout aside{grid-template-columns:1fr 1fr}.benchmark-section{padding-bottom:30px;margin-bottom:30px}.benchmark-section h2{font-size:24px}.benchmark-card{grid-template-columns:1fr;gap:20px;padding:25px}.benchmark-card-meta{border-left:0;border-top:1px solid var(--line);padding:20px 0 0}.benchmark-heading h1{gap:0 .2em}}
 
 /* Column widths depend on the viewport, never the current rows or sort. */
-#leaderboard{table-layout:fixed;width:100%;min-width:1420px}
-#leaderboard .col-rank{width:5%}#leaderboard .col-model{width:16%}#leaderboard .col-type{width:8%}#leaderboard .col-org{width:13%}#leaderboard .col-success{width:8%}#leaderboard .col-completion{width:8%}#leaderboard .col-metric{width:7%}
-#leaderboard td:nth-child(2),#leaderboard td:nth-child(4){white-space:normal;overflow-wrap:anywhere}
+.board-section{max-width:1800px;padding-left:2.5%;padding-right:2.5%}
+#leaderboard{table-layout:fixed;width:100%;min-width:1120px;font-size:clamp(10px,.92vw,12px)}
+#leaderboard .col-rank{width:4%}#leaderboard .col-model{width:22%}#leaderboard .col-type{width:4.5%}#leaderboard .col-org{width:13%}#leaderboard .col-success{width:6%}#leaderboard .col-completion{width:6.5%}#leaderboard .col-metric{width:7.333333%}
+#leaderboard td,#leaderboard th{padding-left:clamp(3px,.55vw,9px);padding-right:clamp(3px,.55vw,9px)}
+#leaderboard thead tr:last-child th{padding-left:3px;padding-right:clamp(3px,.55vw,9px)}
+#leaderboard td:nth-child(2){white-space:nowrap}
+#leaderboard td:nth-child(4){white-space:normal;overflow-wrap:break-word}
+#leaderboard .model-entry{gap:7px}
+#leaderboard .model-icon{width:26px;height:26px;border-radius:4px}
+#leaderboard .model-entry-text{flex:1}
+#leaderboard .model-entry-text>a{display:block;white-space:nowrap;font-size:clamp(11px,1vw,14px)}
+#leaderboard .eval-code-links{white-space:nowrap;font-size:10px}
+#leaderboard .type-tag{font-size:clamp(9px,.8vw,11px);padding:3px 5px}
+#leaderboard .rank-badge{min-width:0;gap:3px}
+#leaderboard .rank-medal{font-size:18px}
+#leaderboard tr[class^="podium-"] .rank-number{font-size:14px}
+#leaderboard .score{font-size:clamp(11px,1vw,14px)}
+#leaderboard .score small{font-size:clamp(8px,.72vw,10px)}
 #leaderboard th{white-space:normal}#leaderboard td{vertical-align:middle}
 .model-artifacts{padding-top:20px;padding-bottom:30px}.artifact-row{display:grid;grid-template-columns:190px minmax(0,1fr);gap:25px;padding:22px 0;border-bottom:1px solid var(--line);font-size:14px}.artifact-row code{align-self:center;font-size:12px;overflow-wrap:anywhere}.evaluation-links{display:grid;gap:18px}.model-evaluations{padding-top:25px}.evaluation-overview{padding-top:0;padding-bottom:25px}.evaluation-context{padding-top:25px;padding-bottom:25px;border-top:1px solid var(--line)}.evaluation-context h2{font-size:25px}.evaluation-context p{font-size:14px;max-width:1000px}.evaluation-mode{border-top:1px solid var(--line);scroll-margin-top:25px}.evaluation-score{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}.evaluation-score strong{font:600 36px Manrope,system-ui;color:var(--green)}.evaluation-score span:last-child{margin-left:auto}.evaluation-metrics{table-layout:fixed;min-width:420px}.evaluation-metrics caption{text-align:left;padding:20px;background:var(--tint);font-weight:600;white-space:normal}.evaluation-metrics th,.evaluation-metrics td{width:33.333%;font-size:14px;padding:20px}.evaluation-metrics td{font-size:22px;color:var(--green)}.evaluation-details{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:40px}.evaluation-details>div{min-width:0}.evaluation-details pre{font-size:13px;line-height:1.7;padding:22px;overflow-x:auto;max-width:100%}
 .evaluation-details pre code{font-size:inherit;line-height:inherit;overflow-wrap:normal;word-break:normal}.evaluation-details h3{margin-top:15px}
@@ -84,3 +99,7 @@
 .model-card-label .model-icon{width:40px;height:40px;border-radius:11px}
 #leaderboard td.sorted-column{color:var(--green);font-weight:700}
 #leaderboard td.sorted-column small{color:var(--muted)}
+
+@media(max-width:1400px){#leaderboard th button{font-size:9px}}
+#leaderboard td:nth-child(4){font-size:clamp(10px,.85vw,11.5px)}
+#leaderboard td.rank{padding-left:4px;padding-right:4px}
