@@ -4,15 +4,6 @@
   "selection": "Models without released general-purpose checkpoints are outside the current coverage.",
   "entries": [
     {
-      "model": "sonic-low-latency",
-      "name": "SONIC Low-Latency",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://nvlabs.github.io/GEAR-SONIC/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-low-latency"
-    },
-    {
       "model": "pmt-flat",
       "name": "PMT Flat MLP 20k",
       "status": "Incompatible input contract",
@@ -20,15 +11,6 @@
       "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
       "author_source": "https://acodedog.github.io/perceptive-bfm/",
       "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-flat"
-    },
-    {
-      "model": "twist2",
-      "name": "TWIST2 1017-20k",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://yanjieze.com/projects/TWIST2/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2"
     },
     {
       "model": "pmt-adaptive",
@@ -83,15 +65,6 @@
       "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
       "author_source": "https://text-op.github.io/",
       "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-textop"
-    },
-    {
-      "model": "ufo",
-      "name": "UFO FB-CPR-Aux 192M",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://roboparty.github.io/UFO/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo"
     },
     {
       "model": "holomotion-v2-0-0",

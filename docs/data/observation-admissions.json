@@ -908,7 +908,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "b42e4996e19412ebcc79d3a823e72f97ae7eca81"
+      "published_adapter_commit": "b42e4996e19412ebcc79d3a823e72f97ae7eca81",
+      "evaluation_progress": "accepted"
     },
     "teleopit": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1010,7 +1011,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "8bd4f1d261dfaa22b5cd4a8a7f24c7a72aafe31c"
+      "published_adapter_commit": "8bd4f1d261dfaa22b5cd4a8a7f24c7a72aafe31c",
+      "evaluation_progress": "accepted"
     },
     "twist2": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1059,7 +1061,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "1b8e17132fc155634b18f0452dfe3797efdecdd3"
+      "published_adapter_commit": "1b8e17132fc155634b18f0452dfe3797efdecdd3",
+      "evaluation_progress": "accepted"
     },
     "textop": {
       "schema": "MotionChallenge/observation-admission-v1",

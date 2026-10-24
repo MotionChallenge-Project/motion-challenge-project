@@ -965,6 +965,110 @@
             "fixed_initial_alignment": 1e-06
           }
         }
+      },
+      "sonic-low-latency": {
+        "status": "passed",
+        "evaluated_adapter_commit": "b42e4996e19412ebcc79d3a823e72f97ae7eca81",
+        "checked_adapter_commit": "b42e4996e19412ebcc79d3a823e72f97ae7eca81",
+        "checkpoint_sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab",
+        "report_file": "sonic-low-latency.restricted.json",
+        "report_sha256": "b56fd9a67532e81ef3ca9d4f5db4d48de043bcc92e48d8e9ceab888d4a124f53",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-low-latency/blob/b42e4996e19412ebcc79d3a823e72f97ae7eca81/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-low-latency/blob/b42e4996e19412ebcc79d3a823e72f97ae7eca81/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-low-latency/blob/b42e4996e19412ebcc79d3a823e72f97ae7eca81/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "288660d68eaebbdeb7a581a82099b1869643807d",
+          "checked_adapter_commit": "2ee40ad2882242ce1c62ebb7015d4e5ee8578023",
+          "checkpoint_sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab",
+          "report_file": "sonic-low-latency.json",
+          "report_sha256": "90a94d0f5fac0a49c4f847eb4a09667481f5c21b899633bc6241b7b42e09f3f5",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-low-latency/blob/2ee40ad2882242ce1c62ebb7015d4e5ee8578023/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-low-latency/blob/2ee40ad2882242ce1c62ebb7015d4e5ee8578023/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-low-latency/blob/2ee40ad2882242ce1c62ebb7015d4e5ee8578023/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": 2e-05
+        }
+      },
+      "twist2": {
+        "status": "passed",
+        "evaluated_adapter_commit": "1b8e17132fc155634b18f0452dfe3797efdecdd3",
+        "checked_adapter_commit": "1b8e17132fc155634b18f0452dfe3797efdecdd3",
+        "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
+        "report_file": "twist2.restricted.json",
+        "report_sha256": "fe1efb00f29e05c0173627c709fec621f5b627a0e14c907322c896f851e46a9e",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2/blob/1b8e17132fc155634b18f0452dfe3797efdecdd3/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2/blob/1b8e17132fc155634b18f0452dfe3797efdecdd3/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2/blob/1b8e17132fc155634b18f0452dfe3797efdecdd3/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "d1e5b041cca86b454168b2f3a581d4973962dc0b",
+          "checked_adapter_commit": "4963926c368a280a8c157b92ba6b3e627a56f95e",
+          "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
+          "report_file": "twist2.json",
+          "report_sha256": "82d85c4154298f1707d8f933bc79fbe1e94a7d717590f5d2742d77b93844ba53",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2/blob/4963926c368a280a8c157b92ba6b3e627a56f95e/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2/blob/4963926c368a280a8c157b92ba6b3e627a56f95e/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2/blob/4963926c368a280a8c157b92ba6b3e627a56f95e/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "default": 1e-07,
+            "scale": 0.0,
+            "kp": 0.0,
+            "kd": 0.0,
+            "reference": 0.0002,
+            "observation": 0.0002,
+            "network": 0.0,
+            "action": 0.0002,
+            "motor_target": 0.0002,
+            "synthetic_motor_target": 0.0002
+          }
+        }
+      },
+      "ufo": {
+        "status": "passed",
+        "evaluated_adapter_commit": "8bd4f1d261dfaa22b5cd4a8a7f24c7a72aafe31c",
+        "checked_adapter_commit": "8bd4f1d261dfaa22b5cd4a8a7f24c7a72aafe31c",
+        "checkpoint_sha256": "fe58bf17427679a0f0a22ad5f05d7579373a365936154770f31e815e8f0e4ad7",
+        "report_file": "ufo.restricted.json",
+        "report_sha256": "49770b90e370e5f4abad81f807be01643c6f306be1220458a81e35782d9a17dd",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo/blob/8bd4f1d261dfaa22b5cd4a8a7f24c7a72aafe31c/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo/blob/8bd4f1d261dfaa22b5cd4a8a7f24c7a72aafe31c/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo/blob/8bd4f1d261dfaa22b5cd4a8a7f24c7a72aafe31c/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "3b4c4c69fb5271f47f0236b5a697d1bb43ffd58b",
+          "checked_adapter_commit": "d2127c0cc4405bfe25ca5eabbce88355bbff7203",
+          "checkpoint_sha256": "fe58bf17427679a0f0a22ad5f05d7579373a365936154770f31e815e8f0e4ad7",
+          "report_file": "ufo.json",
+          "report_sha256": "8691886d055431be897e18eec559c4d0c87e79d2d904dbb79ce24aaf96895cb4",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo/blob/d2127c0cc4405bfe25ca5eabbce88355bbff7203/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo/blob/d2127c0cc4405bfe25ca5eabbce88355bbff7203/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo/blob/d2127c0cc4405bfe25ca5eabbce88355bbff7203/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "reference_state": 0.0002,
+            "reference_privileged": 0.0002,
+            "latent": 0.0002,
+            "actor_observation": 0.0002,
+            "action": 0.0002,
+            "motor_target": 0.0002,
+            "history": 0.0002,
+            "reset_history": 0.0,
+            "kp": 0.0,
+            "kd": 0.0,
+            "forced_clip_slew": 0.0002
+          }
+        }
       }
     }
   }
