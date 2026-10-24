@@ -53,134 +53,60 @@
         {
           "label": "Robot definition",
           "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/robots/g1-29dof-cpu-v0.json"
+        },
+        {
+          "label": "Metrics and alignment",
+          "url": "/protocol/#alignment"
+        },
+        {
+          "label": "Tracking-error coverage",
+          "url": "/protocol/#coverage"
         }
+      ],
+      "notes": [
+        "Scored body origins (14): {metric_bodies}."
       ]
     },
     {
       "id": "failure-conditions",
-      "title": "03 · Success & failure",
+      "title": "03 · Failure configuration",
       "paragraphs": [
-        "A motion passes only if it reaches the exact final reference timestamp without any condition below firing. All comparisons use the actual and reference states at the same time."
+        "Uses the shared tracking-failure rules with these body mappings and thresholds."
       ],
       "table": {
         "headers": [
           "Condition",
-          "Measurement",
+          "Body mapping",
           "Failure threshold"
         ],
         "rows": [
           [
             "Torso height",
-            "Absolute world-Z error of {anchor}.",
+            "{anchor}",
             "> {height:g} m"
           ],
           [
-            "Torso tilt",
-            "Difference in the torso’s inclination to gravity: compare the local Z component of unit gravity in the actual and reference torso frames.",
+            "Torso inclination",
+            "{anchor}",
             "> {tilt:g} · dimensionless"
           ],
           [
-            "Wrist / ankle height",
-            "Maximum absolute world-Z error across the four designated end effectors.",
+            "End-effector height",
+            "{end_effectors}",
             "> {ee_height:g} m"
           ]
         ]
       },
-      "notes": [
-        "Any condition is sufficient. Threshold equality does not fail; a failure at the final timestamp still counts.",
-        "Height is relative to the reference, not a minimum standing height. Lying down or touching the floor is not automatically a failure.",
-        "With local-to-world torso rotations R_actual and R_ref and unit gravity g = (0, 0, −1), tilt error is |(R_actualᵀg)_z − (R_refᵀg)_z|. It measures inclination to gravity, not yaw or the full relative rotation. Equal inclination can produce zero error even with different leaning directions.",
-        "End effectors: {end_effectors}.",
-        "No XY or yaw alignment is applied to success checks. The three alignments are used only for reporting tracking errors; they do not change success or completion."
-      ]
-    },
-    {
-      "id": "rollout-modes",
-      "title": "04 · Tracking-error coverage",
-      "table": {
-        "headers": [
-          "Time range",
-          "Frames included"
-        ],
-        "rows": [
-          [
-            "Early termination",
-            "From the first frame through the first failing sample, including that sample. If no failure occurs, use the entire motion."
-          ],
-          [
-            "No termination",
-            "All evaluation samples through the exact final reference timestamp, including states after failure. The robot is not reset after a failure."
-          ]
-        ]
-      },
-      "notes": [
-        "Both ranges use the same three alignment definitions below. Read tracking errors together with success and completion."
-      ],
       "links": [
         {
-          "label": "Early-termination protocol",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/suites/lafan/protocol.mujoco317-v1.json"
-        },
-        {
-          "label": "No-termination protocol",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/suites/lafan/protocol.mujoco317-no-termination-v1.json"
-        }
-      ],
-      "paragraphs": [
-        "Tracking errors are reported over two time ranges. Success and completion always use the first failure; recovering later does not turn a failed motion into a success."
-      ]
-    },
-    {
-      "id": "metrics",
-      "title": "05 · Metrics",
-      "table": {
-        "headers": [
-          "Metric",
-          "Definition",
-          "Better"
-        ],
-        "rows": [
-          [
-            "Success",
-            "Number of complete motions without failure, divided by all 40 motions.",
-            "Higher"
-          ],
-          [
-            "Completion",
-            "Last valid sample time divided by full reference duration, averaged equally across motions.",
-            "Higher"
-          ],
-          [
-            "MPBPE · mm",
-            "Mean Euclidean position error of 14 named body origins. Average bodies and samples within each motion, then average motions equally.",
-            "Lower"
-          ]
-        ]
-      },
-      "paragraphs": [
-        "MPBPE is reported for each time range under three alignment settings, giving six tracking-error measurements."
-      ],
-      "notes": [
-        "XY + yaw: remove pelvis XY translation and the closest relative world-Z rotation. Preserve absolute height and tilt.",
-        "XY only: remove pelvis XY translation. Preserve heading, absolute height and tilt.",
-        "No alignment: compare world-frame positions directly, retaining translation and heading drift.",
-        "The same 14 metric bodies are used in every view: {metric_bodies}.",
-        "Degenerate yaw alignment is flagged and retained. Tracking accuracy should be read together with success and coverage."
-      ],
-      "links": [
-        {
-          "label": "Alignment formulas",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/suites/lafan/protocol.mujoco317-v1.json"
-        },
-        {
-          "label": "Metric implementation",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/src/motion_challenge/metrics.py"
+          "label": "Shared tracking-failure rules",
+          "url": "/protocol/#failure-conditions"
         }
       ]
     },
     {
       "id": "reproduction",
-      "title": "06 · Reproduction",
+      "title": "04 · Reproduction",
       "paragraphs": [
         "Each score links the evaluated adapter commit, core commit, checkpoint hash and per-motion evidence. The core independently recomputes failures and metrics from the recorded poses."
       ],
