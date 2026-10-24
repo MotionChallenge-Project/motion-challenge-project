@@ -1,6 +1,6 @@
 {
   "schema": "MotionChallenge/observation-admissions-v1",
-  "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+  "core_commit": "953860095d0ff85d19a19e8ebfeaeebadbc9f5be",
   "models": {
     "bfm-zero": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -620,7 +620,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df"
+      "published_adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
+      "evaluation_progress": "accepted"
     },
     "pmt-uniform": {
       "schema": "MotionChallenge/observation-admission-v1",

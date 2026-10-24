@@ -35,22 +35,24 @@ class PublicationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'displayed'):
             validate_row(row,self.models['grit'],self.tracks[0],self.evidence)
     def test_inference_checkpoint_mismatch_is_rejected(self):
-        check=json.loads((CONTENT/'inference_checks.json').read_text())['models']['grit']
+        check=json.loads((CONTENT/'inference_checks.json').read_text())['tracks'][self.row['track_id']]['grit']
         report=json.loads((CONTENT/'inference'/check['report_file']).read_text())
         check['checkpoint_sha256']='0'*64
         with self.assertRaisesRegex(ValueError,'inference identity'):
             validate_inference(self.row,check,report)
     def test_excessive_inference_error_is_rejected(self):
-        check=json.loads((CONTENT/'inference_checks.json').read_text())['models']['grit']
+        check=json.loads((CONTENT/'inference_checks.json').read_text())['tracks'][self.row['track_id']]['grit']
         report=json.loads((CONTENT/'inference'/check['report_file']).read_text())
-        report['max_abs_error']['action']=1.0
+        report['max_abs_error']['motor_command']=1.0
         with self.assertRaisesRegex(ValueError,'inference error'):
             validate_inference(self.row,check,report)
 
     def test_privileged_score_cannot_be_relabelled_as_restricted(self):
-        track=dict(self.tracks[0],state_access='ideal-proprioceptive-no-position-v1')
-        with self.assertRaisesRegex(ValueError,'observation access'):
-            validate_row(self.row,self.models['grit'],track,self.evidence)
+        for state in (None,'privileged-state-v0'):
+            evidence=copy.deepcopy(self.evidence)
+            evidence['result']['state_access']=state
+            with self.assertRaisesRegex(ValueError,'observation access'):
+                validate_row(self.row,self.models['grit'],self.tracks[0],evidence)
 
     def test_restricted_admission_and_protocol_are_bound_to_evidence(self):
         row=next(r for r in self.rows if r['track_id']=='lafan40-g1-ideal-proprioception-v1')

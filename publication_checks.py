@@ -39,11 +39,10 @@ def validate_inference(row, check, report):
 
 def validate_row(row, model, track, evidence):
     name=row['model']; result=evidence['result']; source=result['source']
-    require(result.get('state_access', 'privileged-state-v0') == track.get('state_access', 'privileged-state-v0'), name+': observation access')
-    if track.get('state_access') == 'ideal-proprioceptive-no-position-v1':
-        for scope, id_key, hash_key in [('until_first_failure','protocol_id','protocol_sha256'), ('full_motion','no_termination_protocol_id','no_termination_protocol_sha256')]:
-            require(result['protocols'][scope]['protocol_id']==track[id_key] and result['protocols'][scope]['protocol_sha256']==track[hash_key], name+': observation protocol identity')
-        validate_admission(row,evidence)
+    require(result.get('state_access') == row.get('state_access') == track.get('state_access') == 'ideal-proprioceptive-no-position-v1', name+': observation access')
+    for scope, id_key, hash_key in [('until_first_failure','protocol_id','protocol_sha256'), ('full_motion','no_termination_protocol_id','no_termination_protocol_sha256')]:
+        require(result['protocols'][scope]['protocol_id']==track[id_key] and result['protocols'][scope]['protocol_sha256']==track[hash_key], name+': observation protocol identity')
+    validate_admission(row,evidence)
     require(evidence['model']==name, name+': wrong evidence')
     require(result['schema'] in ('MotionChallenge/unified-result-v1', 'motion-challenge/unified-result-v1') and
             result['status']=='trace_verified', name+': unverified result')
@@ -111,7 +110,8 @@ def validate_admission(row,evidence):
 
 def validate(content, rows, models, tracks):
     by_id={t['id']:t for t in tracks};seen=set()
-    require(set(models)=={r['model'] for r in rows}, 'Model cards and ranked models differ')
+    require({r['model'] for r in rows} <= set(models), 'Ranked model metadata is missing')
+    require(all(t.get('state_access')=='ideal-proprioceptive-no-position-v1' for t in tracks), 'Only the proprioceptive observation contract is supported')
     catalog=json.loads((content/'inference_checks.json').read_text())
     checks=catalog['models']
     require(set(checks)==set(models), 'Ranked models require inference checks')
@@ -122,7 +122,7 @@ def validate(content, rows, models, tracks):
         require(Path(filename).name==filename, 'Evidence must be a local JSON file')
         evidence=json.loads((content/'evidence'/filename).read_text())
         validate_row(row, models[row['model']], by_id[row['track_id']], evidence)
-        check=catalog.get('tracks',{}).get(row['track_id'],{}).get(row['model'],checks[row['model']])
+        check=catalog['tracks'][row['track_id']][row['model']]
         require(Path(check['report_file']).name==check['report_file'], 'Inference report must be local')
         raw=(content/'inference'/check['report_file']).read_bytes()
         require(hashlib.sha256(raw).hexdigest()==check['report_sha256'], row['model']+': changed inference report')

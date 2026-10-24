@@ -41,12 +41,8 @@ def evaluation_path(track_id, model_id):
 
 def evaluation_record(results, track, key, content, github):
     """One score table, source block and command for an evaluation."""
-    unified = next((r for r in results if r.get('termination_mode') == 'unified'), None)
-    early = unified or next((r for r in results if r.get('termination_mode', 'early_termination') == 'early_termination'), None)
-    full = unified or next((r for r in results if r.get('termination_mode') == 'no_termination'), None)
-    assert early is not None
-    if full:
-        assert early['passed'] == full['passed'] and abs(early['completion_pct']-full['completion_pct']) < 1e-7
+    assert len(results)==1 and results[0]['termination_mode']=='unified'
+    unified = early = full = results[0]
     fields = [('XY + yaw', 'mpjpe_xy_yaw_aligned_m'), ('XY only', 'mpjpe_xy_aligned_m'), ('No alignment', 'mpjpe_world_m')]
     text = '<section class="section evaluation-mode" id="results"><h2>Results</h2>'
     text += f'<div class="evaluation-score"><strong>{early["passed"]} / {early["total"]}</strong><span>motions passed</span><span>Completion {early["completion_pct"]:.2f}%</span></div>'
@@ -60,40 +56,23 @@ def evaluation_record(results, track, key, content, github):
               ('Engine', 'MuJoCo '+esc(early['mujoco_version'])+' · official CPU batch'),
               ('Checkpoint SHA256', '<code>'+esc(early['checkpoint_sha256'])+'</code>')]
     repo = repository_location(early.get('adapter_repository', github+'/MotionChallenge-'+key))
-    if unified:
-        evidence = json.loads((content/'evidence'/unified['evidence_file']).read_text())
-        common += [('Evaluated adapter', link(unified['adapter_code_url'], unified['adapter_commit'])),
-                   ('Evaluated core', link(unified['core_code_url'], unified['core_commit'])),
-                   ('Verification', 'Both trajectory ranges recomputed · repeatability checked')]
-        catalog = json.loads((content/'inference_checks.json').read_text())
-        check = catalog.get('tracks',{}).get(track['id'],{}).get(key,catalog['models'][key])
-        report = json.loads((content/'inference'/check['report_file']).read_text())
-        common.append((check.get('label','Author inference comparison'),
-                       f'{report["cases"]} inputs · {report["resets"]} resets · '
-                       + link(check['report_url'], 'Report ↗') + ' · '
-                       + link(check['code_url'], 'Comparison code ↗')))
-        commands = ['git clone --recurse-submodules '+repo+'.git',
-                    'cd '+repo.rsplit('/', 1)[-1], 'uv sync',
-                    'uv run evaluate.py --track '+('ideal-proprioception' if track.get('state_access')=='ideal-proprioceptive-no-position-v1' else 'privileged')]
-        downloads = link('/data/evidence/'+unified['evidence_file'], 'Complete results, source & verification (JSON) ↗', 'text-link')
-        title = 'Reproduce this run'
-        note = 'Runs the maintained main branch. The evaluated source commits and complete result remain linked alongside.'
-    else:
-        # Preserve actual old sources until a new shared-source run passes comparison.
-        source_items = []
-        downloads = ''
-        for row, label in [(early, 'Until first failure'), (full, 'Entire motion')]:
-            if row is None:
-                continue
-            source_items.append(esc(label)+': '+link(row['adapter_code_url'], 'adapter '+row['adapter_commit'][:7])+' · '+link(row['core_code_url'], 'core '+row['core_commit'][:7]))
-            downloads += link('/data/evidence/'+row['evidence_file'], label+' evidence (JSON) ↗', 'text-link')+' '
-        common.append(('Recorded source versions', '<br>'.join(source_items)))
-        reruns = json.loads((content/'unified_reruns.json').read_text())
-        revision = reruns[key]['commit']
-        commands = ['git clone '+repo+'.git', 'cd MotionChallenge-'+key, 'git checkout '+revision,
-                    'git submodule update --init --recursive', 'uv sync --locked', 'uv run evaluate.py']
-        title = 'Run the unified evaluation'
-        note = 'The one-command rerun is being checked against these recorded scores. Its source and complete result will replace the previous records after verification.'
+    evidence = json.loads((content/'evidence'/unified['evidence_file']).read_text())
+    common += [('Evaluated adapter', link(unified['adapter_code_url'], unified['adapter_commit'])),
+               ('Evaluated core', link(unified['core_code_url'], unified['core_commit'])),
+               ('Verification', 'Both trajectory ranges recomputed · repeatability checked')]
+    catalog = json.loads((content/'inference_checks.json').read_text())
+    check = catalog.get('tracks',{}).get(track['id'],{}).get(key,catalog['models'][key])
+    report = json.loads((content/'inference'/check['report_file']).read_text())
+    common.append((check.get('label','Author inference comparison'),
+                   f'{report["cases"]} inputs · {report["resets"]} resets · '
+                   + link(check['report_url'], 'Report ↗') + ' · '
+                   + link(check['code_url'], 'Comparison code ↗')))
+    commands = ['git clone --recurse-submodules '+repo+'.git',
+                'cd '+repo.rsplit('/', 1)[-1], 'uv sync',
+                'uv run evaluate.py']
+    downloads = link('/data/evidence/'+unified['evidence_file'], 'Complete results, source & verification (JSON) ↗', 'text-link')
+    title = 'Reproduce this run'
+    note = 'Runs the maintained main branch. The evaluated source commits and complete result remain linked alongside.'
     text += '<div class="evaluation-details">'+facts(common)+'<div><h3>'+title+'</h3><pre><code>'+esc('\n'.join(commands))+'</code></pre><p class="small">'+note+'</p>'+downloads+'</div></div></section>'
     return text
 

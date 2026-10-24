@@ -4,7 +4,7 @@
     "organization_source": "https://github.com/HorizonRobotics/HoloMotion",
     "runtime": {
       "id": "holomotion-g1-development-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_steps": [
@@ -35,7 +35,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.2,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "7974f78f380877c9b2266e80c9f22ba7789c7f29e2b75a5d5226c623aaa6bf07",
@@ -63,7 +63,11 @@
       "official": false,
       "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "fcb8d4d8e96af9535c2adcc2b53e267019f865a2",
-      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/exported/model_14000.onnx"
+      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/exported/model_14000.onnx",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "bf4b2a4778bab89870833a39e0a1a5ed5a2f70657213d4c93bb6533f923189aa"
+      }
     },
     "provenance": {
       "model": "holomotion",
@@ -115,7 +119,7 @@
     "organization_source": "https://github.com/NVlabs/ProtoMotions",
     "runtime": {
       "id": "protomotions-g1-development-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
         0.02,
@@ -133,7 +137,12 @@
       "action_history_semantics": "previous final joint position targets, matching official deployment/test_tracker_mujoco.py",
       "source_repository": "https://github.com/NVlabs/ProtoMotions",
       "weights_url": "https://media.githubusercontent.com/media/NVlabs/ProtoMotions/f69fdcaabff31846b4d2247207417b57dc788828/data/pretrained_models/motion_tracker/g1-bones-deploy/compiled_models/unified_pipeline.onnx",
-      "inference_config": "policy.yaml"
+      "inference_config": "policy.yaml",
+      "state_access": "ideal-proprioceptive-no-position-v1",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "17ecee339d9fe3bc7e19929da8f3f1c1309f9c1082d230b401b8891fc5506e42"
+      }
     },
     "provenance": {
       "model": "protomotions",
@@ -191,14 +200,14 @@
     "repository_available": true,
     "runtime": {
       "id": "teleopit-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
         0.0
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.0,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/policy.onnx",
       "weights_url": "https://huggingface.co/12e21/Teleopit-models/resolve/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx",
@@ -207,7 +216,11 @@
       "inference_config_sha256": "078b79be54dbc0b7eab919cc843ac6774ef23e1c15aca01afe1c584ff6cd3c02",
       "source_repository": "https://github.com/BotRunner64/Teleopit",
       "source_commit": "f9263865c581802ad531854b8e547e2403a945f3",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "5e134834226648edcec1450bc4bdc969cb41188a4e07819cbb8edf625320199b"
+      }
     },
     "provenance": {
       "model": "teleopit",
@@ -258,7 +271,7 @@
     "repository_available": true,
     "runtime": {
       "id": "sonic-v1-1-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
         0.0,
@@ -274,7 +287,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.9,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/policy.onnx",
       "weights_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/model_decoder.onnx",
@@ -290,6 +303,10 @@
           "sha256": "fb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae",
           "url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/model_encoder.onnx"
         }
+      },
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "5e8d9dfd1fb04565c27950aa3d68a24d67505dca2276c47cabf4978250a0a40b"
       }
     },
     "provenance": {
@@ -348,7 +365,7 @@
     "repository_available": true,
     "runtime": {
       "id": "sonic-low-latency-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
         0.0,
@@ -364,7 +381,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.18,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/policy.onnx",
       "weights_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/model_decoder.onnx",
@@ -380,6 +397,10 @@
           "sha256": "60be43157f57d812f38bdbb740a5de5d5d070e8840d9edc16f02a91a6d06255b",
           "url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/model_encoder.onnx"
         }
+      },
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "280313b16303ce9f11697eef7778d52af3dab2e7cd824bfad5f351a5377effd1"
       }
     },
     "provenance": {
@@ -445,7 +466,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/multimotionv2_flat.pt",
       "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
@@ -454,7 +475,11 @@
       "inference_config_sha256": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
       "source_repository": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "870dba8bcd3d7bbef72b8a5ffe257af32a4c667afafebed52c287da31eda5969"
+      }
     },
     "provenance": {
       "model": "pmt-flat",
@@ -522,7 +547,7 @@
     "organization_source": "https://github.com/amazon-far/TWIST2",
     "runtime": {
       "id": "twist2-g1-development-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.01,
       "reference_step_s": 0.02,
       "reference_steps": [
@@ -533,7 +558,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.0,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "57d7d9c1f4b793ccf076f0260c9d249a7cdb99560814b7f0f4ad316f7655b17a",
@@ -561,7 +586,11 @@
       "official": false,
       "source_repository": "https://github.com/amazon-far/TWIST2",
       "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
-      "weights_url": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx"
+      "weights_url": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "52c5cf19008294e14bd845bb5b57b42883c2295270824a3ad0f5264737789e2b"
+      }
     },
     "provenance": {
       "model": "twist2",
@@ -613,7 +642,7 @@
     "organization_source": "https://github.com/mrzuang/GRIT_teleop_deploy",
     "runtime": {
       "id": "grit-g1-development-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_steps": [
@@ -640,7 +669,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.26,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "79fcb076d49b8989c587cbbf5589d2073e5d3ecf785ad92025859b7a7fa94fac",
@@ -668,7 +697,11 @@
       "official": false,
       "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
       "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
-      "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx"
+      "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "5ea892ff2f3bf34e55c37e8c825bfd83c96aabaddeddb6b01b472c81991cb62b"
+      }
     },
     "provenance": {
       "model": "grit",
@@ -724,7 +757,7 @@
     "organization_source": "https://heft.axell.top/",
     "runtime": {
       "id": "heft-g1-development-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_steps": [
@@ -759,7 +792,7 @@
       ],
       "reference_history_s": 0.32,
       "reference_preview_s": 0.12,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "a7ca0ceb7d5c0ee31dc901b1ab4beb40546dcd21f46809456438f9e64fc3528e",
@@ -787,7 +820,11 @@
       "official": false,
       "source_repository": "https://github.com/Axellwppr/motion_tracking",
       "source_commit": "0d5ba31e33397f3543d350d98b637e26d92f470a",
-      "weights_url": "https://drive.usercontent.google.com/download?id=1yZybFGcaU77QMi24Syc7iXaTlzdLpWkA&export=download"
+      "weights_url": "https://drive.usercontent.google.com/download?id=1yZybFGcaU77QMi24Syc7iXaTlzdLpWkA&export=download",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "b82a2b0db0e7a286d966661474aa44a93db34d9ed7d4c1564db0fd2795366b1e"
+      }
     },
     "provenance": {
       "model": "heft",
@@ -840,7 +877,7 @@
     "organization_source": "https://github.com/Roboparty/MimicLite",
     "runtime": {
       "id": "mimic-lite-g1-development-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_steps": [
@@ -865,7 +902,7 @@
       ],
       "reference_history_s": 0.16,
       "reference_preview_s": 0.08,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "05f0211249ba531cf7382559a3a27e0fbefbbfbb51da131e417c9a24a6e6aec4",
@@ -895,7 +932,11 @@
       "source_commit": "3253810ce21dbcc05d8f4942a017ea3eaffc6cf1",
       "weights_url": "https://drive.usercontent.google.com/download?id=1UsdiBBQuhFcLSXvITjjhuSY-vhMrxYuy&export=download",
       "author_inference_repository": "https://github.com/EGalahad/sim2real",
-      "author_inference_commit": "287ac157e6a7143340da7a9fc2fa5ff552031bc8"
+      "author_inference_commit": "287ac157e6a7143340da7a9fc2fa5ff552031bc8",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "ab7da992b0be10b5e0484811ae90dbc446b4c505742d80b911c1eed92e726bc4"
+      }
     },
     "provenance": {
       "model": "mimic-lite",
@@ -960,7 +1001,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/multimotionv2_adaptive_flat.pt",
       "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_adaptive_flat.pt",
@@ -969,7 +1010,11 @@
       "inference_config_sha256": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
       "source_repository": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "90e7a261aa5917c38d0e4fc86844477cbcca1bbd4b78869bbe0f04ee65009165"
+      }
     },
     "provenance": {
       "model": "pmt-adaptive",
@@ -1048,7 +1093,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/multimotionv2_streaming_flat.pt",
       "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_streaming_flat.pt",
@@ -1057,7 +1102,11 @@
       "inference_config_sha256": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
       "source_repository": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "7ddad01de77279a0ad7ab335084cf2e3309068ad60dd8aa5abad1284fb5fa6ca"
+      }
     },
     "provenance": {
       "model": "pmt-streaming",
@@ -1136,7 +1185,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/multimotionv2_uniform_flat.pt",
       "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_uniform_flat.pt",
@@ -1145,7 +1194,11 @@
       "inference_config_sha256": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
       "source_repository": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "e2831f4dff54f95ebfe3388ee20c0e40c6e21c488660b9d6c77e72ab5e96b153"
+      }
     },
     "provenance": {
       "model": "pmt-uniform",
@@ -1224,7 +1277,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/bpo_multimotionv2_flat.pt",
       "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/bpo_multimotionv2_flat.pt",
@@ -1233,7 +1286,11 @@
       "inference_config_sha256": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
       "source_repository": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "0f6156efe1e58605a634727c0dea14f3db419fa109009d5b6d4e33df3da7bf38"
+      }
     },
     "provenance": {
       "model": "pmt-bpo",
@@ -1312,7 +1369,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/add_multimotion_flat.pt",
       "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/add_multimotion_flat.pt",
@@ -1321,7 +1378,11 @@
       "inference_config_sha256": "78e51f8e9c06880f2d823a46dfc940d2bdd92b90f401c2f85c0a3b6b090e7fc6",
       "source_repository": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "96f22390032630601ee4b080e48698c39a788678f41d18702cf46f50a6036826"
+      }
     },
     "provenance": {
       "model": "pmt-add",
@@ -1370,7 +1431,7 @@
     "repository_available": true,
     "runtime": {
       "id": "pmt-rgmt-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
         -0.2,
@@ -1397,7 +1458,7 @@
       ],
       "reference_history_s": 0.2,
       "reference_preview_s": 0.2,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/rgmt_flat.pt",
       "weights_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/rgmt_flat.pt",
@@ -1429,7 +1490,11 @@
         8,
         9,
         10
-      ]
+      ],
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "e909a5058aca108499a63e0cb9dc00426f8d726608c95a48ad825f90a77de554"
+      }
     },
     "provenance": {
       "model": "pmt-rgmt",
@@ -1478,7 +1543,7 @@
     "repository_available": true,
     "runtime": {
       "id": "sonic-original-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
         0.0,
@@ -1494,7 +1559,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.9,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/policy.onnx",
       "weights_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/model_decoder.onnx",
@@ -1510,6 +1575,10 @@
           "sha256": "013ab0287236aa2721e13f1e936d699db982302d0de0bfcdae76d5c3245362d3",
           "url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/model_encoder.onnx"
         }
+      },
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "a8a43ea75fc252388be7ec7b1027e2322eea5225e4562823a380771b13fd4133"
       }
     },
     "provenance": {
@@ -1563,7 +1632,7 @@
     "organization_source": "https://github.com/HorizonRobotics/HoloMotion",
     "runtime": {
       "id": "holomotion-v1-3-2-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_steps": [
@@ -1594,7 +1663,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.2,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "f308b6eaec451b7ee71ddf14968011a355199f558597340f1f5b6a9542faeff4",
@@ -1621,7 +1690,11 @@
       "official": false,
       "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "799302097ac60971db049f3861d3e67c96bffd32",
-      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.2/exported/motion_tracking_model.onnx"
+      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.2/exported/motion_tracking_model.onnx",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "359dd6a913cb97314884a23f31a1458745c756cf0de9f6d0ec1ec515470bbba0"
+      }
     },
     "provenance": {
       "model": "holomotion-v1-3-2",
@@ -1672,7 +1745,7 @@
     "organization_source": "https://github.com/HorizonRobotics/HoloMotion",
     "runtime": {
       "id": "holomotion-v1-4-1-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_steps": [
@@ -1703,7 +1776,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.2,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "f308b6eaec451b7ee71ddf14968011a355199f558597340f1f5b6a9542faeff4",
@@ -1730,7 +1803,11 @@
       "official": false,
       "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "cf2018a282249a04df1db4fa639760884f97b41b",
-      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx"
+      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "8a1911f309559bfe6f969cf3975e6dfbc23094c3055f03a3ec2acd439e5a0d6d"
+      }
     },
     "provenance": {
       "model": "holomotion-v1-4-1",
@@ -1807,7 +1884,7 @@
       ],
       "reference_history_s": 0.0,
       "reference_preview_s": 0.08,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/latest.onnx",
       "weights_url": "https://huggingface.co/datasets/Yochish/TextOp-Data/resolve/bb9604ce36ad4c0a77b5cccde89ebbb7c3ca93c9/TextOpTracker/logs/rsl_rl/Pretrained/checkpoints/latest.onnx",
@@ -1816,7 +1893,11 @@
       "inference_config_sha256": "c3cc600b74f346c2e56e59ef55e4134a6f1ccdfc761eec5149868b5fa52bce15",
       "source_repository": "https://github.com/TeleHuman/TextOp",
       "source_commit": "ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "239a8364b5109f3174151ca4e0289c35994a786c43d461313fc169cda94385e9"
+      }
     },
     "provenance": {
       "model": "textop",
@@ -1868,7 +1949,7 @@
     "description": "The released G1 forward-backward controller from UFO. A backward encoder turns reference poses into a latent command for its history-conditioned policy.",
     "runtime": {
       "id": "ufo-fb-cpr-aux-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
         0.02,
@@ -1878,7 +1959,7 @@
       ],
       "reference_history_s": 0.0,
       "reference_preview_s": 0.08,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "weights": "checkpoints/FBcprAuxModel.onnx",
       "weights_url": "https://huggingface.co/xuewang/ufo-g1-policy/resolve/da3727034a058eae588a16af142764ee34bdada4/exported/FBcprAuxModel.onnx",
@@ -1894,7 +1975,11 @@
       },
       "source_repository": "https://github.com/Roboparty/UFO",
       "source_commit": "ee5c57082bb4223bdac215bff7a607cbe0a93cd1",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "80dcbf685477ec07fd494a3c3acc52d960e0ab5e966d87b286c9396923122ca2"
+      }
     },
     "provenance": {
       "model": "ufo",
@@ -1937,7 +2022,7 @@
     "organization_source": "https://github.com/HorizonRobotics/HoloMotion",
     "runtime": {
       "id": "holomotion-v2-0-0-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_steps": [
@@ -1958,7 +2043,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.1,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "a2ca89e2a34bb2493cb31ec515893fcdf55f41e14c9eb2a4aab068dc6a038ddd",
@@ -1967,7 +2052,11 @@
       "official": false,
       "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "ebb3747ad3b6dab57e4b621611efef87317bdc3b",
-      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/exported/model_10500.onnx"
+      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/exported/model_10500.onnx",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "4e2397847a0978d100f8d1a33b3f39401feac5e9ccf7346c188979b273ff5435"
+      }
     },
     "provenance": {
       "model": "holomotion-v2-0-0",
@@ -2042,14 +2131,14 @@
     },
     "runtime": {
       "id": "mosaic-gmt",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
         -0.02
       ],
       "reference_history_s": 0.02,
       "reference_preview_s": 0.0,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "66f14dc44b8f1560ead737acfeb848fe605fa2772c772cb66f53ca61dc1e55e4",
@@ -2058,7 +2147,11 @@
       "weights_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/resolve/2ab795d7420cf339bb803bfb145c18faf8137cb8/gmt.onnx",
       "source_repository": "https://github.com/BAAI-Humanoid/RobotBridge",
       "source_commit": "175287dd559c098d21b287a8a27c6bb48d4606ff",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "dbeff0283f373b7b15224b56ad999c73fd758deefe2c9bf161f09f818d5a7610"
+      }
     },
     "provenance": {
       "model": "mosaic",
@@ -2121,7 +2214,7 @@
     },
     "runtime": {
       "id": "bfm-zero-g1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_offsets_s": [
@@ -2137,7 +2230,7 @@
       ],
       "reference_history_s": 0.02,
       "reference_preview_s": 0.14,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "39e4605b2a0dbb99379203fddc007d8b0ca23d4e1f9796569889097b78be71bf",
@@ -2148,7 +2241,11 @@
       "source_commit": "df9c4a9633aa155c727419e82c906010b1e1845f",
       "tracking_inference": "official uniform 8-frame latent mean, not notebook customized discount variant",
       "official": false,
-      "prepare_checkpoint": "conversion.prepare:prepare"
+      "prepare_checkpoint": "conversion.prepare:prepare",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "30fa11d4acaf6937de74d4c610f2af4f028ce871df89432a5d00a3d546b1c699"
+      }
     },
     "provenance": {
       "model": "bfm-zero",
@@ -2223,7 +2320,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.02,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
@@ -2235,7 +2332,11 @@
       "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
       "weights_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx",
       "kinematics": "assets/g1_5010_kinematics.xml",
-      "kinematics_sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6"
+      "kinematics_sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6",
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "bf8983077b8efe762817ebb724970d36d833c27d72d2abb3f53ac2c48f90aa4f"
+      }
     },
     "provenance": {
       "model": "humanoid-gpt",
@@ -2301,7 +2402,7 @@
     },
     "runtime": {
       "id": "omnixtreme",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
         0.0,
@@ -2309,7 +2410,7 @@
       ],
       "reference_history_s": 0.0,
       "reference_preview_s": 0.02,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "ac2c390c351ca3de88e637fe794cfa25281284b34a2eae748235620768396ed5",
@@ -2330,7 +2431,11 @@
           "sha256": "6174205a430b84ec51d3f15e014907504a9ad0c38575535a509bc771ebbc1d85"
         }
       },
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "67b8eb6ae42923a6698187ded2ee390f94c6baad7e896f03e92761a1bb3ef59b"
+      }
     },
     "provenance": {
       "model": "omnixtreme",
@@ -2433,7 +2538,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.02,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
@@ -2446,7 +2551,11 @@
       "weights_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
       "kinematics": "assets/g1_5010_kinematics.xml",
       "kinematics_sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6",
-      "history_len": 16
+      "history_len": 16,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "2509a40af09449d3f8ce33b0de7d523db8297c77a3140a8c13d1bbd0e447633e"
+      }
     },
     "provenance": {
       "model": "humanoid-gpt-transformer-216",
@@ -2500,7 +2609,7 @@
     "organization_source": "https://github.com/HorizonRobotics/HoloMotion",
     "runtime": {
       "id": "holomotion-v1-3-1-g1-v1",
-      "entrypoint": "adapter:create",
+      "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_steps": [
@@ -2531,7 +2640,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.2,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "d2ac75219c227385f271f8746a8e55392a1dae879c7dc3f67570ed9015cbe540",
@@ -2560,7 +2669,11 @@
       "source_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
       "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1/exported/motion_tracking_model.onnx",
       "motion_rope_max_seq_len": 8192,
-      "motion_rope_reset_margin": 64
+      "motion_rope_reset_margin": 64,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "8a2b15471bab6656affe1aaa3134b7d2d7d2fecc53a537e1296598d477563d6b"
+      }
     },
     "provenance": {
       "model": "holomotion-v1-3-1",
@@ -2666,7 +2779,7 @@
       ],
       "reference_history_s": 0,
       "reference_preview_s": 0.1,
-      "state_access": "privileged-state-v0",
+      "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
       "inference_config_sha256": "a8d4a72064e7e14a3889d28cf1f7a8d380501468f6d93cc2d9863b57f139e10f",
@@ -2702,7 +2815,11 @@
       },
       "source_repository": "https://github.com/zengweishuai/ScaleBFM",
       "source_commit": "abd6f17c02fe0baabc14709feb8d9ea4959aa621",
-      "official": false
+      "official": false,
+      "observation_contract": {
+        "admission_record": "admission.json",
+        "admission_sha256": "220bfde4331217c067fb41b7e58d57435177419e29dbd47546f8d408f709c1d3"
+      }
     },
     "provenance": {
       "model": "scalebfm-m",

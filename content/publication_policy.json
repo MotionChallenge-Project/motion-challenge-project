@@ -15,11 +15,5 @@
       "evaluate": false,
       "publish_results": false
     }
-  },
-  "required_adapter_commits": {
-    "grit": "6f04b73653abe8a819cd19245b869b72f5d81b36",
-    "heft": "6604e4815965d13ea248785deebde4632e9aa632",
-    "mimic-lite": "0e95ec2f35b36925c330e5c31b6499a3fe8a833f",
-    "twist2": "d1e5b041cca86b454168b2f3a581d4973962dc0b"
   }
 }

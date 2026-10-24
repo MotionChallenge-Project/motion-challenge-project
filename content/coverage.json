@@ -1,6 +1,187 @@
 {
-  "updated": "2026-10-24",
-  "scope": "Current coverage: public general-purpose motion-tracking checkpoints compatible with the LAFAN40 / G1 29DoF benchmark.",
-  "selection": "Humanoid-GPT Transformer 216, ScaleBFM M and HoloMotion v1.3.1 have completed full-suite evaluation, independent trajectory verification and repeatability checks. Projects without a public checkpoint or with only single-motion checkpoints are not being followed.",
-  "entries": []
+  "updated": "2026-10-25",
+  "scope": "Public general-purpose motion controllers under the shared proprioceptive observation rules.",
+  "selection": "Models without released general-purpose checkpoints are outside the current coverage.",
+  "entries": [
+    {
+      "model": "teleopit",
+      "name": "TeleopIT G1",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://botrunner64.github.io/teleopit-page/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-teleopit"
+    },
+    {
+      "model": "sonic-v1-1",
+      "name": "SONIC v1.1",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://nvlabs.github.io/GEAR-SONIC/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-v1-1"
+    },
+    {
+      "model": "sonic-low-latency",
+      "name": "SONIC Low-Latency",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://nvlabs.github.io/GEAR-SONIC/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-low-latency"
+    },
+    {
+      "model": "pmt-flat",
+      "name": "PMT Flat MLP 20k",
+      "status": "Incompatible input contract",
+      "gap": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://acodedog.github.io/perceptive-bfm/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-flat"
+    },
+    {
+      "model": "twist2",
+      "name": "TWIST2 1017-20k",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://yanjieze.com/projects/TWIST2/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2"
+    },
+    {
+      "model": "pmt-adaptive",
+      "name": "PMT Adaptive MLP 20k",
+      "status": "Incompatible input contract",
+      "gap": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://acodedog.github.io/perceptive-bfm/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-adaptive"
+    },
+    {
+      "model": "pmt-streaming",
+      "name": "PMT Streaming MLP 20k",
+      "status": "Incompatible input contract",
+      "gap": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://acodedog.github.io/perceptive-bfm/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-streaming"
+    },
+    {
+      "model": "pmt-uniform",
+      "name": "PMT Uniform MLP 20k",
+      "status": "Incompatible input contract",
+      "gap": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://acodedog.github.io/perceptive-bfm/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-uniform"
+    },
+    {
+      "model": "pmt-bpo",
+      "name": "PMT BPO MLP 20k",
+      "status": "Incompatible input contract",
+      "gap": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://acodedog.github.io/perceptive-bfm/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-bpo"
+    },
+    {
+      "model": "pmt-add",
+      "name": "PMT ADD MLP 20k",
+      "status": "Incompatible input contract",
+      "gap": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://acodedog.github.io/perceptive-bfm/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-add"
+    },
+    {
+      "model": "sonic-original",
+      "name": "SONIC Original",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://nvlabs.github.io/GEAR-SONIC/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-original"
+    },
+    {
+      "model": "textop",
+      "name": "TextOp Tracker 75k",
+      "status": "Requires author deployment validation",
+      "gap": "Current simulation adapter uses actual position feedback. The pinned author hardware code sets odometry position to zero AND unconditionally zeros all 15 future position-error entries, with a separate initial-heading reference transform. This is not equivalent to merely setting our root position to zero. Verify the hardware policy file against this exact latest.onnx SHA and compare the complete C++ observation/reset/action path before admission.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://text-op.github.io/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-textop"
+    },
+    {
+      "model": "ufo",
+      "name": "UFO FB-CPR-Aux 192M",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://roboparty.github.io/UFO/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo"
+    },
+    {
+      "model": "holomotion-v2-0-0",
+      "name": "HoloMotion v2.0.0",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://horizonrobotics.github.io/robot_lab/holomotion/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v2-0-0"
+    },
+    {
+      "model": "mosaic",
+      "name": "MOSAIC GMT",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://baai-humanoid.github.io/MOSAIC/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic"
+    },
+    {
+      "model": "humanoid-gpt",
+      "name": "Humanoid-GPT 264",
+      "status": "Requires author deployment validation",
+      "gap": "Current adapter uses actual XY in command. Author real_robot sets root XYZ to [0,0,0.78]; exact same weight, heading/reference processing and reset behavior must be verified for that path.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://qizekun.github.io/Humanoid-GPT/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt"
+    },
+    {
+      "model": "omnixtreme",
+      "name": "OmniXtreme",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://extreme-humanoid.github.io/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-omnixtreme"
+    },
+    {
+      "model": "humanoid-gpt-transformer-216",
+      "name": "Humanoid-GPT Transformer 216",
+      "status": "Requires author deployment validation",
+      "gap": "Current Transformer adapter uses actual XY in command. Verify the author fixed-root hardware path specifically for this 216 checkpoint; the 264 checkpoint is not a substitute.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://qizekun.github.io/Humanoid-GPT/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216"
+    },
+    {
+      "model": "holomotion-v1-3-1",
+      "name": "HoloMotion v1.3.1",
+      "status": "Full evaluation pending",
+      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
+      "next_step": "Complete all 40 motions twice and verify traces.",
+      "author_source": "https://horizonrobotics.github.io/robot_lab/holomotion/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-1"
+    },
+    {
+      "model": "scalebfm-m",
+      "name": "ScaleBFM M",
+      "status": "Requires author deployment validation",
+      "gap": "Author mode7/reference_forcing uses reference root after the first act, but initialization currently reads actual root. Need a same-weight, author-supported reference-only initialization path and full reset/history parity before admission.",
+      "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
+      "author_source": "https://scalebfm.github.io/",
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-scalebfm-m"
+    }
+  ]
 }

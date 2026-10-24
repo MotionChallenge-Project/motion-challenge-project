@@ -1,38 +1,53 @@
 {
   "model": "pmt-rgmt",
-  "submitter": "Motion Challenge",
-  "result_sha256": "965715e0c7adb70a18cbc02a0437e41b947655f499b2c6a0047db9a083270550",
+  "submitter": "MotionChallenge",
+  "result_sha256": "f4b3b25ea6399ba73554aa9cab9f848cd5cd3d7ff38917ac8aa99ebd0907264b",
   "result": {
-    "schema": "motion-challenge/unified-result-v1",
+    "schema": "MotionChallenge/unified-result-v1",
     "status": "trace_verified",
     "source": {
-      "adapter_commit": "7ee22ccf48bac293749d598f419764dd4b9cde69",
+      "adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
-        ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
-        "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
+        ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
+        "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
         "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-        "README.md": "be6b1505e972380c6fb5a5f393a241175895ff2eebdc1217a129202644abf00a",
+        "README.md": "9adb2b4131376a255d32ecc429584aa9dce053932e29eb2dd88f180e6ee2d38e",
         "THIRD_PARTY_LICENSES": "ea0e6e886641814bdacb574af25ed988d9e15612478614e1b275538d1723fb99",
         "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
         "adapter.py": "be5c63296aff4c502fa5a89f42ea1dba526a110521b12a035e6ba9756c3c272e",
+        "admission.json": "e909a5058aca108499a63e0cb9dc00426f8d726608c95a48ad825f90a77de554",
         "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
         "native-sources.json": "b978fa540e6ec160c4ee24557d8610e9a6f1ff3273ad428b531a34d4b9098349",
         "network.py": "910cc8425cafb942ea4f35620f2d130ec5bb159ac6fbfb6f84c5f9c6305cf011",
         "policy.json": "597a70bc7378e3556b08c7263661ef1040a1972b0be9e3b379eab4ca6133bbe6",
-        "provenance.json": "7d1652e97f025ff6786c722c17d2ee525d0b561b2fb48b93f4711f00dd775755",
-        "pyproject.toml": "44261a16d50c0c546a2ab13cc395c8d6ce55cd1a422c4de52d8ca6c151bd2712",
-        "runtime.json": "97fc104cf5912828bee92525906aa2d0e681f86cfb1cb6159dfedebda0757b2c",
-        "uv.lock": "ba577d2dbf441631f5876991acca81271a47e0e334c53c46dceccf05baee3ce8",
+        "provenance.json": "a3e4833987e1d0fd940ec6cb60b0f2b3bc70fe4145490773fa80e87cad4fc2af",
+        "pyproject.toml": "06413432976d2f4260c54163d823678d31dd4e0916e6050dba74c03817a3c3a1",
+        "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
+        "runtime.json": "bfb8228a5c69018bc8bd1b2e7417ef7a79858a5f4fa91a3cde7330f9e4846c7f",
+        "uv.lock": "1acd7e35505b3279740246ed0cd58d5f1f240a6b3e46cebbad20c00d4ff51c2a",
         "validate_inference.py": "d150d70ef4c30d354bbff4b87898b5d1aed706936bbd3e8b3f4b7548f41e01ce",
+        "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
         "validation/native-parity.json": "f7d1f6dead5c7c88a5ec0c8ed0236d2c6e8e29f3041f6474022938b1afbc096f",
-        "validation/native_config.py": "0b83a014d302faef203ddd5b8c41e3060e3881d77c00566c368c115b7437b083"
+        "validation/native_config.py": "68df973687a6051daec4dd97f5a2781296697c2dc6a0ebf4fc6d88e8e31982ff",
+        "validation/observation-access.json": "d17414c4cea119648ab41d0426426b0ede2d72d3372629130c530ef9ec7bde64"
       },
-      "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+      "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
       "core_dirty": false
     },
     "checkpoint_sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12",
+    "state_access": "ideal-proprioceptive-no-position-v1",
+    "protocols": {
+      "until_first_failure": {
+        "protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-v1",
+        "protocol_sha256": "35806b6c96e83b82e2f7273f2531114b2b620e7ce0decba86e68e3dfeb810a79"
+      },
+      "full_motion": {
+        "protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-no-termination-v1",
+        "protocol_sha256": "861febec8b0b2b7c77cebde792bbf79c402768d1d270efccc96ac3f90235d09f"
+      }
+    },
     "controller_id": "pmt-rgmt-g1-v1",
     "suite_sha256": "113b15cbb133fc1f8f873ad310a13c433d552f77137bde1b43426a2b55af1060",
     "robot_profile_sha256": "27a89860a47c730b73156d945be9eb28736001afc16530165eccb31d1513b432",
@@ -1965,170 +1980,52 @@
     "components": {
       "early": {
         "result": "rollout/prefix-result.json",
-        "result_sha256": "91488002481c8ecf2039e3df0433eade8a67b32b56fa1c751bf45abf2d720a78",
+        "result_sha256": "6ca6fc99e2f0cdaed397345d0441cee53dadc296e688b962085c3d921e78d061",
         "receipt": "rollout/receipt.json",
-        "receipt_sha256": "f85c462b11c6303534eb380352247b2eaf9503df997e444422a03c154e9a72fa"
+        "receipt_sha256": "4911080091200fe68d9cc81226da28cb82e5b8a2834186a2732ff1730d9b5275"
       },
       "none": {
         "result": "rollout/result.json",
-        "result_sha256": "a53511c0b5fe25552d75cf8d321c96ece7c9fca569b07d6e3b50509764301491",
+        "result_sha256": "af5b3611123a80720d04484f716336061b015d8612050d57ca29a4204828e5ea",
         "receipt": "rollout/receipt.json",
-        "receipt_sha256": "f85c462b11c6303534eb380352247b2eaf9503df997e444422a03c154e9a72fa"
+        "receipt_sha256": "4911080091200fe68d9cc81226da28cb82e5b8a2834186a2732ff1730d9b5275"
       }
     }
   },
-  "receipts": {
-    "early": {
-      "submitter": "local-run",
-      "source": {
-        "adapter_commit": "7ee22ccf48bac293749d598f419764dd4b9cde69",
-        "adapter_dirty": false,
-        "tracked_files_sha256": {
-          ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
-          ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
-          "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
-          "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-          "README.md": "be6b1505e972380c6fb5a5f393a241175895ff2eebdc1217a129202644abf00a",
-          "THIRD_PARTY_LICENSES": "ea0e6e886641814bdacb574af25ed988d9e15612478614e1b275538d1723fb99",
-          "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
-          "adapter.py": "be5c63296aff4c502fa5a89f42ea1dba526a110521b12a035e6ba9756c3c272e",
-          "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
-          "native-sources.json": "b978fa540e6ec160c4ee24557d8610e9a6f1ff3273ad428b531a34d4b9098349",
-          "network.py": "910cc8425cafb942ea4f35620f2d130ec5bb159ac6fbfb6f84c5f9c6305cf011",
-          "policy.json": "597a70bc7378e3556b08c7263661ef1040a1972b0be9e3b379eab4ca6133bbe6",
-          "provenance.json": "7d1652e97f025ff6786c722c17d2ee525d0b561b2fb48b93f4711f00dd775755",
-          "pyproject.toml": "44261a16d50c0c546a2ab13cc395c8d6ce55cd1a422c4de52d8ca6c151bd2712",
-          "runtime.json": "97fc104cf5912828bee92525906aa2d0e681f86cfb1cb6159dfedebda0757b2c",
-          "uv.lock": "ba577d2dbf441631f5876991acca81271a47e0e334c53c46dceccf05baee3ce8",
-          "validate_inference.py": "d150d70ef4c30d354bbff4b87898b5d1aed706936bbd3e8b3f4b7548f41e01ce",
-          "validation/native-parity.json": "f7d1f6dead5c7c88a5ec0c8ed0236d2c6e8e29f3041f6474022938b1afbc096f",
-          "validation/native_config.py": "0b83a014d302faef203ddd5b8c41e3060e3881d77c00566c368c115b7437b083"
-        },
-        "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-        "core_dirty": false
-      },
-      "source_runtime_sha256": "97fc104cf5912828bee92525906aa2d0e681f86cfb1cb6159dfedebda0757b2c",
-      "resolved_runtime_sha256": "f6d97cf965aa4c47a4617f0641b27663656b32b015e1f55a3f8b1367fc78ad58",
-      "suite": "lafan40",
-      "started_utc": "20261023T185157.634566Z",
-      "author_inference_review": "not_granted_by_runner",
-      "status": "trace_verified",
-      "backend": "batch",
-      "termination_mode": "no_termination",
-      "batch_size": 8,
-      "timings_s": {
-        "rollout": 2767.879806276411,
-        "verification": 72.3438162393868,
-        "total": 2840.245745945722
-      },
-      "verification": {
-        "verification": "trace_consistent",
-        "official": false,
-        "clips": 40,
-        "samples": 441120,
-        "full_suite": true,
-        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
-        "derived_prefix": {
-          "result": "prefix-result.json",
-          "result_sha256": "91488002481c8ecf2039e3df0433eade8a67b32b56fa1c751bf45abf2d720a78",
-          "samples": 305448
-        }
-      },
-      "full_suite": true,
-      "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-23T19:39:21.585531+00:00"
-    },
-    "none": {
-      "submitter": "local-run",
-      "source": {
-        "adapter_commit": "7ee22ccf48bac293749d598f419764dd4b9cde69",
-        "adapter_dirty": false,
-        "tracked_files_sha256": {
-          ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
-          ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
-          "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
-          "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-          "README.md": "be6b1505e972380c6fb5a5f393a241175895ff2eebdc1217a129202644abf00a",
-          "THIRD_PARTY_LICENSES": "ea0e6e886641814bdacb574af25ed988d9e15612478614e1b275538d1723fb99",
-          "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
-          "adapter.py": "be5c63296aff4c502fa5a89f42ea1dba526a110521b12a035e6ba9756c3c272e",
-          "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
-          "native-sources.json": "b978fa540e6ec160c4ee24557d8610e9a6f1ff3273ad428b531a34d4b9098349",
-          "network.py": "910cc8425cafb942ea4f35620f2d130ec5bb159ac6fbfb6f84c5f9c6305cf011",
-          "policy.json": "597a70bc7378e3556b08c7263661ef1040a1972b0be9e3b379eab4ca6133bbe6",
-          "provenance.json": "7d1652e97f025ff6786c722c17d2ee525d0b561b2fb48b93f4711f00dd775755",
-          "pyproject.toml": "44261a16d50c0c546a2ab13cc395c8d6ce55cd1a422c4de52d8ca6c151bd2712",
-          "runtime.json": "97fc104cf5912828bee92525906aa2d0e681f86cfb1cb6159dfedebda0757b2c",
-          "uv.lock": "ba577d2dbf441631f5876991acca81271a47e0e334c53c46dceccf05baee3ce8",
-          "validate_inference.py": "d150d70ef4c30d354bbff4b87898b5d1aed706936bbd3e8b3f4b7548f41e01ce",
-          "validation/native-parity.json": "f7d1f6dead5c7c88a5ec0c8ed0236d2c6e8e29f3041f6474022938b1afbc096f",
-          "validation/native_config.py": "0b83a014d302faef203ddd5b8c41e3060e3881d77c00566c368c115b7437b083"
-        },
-        "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-        "core_dirty": false
-      },
-      "source_runtime_sha256": "97fc104cf5912828bee92525906aa2d0e681f86cfb1cb6159dfedebda0757b2c",
-      "resolved_runtime_sha256": "f6d97cf965aa4c47a4617f0641b27663656b32b015e1f55a3f8b1367fc78ad58",
-      "suite": "lafan40",
-      "started_utc": "20261023T185157.634566Z",
-      "author_inference_review": "not_granted_by_runner",
-      "status": "trace_verified",
-      "backend": "batch",
-      "termination_mode": "no_termination",
-      "batch_size": 8,
-      "timings_s": {
-        "rollout": 2767.879806276411,
-        "verification": 72.3438162393868,
-        "total": 2840.245745945722
-      },
-      "verification": {
-        "verification": "trace_consistent",
-        "official": false,
-        "clips": 40,
-        "samples": 441120,
-        "full_suite": true,
-        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
-        "derived_prefix": {
-          "result": "prefix-result.json",
-          "result_sha256": "91488002481c8ecf2039e3df0433eade8a67b32b56fa1c751bf45abf2d720a78",
-          "samples": 305448
-        }
-      },
-      "full_suite": true,
-      "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-23T19:39:21.585531+00:00"
-    }
-  },
   "summary": {
-    "schema": "motion-challenge/paired-evaluation-v1",
+    "schema": "MotionChallenge/paired-evaluation-v1",
     "status": "trace_verified",
     "execution": "single_full_rollout",
-    "started_utc": "20261023T185157.634566Z",
+    "started_utc": "20261024T160403.342562Z",
     "source": {
-      "adapter_commit": "7ee22ccf48bac293749d598f419764dd4b9cde69",
+      "adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
-        ".gitmodules": "b924ac9568718a259bf61b97f91f24ec286ef9182d53346a4487be4589d3609a",
-        "LICENSE": "3b50dbfb0ecfbc5f16ede2c9058c367b575a611280832c94d9ee28c3921ec528",
+        ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
+        "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
         "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
-        "README.md": "be6b1505e972380c6fb5a5f393a241175895ff2eebdc1217a129202644abf00a",
+        "README.md": "9adb2b4131376a255d32ecc429584aa9dce053932e29eb2dd88f180e6ee2d38e",
         "THIRD_PARTY_LICENSES": "ea0e6e886641814bdacb574af25ed988d9e15612478614e1b275538d1723fb99",
         "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
         "adapter.py": "be5c63296aff4c502fa5a89f42ea1dba526a110521b12a035e6ba9756c3c272e",
+        "admission.json": "e909a5058aca108499a63e0cb9dc00426f8d726608c95a48ad825f90a77de554",
         "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
         "native-sources.json": "b978fa540e6ec160c4ee24557d8610e9a6f1ff3273ad428b531a34d4b9098349",
         "network.py": "910cc8425cafb942ea4f35620f2d130ec5bb159ac6fbfb6f84c5f9c6305cf011",
         "policy.json": "597a70bc7378e3556b08c7263661ef1040a1972b0be9e3b379eab4ca6133bbe6",
-        "provenance.json": "7d1652e97f025ff6786c722c17d2ee525d0b561b2fb48b93f4711f00dd775755",
-        "pyproject.toml": "44261a16d50c0c546a2ab13cc395c8d6ce55cd1a422c4de52d8ca6c151bd2712",
-        "runtime.json": "97fc104cf5912828bee92525906aa2d0e681f86cfb1cb6159dfedebda0757b2c",
-        "uv.lock": "ba577d2dbf441631f5876991acca81271a47e0e334c53c46dceccf05baee3ce8",
+        "provenance.json": "a3e4833987e1d0fd940ec6cb60b0f2b3bc70fe4145490773fa80e87cad4fc2af",
+        "pyproject.toml": "06413432976d2f4260c54163d823678d31dd4e0916e6050dba74c03817a3c3a1",
+        "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
+        "runtime.json": "bfb8228a5c69018bc8bd1b2e7417ef7a79858a5f4fa91a3cde7330f9e4846c7f",
+        "uv.lock": "1acd7e35505b3279740246ed0cd58d5f1f240a6b3e46cebbad20c00d4ff51c2a",
         "validate_inference.py": "d150d70ef4c30d354bbff4b87898b5d1aed706936bbd3e8b3f4b7548f41e01ce",
+        "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
         "validation/native-parity.json": "f7d1f6dead5c7c88a5ec0c8ed0236d2c6e8e29f3041f6474022938b1afbc096f",
-        "validation/native_config.py": "0b83a014d302faef203ddd5b8c41e3060e3881d77c00566c368c115b7437b083"
+        "validation/native_config.py": "68df973687a6051daec4dd97f5a2781296697c2dc6a0ebf4fc6d88e8e31982ff",
+        "validation/observation-access.json": "d17414c4cea119648ab41d0426426b0ede2d72d3372629130c530ef9ec7bde64"
       },
-      "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+      "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
       "core_dirty": false
     },
     "checkpoint_sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12",
@@ -2181,45 +2078,239 @@
       }
     },
     "result": "result.json",
-    "finished_utc": "2026-10-23T19:39:21.594028+00:00"
+    "finished_utc": "2026-10-24T16:11:03.694030+00:00"
+  },
+  "receipts": {
+    "early": {
+      "submitter": "local-run",
+      "source": {
+        "adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
+        "adapter_dirty": false,
+        "tracked_files_sha256": {
+          ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
+          ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
+          "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
+          "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
+          "README.md": "9adb2b4131376a255d32ecc429584aa9dce053932e29eb2dd88f180e6ee2d38e",
+          "THIRD_PARTY_LICENSES": "ea0e6e886641814bdacb574af25ed988d9e15612478614e1b275538d1723fb99",
+          "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
+          "adapter.py": "be5c63296aff4c502fa5a89f42ea1dba526a110521b12a035e6ba9756c3c272e",
+          "admission.json": "e909a5058aca108499a63e0cb9dc00426f8d726608c95a48ad825f90a77de554",
+          "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
+          "native-sources.json": "b978fa540e6ec160c4ee24557d8610e9a6f1ff3273ad428b531a34d4b9098349",
+          "network.py": "910cc8425cafb942ea4f35620f2d130ec5bb159ac6fbfb6f84c5f9c6305cf011",
+          "policy.json": "597a70bc7378e3556b08c7263661ef1040a1972b0be9e3b379eab4ca6133bbe6",
+          "provenance.json": "a3e4833987e1d0fd940ec6cb60b0f2b3bc70fe4145490773fa80e87cad4fc2af",
+          "pyproject.toml": "06413432976d2f4260c54163d823678d31dd4e0916e6050dba74c03817a3c3a1",
+          "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
+          "runtime.json": "bfb8228a5c69018bc8bd1b2e7417ef7a79858a5f4fa91a3cde7330f9e4846c7f",
+          "uv.lock": "1acd7e35505b3279740246ed0cd58d5f1f240a6b3e46cebbad20c00d4ff51c2a",
+          "validate_inference.py": "d150d70ef4c30d354bbff4b87898b5d1aed706936bbd3e8b3f4b7548f41e01ce",
+          "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
+          "validation/native-parity.json": "f7d1f6dead5c7c88a5ec0c8ed0236d2c6e8e29f3041f6474022938b1afbc096f",
+          "validation/native_config.py": "68df973687a6051daec4dd97f5a2781296697c2dc6a0ebf4fc6d88e8e31982ff",
+          "validation/observation-access.json": "d17414c4cea119648ab41d0426426b0ede2d72d3372629130c530ef9ec7bde64"
+        },
+        "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+        "core_dirty": false
+      },
+      "source_runtime_sha256": "bfb8228a5c69018bc8bd1b2e7417ef7a79858a5f4fa91a3cde7330f9e4846c7f",
+      "resolved_runtime_sha256": "acfad380fb9a48d855044bd20ddef58f824e7a65f02f5fcd9a4b8675923df96c",
+      "suite": "lafan40",
+      "observation_track": "ideal-proprioception",
+      "state_access": "ideal-proprioceptive-no-position-v1",
+      "started_utc": "20261024T160403.342562Z",
+      "author_inference_review": "not_granted_by_runner",
+      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-v1/pmt-rgmt/run-01/rollout",
+      "status": "trace_verified",
+      "backend": "batch",
+      "termination_mode": "no_termination",
+      "batch_size": 40,
+      "timings_s": {
+        "rollout": 395.94533421844244,
+        "verification": 21.325082253664732,
+        "total": 417.2946672551334
+      },
+      "verification": {
+        "verification": "trace_consistent",
+        "official": false,
+        "clips": 40,
+        "samples": 441120,
+        "full_suite": true,
+        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
+        "derived_prefix": {
+          "result": "prefix-result.json",
+          "result_sha256": "6ca6fc99e2f0cdaed397345d0441cee53dadc296e688b962085c3d921e78d061",
+          "samples": 305448
+        }
+      },
+      "full_suite": true,
+      "source_unchanged_during_run": true,
+      "finished_utc": "2026-10-24T16:11:03.686557+00:00"
+    },
+    "none": {
+      "submitter": "local-run",
+      "source": {
+        "adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
+        "adapter_dirty": false,
+        "tracked_files_sha256": {
+          ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
+          ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
+          "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
+          "LICENSE.PMT": "7dfd4d9420dc136635086886332caaebb3e42a2f11853eb26119e5fa1aa34f93",
+          "README.md": "9adb2b4131376a255d32ecc429584aa9dce053932e29eb2dd88f180e6ee2d38e",
+          "THIRD_PARTY_LICENSES": "ea0e6e886641814bdacb574af25ed988d9e15612478614e1b275538d1723fb99",
+          "THIRD_PARTY_NOTICES.md": "25762eadd5d6eac6450b6eb8b07c2ab620ec87c609223c84ff853ef3acb1cce0",
+          "adapter.py": "be5c63296aff4c502fa5a89f42ea1dba526a110521b12a035e6ba9756c3c272e",
+          "admission.json": "e909a5058aca108499a63e0cb9dc00426f8d726608c95a48ad825f90a77de554",
+          "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
+          "native-sources.json": "b978fa540e6ec160c4ee24557d8610e9a6f1ff3273ad428b531a34d4b9098349",
+          "network.py": "910cc8425cafb942ea4f35620f2d130ec5bb159ac6fbfb6f84c5f9c6305cf011",
+          "policy.json": "597a70bc7378e3556b08c7263661ef1040a1972b0be9e3b379eab4ca6133bbe6",
+          "provenance.json": "a3e4833987e1d0fd940ec6cb60b0f2b3bc70fe4145490773fa80e87cad4fc2af",
+          "pyproject.toml": "06413432976d2f4260c54163d823678d31dd4e0916e6050dba74c03817a3c3a1",
+          "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
+          "runtime.json": "bfb8228a5c69018bc8bd1b2e7417ef7a79858a5f4fa91a3cde7330f9e4846c7f",
+          "uv.lock": "1acd7e35505b3279740246ed0cd58d5f1f240a6b3e46cebbad20c00d4ff51c2a",
+          "validate_inference.py": "d150d70ef4c30d354bbff4b87898b5d1aed706936bbd3e8b3f4b7548f41e01ce",
+          "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
+          "validation/native-parity.json": "f7d1f6dead5c7c88a5ec0c8ed0236d2c6e8e29f3041f6474022938b1afbc096f",
+          "validation/native_config.py": "68df973687a6051daec4dd97f5a2781296697c2dc6a0ebf4fc6d88e8e31982ff",
+          "validation/observation-access.json": "d17414c4cea119648ab41d0426426b0ede2d72d3372629130c530ef9ec7bde64"
+        },
+        "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+        "core_dirty": false
+      },
+      "source_runtime_sha256": "bfb8228a5c69018bc8bd1b2e7417ef7a79858a5f4fa91a3cde7330f9e4846c7f",
+      "resolved_runtime_sha256": "acfad380fb9a48d855044bd20ddef58f824e7a65f02f5fcd9a4b8675923df96c",
+      "suite": "lafan40",
+      "observation_track": "ideal-proprioception",
+      "state_access": "ideal-proprioceptive-no-position-v1",
+      "started_utc": "20261024T160403.342562Z",
+      "author_inference_review": "not_granted_by_runner",
+      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-v1/pmt-rgmt/run-01/rollout",
+      "status": "trace_verified",
+      "backend": "batch",
+      "termination_mode": "no_termination",
+      "batch_size": 40,
+      "timings_s": {
+        "rollout": 395.94533421844244,
+        "verification": 21.325082253664732,
+        "total": 417.2946672551334
+      },
+      "verification": {
+        "verification": "trace_consistent",
+        "official": false,
+        "clips": 40,
+        "samples": 441120,
+        "full_suite": true,
+        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
+        "derived_prefix": {
+          "result": "prefix-result.json",
+          "result_sha256": "6ca6fc99e2f0cdaed397345d0441cee53dadc296e688b962085c3d921e78d061",
+          "samples": 305448
+        }
+      },
+      "full_suite": true,
+      "source_unchanged_during_run": true,
+      "finished_utc": "2026-10-24T16:11:03.686557+00:00"
+    }
   },
   "repeatability": {
     "status": "passed",
-    "fields": [
-      "source",
-      "checkpoint_sha256",
-      "controller_id",
-      "suite_sha256",
-      "robot_profile_sha256",
-      "mujoco_version",
-      "backend",
-      "success_count",
-      "total",
-      "macro_completion",
-      "metrics",
-      "clips"
-    ],
-    "difference_fields": [],
-    "result_sha256": {
-      "run-01": "965715e0c7adb70a18cbc02a0437e41b947655f499b2c6a0047db9a083270550",
-      "run-02": "a5d6131719b586384ef2db6d0a3d1e3236d514cff4299624493e98402a0a815c"
+    "differences": [],
+    "pose_samples": 441120,
+    "first_result_sha256": "f4b3b25ea6399ba73554aa9cab9f848cd5cd3d7ff38917ac8aa99ebd0907264b",
+    "second_result_sha256": "7be4d61c6a43a185288ed592d0cd7bcef531c2d27e3f0bf7571278f8d87cfb02"
+  },
+  "raw_trace_hashes_verified": 80,
+  "observation_admission": {
+    "schema": "MotionChallenge/observation-admission-v1",
+    "model": "pmt-rgmt",
+    "display_name": "PMT RGMT Transformer 20k",
+    "state_access": "ideal-proprioceptive-no-position-v1",
+    "status": "inference_verified",
+    "checkpoint_sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12",
+    "auxiliary_artifacts": {},
+    "checkpoint_origin": {
+      "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
+      "author_release_label": "Mondo-Robotics/PMT",
+      "kind": "author_file",
+      "kind_label": "Author-released checkpoint",
+      "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/rgmt_flat.pt",
+      "original_filename": "rgmt_flat.pt",
+      "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+      "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/rgmt_flat.pt",
+      "sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12"
     },
-    "publication": "Requires matching public GitHub source before ranking"
+    "author_source": "https://github.com/Mondo-Robotics/PMT",
+    "author_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
+    "base_adapter_commit": "6cdf73feb4626eb575b74f79c895216938f20a75",
+    "production_source_sha256": {
+      "adapter.py": "be5c63296aff4c502fa5a89f42ea1dba526a110521b12a035e6ba9756c3c272e",
+      "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
+      "native-sources.json": "b978fa540e6ec160c4ee24557d8610e9a6f1ff3273ad428b531a34d4b9098349",
+      "network.py": "910cc8425cafb942ea4f35620f2d130ec5bb159ac6fbfb6f84c5f9c6305cf011",
+      "policy.json": "597a70bc7378e3556b08c7263661ef1040a1972b0be9e3b379eab4ca6133bbe6",
+      "validate_inference.py": "d150d70ef4c30d354bbff4b87898b5d1aed706936bbd3e8b3f4b7548f41e01ce",
+      "validation/native_config.py": "68df973687a6051daec4dd97f5a2781296697c2dc6a0ebf4fc6d88e8e31982ff"
+    },
+    "prior_native_parity_sha256": {
+      "validation/native-parity.json": "f7d1f6dead5c7c88a5ec0c8ed0236d2c6e8e29f3041f6474022938b1afbc096f"
+    },
+    "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
+    "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
+    "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
+    "new_evaluation": {
+      "status": "queued",
+      "inherited_scores": false
+    },
+    "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt",
+    "dependency_test": {
+      "path": "validation/observation-access.json",
+      "sha256": "d17414c4cea119648ab41d0426426b0ede2d72d3372629130c530ef9ec7bde64",
+      "code": "validate_observations.py",
+      "cases": 160,
+      "resets": 4
+    }
+  },
+  "observation_dependency_report": {
+    "model": "pmt-rgmt",
+    "status": "passed",
+    "cases": 160,
+    "resets": 4,
+    "tolerance_abs": 2e-05,
+    "checkpoint_sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12",
+    "network_calls": 160,
+    "max_abs_error": {
+      "observation": 0.0,
+      "network_output": 0.0,
+      "motor_command": 0.0
+    },
+    "checks": [
+      "160 matched state sequences / 4 resets",
+      "large actual translation perturbations",
+      "reference windows preserved including endpoints",
+      "all captured ONNX inputs and outputs",
+      "all PD command fields",
+      "forbidden-field counterfactual before transport"
+    ],
+    "limits": "Finite numerical regression plus source audit; not a proof against malicious code or implicit neural odometry."
   },
   "reproduction": {
-    "adapter_commit": "7ee22ccf48bac293749d598f419764dd4b9cde69",
-    "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-rgmt",
-    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-rgmt/tree/7ee22ccf48bac293749d598f419764dd4b9cde69",
-    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
+    "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt/tree/ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
     "checkpoint_sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12",
     "commands": [
-      "git clone https://github.com/MotionChallenge-Project/motion-challenge-pmt-rgmt.git",
-      "cd motion-challenge-pmt-rgmt",
-      "git checkout 7ee22ccf48bac293749d598f419764dd4b9cde69",
+      "git clone --recurse-submodules https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt.git",
+      "cd MotionChallenge-pmt-rgmt",
+      "git checkout ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
       "git submodule update --init --recursive",
-      "uv sync --locked",
-      "uv run evaluate.py"
+      "uv sync --frozen",
+      "uv run evaluate.py --track ideal-proprioception"
     ]
   }
 }

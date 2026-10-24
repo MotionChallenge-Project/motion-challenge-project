@@ -41,8 +41,8 @@ def model_handling(key, model, record):
     if record.get('evaluation_progress') == 'accepted':
         status = 'Admitted · full evaluation verified'
     url = record['repository'] + '/blob/' + record['published_adapter_commit'] + '/admission.json'
-    return ('<div class="model-observation-note" id="observations"><h3>Restricted observation track</h3>'
-            '<p class="small">' + esc(status) + ' · <a href="/protocol/#observations">Track rules ↗</a></p>'
+    return ('<div class="model-observation-note" id="observations"><h3>Observation requirements</h3>'
+            '<p class="small">' + esc(status) + ' · <a href="/protocol/#observations">Observation rules ↗</a></p>'
             '<details><summary>Model-specific handling</summary><p>' + esc(record['handling']) + '</p>'
             '<a class="text-link" href="' + esc(url) + '">Exact checkpoint &amp; evidence ↗</a>'
             '</details></div>')

@@ -840,6 +840,41 @@
             "endpoint_reference": 0.0
           }
         }
+      },
+      "pmt-rgmt": {
+        "status": "passed",
+        "evaluated_adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
+        "checked_adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
+        "checkpoint_sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12",
+        "report_file": "pmt-rgmt.restricted.json",
+        "report_sha256": "d17414c4cea119648ab41d0426426b0ede2d72d3372629130c530ef9ec7bde64",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt/blob/ec6fb39a9c360a7399bc1596e03fa9609b55f9df/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt/blob/ec6fb39a9c360a7399bc1596e03fa9609b55f9df/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt/blob/ec6fb39a9c360a7399bc1596e03fa9609b55f9df/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "7ee22ccf48bac293749d598f419764dd4b9cde69",
+          "checked_adapter_commit": "6cdf73feb4626eb575b74f79c895216938f20a75",
+          "checkpoint_sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12",
+          "report_file": "pmt-rgmt.json",
+          "report_sha256": "f7d1f6dead5c7c88a5ec0c8ed0236d2c6e8e29f3041f6474022938b1afbc096f",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt/blob/6cdf73feb4626eb575b74f79c895216938f20a75/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt/blob/6cdf73feb4626eb575b74f79c895216938f20a75/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt/blob/6cdf73feb4626eb575b74f79c895216938f20a75/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "proprio": 2e-05,
+            "history": 2e-05,
+            "command": 2e-05,
+            "network": 0.0,
+            "action": 0.0002,
+            "motor_target": 0.0002,
+            "reset_history": 0.0
+          }
+        }
       }
     }
   }
