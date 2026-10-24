@@ -47,10 +47,11 @@
 .benchmark-contribute{margin-top:30px;font-size:13px}
 @media(max-width:760px){.benchmark-controls{padding:25px 5%;gap:18px}.benchmark-controls label{width:100%}.benchmark-controls select{width:100%;min-width:0}.benchmark-controls .button{margin-left:0}.benchmark-layout{grid-template-columns:1fr;padding:25px 5%;gap:30px}.benchmark-layout aside{grid-template-columns:1fr 1fr}.benchmark-section{padding-bottom:30px;margin-bottom:30px}.benchmark-section h2{font-size:24px}.benchmark-card{grid-template-columns:1fr;gap:20px;padding:25px}.benchmark-card-meta{border-left:0;border-top:1px solid var(--line);padding:20px 0 0}.benchmark-heading h1{gap:0 .2em}}
 
-/* Column widths depend on the viewport, never the current rows or sort. */
+/* Content-sized minimums share extra space equally; sorting never changes widths. */
 .board-section{max-width:1800px;padding-left:2.5%;padding-right:2.5%}
-#leaderboard{table-layout:fixed;width:100%;min-width:1120px;font-size:clamp(10px,.92vw,12px)}
-#leaderboard .col-rank{width:4%}#leaderboard .col-model{width:22%}#leaderboard .col-type{width:4.5%}#leaderboard .col-org{width:13%}#leaderboard .col-success{width:9%}#leaderboard .col-completion{width:7%}#leaderboard .col-metric{width:6.75%}
+.board-section .table-scroll{container-type:inline-size}
+#leaderboard{--column-space:max(0px,calc((100cqw - 1120px)/12));table-layout:fixed;width:100%;min-width:1120px;font-size:12px}
+#leaderboard .col-rank{width:calc(48px + var(--column-space))}#leaderboard .col-model{width:calc(224px + var(--column-space))}#leaderboard .col-type{width:calc(60px + var(--column-space))}#leaderboard .col-org{width:calc(146px + var(--column-space))}#leaderboard .col-success{width:calc(90px + var(--column-space))}#leaderboard .col-completion{width:calc(96px + var(--column-space))}#leaderboard .col-metric{width:calc(76px + var(--column-space))}
 #leaderboard td,#leaderboard th{padding-left:clamp(3px,.55vw,9px);padding-right:clamp(3px,.55vw,9px)}
 #leaderboard thead tr:last-child th{padding-left:3px;padding-right:clamp(3px,.55vw,9px)}
 #leaderboard td:nth-child(2){white-space:nowrap}
@@ -64,7 +65,7 @@
 #leaderboard .rank-badge{min-width:0;gap:3px}
 #leaderboard .rank-medal{font-size:18px}
 #leaderboard tr[class^="podium-"] .rank-number{font-size:14px}
-#leaderboard .score{font-size:clamp(11px,1vw,14px)}
+#leaderboard .score{font-size:12px}
 #leaderboard .score small{font-size:clamp(8px,.72vw,10px)}
 #leaderboard th{white-space:normal}#leaderboard td{vertical-align:middle}
 .model-artifacts{padding-top:20px;padding-bottom:30px}.artifact-row{display:grid;grid-template-columns:190px minmax(0,1fr);gap:25px;padding:22px 0;border-bottom:1px solid var(--line);font-size:14px}.artifact-row code{align-self:center;font-size:12px;overflow-wrap:anywhere}.evaluation-links{display:grid;gap:18px}.model-evaluations{padding-top:25px}.evaluation-overview{padding-top:0;padding-bottom:25px}.evaluation-context{padding-top:25px;padding-bottom:25px;border-top:1px solid var(--line)}.evaluation-context h2{font-size:25px}.evaluation-context p{font-size:14px;max-width:1000px}.evaluation-mode{border-top:1px solid var(--line);scroll-margin-top:25px}.evaluation-score{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:14px}.evaluation-score strong{font:600 36px Manrope,system-ui;color:var(--green)}.evaluation-score span:last-child{margin-left:auto}.evaluation-metrics{table-layout:fixed;min-width:420px}.evaluation-metrics caption{text-align:left;padding:20px;background:var(--tint);font-weight:600;white-space:normal}.evaluation-metrics th,.evaluation-metrics td{width:33.333%;font-size:14px;padding:20px}.evaluation-metrics td{font-size:22px;color:var(--green)}.evaluation-details{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;margin-top:40px}.evaluation-details>div{min-width:0}.evaluation-details pre{font-size:13px;line-height:1.7;padding:22px;overflow-x:auto;max-width:100%}
@@ -101,5 +102,9 @@
 #leaderboard td.sorted-column small{color:var(--muted)}
 
 @media(max-width:1400px){#leaderboard th button{font-size:9px}}
-#leaderboard td:nth-child(4){font-size:clamp(10px,.85vw,11.5px)}
+#leaderboard thead tr:first-child th[rowspan]{font-size:11px;font-weight:600;text-align:center}
+#leaderboard thead tr:first-child th[rowspan] button{font:inherit}
+#leaderboard thead tr:first-child th:nth-child(2){text-align:left}
+#leaderboard thead tr:last-child th,#leaderboard td:not(:nth-child(2)){text-align:center}
+#leaderboard td:nth-child(4){font-size:12px;line-height:1.5}
 #leaderboard td.rank{padding-left:4px;padding-right:4px}
