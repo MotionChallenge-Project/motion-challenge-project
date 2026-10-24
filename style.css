@@ -50,7 +50,7 @@
 /* Column widths depend on the viewport, never the current rows or sort. */
 .board-section{max-width:1800px;padding-left:2.5%;padding-right:2.5%}
 #leaderboard{table-layout:fixed;width:100%;min-width:1120px;font-size:clamp(10px,.92vw,12px)}
-#leaderboard .col-rank{width:4%}#leaderboard .col-model{width:22%}#leaderboard .col-type{width:4.5%}#leaderboard .col-org{width:13%}#leaderboard .col-success{width:6%}#leaderboard .col-completion{width:6.5%}#leaderboard .col-metric{width:7.333333%}
+#leaderboard .col-rank{width:4%}#leaderboard .col-model{width:22%}#leaderboard .col-type{width:4.5%}#leaderboard .col-org{width:13%}#leaderboard .col-success{width:9%}#leaderboard .col-completion{width:7%}#leaderboard .col-metric{width:6.75%}
 #leaderboard td,#leaderboard th{padding-left:clamp(3px,.55vw,9px);padding-right:clamp(3px,.55vw,9px)}
 #leaderboard thead tr:last-child th{padding-left:3px;padding-right:clamp(3px,.55vw,9px)}
 #leaderboard td:nth-child(2){white-space:nowrap}
