@@ -19,6 +19,24 @@ def same_number(a, b, label):
             math.isclose(a, b, rel_tol=0, abs_tol=1e-10), label)
 
 
+def validate_inference(row, check, report):
+    name = row['model']
+    require(check['status'] == 'passed' and
+            check['production_inference_alignment'] == 'identical', name+': inference approval')
+    require(check['checkpoint_sha256'] == row['checkpoint_sha256'] and
+            check['evaluated_adapter_commit'] == row['adapter_commit'], name+': inference identity')
+    require(report['cases'] >= 160 and report['resets'] >= 4, name+': inference coverage')
+    for field in ('report_url', 'code_url', 'runtime_url'):
+        require('/blob/'+check['checked_adapter_commit']+'/' in check[field], name+': inference source')
+    errors = report.get('max_abs_errors', report.get('max_abs_error', report.get('max_abs')))
+    require(bool(errors), name+': missing inference errors')
+    for key, error in errors.items():
+        limit = check['limits'][key] if isinstance(check['limits'], dict) else check['limits']
+        require(math.isfinite(error) and 0 <= error <= limit, name+': inference error '+key)
+    require(report.get('status', 'passed') == 'passed' and
+            report.get('passed', True) is True, name+': failed inference report')
+
+
 def validate_row(row, model, track, evidence):
     name=row['model']; result=evidence['result']; source=result['source']
     require(evidence['model']==name, name+': wrong evidence')
@@ -70,6 +88,8 @@ def validate_row(row, model, track, evidence):
 def validate(content, rows, models, tracks):
     by_id={t['id']:t for t in tracks};seen=set()
     require(set(models)=={r['model'] for r in rows}, 'Model cards and ranked models differ')
+    checks=json.loads((content/'inference_checks.json').read_text())['models']
+    require(set(checks)==set(models), 'Ranked models require inference checks')
     for row in rows:
         identity=(row['track_id'],row['model'])
         require(identity not in seen, 'Duplicate model/track result');seen.add(identity)
@@ -77,3 +97,8 @@ def validate(content, rows, models, tracks):
         require(Path(filename).name==filename, 'Evidence must be a local JSON file')
         evidence=json.loads((content/'evidence'/filename).read_text())
         validate_row(row, models[row['model']], by_id[row['track_id']], evidence)
+        check=checks[row['model']]
+        require(Path(check['report_file']).name==check['report_file'], 'Inference report must be local')
+        raw=(content/'inference'/check['report_file']).read_bytes()
+        require(hashlib.sha256(raw).hexdigest()==check['report_sha256'], row['model']+': changed inference report')
+        validate_inference(row, check, json.loads(raw))

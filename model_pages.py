@@ -64,6 +64,12 @@ def evaluation_record(results, track, key, content, github):
         common += [('Evaluated adapter', link(unified['adapter_code_url'], unified['adapter_commit'])),
                    ('Evaluated core', link(unified['core_code_url'], unified['core_commit'])),
                    ('Verification', 'Both trajectory ranges recomputed · repeatability checked')]
+        check = json.loads((content/'inference_checks.json').read_text())['models'][key]
+        report = json.loads((content/'inference'/check['report_file']).read_text())
+        common.append(('Author inference comparison',
+                       f'{report["cases"]} inputs · {report["resets"]} resets · '
+                       + link(check['report_url'], 'Report ↗') + ' · '
+                       + link(check['code_url'], 'Comparison code ↗')))
         commands = ['git clone --recurse-submodules '+repo+'.git',
                     'cd '+repo.rsplit('/', 1)[-1], 'uv sync', 'uv run evaluate.py']
         downloads = link('/data/evidence/'+unified['evidence_file'], 'Complete results, source & verification (JSON) ↗', 'text-link')

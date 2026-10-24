@@ -2,7 +2,7 @@ import copy
 import json
 from pathlib import Path
 import unittest
-from publication_checks import validate, validate_row
+from publication_checks import validate, validate_row, validate_inference
 
 CONTENT=Path(__file__).resolve().parents[1]/'content'
 class PublicationTests(unittest.TestCase):
@@ -34,3 +34,15 @@ class PublicationTests(unittest.TestCase):
         row=dict(self.row,mpjpe_world_m=float('nan'))
         with self.assertRaisesRegex(ValueError,'displayed'):
             validate_row(row,self.models['grit'],self.tracks[0],self.evidence)
+    def test_inference_checkpoint_mismatch_is_rejected(self):
+        check=json.loads((CONTENT/'inference_checks.json').read_text())['models']['grit']
+        report=json.loads((CONTENT/'inference'/check['report_file']).read_text())
+        check['checkpoint_sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'inference identity'):
+            validate_inference(self.row,check,report)
+    def test_excessive_inference_error_is_rejected(self):
+        check=json.loads((CONTENT/'inference_checks.json').read_text())['models']['grit']
+        report=json.loads((CONTENT/'inference'/check['report_file']).read_text())
+        report['max_abs_error']['action']=1.0
+        with self.assertRaisesRegex(ValueError,'inference error'):
+            validate_inference(self.row,check,report)

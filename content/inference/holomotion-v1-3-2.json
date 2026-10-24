@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "cases": 160,
+  "resets": 4,
+  "max_abs_error": {
+    "observation": 2.6226043701171875e-06,
+    "network": 0.0,
+    "action": 2.6226043701171875e-06,
+    "motor_target": 8.344650268554688e-07,
+    "cache": 2.4139881134033203e-06,
+    "reset_cache": 0.0
+  },
+  "limits": {
+    "observation": 0.0002,
+    "network": 0.0,
+    "action": 0.002,
+    "motor_target": 0.002,
+    "cache": 0.002,
+    "reset_cache": 0.0
+  },
+  "checkpoint_sha256": "f3fa8cecf98080fe255348fd94627038f90db64246ca7309de15e80ad6bc6f22",
+  "source_commit": "799302097ac60971db049f3861d3e67c96bffd32",
+  "version": "v1.3.2",
+  "scope": "Original offline-reference/evaluator/runtime AST, published ONNX metadata, recurrent ONNX and motor targets; no ROS glue. Shared benchmark physics and GPU-provider equivalence are separate."
+}

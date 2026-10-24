@@ -1676,7 +1676,7 @@
       "evidence_file": "omnixtreme.mujoco317.unified.json",
       "icon": "/assets/model-icons/bigai.png",
       "icon_label": "BIGAI",
-      "icon_source": "https://github.com/bigai-ai",
+      "icon_source": "https://www.bigai.ai/",
       "controller_type": {
         "id": "flow",
         "label": "Flow",
