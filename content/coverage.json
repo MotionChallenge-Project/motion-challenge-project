@@ -14,10 +14,10 @@
     },
     {
       "name": "Humanoid-GPT",
-      "status": "264 inference contract audit",
-      "gap": "The author-recommended 264 checkpoint is downloaded and hash-verified. Its deployment smooths reference qpos with EMA (alpha 0.8) before conversion; the older adapter did not apply that preprocessing. Author-model reference cvel conventions also need verification. The earlier 216 run encountered a numerical reset.",
-      "next_step": "Match the 264 reference preprocessing and native inference, then run and independently repeat the complete suite.",
-      "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/scripts/inference.py#L107-L111",
+      "status": "Full evaluation running",
+      "gap": "The author-recommended 264 checkpoint, EMA reference preprocessing and 5010 reference kinematics passed the 160-case native inference comparison on macOS and Linux. Complete LAFAN40 evaluation and its independent repeat are still running.",
+      "next_step": "Verify complete trajectories, numerical stability and repeatability before publishing a score.",
+      "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/tree/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
       "checked": "2026-10-24",
       "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt"
     },
