@@ -27,13 +27,13 @@
 .benchmark-section:last-child{border:0;margin-bottom:0}
 .benchmark-section h2{font-size:28px;letter-spacing:-.6px;margin-bottom:22px}
 .benchmark-section p{font-size:14px;max-width:900px;line-height:1.8}
-.benchmark-table{white-space:normal;min-width:590px;table-layout:fixed;font-size:13px}
-.benchmark-table th,.benchmark-table td{white-space:normal;vertical-align:top;overflow-wrap:anywhere;padding:17px 19px;line-height:1.65}
-.benchmark-table thead th{font-size:11px;letter-spacing:.03em}
-.benchmark-table tbody th{width:24%;background:transparent;font-size:13px;font-weight:600;color:var(--ink);border-bottom:1px solid #e5eae3}
-.benchmark-table thead th:first-child{width:24%}
-.benchmark-table td{color:var(--muted)}
-.benchmark-table tbody tr:last-child th{border-bottom:0}
+:is(.benchmark-table,.rules-table){white-space:normal;min-width:590px;table-layout:fixed;font-size:13px}
+:is(.benchmark-table,.rules-table) th,:is(.benchmark-table,.rules-table) td{white-space:normal;vertical-align:top;overflow-wrap:anywhere;padding:17px 19px;line-height:1.65}
+:is(.benchmark-table,.rules-table) thead th{font-size:11px;letter-spacing:.03em}
+:is(.benchmark-table,.rules-table) tbody th{width:24%;background:transparent;font-size:13px;font-weight:600;color:var(--ink);border-bottom:1px solid #e5eae3}
+:is(.benchmark-table,.rules-table) thead th:first-child{width:24%}
+:is(.benchmark-table,.rules-table) td{color:var(--muted)}
+:is(.benchmark-table,.rules-table) tbody tr:last-child th{border-bottom:0}
 .benchmark-notes{margin:20px 0 0;padding-left:19px;color:var(--muted);font-size:13px;line-height:1.8}
 .benchmark-notes li{padding-left:5px;margin:9px 0;overflow-wrap:anywhere}
 .benchmark-sources{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:22px;font-size:12px}
@@ -123,15 +123,16 @@
 .leaderboard-head{max-width:1800px;padding:28px 2.5% 24px}.leaderboard-head .eyebrow{margin-bottom:10px}.leaderboard-head h1{font-size:clamp(28px,3vw,40px);letter-spacing:-1.2px;margin-bottom:10px}.leaderboard-head .lede{font-size:14px;max-width:none;margin:0}
 
 
-/* Compact rule tables share the site's document layout. */
-.rules-table{white-space:normal;font-size:14px;margin:22px 0}
-.rules-table th{font-size:12px;background:transparent}
-.rules-table th,.rules-table td{padding:13px 12px;vertical-align:middle}
-.rules-table th:first-child,.rules-table td:first-child{padding-left:0}
-.rules-table th:last-child,.rules-table td:last-child{padding-right:0}
+/* Protocol and dataset tables share typography, headers and row spacing. */
+.docs{min-width:0}
+.rules-table-wrapper{margin:22px 0}
+.rules-table{min-width:0;table-layout:auto}
+.rules-table tbody th{white-space:nowrap;overflow-wrap:normal;width:auto}
+.rules-table th:last-child{white-space:nowrap}
+.observation-table thead th:first-child{width:auto}
 .observation-table th:last-child,.observation-table td:last-child{width:75px;text-align:center}
 .rule-verdict{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;font-size:18px;font-weight:600;line-height:1}
 .rule-allowed{color:#187345;background:#e3f0e5}.rule-excluded{color:#b13b37;background:#f8e9e5}
 .model-observation-note{border-top:1px solid var(--line);padding-top:16px;margin-top:26px;scroll-margin-top:24px}
 .model-observation-note h3{font-size:18px;margin:0 0 8px}.model-observation-note summary{font-size:14px;color:var(--green);cursor:pointer}.model-observation-note details p{font-size:14px}
-@media(max-width:600px){.rules-table{font-size:13px}.rules-table th,.rules-table td{padding:11px 8px}}
+@media(max-width:600px){.rules-table th,.rules-table td{padding:13px 12px}}
