@@ -256,26 +256,22 @@
     },
     "textop": {
       "status": "passed",
-      "evaluated_adapter_commit": "a39028cf3a66f8b69d60eb2b00cba1e9670ec8d6",
-      "checked_adapter_commit": "e4cfc721e1f46ef3c809ee32f189dd8e833b9602",
+      "evaluated_adapter_commit": "9733615f59059552fc2949e8161fd7946358140e",
+      "checked_adapter_commit": "9733615f59059552fc2949e8161fd7946358140e",
       "checkpoint_sha256": "8df6371cce677a6ef8fd7124d082fbf98df11735b9e1aa5808f1bf9d3152b582",
-      "report_file": "textop.json",
-      "report_sha256": "29d098ba1dbedd3361424addc4d970091511e48b7c9e98402aa3ef8b63151f61",
-      "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/e4cfc721e1f46ef3c809ee32f189dd8e833b9602/validation/native-parity.json",
-      "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/e4cfc721e1f46ef3c809ee32f189dd8e833b9602/validate_inference.py",
-      "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/e4cfc721e1f46ef3c809ee32f189dd8e833b9602/runtime.json",
+      "report_file": "textop.author.json",
+      "report_sha256": "50aa4fb3994366286211006460066377b5b06bb6a1c6cca82310c8d1b41d4ca2",
+      "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/9733615f59059552fc2949e8161fd7946358140e/validation/native-parity-linux.json",
+      "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/9733615f59059552fc2949e8161fd7946358140e/validate_inference.py",
+      "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/9733615f59059552fc2949e8161fd7946358140e/runtime.json",
       "production_inference_alignment": "identical",
       "limits": {
         "observation": 0.0002,
-        "network_same_input": 0.0,
         "action": 0.0002,
         "motor_target": 0.0002,
-        "history": 0.0002,
         "reset_history": 0.0,
-        "stiffness": 0.0,
-        "damping": 0.0,
-        "unclipped_target": 0.0,
-        "unclipped_history": 0.0
+        "history": 0.0,
+        "position_independence": 0.0
       }
     },
     "ufo": {
@@ -1075,6 +1071,40 @@
           "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-omnixtreme/blob/a1e66b16e1fa8366f115181af9c6f578f18999c2/runtime.json",
           "production_inference_alignment": "identical",
           "limits": 2e-05
+        }
+      },
+      "textop": {
+        "status": "passed",
+        "evaluated_adapter_commit": "9733615f59059552fc2949e8161fd7946358140e",
+        "checked_adapter_commit": "9733615f59059552fc2949e8161fd7946358140e",
+        "checkpoint_sha256": "8df6371cce677a6ef8fd7124d082fbf98df11735b9e1aa5808f1bf9d3152b582",
+        "report_file": "textop.restricted.json",
+        "report_sha256": "8c186c199c3d19833de1923873a962e07697fa7643ec55334b017cb5e0baf48d",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/9733615f59059552fc2949e8161fd7946358140e/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/9733615f59059552fc2949e8161fd7946358140e/validate_inference.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/9733615f59059552fc2949e8161fd7946358140e/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 0.0002,
+        "label": "Inference comparison",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "9733615f59059552fc2949e8161fd7946358140e",
+          "checked_adapter_commit": "9733615f59059552fc2949e8161fd7946358140e",
+          "checkpoint_sha256": "8df6371cce677a6ef8fd7124d082fbf98df11735b9e1aa5808f1bf9d3152b582",
+          "report_file": "textop.author.json",
+          "report_sha256": "50aa4fb3994366286211006460066377b5b06bb6a1c6cca82310c8d1b41d4ca2",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/9733615f59059552fc2949e8161fd7946358140e/validation/native-parity-linux.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/9733615f59059552fc2949e8161fd7946358140e/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-textop/blob/9733615f59059552fc2949e8161fd7946358140e/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "observation": 0.0002,
+            "action": 0.0002,
+            "motor_target": 0.0002,
+            "reset_history": 0.0,
+            "history": 0.0,
+            "position_independence": 0.0
+          }
         }
       }
     }
