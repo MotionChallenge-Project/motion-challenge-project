@@ -18,9 +18,9 @@ OBSERVATIONS = [
     ('Local body positions and orientations from forward kinematics (FK)', True),
     ('Reference motion, world trajectory and future frames', True),
     ('Native proprioceptive history, past actions and recurrent memory', True),
-    ('Actual root or body world positions, including actual height', False),
-    ('Actual contacts, forces and impulses', False),
-    ('Tracking errors derived from actual world position', False),
+    ('Robot world positions (root and bodies, including height)', False),
+    ('Robot contact states, forces and impulses', False),
+    ('Tracking errors derived from robot world position', False),
     ('Velocity integration, odometry or explicit global-position estimators', False),
 ]
 

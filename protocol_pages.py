@@ -30,7 +30,7 @@ def render(content, page, intro, github):
 <p class="small">Equality passes; a failure at the final sample still counts. Each benchmark declares its torso and end-effector bodies and freezes its thresholds. Different thresholds require a separately versioned configuration.</p>
 </section>
 <section id="observations"><h2>Restricted observation track</h2>
-<p>Ideal proprioception, without actual world-position or contact feedback. Rules apply to initialization, preprocessing, history and inference.</p>'''
+<p>Ideal proprioception and reference motion, without robot world-position or contact feedback. Rules apply to initialization, preprocessing, history and inference.</p>'''
     body += admission_pages.observation_table()
     body += ('<div class="actions"><a class="text-link" href="' + core + '/docs/OBSERVATIONS.md">Frozen rules ↗</a>'
              '<a class="text-link" href="/models/">Model-specific handling ↗</a></div></section>')
