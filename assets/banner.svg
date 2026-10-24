@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-<title id="title">Motion Challenge</title><desc id="desc">Open benchmarks for motion controllers. A reference pose and a tracked pose illustrated as connected joints.</desc>
+<title id="title">MotionChallenge</title><desc id="desc">Open benchmarks for motion controllers. A reference pose and a tracked pose illustrated as connected joints.</desc>
 <rect width="1200" height="300" rx="24" fill="#f1f6f2"/>
 <path d="M762 232 Q850 246 921 213 T1136 163" fill="none" stroke="#97b4a5" stroke-width="2" stroke-dasharray="6 9"/>
 <path d="M762 252 Q850 266 921 233 T1136 183" fill="none" stroke="#145b51" stroke-width="3"/>
@@ -9,6 +9,6 @@
 </g>
 <g fill="#145b51"><circle cx="944" cy="141" r="6"/><circle cx="971" cy="184" r="6"/><circle cx="920" cy="187" r="6"/></g>
 <text x="58" y="78" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#417466">OPEN HUMANOID EVALUATION</text>
-<text x="54" y="154" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="700" letter-spacing="-2" fill="#163d35">Motion Challenge</text>
+<text x="54" y="154" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="700" letter-spacing="-2" fill="#163d35">MotionChallenge</text>
 <text x="58" y="205" font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#537269">Measure motion. Make it reproducible.</text>
 </svg>
