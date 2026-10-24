@@ -5,25 +5,25 @@
   "entries": [
     {
       "name": "Humanoid-GPT Transformer 216",
-      "status": "Temporal inference checked; full evaluation pending",
-      "gap": "The original 42,977,083-byte ONNX requires 16 \u00d7 136 observations; the author script default is 4 frames. A 16-frame adapter passed 160 matched-input comparisons and 4 resets. No complete-suite result is published for this checkpoint.",
-      "next_step": "Complete full 40-motion evaluation, trajectory verification and repeatability as a separate checkpoint version.",
+      "status": "Full-suite verification in progress",
+      "gap": "The original 16 × 136 Transformer checkpoint passed 160 matched-input comparisons, 4 resets and 32 endpoint cases on macOS and Linux. Its first complete 40-motion rollout has finished; independent trajectory verification and a second run are required before publication.",
+      "next_step": "Complete trajectory verification, repeatability, clean-clone reproduction and public evidence alignment before ranking.",
       "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
       "checked": "2026-10-24"
     },
     {
       "name": "ScaleBFM",
-      "status": "Original author weights verified",
-      "gap": "Official Hugging Face release contains M and XL PyTorch checkpoints. The M checkpoint (72,856,655 bytes) was SHA256-verified and loaded strictly with the author CPU network. Observation/history, control-mode and motor-target parity are still pending; the older shared ONNX is not used.",
-      "next_step": "Finish author ScaleBridge end-to-end comparison, then full 40-motion evaluation and repeatability.",
+      "status": "Original CPU inference validated",
+      "gap": "The official raw M checkpoint passed 160 matched-input comparisons and 4 resets exactly on macOS and Linux using author float32 reference kinematics, whole-body mode 7 and reference forcing. Full 40-motion evaluation and repeatability are in progress; TensorRT/CUDA numeric equivalence is not implied.",
+      "next_step": "Complete trajectory verification, repeatability, clean-clone reproduction and public evidence alignment before ranking.",
       "author_source": "https://huggingface.co/WeishuaiZeng/ScaleBFM/tree/2eec74e0f326076a706702654168efc489ef604a",
       "checked": "2026-10-24"
     },
     {
       "name": "HoloMotion v1.3.1",
-      "status": "Author long-sequence reset path identified",
-      "gap": "The original ONNX fails at index 8192. Current author runtime explicitly supports a legacy max-length override and resets the KV cache at max length minus 64. Boundary probes with length 8192 pass; new-runtime observation parity and a complete long rollout remain unverified.",
-      "next_step": "Verify the author legacy path with v1.3.1 observations, then full 40-motion evaluation and repeatability.",
+      "status": "Long-sequence evaluation in progress",
+      "gap": "The current author runtime legacy RoPE handling passed 160 matched-input comparisons and 4 resets on macOS and Linux. The fixed v1.3.1 checkpoint is undergoing complete 40-motion rollout and repeatability checks.",
+      "next_step": "Complete trajectory verification, repeatability, clean-clone reproduction and public evidence alignment before ranking.",
       "author_source": "https://github.com/HorizonRobotics/HoloMotion/tree/adaacd50ada6ba9338f6c3f539093f85453e2554/deployment/unitree_g1_ros2_29dof",
       "checked": "2026-10-24"
     }
