@@ -94,6 +94,11 @@
 .evaluation-overview .actions{gap:12px}
 .evaluation-overview .actions .text-link{display:inline-flex;align-items:center;min-height:42px;padding:9px 16px;border:1px solid #c5d6ca;border-radius:6px;background:#edf3ed;color:#155e50;font-size:14px;font-weight:650;transition:background .15s,border-color .15s}
 .evaluation-overview .actions .text-link:hover{background:#e0ecdf;border-color:#87aa94;color:#103f37}
+.heading-with-logo{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.heading-with-logo h1{min-width:0}
+.heading-with-logo .model-icon{flex:none;width:96px;height:96px;object-fit:contain;background:transparent;border:0;border-radius:0;padding:0;margin:0 0 20px}
+.heading-with-logo .model-initial{display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--tint);font-size:44px;font-weight:700;color:var(--green)}
+@media(max-width:700px){.heading-with-logo{gap:16px}.heading-with-logo .model-icon{width:64px;height:64px}.heading-with-logo .model-initial{font-size:32px}}
 .pagination button[data-page=next]:not(:disabled){background:var(--green);border-color:var(--green);color:white;font-weight:650}
 .pagination-bottom{justify-content:flex-end}
 

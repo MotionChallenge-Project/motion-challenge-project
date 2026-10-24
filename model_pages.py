@@ -168,7 +168,7 @@ def render(models, rows, tracks, content, github, page, intro):
         else:
             detail += '<p>No published evaluation record.</p>'
         detail += '</section>'
-        page('/models/' + key + '/', model['display_name'], intro('MODEL / CHECKPOINT', model['display_name'], model['organization']) + detail, 'Models')
+        page('/models/' + key + '/', model['display_name'], intro('MODEL / CHECKPOINT', model['display_name'], model['organization'], model_icon(model)) + detail, 'Models')
 
     for (track_id, key), results in groups.items():
         track, model = track_by_id[track_id], models[key]
