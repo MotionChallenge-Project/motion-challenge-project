@@ -56,7 +56,7 @@
 .evaluation-details pre code{font-size:inherit;line-height:inherit;overflow-wrap:normal;word-break:normal}.evaluation-details h3{margin-top:15px}
 @media(max-width:760px){.artifact-row{grid-template-columns:1fr;gap:10px}.evaluation-details{grid-template-columns:1fr;gap:25px}.evaluation-score span:last-child{margin-left:0}.evaluation-mode h2{font-size:29px}}
 
-/* Podium marks apply only when the selected metric is sorted best first. */
+/* Podium marks follow metric rank, including when the display is reversed. */
 #leaderboard .rank{font-family:Manrope,system-ui;color:#66776f}
 .rank-badge{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-width:32px}
 .rank-number{font-size:14px;font-weight:650}

@@ -67,17 +67,17 @@
   const needle=search.value.toLowerCase().trim(),limit=Number(size.value);
   const filtered=trackData.filter(r=>(r.label+' '+(r.version||'')+' '+(r.organization||'')+' '+(r.controller_type?.label||'')).toLowerCase().includes(needle)).sort((a,b)=>{
    const av=a[sort],bv=b[sort];
-   if(av==null&&bv!=null)return 1;if(av!=null&&bv==null)return -1;
-   return (av==null?0:descending?bv-av:av-bv)||b.completion_pct-a.completion_pct||a.label.localeCompare(b.label);
+   if(av==null&&bv!=null)return bestFirst?1:-1;if(av!=null&&bv==null)return bestFirst?-1:1;
+   return (av==null?0:descending?bv-av:av-bv)||(bestFirst?1:-1)*(b.completion_pct-a.completion_pct||a.label.localeCompare(b.label));
   });
   const pages=Math.max(1,Math.ceil(filtered.length/limit));page=Math.min(page,pages);
   const start=(page-1)*limit,rows=filtered.slice(start,start+limit);
   body.replaceChildren();table.hidden=!rows.length;empty.hidden=!!rows.length;empty.textContent=trackData.length?'No models match your search.':'No completed results for this protocol yet. Batch evaluation is in progress.';
   for(const range of ranges)range.textContent=filtered.length?`${start+1}–${Math.min(start+limit,filtered.length)} of ${filtered.length} · Page ${page}/${pages}`:'0 models';prev.forEach(b=>b.disabled=page<=1);next.forEach(b=>b.disabled=page>=pages);
   for(const [rowIndex,r] of rows.entries()){const tr=document.createElement('tr');
-   const rank=start+rowIndex+1,medal=bestFirst&&rank<=3?['gold','silver','bronze'][rank-1]:null;
+   const rank=bestFirst?start+rowIndex+1:filtered.length-start-rowIndex,medal=rank<=3?['gold','silver','bronze'][rank-1]:null;
    if(medal)tr.className='podium-'+medal;
-   [start+rowIndex+1,r.label,r.controller_type,r.organization||'Not listed',r.passed,r.completion_pct,r.mpjpe_xy_yaw_aligned_m,r.mpjpe_xy_aligned_m,r.mpjpe_world_m,r.full_mpjpe_xy_yaw_aligned_m,r.full_mpjpe_xy_aligned_m,r.full_mpjpe_world_m].forEach((v,i)=>{const td=document.createElement('td');
+   [rank,r.label,r.controller_type,r.organization||'Not listed',r.passed,r.completion_pct,r.mpjpe_xy_yaw_aligned_m,r.mpjpe_xy_aligned_m,r.mpjpe_world_m,r.full_mpjpe_xy_yaw_aligned_m,r.full_mpjpe_xy_aligned_m,r.full_mpjpe_world_m].forEach((v,i)=>{const td=document.createElement('td');
     if(i===0){td.className='rank';td.setAttribute('aria-label','Rank '+v);const badge=document.createElement('span');badge.className='rank-badge';if(medal){const icon=document.createElement('span');icon.className='rank-medal';icon.setAttribute('aria-hidden','true');icon.textContent=['🥇','🥈','🥉'][rank-1];badge.append(icon);td.title='Top '+rank+' by '+sortingLabel;}const number=document.createElement('span');number.className='rank-number';number.textContent=String(v);badge.append(number);td.append(badge);}
     else if(i===1){const a=document.createElement('a');a.href=base+'/models/'+r.model+'/';a.textContent=v;td.append(a);const links=document.createElement('small');links.className='eval-code-links';const details=document.createElement('a');details.href=base+'/evaluations/'+encodeURIComponent(track.id)+'/'+r.model+'/';details.textContent='Detailed results ↗';links.append(details);td.append(links);}
     else if(i===2){const tag=document.createElement('a');tag.className='type-tag type-'+v.id;tag.href=v.source;tag.textContent=v.label;tag.title=v.description;td.append(tag);}
