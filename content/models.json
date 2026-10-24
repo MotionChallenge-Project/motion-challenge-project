@@ -1848,5 +1848,85 @@
     "icon_label": "TeleAI",
     "icon_source": "https://text-op.github.io/",
     "project_url": "https://text-op.github.io/"
+  },
+  "ufo": {
+    "organization": "RoboParty",
+    "organization_source": "https://roboparty.github.io/UFO/",
+    "family": "ufo",
+    "display_name": "UFO FB-CPR-Aux 192M",
+    "version": "FB-CPR-Aux \u00b7 191,995,904 training steps",
+    "version_kind": "author-released checkpoint; 192M denotes training steps",
+    "version_source": "https://huggingface.co/xuewang/ufo-g1-policy/blob/da3727034a058eae588a16af142764ee34bdada4/release_manifest.json",
+    "repository_available": true,
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "description": "The released G1 forward-backward controller from UFO. A backward encoder turns reference poses into a latent command for its history-conditioned policy.",
+    "runtime": {
+      "id": "ufo-fb-cpr-aux-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.02,
+        0.04,
+        0.06,
+        0.08
+      ],
+      "reference_history_s": 0.0,
+      "reference_preview_s": 0.08,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "weights": "checkpoints/FBcprAuxModel.onnx",
+      "weights_url": "https://huggingface.co/xuewang/ufo-g1-policy/resolve/da3727034a058eae588a16af142764ee34bdada4/exported/FBcprAuxModel.onnx",
+      "weights_sha256": "fe58bf17427679a0f0a22ad5f05d7579373a365936154770f31e815e8f0e4ad7",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "663bdc125c15a3ee8b2e443ba3506442aaa1481894705e9c88c026c823d93f68",
+      "artifacts": {
+        "encoder": {
+          "path": "checkpoints/backward_encoder.onnx",
+          "url": "https://huggingface.co/xuewang/ufo-g1-policy/resolve/da3727034a058eae588a16af142764ee34bdada4/exported/backward_encoder.onnx",
+          "sha256": "4333441ba4a393f9493545f5c8a706fa912e8ec358dae1c05c09e31aaae00d4b"
+        }
+      },
+      "source_repository": "https://github.com/Roboparty/UFO",
+      "source_commit": "ee5c57082bb4223bdac215bff7a607cbe0a93cd1",
+      "official": false
+    },
+    "provenance": {
+      "model": "ufo",
+      "display_name": "UFO FB-CPR-Aux 192M",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/Roboparty/UFO",
+      "source_commit": "ee5c57082bb4223bdac215bff7a607cbe0a93cd1",
+      "training_source_commit": "973b805e87cac29ac9484296be0a71b6f4764ad4",
+      "checkpoint_sha256": "fe58bf17427679a0f0a22ad5f05d7579373a365936154770f31e815e8f0e4ad7",
+      "encoder_sha256": "4333441ba4a393f9493545f5c8a706fa912e8ec358dae1c05c09e31aaae00d4b",
+      "author_inference_review": "Passed author reference, latent, history, CPU ONNX and final motor-target comparisons: 160 cases, 4 resets, 14 endpoint cases.",
+      "inference_validation": "validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization. See validation/README.md for exact-endpoint handling.",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/Roboparty/UFO/blob/973b805e87cac29ac9484296be0a71b6f4764ad4/README.md",
+        "author_release_label": "RoboParty / UFO",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/xuewang/ufo-g1-policy/blob/da3727034a058eae588a16af142764ee34bdada4/exported/FBcprAuxModel.onnx",
+        "original_filename": "FBcprAuxModel.onnx",
+        "download_url": "https://huggingface.co/xuewang/ufo-g1-policy/resolve/da3727034a058eae588a16af142764ee34bdada4/exported/FBcprAuxModel.onnx",
+        "sha256": "fe58bf17427679a0f0a22ad5f05d7579373a365936154770f31e815e8f0e4ad7",
+        "verification": "Official project links the artifact repository; its release manifest binds the training and deployment commits and the SHA256 of both ONNX files."
+      }
+    },
+    "controller_type": {
+      "id": "fb",
+      "label": "FB",
+      "description": "Forward-backward latent policy with a backward reference encoder (FB-CPR-Aux).",
+      "source": "https://roboparty.github.io/UFO/"
+    },
+    "icon": "/assets/model-icons/roboparty.png",
+    "icon_label": "RoboParty",
+    "icon_source": "https://github.com/Roboparty",
+    "project_url": "https://roboparty.github.io/UFO/"
   }
 }
