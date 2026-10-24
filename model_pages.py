@@ -14,7 +14,7 @@ def repository_location(value):
     value = re.sub(r'(https://github\.com/|git@github\.com:)(?:MotionChallenge|motion-challenge-project)/',
                    r'\1MotionChallenge-Project/', value, flags=re.IGNORECASE)
     value = value.replace('MotionChallenge-Project/motion-challenge-project',
-                          'MotionChallenge-Project/MotionChallenge')
+                          'MotionChallenge-Project/motionchallenge')
     value = re.sub(r'(MotionChallenge-Project/)motion-challenge-', r'\1MotionChallenge-', value)
     return re.sub(r'(MotionChallenge-Project/)motion-challenge(?![\w-])',
                   r'\1MotionChallenge-Core', value)

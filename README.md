@@ -1,6 +1,6 @@
 # MotionChallenge website
 
-[Website & leaderboard](https://motionchallenge-project.github.io/MotionChallenge/) · [Evaluation core](https://github.com/MotionChallenge-Project/MotionChallenge-Core)
+[Website & leaderboard](https://motionchallenge-project.github.io/motionchallenge/) · [Evaluation core](https://github.com/MotionChallenge-Project/MotionChallenge-Core)
 
 ```sh
 SITE_BASE_PATH='' python3 build.py

@@ -10,9 +10,9 @@ for generated in ('models','evaluations','data/evidence','assets/model-icons'):
  path=D/generated
  if path.exists():shutil.rmtree(path)
 GH='https://github.com/MotionChallenge-Project'
-BASE=os.environ.get('SITE_BASE_PATH','/MotionChallenge').rstrip('/')
+BASE=os.environ.get('SITE_BASE_PATH','/motionchallenge').rstrip('/')
 SITE_URL='https://motionchallenge-project.github.io'+BASE
-WEBSITE_SOURCE=GH+'/MotionChallenge/tree/website'
+WEBSITE_SOURCE=GH+'/motionchallenge/tree/website'
 NAMES={'grit':'GRIT','heft':'HEFT','sonic':'SONIC','mimic-lite':'MimicLite','scalebfm':'ScaleBFM','holomotion':'HoloMotion','humanoid-gpt':'Humanoid-GPT','protomotions':'ProtoMotions','bfm-zero':'BFM-Zero','twist2':'TWIST2'}
 CONTENT=ROOT/'content'
 MODELS=json.loads((CONTENT/'models.json').read_text())
