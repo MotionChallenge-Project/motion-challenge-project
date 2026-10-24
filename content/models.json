@@ -72,13 +72,12 @@
     "provenance": {
       "model": "holomotion",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "fcb8d4d8e96af9535c2adcc2b53e267019f865a2",
       "checkpoint_sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe",
-      "author_inference_review": "Native-source parity passed: 160 cases and 4 resets; observation, recurrent inference, cache rollover and motor targets.",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/blob/fcb8d4d8e96af9535c2adcc2b53e267019f865a2/README.md",
@@ -147,13 +146,12 @@
     "provenance": {
       "model": "protomotions",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/NVlabs/ProtoMotions",
       "source_commit": "f69fdcaabff31846b4d2247207417b57dc788828",
       "checkpoint_sha256": "a59baa3e04a951e5cf0b4cc68f24ebaafa9272714226618b99a5017dfc805b4c",
-      "author_inference_review": "Passed original deployment state, future-reference, ONNX, motor-target and history comparison: 160 cases, 4 resets; maximum absolute error 0.",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/NVlabs/ProtoMotions/blob/f69fdcaabff31846b4d2247207417b57dc788828/README.md",
@@ -226,13 +224,13 @@
       "model": "teleopit",
       "display_name": "TeleopIT G1",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/BotRunner64/Teleopit",
       "source_commit": "f9263865c581802ad531854b8e547e2403a945f3",
       "checkpoint_sha256": "1ebd341d9193e1c49a986450f6043ba1a9473ad46636ce0bcb1c7755c856e0de",
-      "author_inference_review": "Passed native observation, reference velocity, history reset, CPU ONNX and motor-target comparison: 160 cases, 4 resets.",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "notes": "The released base G1 29DoF policy is paired with g1_29dof.xml. Neck and hand variants use separate checkpoints.",
-      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/BotRunner64/Teleopit/blob/f9263865c581802ad531854b8e547e2403a945f3/README.md",
         "author_release_label": "BotRunner64/Teleopit",
@@ -313,13 +311,13 @@
       "model": "sonic-v1-1",
       "display_name": "SONIC v1.1",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
       "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
       "checkpoint_sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509",
-      "author_inference_review": "passed: 160 randomized C++ gatherer comparisons, 4 resets, native encoder/decoder and motor-target parity",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "notes": "G1 encoder mode 0 with the author release observation configuration, history order, PD gains and unclipped actions.",
-      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "encoder_sha256": "fb97de22819b2057b41459802128d91723d91a25f0ad73e7bfc41a9cf8365bae",
       "inference_adaptations": [
         "CPU ONNX Runtime executes the author encoder and decoder; no weight conversion.",
@@ -407,13 +405,13 @@
       "model": "sonic-low-latency",
       "display_name": "SONIC Low-Latency",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
       "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
       "checkpoint_sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab",
-      "author_inference_review": "passed: 160 randomized C++ gatherer comparisons, 4 resets, native encoder/decoder and motor-target parity",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "notes": "G1 encoder mode 0 with the author release observation configuration, history order, PD gains and unclipped actions.",
-      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "encoder_sha256": "60be43157f57d812f38bdbb740a5de5d5d070e8840d9edc16f02a91a6d06255b",
       "inference_adaptations": [
         "CPU ONNX Runtime executes the author encoder and decoder; no weight conversion.",
@@ -502,13 +500,12 @@
     "provenance": {
       "model": "twist2",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/amazon-far/TWIST2",
       "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
       "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
-      "author_inference_review": "passed: 160 cases, 4 resets, original command/observation/history, ONNX, action clipping and PD gains",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/amazon-far/TWIST2/blob/b06178f19a22f2138cbd31f60c6d494bc263f67d/README.md",
@@ -613,12 +610,12 @@
     "provenance": {
       "model": "grit",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/mrzuang/GRIT_teleop_deploy",
       "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
       "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
-      "author_inference_review": "Passed native observation, history/reset, ONNX and motor-target comparison: 160 cases, 4 resets, plus out-of-range raw-action conversion.",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/README.md",
@@ -736,13 +733,12 @@
     "provenance": {
       "model": "heft",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/Axellwppr/motion_tracking",
       "source_commit": "0d5ba31e33397f3543d350d98b637e26d92f470a",
       "checkpoint_sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
-      "author_inference_review": "passed: 160 observation/action cases, 4 resets, original author ONNX and synthetic clipped-action history",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/Axellwppr/motion_tracking/blob/0d5ba31e33397f3543d350d98b637e26d92f470a/README.md",
@@ -754,7 +750,7 @@
         "verification": "The distributed single-file ONNX adds one input Concat. All 33 initializer tensors and all 29 native graph nodes are preserved exactly; action outputs matched on 100 random input cases (maximum absolute error 0). This checks the checkpoint wrapper, not full controller/reset parity.",
         "download_url": "https://drive.usercontent.google.com/download?id=1yZybFGcaU77QMi24Syc7iXaTlzdLpWkA&export=download",
         "sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
-        "verification_url": "https://github.com/motion-challenge-project/motion-challenge-heft/blob/main/validation/checkpoint-origin.json"
+        "verification_url": "https://github.com/MotionChallenge-project/MotionChallenge-heft/blob/main/validation/checkpoint-origin.json"
       },
       "native_validation": "validation/native-parity.json",
       "correction": "Previous adapter stored unclipped raw actions in history. The author stores clipped actions; this revision follows that contract. Full benchmark rerun is required."
@@ -848,13 +844,12 @@
     "provenance": {
       "model": "mimic-lite",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/EGalahad/mimic-lite",
       "source_commit": "3253810ce21dbcc05d8f4942a017ea3eaffc6cf1",
       "checkpoint_sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b",
-      "author_inference_review": "passed: 160 cases, 4 resets, near-vertical heading fallback and raw action target",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/EGalahad/mimic-lite/blob/3253810ce21dbcc05d8f4942a017ea3eaffc6cf1/README.md",
@@ -970,11 +965,11 @@
       "model": "pmt-rgmt",
       "display_name": "PMT RGMT Transformer 20k",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer adaptation, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
       "checkpoint_sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12",
-      "author_inference_review": "Native-source parity passed: 160 cases, 4 resets, proprioception, circular history, torso-frame reference window, transformer and residual motor targets.",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "notes": "Original 286D PyTorch ActorCritic,512/256/128 ELU; normalizer epsilon0.01 from native class (mjlab demo differs). No action clipping. State body transforms relative to actual torso; actual root COM linear velocity and angular velocity in pelvis link frame; convert packet link-origin velocity with the canonical pelvis COM offset. Current reference at control time. Canonical benchmark physics, not IsaacLab training physics.",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
@@ -1055,13 +1050,13 @@
       "model": "sonic-original",
       "display_name": "SONIC Original",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
       "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
       "checkpoint_sha256": "c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed",
-      "author_inference_review": "passed: 160 randomized C++ gatherer comparisons, 4 resets, original encoder/decoder and native motor-target parity",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "notes": "G1 encoder mode 0 with the author release observation configuration, history order, PD gains and unclipped actions.",
-      "benchmark_physics": "Shared canonical G1 nominal physics; not the author training simulator",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "encoder_sha256": "013ab0287236aa2721e13f1e936d699db982302d0de0bfcdae76d5c3245362d3",
       "inference_adaptations": [
         "CPU ONNX Runtime executes the author encoder and decoder; no weight conversion.",
@@ -1169,12 +1164,12 @@
     "provenance": {
       "model": "holomotion-v1-3-2",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "799302097ac60971db049f3861d3e67c96bffd32",
       "checkpoint_sha256": "f3fa8cecf98080fe255348fd94627038f90db64246ca7309de15e80ad6bc6f22",
-      "author_inference_review": "Passed native observation, recurrent inference, reset and motor-target comparison: 160 cases, 4 resets.",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/799302097ac60971db049f3861d3e67c96bffd32",
@@ -1282,12 +1277,12 @@
     "provenance": {
       "model": "holomotion-v1-4-1",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "cf2018a282249a04df1db4fa639760884f97b41b",
       "checkpoint_sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7",
-      "author_inference_review": "Passed native observation, recurrent inference, reset and motor-target comparison: 160 cases, 4 resets.",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/cf2018a282249a04df1db4fa639760884f97b41b",
@@ -1373,13 +1368,13 @@
       "model": "textop",
       "display_name": "TextOp Tracker 75k",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/TeleHuman/TextOp",
       "source_commit": "ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22",
       "checkpoint_sha256": "8df6371cce677a6ef8fd7124d082fbf98df11735b9e1aa5808f1bf9d3152b582",
-      "author_inference_review": "Passed native observation, action history, CPU ONNX and motor-target comparison: 160 cases, 4 resets.",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "inference_validation": "validation/native-parity.json",
-      "benchmark_physics": "Shared canonical G1 nominal physics and initialization; not the author training or viewer simulator.",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/USAGE.md",
         "author_release_label": "TeleHuman/TextOp",
@@ -1455,15 +1450,15 @@
       "model": "ufo",
       "display_name": "UFO FB-CPR-Aux 192M",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/Roboparty/UFO",
       "source_commit": "ee5c57082bb4223bdac215bff7a607cbe0a93cd1",
       "training_source_commit": "973b805e87cac29ac9484296be0a71b6f4764ad4",
       "checkpoint_sha256": "fe58bf17427679a0f0a22ad5f05d7579373a365936154770f31e815e8f0e4ad7",
       "encoder_sha256": "4333441ba4a393f9493545f5c8a706fa912e8ec358dae1c05c09e31aaae00d4b",
-      "author_inference_review": "Passed author reference, latent, history, CPU ONNX and final motor-target comparisons: 160 cases, 4 resets, 14 endpoint cases.",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "inference_validation": "validation/native-parity.json",
-      "benchmark_physics": "Shared canonical G1 nominal physics and initialization. See validation/README.md for exact-endpoint handling.",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/Roboparty/UFO/blob/973b805e87cac29ac9484296be0a71b6f4764ad4/README.md",
         "author_release_label": "RoboParty / UFO",
@@ -1532,13 +1527,13 @@
       "model": "holomotion-v2-0-0",
       "display_name": "HoloMotion v2.0.0",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "ebb3747ad3b6dab57e4b621611efef87317bdc3b",
       "checkpoint_sha256": "b0681976135eed572d1d20aefc52ec65c149bdc636f2594a6436fa7136a3fc86",
-      "author_inference_review": "Passed native CUDA FK/observation, motion-entry heading, recurrent CPU inference and motor-target comparison: 160 states, 4 resets, 20 endpoint cases and RoPE reset at step 8128.",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "inference_validation": "validation/native-parity.json",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/ebb3747ad3b6dab57e4b621611efef87317bdc3b",
@@ -1627,13 +1622,13 @@
       "model": "mosaic",
       "display_name": "MOSAIC GMT",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/BAAI-Humanoid/MOSAIC",
       "project_url": "https://baai-humanoid.github.io/MOSAIC/",
       "source_commit": "175287dd559c098d21b287a8a27c6bb48d4606ff",
       "inference_repository": "https://github.com/BAAI-Humanoid/RobotBridge",
       "checkpoint_sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
-      "author_inference_review": "Passed 160 states, 4 resets, 24 endpoint clamps, shuffled joint order and a common global-yaw transform; observation, action and motor target maximum absolute errors all zero.",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "inference_validation": "validation/native-parity.json",
       "checkpoint_origin": {
         "author_release_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/blob/2ab795d7420cf339bb803bfb145c18faf8137cb8/README.md",
@@ -1720,13 +1715,12 @@
     "provenance": {
       "model": "bfm-zero",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/LeCAR-Lab/BFM-Zero",
       "source_commit": "df9c4a9633aa155c727419e82c906010b1e1845f",
       "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
-      "author_inference_review": "160 cases/4 resets/32 endpoint cases passed stated tolerances; zero actor-observation and identical-action PD mapping difference; CPU ONNX/PyTorch maximum motor-target difference 2.82e-4 rad.",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/LeCAR-Lab/BFM-Zero/blob/df9c4a9633aa155c727419e82c906010b1e1845f/README.md",
@@ -1762,7 +1756,7 @@
     "version_kind": "author-released feed-forward checkpoint",
     "version_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx",
     "project_url": "https://qizekun.github.io/Humanoid-GPT/",
-    "description": "The author-recommended 264 ONNX policy, evaluated through the standard G1 inference route with native reference filtering and feature kinematics.",
+    "description": "The released 264 MLP checkpoint with the author offline-motion hardware inference, reference filtering and feature kinematics.",
     "controller_type": {
       "id": "dense",
       "label": "Dense",
@@ -1770,7 +1764,7 @@
       "source": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/main/validation/checkpoint-graph.json"
     },
     "artifact_notes": [
-      "This record evaluates pns_wo_priv264.onnx. It does not report results for pns_wo_priv216_trans.onnx or the paper\u2019s Transformer."
+      "pns_wo_priv264.onnx: a 136-input MLP with hidden widths 2048 / 1024 / 512 and 29 motor outputs."
     ],
     "icon": "/assets/model-icons/galbot.jpg",
     "icon_label": "Galbot",
@@ -1811,13 +1805,12 @@
     "provenance": {
       "model": "humanoid-gpt",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
       "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
       "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
-      "author_inference_review": "160 states, 4 resets and 32 endpoint cases passed the fixed 2e-5 tolerance on macOS and Linux. macOS comparisons were exact; Linux maximum observation/action difference was 5.25e-6 and motor-target difference 2.33e-6 rad.",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md",
@@ -1834,13 +1827,12 @@
       "display_name": "Humanoid-GPT 264",
       "inference_validation": "validation/native-parity.json",
       "deployment": {
-        "route": "scripts/inference.py --convert, privileged=false, G1_VERSION=5010, HAND=Default,50Hz; canonical packets are already sampled by the core at the policy clock.",
+        "route": "Author infer_onnx_real offline-motion hardware route, G1_VERSION=5010, HAND=Default, 50 Hz; fixed synthetic robot root [0,0,0.78].",
         "reference_preprocessing": "Causal author EMA alpha0.8 with quaternion sign continuity and normalization, then author world-frame finite-difference qvel and5010 FK. Only policy input is filtered; scoring still uses unmodified canonical reference.",
-        "reference_window": "Current filtered reference supplies XY/yaw error; next filtered reference supplies joints,height,gravity,cvel. Endpoints reuse the final filtered feature rather than applying repeated EMA updates.",
+        "reference_window": "Current filtered reference supplies position/yaw features relative to the author fixed synthetic root; next filtered reference supplies joints, height, gravity and cvel. Endpoint reuses the final filtered feature.",
         "kinematics": "assets/g1_5010_kinematics.xml derives from pinned author XML by removing mesh assets/geoms only. All30 explicit inertials and body/joint transforms preserved. Used for reference features only, never simulation or scoring.",
         "reset": "Fresh filter and zero last action for each clip, equivalent to an independently constructed author inference instance. Canonical initial pose/velocity remain fixed.",
-        "output": "Author gain/scaling constants without decimal truncation; float32 motor-target assignment; no additional action clipping. Native PD torque and canonical actuator limits remain kernel-owned.",
-        "legacy": "The unranked216 adapter/result is not reused. All264 benchmark results require fresh full-suite runs."
+        "output": "Author gain/scaling constants without decimal truncation; float32 motor-target assignment; no additional action clipping. Native PD torque and canonical actuator limits remain kernel-owned."
       },
       "inference_validation_platforms": {
         "macOS": "validation/native-parity.json",
@@ -1911,12 +1903,12 @@
       "model": "omnixtreme",
       "display_name": "OmniXtreme",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/Perkins729/OmniXtreme",
       "project_url": "https://extreme-humanoid.github.io/",
       "source_commit": "6f2716d1b1d1132d513d86beb2193f5b18f11fcd",
       "checkpoint_sha256": "b050772c0b49c813f457cdf21bb3e4f23a027e2e22c5279ab23423ea264007e2",
-      "author_inference_review": "Passed 160 states, 4 resets, 24 endpoint clamps and shuffled joint order; all observed inputs, outputs and motor targets exactly equal to original inference under the same sampled initial_noise and nominal sensor state. 126 cases exercised native target limits.",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "inference_validation": "validation/native-parity.json",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/Perkins729/OmniXtreme/blob/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/README.md",
@@ -1988,7 +1980,7 @@
       "source": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216/blob/main/validation/checkpoint-graph.json"
     },
     "artifact_notes": [
-      "Original pns_wo_priv216_trans.onnx; history length16 follows the released model input shape. Scores do not transfer from the264 MLP."
+      "pns_wo_priv216_trans.onnx uses 16 chronological frames of 136 observations, as required by the released model input shape."
     ],
     "icon": "/assets/model-icons/galbot.jpg",
     "icon_label": "Galbot",
@@ -2030,13 +2022,12 @@
     "provenance": {
       "model": "humanoid-gpt-transformer-216",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
       "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
       "checkpoint_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
-      "author_inference_review": "160 matched-input cases, 4 resets and 32 endpoint cases passed the fixed 2e-5 tolerance on macOS and Linux. macOS comparisons were exact; Linux maximum observation/action difference was 4.95e-6 and motor-target difference 2.17e-6 rad. Full-suite verification is separate.",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
-      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md",
@@ -2053,13 +2044,12 @@
       "display_name": "Humanoid-GPT Transformer 216",
       "inference_validation": "validation/native-parity.json",
       "deployment": {
-        "route": "Author Transformer inference class, privileged=false, history_len=16, G1_VERSION=5010, HAND=Default, 50Hz.",
+        "route": "Author infer_onnx_real offline-motion hardware route, G1_VERSION=5010, HAND=Default, 50 Hz; fixed synthetic robot root [0,0,0.78].",
         "reference_preprocessing": "Causal author EMA alpha0.8 with quaternion sign continuity and normalization, then author world-frame finite-difference qvel and5010 FK. Only policy input is filtered; scoring still uses unmodified canonical reference.",
-        "reference_window": "Current filtered reference supplies XY/yaw error; next filtered reference supplies joints,height,gravity,cvel. Endpoints reuse the final filtered feature rather than applying repeated EMA updates.",
+        "reference_window": "Current filtered reference supplies position/yaw features relative to the author fixed synthetic root; next filtered reference supplies joints, height, gravity and cvel. Endpoint reuses the final filtered feature.",
         "kinematics": "assets/g1_5010_kinematics.xml derives from pinned author XML by removing mesh assets/geoms only. All30 explicit inertials and body/joint transforms preserved. Used for reference features only, never simulation or scoring.",
         "reset": "Fresh reference filter and zero last action for each clip. Author history initialization repeats the first measured observation across all 16 slots, then shifts oldest to newest.",
         "output": "Author gain/scaling constants without decimal truncation; float32 motor-target assignment; no additional action clipping. Native PD torque and canonical actuator limits remain kernel-owned.",
-        "legacy": "This Transformer checkpoint is separate from the 264 MLP. No scores or trajectories are inherited from another checkpoint.",
         "history": "Sixteen 136D frames in oldest-to-newest order. This length follows the released ONNX shape, overriding the incompatible author script default of four frames."
       },
       "inference_validation_platforms": {
@@ -2148,12 +2138,12 @@
     "provenance": {
       "model": "holomotion-v1-3-1",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "adaacd50ada6ba9338f6c3f539093f85453e2554",
       "checkpoint_sha256": "ae28e8e9bf39bc752e82ade5e0ea0436689dafa07af41fa39af696f6f6a2bbfe",
-      "author_inference_review": "160 matched inputs and4 resets passed on macOS and Linux, including author legacy KV window reset transitions. Maximum motor-target difference 2.15e-6 rad on macOS and8.35e-7 rad on Linux. Full-suite verification is separate.",
-      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
         "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/8e39874f63351ad74467c1c01082fcaada31885d",
@@ -2200,7 +2190,7 @@
     "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/",
     "description": "The original v1.3.1 checkpoint using the author runtime legacy RoPE window handling.",
     "artifact_notes": [
-      "Original checkpoint with8192-position RoPE table. Author runtime resets its KV cache at8128 steps while retaining reference time and physical state."
+      "Original checkpoint with an 8192-position RoPE table. The author runtime resets its KV cache at 8128 steps while retaining reference time and physical state."
     ],
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-1"
   },
@@ -2212,7 +2202,7 @@
     "version": "M \u00b7 model22200",
     "version_kind": "author raw PyTorch checkpoint",
     "project_url": "https://scalebfm.github.io/",
-    "description": "Original medium Humanoid Transformer checkpoint with the author whole-body control mode and CPU inference.",
+    "description": "The original ScaleBFM M checkpoint in whole-body mode 7, using the author PyTorch network.",
     "controller_type": {
       "id": "dense",
       "label": "Dense",
@@ -2220,7 +2210,7 @@
       "source": "https://github.com/zengweishuai/ScaleBFM/blob/abd6f17c02fe0baabc14709feb8d9ea4959aa621/ScaleTrack/source/my_rsl_rl/my_rsl_rl/networks/humanoid_transformer.py"
     },
     "artifact_notes": [
-      "Original raw M checkpoint, strictly loaded without conversion. Author default whole-body mode7 and reference_forcing=True. CPU inference is verified; TensorRT/CUDA numerical equivalence is not implied."
+      "Initialize root history from the first reference root position instead of measured robot position, which is unavailable under the benchmark observation rules. Then use the author mode 7 reference-forcing inference with the original checkpoint; no robot translation is measured or integrated."
     ],
     "supported_robots": [
       "Unitree G1 \u00b7 29 DoF"
@@ -2295,13 +2285,13 @@
       "model": "scalebfm-m",
       "display_name": "ScaleBFM M",
       "submitter": "MotionChallenge",
-      "submission_type": "maintainer reproduction, not author submission",
+      "submission_type": "MotionChallenge reproduction",
       "upstream": "https://github.com/zengweishuai/ScaleBFM",
       "source_commit": "abd6f17c02fe0baabc14709feb8d9ea4959aa621",
       "checkpoint_sha256": "88d5a79946c03ed25503f48b2af71d16290844ef066ca9b6c8fa8dc3837422e3",
-      "author_inference_review": "160 matched inputs and4 resets passed with zero measured difference on both macOS and Linux using the original float32 reference FK operation order. Fixed2e-5 tolerance unchanged; initial MuJoCo-FK mismatch retained in validation/diagnostics. TensorRT/CUDA equivalence and full-suite verification are separate.",
+      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
       "inference_validation": "validation/native-parity.json",
-      "benchmark_physics": "shared G1 canonical profile, not author training simulator",
+      "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "checkpoint_origin": {
         "author_release_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM",
         "author_release_label": "Official ScaleBFM Hugging Face release",
@@ -2316,10 +2306,10 @@
       },
       "deployment": {
         "backend": "Original author PyTorch network and export functions on CPU. TensorRT/CUDA equivalence is not implied. Author source and metadata are downloaded at pinned revisions with SHA256 validation.",
-        "mode": "Author default whole-body control mode7, reference_forcing=True. Reference root position is substituted only in observation buffers after initialization; simulator state is never changed.",
-        "history": "Three chronological frames, initialized by broadcasting actual initial state; zero last actions. Future reference offsets0..5 at50Hz.",
+        "mode": "Author whole-body control mode 7, reference_forcing=True; original checkpoint and export functions.",
+        "history": "Three chronological frames; root-position history starts from the first reference root, other history uses initial proprioception, and last actions start at zero. Six future reference frames at 50 Hz.",
         "reference": "Original author XML and float32 quaternion FK operation order applied to canonical root/joint reference, input-only. No change to dataset or scoring.",
-        "initialization": "Core canonical initial state replaces author interactive calibration; same author reset history rules. First reference root/heading already align with initial actual root.",
+        "initialization": "Benchmark adaptation: substitute the first reference root for measured robot root when initializing history, because robot world position is unavailable under the observation rules. Subsequent author reference forcing is unchanged; simulator reset remains canonical.",
         "action": "Original float32 network PD targets and author gains. Core motor limits, failure and scoring unchanged."
       },
       "inference_validation_platforms": {
