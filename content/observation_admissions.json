@@ -41,10 +41,6 @@
       "handling": "reference_privileged is a REFERENCE-only backward-encoder input. Actor proprioception and the author double history insertion are retained; no measured translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -53,8 +49,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "b428a4831ab9377774b80cda8a8d39d7df985935"
     },
     "heft": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -93,10 +88,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-heft",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -105,8 +96,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "2125da72a4e5576d19657de595e0ab2c2dbc98ef",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "5ae55351a1e5a2f08d073b47b1e7f3f1e89ea3da"
     },
     "holomotion": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -143,10 +133,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -155,8 +141,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "7eb0689f5ef868d9d9dd605d5ac2e5e3e3c0306a",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "3c2e9bb1fc4c4244f7eccfecc1b3451ace3555c9"
     },
     "grit": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -185,7 +170,9 @@
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
         "native-sources.json": "b6e14d07934b54e9c25cea3e5cf3c0e781899ecc9f0d5e06c2375500b4c687f3",
         "policy.json": "79fcb076d49b8989c587cbbf5589d2073e5d3ecf785ad92025859b7a7fa94fac",
-        "validate_inference.py": "ac93aa26887da35a6601eb7153ccd68d3dc3c9827da29ce8edaa03ce38bbc749"
+        "validate_inference.py": "ac93aa26887da35a6601eb7153ccd68d3dc3c9827da29ce8edaa03ce38bbc749",
+        "batch_adapter.py": "789540f478b5f3f87c954481431127d433fbe1188831c8b76baeb6e7dc428816",
+        "validate_batch.py": "2d565f3ec91480f14c98b46e583d1a77d2deed5b0723fb30edb2405c762a2929"
       },
       "prior_native_parity_sha256": {
         "validation/native-parity.json": "5d618e8702905b717140ab90f284f88228b920aec6a4f86103ba5a75c05ab97a"
@@ -193,10 +180,6 @@
       "handling": "Nine-frame reference context and 990D proprioceptive history use permitted orientation, joint state and angular velocity; preserve author reset warmup and raw-action history.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-grit",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -205,8 +188,13 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "6d799be5789ef54db5381a81600e3c8577093e32",
-      "evaluation_progress": "accepted"
+      "batch_inference": {
+        "entrypoint": "batch_adapter:create",
+        "validation": "validation/array-parity.json",
+        "sha256": "79655975e0950d31cf0b4ad4bff28daf74268d27d21095bd8b58a74324b86f0f",
+        "handling": "Same author observations, reset history and raw-action history; one ONNX batch call with independent slot state. Engine-specific batching remains in this adapter."
+      },
+      "published_adapter_commit": "94197c9c4c47afea93089fda715e3a42c9b38c3f"
     },
     "holomotion-v1-3-2": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -243,10 +231,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-2",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -255,8 +239,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "a931815b835f04a2cef4054e7e8395760d15bb05",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "525624c8ee52df905547f348ebca6185bad9b753"
     },
     "holomotion-v1-4-1": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -293,10 +276,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -305,8 +284,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "cc02689c9c9ab4b02dd9a8627a181e2bc115933f",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "b3bcbc9e18cc17cf3da3204a7390b03cb2afb6a5"
     },
     "mimic-lite": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -343,10 +321,6 @@
       "handling": "031b8d67 is the ONNX SHA256 prefix, not a W&B run ID. Reference translation is centered on the REFERENCE anchor; the heading transform uses permitted orientation. No actual-position estimate.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-mimic-lite",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -355,15 +329,14 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "3578223dc8788809f814fc3c81e982ebbe85ffa7",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "cba683d2a3c5ceb9ceff1da152e94352a4ea123b"
     },
     "humanoid-gpt": {
       "schema": "MotionChallenge/observation-admission-v1",
       "model": "humanoid-gpt",
       "display_name": "Humanoid-GPT 264",
       "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "requires_author_deployment_validation",
+      "status": "inference_verified",
       "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
       "auxiliary_artifacts": {},
       "checkpoint_origin": {
@@ -382,194 +355,29 @@
       "author_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
       "base_adapter_commit": "e3c7372ee1f3ae6d05cd025a8f1fa0bcf03b98d5",
       "production_source_sha256": {
-        "adapter.py": "6e7b6868c9653fa3d27879f0b88a4a06dc587d67b460b3bf89419ccd11ca23d3",
+        "adapter.py": "cface7fc94a9286ff15f1ac20adfd4af6f5707f71d58392089000f553d29250b",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
         "native-sources.json": "4912ca785df415479ecd6d7f008d76e863653e74adbca806c4134ed650f32503",
         "policy.json": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
         "reference.py": "eca6466f3bbcf094750144eaa2de4eeb3fd7850f6a882e77b0e8e389fb50b55b",
-        "validate_inference.py": "5e9e18c4a18a2b1968d8dd552e2dbaeb4fc17c31e2cb1f10e653455b99e84f93"
+        "validate_inference.py": "707a548efce3d164b512b4b347346f583a4b99b76a59704c5c1160ddecda8aaa"
       },
       "prior_native_parity_sha256": {
-        "validation/native-parity-linux.json": "614ca6654a790b66c6ac4c69e7e2238afed92822dabe95f052d9eb61e92b3987",
-        "validation/native-parity.json": "5bde150d548cf953fc46ffb4af0abf038d9936905e112bcadeebac7641850c83"
+        "validation/native-parity.json": "b207a51f52037ed7cfc32382c695a0725358c92c6dbef71ca74f805179c93181",
+        "validation/native-parity-linux.json": "bf3e9b5d1db1ef5850026128b13db1e8a22b088d73ab7deadb24e6c2c2da5b7c"
       },
-      "handling": "Current adapter uses actual XY in command. Author real_robot sets root XYZ to [0,0,0.78]; exact same weight, heading/reference processing and reset behavior must be verified for that path.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "Current adapter uses actual XY in command. Author real_robot sets root XYZ to [0,0,0.78]; exact same weight, heading/reference processing and reset behavior must be verified for that path.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
+      "handling": "Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and action history. No measured robot position or position integration.",
+      "actual_position_integration": "No measured robot translation, contact inputs or explicit position integration.",
+      "special_handling": "Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and action history. No measured robot position or position integration.",
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt",
-      "published_adapter_commit": "6d7a9e964b859dad5eab9111a00763eb0a7969a0"
-    },
-    "pmt-bpo": {
-      "schema": "MotionChallenge/observation-admission-v1",
-      "model": "pmt-bpo",
-      "display_name": "PMT BPO MLP 20k",
-      "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "incompatible_input_contract",
-      "checkpoint_sha256": "72daa7ae41aad80a247aa57c47e68d33f0d40d03efd3bc4621f585e253d3a759",
-      "auxiliary_artifacts": {},
-      "checkpoint_origin": {
-        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
-        "author_release_label": "Mondo-Robotics/PMT",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/bpo_multimotionv2_flat.pt",
-        "original_filename": "bpo_multimotionv2_flat.pt",
-        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
-        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/bpo_multimotionv2_flat.pt",
-        "sha256": "72daa7ae41aad80a247aa57c47e68d33f0d40d03efd3bc4621f585e253d3a759"
+      "dependency_test": {
+        "path": "validation/observation-access.json",
+        "sha256": "9721b0bb85913035d20d967bedde51366e166dca139b9acfcbcd72ba29d2db59",
+        "code": "validate_inference.py",
+        "cases": 160,
+        "resets": 4
       },
-      "author_source": "https://github.com/Mondo-Robotics/PMT",
-      "author_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "base_adapter_commit": "01bd81d58550ca343aab69b37e34bdcecbf1f839",
-      "production_source_sha256": {
-        "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
-        "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
-        "native-sources.json": "3d86f0c1d17557f48a94be5e430f07460414b88f125061479097c34213110a73",
-        "policy.json": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
-        "validate_inference.py": "0da061a504b7ebecbcdc61dd99da333deffdc9bfd385b72a8512011aae04db1d"
-      },
-      "prior_native_parity_sha256": {
-        "validation/native-parity.json": "0c03328bee6cefda40978865113435b168b82429eb04e95cef533aaba49bf41f"
-      },
-      "handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
-      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-bpo",
-      "published_adapter_commit": "afa313d13bb50c90b9b25270002b2c47e785dc6b"
-    },
-    "pmt-add": {
-      "schema": "MotionChallenge/observation-admission-v1",
-      "model": "pmt-add",
-      "display_name": "PMT ADD MLP 20k",
-      "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "incompatible_input_contract",
-      "checkpoint_sha256": "7f90c94f13f4cca7f57cad4535f6af99a25f80628344ed91567e0e8d7b1f3bc4",
-      "auxiliary_artifacts": {},
-      "checkpoint_origin": {
-        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
-        "author_release_label": "Mondo-Robotics/PMT",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/add_multimotion_flat.pt",
-        "original_filename": "add_multimotion_flat.pt",
-        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
-        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/add_multimotion_flat.pt",
-        "sha256": "7f90c94f13f4cca7f57cad4535f6af99a25f80628344ed91567e0e8d7b1f3bc4"
-      },
-      "author_source": "https://github.com/Mondo-Robotics/PMT",
-      "author_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "base_adapter_commit": "2bf8bfd7d8938fd29a03248a0129d11b30e8e9c0",
-      "production_source_sha256": {
-        "adapter.py": "73ef6c02f311284413f83e625e74eebbaf3f851b2c1853287ae25b9c0b4a0af8",
-        "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
-        "native-sources.json": "a3408340ab0d0cac6cb9c76c0ba9165e4fdb5d30d625b0d30a07afe86605ce07",
-        "policy.json": "78e51f8e9c06880f2d823a46dfc940d2bdd92b90f401c2f85c0a3b6b090e7fc6",
-        "validate_inference.py": "d50d116c3df3b0ed5ffeed0d5f36dd6a4fd31e388c1cec0c6e52c78befbcba39"
-      },
-      "prior_native_parity_sha256": {
-        "validation/native-parity.json": "aac907eff65d407f7194affce3bb910232a66b57cb9f07e5913297cb10069704"
-      },
-      "handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
-      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-add",
-      "published_adapter_commit": "45be8ad8721d96b808cc2647408467c6d4f22498"
-    },
-    "pmt-adaptive": {
-      "schema": "MotionChallenge/observation-admission-v1",
-      "model": "pmt-adaptive",
-      "display_name": "PMT Adaptive MLP 20k",
-      "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "incompatible_input_contract",
-      "checkpoint_sha256": "48b267f01a632b90577148ea1801d291e2e1f3d5321807153a26f38cd4104b25",
-      "auxiliary_artifacts": {},
-      "checkpoint_origin": {
-        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
-        "author_release_label": "Mondo-Robotics/PMT",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_adaptive_flat.pt",
-        "original_filename": "multimotionv2_adaptive_flat.pt",
-        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
-        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_adaptive_flat.pt",
-        "sha256": "48b267f01a632b90577148ea1801d291e2e1f3d5321807153a26f38cd4104b25"
-      },
-      "author_source": "https://github.com/Mondo-Robotics/PMT",
-      "author_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "base_adapter_commit": "6367d999962bbe7a30a509c9c7ebbb53bf973841",
-      "production_source_sha256": {
-        "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
-        "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
-        "native-sources.json": "9988a4944905747238bf1e529bcb785398434f1e5e0250b6365c63f6bdc5b5b5",
-        "policy.json": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
-        "validate_inference.py": "0da061a504b7ebecbcdc61dd99da333deffdc9bfd385b72a8512011aae04db1d"
-      },
-      "prior_native_parity_sha256": {
-        "validation/native-parity.json": "e45e6d9dda6e305bd788ba625038d25e63965641dbc26f225fe68f5f54baa4d1"
-      },
-      "handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
-      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-adaptive",
-      "published_adapter_commit": "0d7d4502337f5929db4710156aa75d0e3db3e54b"
-    },
-    "pmt-flat": {
-      "schema": "MotionChallenge/observation-admission-v1",
-      "model": "pmt-flat",
-      "display_name": "PMT Flat MLP 20k",
-      "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "incompatible_input_contract",
-      "checkpoint_sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26",
-      "auxiliary_artifacts": {},
-      "checkpoint_origin": {
-        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
-        "author_release_label": "Mondo-Robotics/PMT",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
-        "original_filename": "multimotionv2_flat.pt",
-        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
-        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
-        "sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26"
-      },
-      "author_source": "https://github.com/Mondo-Robotics/PMT",
-      "author_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "base_adapter_commit": "10a13d0236223ef667239c4b277335c7e2898980",
-      "production_source_sha256": {
-        "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
-        "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
-        "native-sources.json": "8929bd2726559e3aca6e425e0f1896a7a8172c9c445a52f895d192ea9343af5d",
-        "policy.json": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
-        "validate_inference.py": "0da061a504b7ebecbcdc61dd99da333deffdc9bfd385b72a8512011aae04db1d"
-      },
-      "prior_native_parity_sha256": {
-        "validation/native-parity.json": "b7775250a6330c74f566dd7939c1b7c932ed8c1847f00fea0b5de305f0db2e38"
-      },
-      "handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
-      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-flat",
-      "published_adapter_commit": "0c2b30d0a5971610ab9f6449347d14260048e62d"
+      "published_adapter_commit": "9af642326b949643974365331824342cfabb8f5b"
     },
     "pmt-rgmt": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -608,10 +416,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -620,92 +424,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "ec6fb39a9c360a7399bc1596e03fa9609b55f9df",
-      "evaluation_progress": "accepted"
-    },
-    "pmt-uniform": {
-      "schema": "MotionChallenge/observation-admission-v1",
-      "model": "pmt-uniform",
-      "display_name": "PMT Uniform MLP 20k",
-      "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "incompatible_input_contract",
-      "checkpoint_sha256": "349471acdddcc497a83d397eb540ace4eb4222c7f7a2a3243b1f42d4b538a6a1",
-      "auxiliary_artifacts": {},
-      "checkpoint_origin": {
-        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
-        "author_release_label": "Mondo-Robotics/PMT",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_uniform_flat.pt",
-        "original_filename": "multimotionv2_uniform_flat.pt",
-        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
-        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_uniform_flat.pt",
-        "sha256": "349471acdddcc497a83d397eb540ace4eb4222c7f7a2a3243b1f42d4b538a6a1"
-      },
-      "author_source": "https://github.com/Mondo-Robotics/PMT",
-      "author_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "base_adapter_commit": "575d957ba5f6c2c158ad77964f800bcbb3a6c793",
-      "production_source_sha256": {
-        "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
-        "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
-        "native-sources.json": "12bf3141322c90fdb00bb6a89feaf70a54d36782797380b6acb91ff394a947af",
-        "policy.json": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
-        "validate_inference.py": "0da061a504b7ebecbcdc61dd99da333deffdc9bfd385b72a8512011aae04db1d"
-      },
-      "prior_native_parity_sha256": {
-        "validation/native-parity.json": "de897f5551cbdb47445dc50993c189d81b53b7cce71ed696e984bb81a0310989"
-      },
-      "handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
-      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-uniform",
-      "published_adapter_commit": "37d76d6d2693c3e0a381b08b1375339c9da58c70"
-    },
-    "pmt-streaming": {
-      "schema": "MotionChallenge/observation-admission-v1",
-      "model": "pmt-streaming",
-      "display_name": "PMT Streaming MLP 20k",
-      "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "incompatible_input_contract",
-      "checkpoint_sha256": "4a13d0e41ad868acf88c5599821b1e983dd845f89d4e2fee1c106f7a6b46337f",
-      "auxiliary_artifacts": {},
-      "checkpoint_origin": {
-        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
-        "author_release_label": "Mondo-Robotics/PMT",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_streaming_flat.pt",
-        "original_filename": "multimotionv2_streaming_flat.pt",
-        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
-        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_streaming_flat.pt",
-        "sha256": "4a13d0e41ad868acf88c5599821b1e983dd845f89d4e2fee1c106f7a6b46337f"
-      },
-      "author_source": "https://github.com/Mondo-Robotics/PMT",
-      "author_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
-      "base_adapter_commit": "97d3e9d9b7ad86442b518fe0bf57dc6dcaeb5e4a",
-      "production_source_sha256": {
-        "adapter.py": "d1f0c1214a08eb8b453f9e1a25ae03d78f50f39efea315b31ee8a160433d30ad",
-        "evaluate.py": "eacb83b1da8b667147244456b55f816f9f9edbf1d400d871b72cc2b71a8e6eb1",
-        "native-sources.json": "c62e647d7377d90ae5a0f7c2a584693be42020ab22b7b22d95ba8dfada495c65",
-        "policy.json": "7b63c8a7fbeb327620a655bcc2e151ffcd59b896fd84b3b9a7766d826d19569f",
-        "validate_inference.py": "0da061a504b7ebecbcdc61dd99da333deffdc9bfd385b72a8512011aae04db1d"
-      },
-      "prior_native_parity_sha256": {
-        "validation/native-parity.json": "c619c5e3a7a162c79946ef1cd99a369ca94d2e605465c06ba1a21059da22456f"
-      },
-      "handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "This exact released 286D MLP actor consumes motion_anchor_pos_b = R_actual_torso^-1 (p_reference_torso - p_actual_torso). No same-weight compliant author deployment path has been established. Do not zero or remove this actor feature.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
-      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-streaming",
-      "published_adapter_commit": "12f31c881822abae88927afd8fee1c354ede00d7"
+      "published_adapter_commit": "b591bce93ec630a1e74347fe3729b9877ca39e47"
     },
     "protomotions": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -742,10 +461,6 @@
       "handling": "The actual torso orientation is FK-derived. The released pipeline takes joint state, local angular velocity, past actions and future reference torso rotations/joints; no actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-protomotions",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -754,8 +469,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "319b56c64e9c2635074023291a7f547b7149ffef",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "110bf276302778124079bb31d30d57589117d444"
     },
     "sonic-v1-1": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -793,10 +507,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-v1-1",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -805,8 +515,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "b8797de45fb5c6b96d42256fb2e86359d164a5b9",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "f689c348432f9d280f699bfd8d6d8132306a5672"
     },
     "sonic-original": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -845,10 +554,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-original",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -857,8 +562,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "42e6b31773199df1d671ed6040655d1a2885b4a4",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "098406681daa63394c68a3d0cebf943eb4c6e8ab"
     },
     "sonic-low-latency": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -896,10 +600,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-low-latency",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -908,8 +608,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "b42e4996e19412ebcc79d3a823e72f97ae7eca81",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "022de7d11e8066687d2f456c8c01c86dd292d251"
     },
     "teleopit": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -947,10 +646,6 @@
       "handling": "Actual torso orientation is reconstructed by FK. Target velocities are finite differences of REFERENCE positions/orientations, not integration of actual measurements.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-teleopit",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -959,8 +654,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "e269d6b11420170ec4bd0107734bd66cc102a87d",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "e3ea1127b19813c88dfc6bf107facae1de5654c8"
     },
     "ufo": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -977,9 +671,9 @@
         "author_release_label": "RoboParty / UFO",
         "kind": "author_file",
         "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/xuewang/ufo-g1-policy/blob/da3727034a058eae588a16af142764ee34bdada4/exported/FBcprAuxModel.onnx",
+        "artifact_page_url": "https://huggingface.co/xuewang/ufo-g1-policy/blob/da3727034a058eae588a16af142764ee34bdada4/g1_policy/exported/FBcprAuxModel.onnx",
         "original_filename": "FBcprAuxModel.onnx",
-        "download_url": "https://huggingface.co/xuewang/ufo-g1-policy/resolve/da3727034a058eae588a16af142764ee34bdada4/exported/FBcprAuxModel.onnx",
+        "download_url": "https://huggingface.co/xuewang/ufo-g1-policy/resolve/da3727034a058eae588a16af142764ee34bdada4/g1_policy/exported/FBcprAuxModel.onnx",
         "sha256": "fe58bf17427679a0f0a22ad5f05d7579373a365936154770f31e815e8f0e4ad7",
         "verification": "Official project links the artifact repository; its release manifest binds the training and deployment commits and the SHA256 of both ONNX files."
       },
@@ -999,10 +693,6 @@
       "handling": "The encoder input named privileged_state is computed exclusively from REFERENCE frames. Actual actor inputs are proprioception/history; released slew limits and endpoint behavior are retained.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -1011,8 +701,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "8bd4f1d261dfaa22b5cd4a8a7f24c7a72aafe31c",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "db080c3b3393d1dc52e2f8da7fa4538a913ce7e2"
     },
     "twist2": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1049,10 +738,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -1061,15 +746,14 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "1b8e17132fc155634b18f0452dfe3797efdecdd3",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "616d0d65593328be3bdf989db650c9c04a52d250"
     },
     "textop": {
       "schema": "MotionChallenge/observation-admission-v1",
       "model": "textop",
       "display_name": "TextOp Tracker 75k",
       "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "requires_author_deployment_validation",
+      "status": "inference_verified",
       "checkpoint_sha256": "8df6371cce677a6ef8fd7124d082fbf98df11735b9e1aa5808f1bf9d3152b582",
       "auxiliary_artifacts": {},
       "checkpoint_origin": {
@@ -1087,42 +771,50 @@
       "author_commit": "ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22",
       "base_adapter_commit": "e4cfc721e1f46ef3c809ee32f189dd8e833b9602",
       "production_source_sha256": {
-        "adapter.py": "e5d99fa2b92aba4a2815fa0fed33c199af332616584fc88eeb6db97f9a42cb4c",
+        "adapter.py": "a22e2a5a9b4c4b8bd50c7dc673559ce837560860cfa5df72b5951e9067ddc777",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
-        "native-sources.json": "551bf9c503c417e7953fb62b5ed276d72de45b94befe71575f8096ea7a6a3b1d",
-        "policy.json": "c3cc600b74f346c2e56e59ef55e4134a6f1ccdfc761eec5149868b5fa52bce15",
-        "validate_inference.py": "43cfb2ae451f2fab419c6f93f91c2a1395c2cc91fab6a73135304e30d53e5d47"
+        "native-sources.json": "75d0dacb672e7fcfe79f47a39ef0c05fa1b2304c769ce19eea61f1470520a480",
+        "policy.json": "0c101d2453fbee0d390d3c54601c3c35231108e96b7c397d7c7419c1b885bc2c",
+        "validate_inference.py": "3e961ad5be58486aef675331f1c144071b8fe0234290e5771196777d7144701c"
       },
       "prior_native_parity_sha256": {
-        "validation/native-parity.json": "29d098ba1dbedd3361424addc4d970091511e48b7c9e98402aa3ef8b63151f61"
+        "validation/native-parity.json": "3ea867f3544822214b8be9ef5a1d8e9088ff29f60bb58ccd30a29307c29b7fb4",
+        "validation/native-parity-linux.json": "50aa4fb3994366286211006460066377b5b06bb6a1c6cca82310c8d1b41d4ca2"
       },
-      "handling": "Current simulation adapter uses actual position feedback. The pinned author hardware code sets odometry position to zero AND unconditionally zeros all 15 future position-error entries, with a separate initial-heading reference transform. This is not equivalent to merely setting our root position to zero. Verify the hardware policy file against this exact latest.onnx SHA and compare the complete C++ observation/reset/action path before admission.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "Current simulation adapter uses actual position feedback. The pinned author hardware code sets odometry position to zero AND unconditionally zeros all 15 future position-error entries, with a separate initial-heading reference transform. This is not equivalent to merely setting our root position to zero. Verify the hardware policy file against this exact latest.onnx SHA and compare the complete C++ observation/reset/action path before admission.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
+      "handling": "Author C++ hardware route: initial-heading reference alignment, all15 future position inputs zeroed by the author, and last action initialized from the author start pose. The exact hardware weight matches latest.onnx. Canonical benchmark physical reset is unchanged; no robot position is read.",
+      "actual_position_integration": "No measured robot translation, contact inputs or explicit position integration.",
+      "special_handling": "Author C++ hardware route: initial-heading reference alignment, all15 future position inputs zeroed by the author, and last action initialized from the author start pose. The exact hardware weight matches latest.onnx. Canonical benchmark physical reset is unchanged; no robot position is read.",
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-textop",
       "additional_source_evidence": [
-        {
-          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/src/onnx_controller.cpp",
-          "sha256": "ba97b73629c8c88c92d202004ace0080a05a73407d6adf159e82df8f948c5e6d"
-        },
         {
           "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/src/observation_computer.cpp",
           "sha256": "a65fad0b4920d2e9357449e1f56b7aab90019c41488a45fa8ee4f8a21d0c9503"
         },
         {
-          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/src/motion_loader.cpp",
-          "sha256": "28ce152a53acd21730f5114cac2878755d8b7251c2249cd024489553776f7f62"
+          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/include/textop_ctrl/observation_computer.hpp",
+          "sha256": "5d4f5d44510675e33db4028bb05dd6b647e877ac4ab1aa04dc30bf35ddcefdb4"
         },
         {
-          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/src/onnx_policy.cpp",
-          "sha256": "faf1bb99848a7e9bd24e08ef5de6dbf91ea206e1b09ec455447f79dc28079d4d"
+          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/src/textop_onnx_controller.cpp",
+          "sha256": "ba97b73629c8c88c92d202004ace0080a05a73407d6adf159e82df8f948c5e6d"
+        },
+        {
+          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/launch/textop_onnx_controller.launch.py",
+          "sha256": "d55860941621ec20da02dc2c37ec1ede83d3acc50a9833f8dbb2bdfc9c05e8ba"
+        },
+        {
+          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/config/g1_29dof.yaml",
+          "sha256": "cd0f7f432650cf89b58c151ece445bfdfd5775814ff2c20a90a131d98007af13"
         }
       ],
-      "published_adapter_commit": "fdbcaf8a3d39fd1f67dea9037ccfe8306d9206a7"
+      "dependency_test": {
+        "path": "validation/observation-access.json",
+        "sha256": "8c186c199c3d19833de1923873a962e07697fa7643ec55334b017cb5e0baf48d",
+        "code": "validate_inference.py",
+        "cases": 160,
+        "resets": 4
+      },
+      "published_adapter_commit": "9733615f59059552fc2949e8161fd7946358140e"
     },
     "holomotion-v2-0-0": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1159,10 +851,6 @@
       "handling": "Actual control-point offsets are local FK. Reconstruct with current joints/orientation at a fixed zero origin; compare the complete 1378D released WholeBody14 inference path. Reference positions remain relative to the reference root.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v2-0-0",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -1171,15 +859,14 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "35338d961e6076920062a7f0e2be0e31f42c4552",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "086159679be4c5a03fe30074b3fdb9aa259bb9ff"
     },
     "humanoid-gpt-transformer-216": {
       "schema": "MotionChallenge/observation-admission-v1",
       "model": "humanoid-gpt-transformer-216",
       "display_name": "Humanoid-GPT Transformer 216",
       "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "requires_author_deployment_validation",
+      "status": "inference_verified",
       "checkpoint_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
       "auxiliary_artifacts": {},
       "checkpoint_origin": {
@@ -1198,26 +885,29 @@
       "author_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
       "base_adapter_commit": "639da90cef226f1cef45532bad537240b64d2543",
       "production_source_sha256": {
-        "adapter.py": "db07cbb6cd11445de4f2ca6b2d26f23af45d7d6046c1eef3c664d4b83b8a6cf3",
+        "adapter.py": "aebf9f6911a4855c16779ee39b411865f09db51087a584c3be6bf5bb5e82b463",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
         "native-sources.json": "0a34a0b4f2196a9fa1bc1fe5e890e26bb3d3c2f38f188b5e3e2afccd9c27d311",
         "policy.json": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
         "reference.py": "eca6466f3bbcf094750144eaa2de4eeb3fd7850f6a882e77b0e8e389fb50b55b",
-        "validate_inference.py": "71e15a027bf2d9c7429292c9606e95c70b2c91dde4e6ea3b0f8c326486667c27"
+        "validate_inference.py": "0a31bf9f298edf059726a87ba120dc859b0d2c1ee40e94ed5674396709a21e27"
       },
       "prior_native_parity_sha256": {
-        "validation/native-parity-linux.json": "bd36aa00e7c684304a4138f559ee7301ba7a5d2e41581465facd60ffcf49efbf",
-        "validation/native-parity.json": "2085aa37481c8a92aabba60d43a4d408060f70ecf423a856f830bab6b8e07066"
+        "validation/native-parity.json": "c5e4bb547728468b1843f4f649fdc622559e377ed1f74a8e9054727d00bc3e14",
+        "validation/native-parity-linux.json": "d6e486f7143d62a6ece7b9e42c2b80c07f3ae29d2e0cec0df32754a4a7e89dd3"
       },
-      "handling": "Current Transformer adapter uses actual XY in command. Verify the author fixed-root hardware path specifically for this 216 checkpoint; the 264 checkpoint is not a substitute.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "Current Transformer adapter uses actual XY in command. Verify the author fixed-root hardware path specifically for this 216 checkpoint; the 264 checkpoint is not a substitute.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
+      "handling": "Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and 16-frame history. No measured robot position or position integration.",
+      "actual_position_integration": "No measured robot translation, contact inputs or explicit position integration.",
+      "special_handling": "Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and 16-frame history. No measured robot position or position integration.",
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216",
-      "published_adapter_commit": "8aaca7d8c5e6e74d999b947222fffda1a2ad6eed"
+      "dependency_test": {
+        "path": "validation/observation-access.json",
+        "sha256": "7c682a7613bcad540f98a58d156252d948f45771262d05950ec888b30cd4070a",
+        "code": "validate_inference.py",
+        "cases": 160,
+        "resets": 4
+      },
+      "published_adapter_commit": "c07b32c7a6bd9ee9d3608ca51996fae9c6b9b1c4"
     },
     "holomotion-v1-3-1": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1255,10 +945,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-1",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -1267,15 +953,14 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "94e1566d606eb143ea01fb8a2b74029044b4ae9b",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "75f045684e7cb5150c8e040e6383f568dfb88ef8"
     },
     "scalebfm-m": {
       "schema": "MotionChallenge/observation-admission-v1",
       "model": "scalebfm-m",
       "display_name": "ScaleBFM M",
       "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "requires_author_deployment_validation",
+      "status": "inference_verified",
       "checkpoint_sha256": "88d5a79946c03ed25503f48b2af71d16290844ef066ca9b6c8fa8dc3837422e3",
       "auxiliary_artifacts": {
         "network": "0f09be3a6c5a7396ef7f28ea8a5365b9c723bb896eb4da71cc8809c840dccdec",
@@ -1300,26 +985,29 @@
       "author_commit": "abd6f17c02fe0baabc14709feb8d9ea4959aa621",
       "base_adapter_commit": "375672f236cce78802eee4855fe8f6333081f421",
       "production_source_sha256": {
-        "adapter.py": "94a000b869028d9bd9f068702481661fca93d67eb755368d605d20a538c247a7",
+        "adapter.py": "35b59cc046a5e38445d9912714dce53fe885137132d3615946b2ad3aa29de222",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
         "native-sources.json": "830d97f529e02ce8ac5e0e1c7c4a575999057e9d0a06cb7b705695fc1ae63a90",
         "native_runtime.py": "30e7c4f8d91a97a823e5753332d3a193e60e7d9fafafcd23d502b5ec5d40e219",
         "policy.json": "a8d4a72064e7e14a3889d28cf1f7a8d380501468f6d93cc2d9863b57f139e10f",
-        "validate_inference.py": "477e6bfa2e4a180895b2c6e2858123975142c4673af60ed5112f6d44ec3a1e7b"
+        "validate_inference.py": "4c6572e1cf2ec7d4a848f518511c576bc23805a21af8f508d3374198feb60961"
       },
       "prior_native_parity_sha256": {
-        "validation/native-parity-linux.json": "641f765dd08dd763f994cb202814e9a961e263cd0853b938bac9a55bfa956f1f",
-        "validation/native-parity.json": "641f765dd08dd763f994cb202814e9a961e263cd0853b938bac9a55bfa956f1f"
+        "validation/native-parity.json": "401838a203a24610eed88a02929ffa82fd90c09ce642824973f23fbb35bf5d23",
+        "validation/native-parity-linux.json": "401838a203a24610eed88a02929ffa82fd90c09ce642824973f23fbb35bf5d23"
       },
-      "handling": "Author mode7/reference_forcing uses reference root after the first act, but initialization currently reads actual root. Need a same-weight, author-supported reference-only initialization path and full reset/history parity before admission.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "Author mode7/reference_forcing uses reference root after the first act, but initialization currently reads actual root. Need a same-weight, author-supported reference-only initialization path and full reset/history parity before admission.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
+      "handling": "Initialize root history from the first reference root position instead of measured robot position, which is unavailable under the benchmark observation rules. Then use the author mode 7 reference-forcing inference with the original checkpoint; no robot translation is measured or integrated.",
+      "actual_position_integration": "No measured robot translation, contact inputs or explicit position integration.",
+      "special_handling": "Initialize root history from the first reference root position instead of measured robot position, which is unavailable under the benchmark observation rules. Then use the author mode 7 reference-forcing inference with the original checkpoint; no robot translation is measured or integrated.",
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-scalebfm-m",
-      "published_adapter_commit": "173f3bd4654244dfb8445cb76d20ee753f9c61bc"
+      "dependency_test": {
+        "path": "validation/observation-access.json",
+        "sha256": "ed3f26febbe1b0819b077788200a2fecaabbb5ccec2bf2b28bc36b324680065c",
+        "code": "validate_inference.py",
+        "cases": 160,
+        "resets": 4
+      },
+      "published_adapter_commit": "ccf148b1cbe56a243e47305227343ebb25a46ff0"
     },
     "omnixtreme": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1383,10 +1071,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-omnixtreme",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -1395,8 +1079,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "043a67adaf412618dc694be74952f4e527fd942a",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "c97d083565640d2ae2792453d99c859f92b14af3"
     },
     "mosaic": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1434,10 +1117,6 @@
       "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "queued",
-        "inherited_scores": false
-      },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic",
       "dependency_test": {
         "path": "validation/observation-access.json",
@@ -1446,8 +1125,7 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "c976ee5786fbb89fba71dfd8114137833d3e260b",
-      "evaluation_progress": "accepted"
+      "published_adapter_commit": "2599069bc7a9cbebd88915c9f4d28e76e20dd8d4"
     }
   }
 }

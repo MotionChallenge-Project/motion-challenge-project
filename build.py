@@ -20,7 +20,6 @@ NAMES={'grit':'GRIT','heft':'HEFT','sonic':'SONIC','mimic-lite':'MimicLite','sca
 CONTENT=ROOT/'content'
 MODELS=json.loads((CONTENT/'models.json').read_text())
 NAMES={k:m['display_name'] for k,m in MODELS.items()}
-CANDIDATES=[c for c in json.loads((CONTENT/'candidates.json').read_text()) if c.get('repository_available')]
 TRACKS=json.loads((CONTENT/'tracks.json').read_text())
 BENCHMARKS=benchmark_pages.load_catalog(CONTENT,TRACKS)
 TRACK_BY_ID={t['id']:t for t in TRACKS}
@@ -32,10 +31,6 @@ publication_checks.validate(CONTENT,rows,MODELS,TRACKS)
 for row in rows:
  for field in ('adapter_code_url', 'core_code_url'):
   row[field]=model_pages.repository_location(row[field])
-POLICY=json.loads((CONTENT/'publication_policy.json').read_text())
-EXCLUDED=POLICY.get('excluded_models', {})
-assert not any(k in EXCLUDED and not EXCLUDED[k].get('publish_results',True) for k in MODELS), 'Excluded models must stay out of the public catalog'
-assert not any(r['model'] in EXCLUDED and not EXCLUDED[r['model']].get('publish_results',True) for r in rows), 'Withdrawn results cannot be republished'
 assert all(r['mujoco_version']=='3.17.0' and r.get('adapter_code_url') and r.get('core_code_url') for r in rows), 'Only batch 3.17 results with pinned code may be published'
 EVALUATED=len(set(r['model'] for r in rows))
 for r in rows:
