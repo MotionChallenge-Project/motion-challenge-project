@@ -753,7 +753,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "319b56c64e9c2635074023291a7f547b7149ffef"
+      "published_adapter_commit": "319b56c64e9c2635074023291a7f547b7149ffef",
+      "evaluation_progress": "accepted"
     },
     "sonic-v1-1": {
       "schema": "MotionChallenge/observation-admission-v1",
