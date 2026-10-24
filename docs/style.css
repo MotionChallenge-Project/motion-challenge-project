@@ -91,6 +91,9 @@
 #leaderboard abbr{text-decoration:none;cursor:help}
 
 .pagination-top{padding:13px 16px;background:#edf2eb;border:1px solid var(--line);border-radius:5px;margin:0 0 16px}
+.evaluation-overview .actions{gap:12px}
+.evaluation-overview .actions .text-link{display:inline-flex;align-items:center;min-height:42px;padding:9px 16px;border:1px solid #c5d6ca;border-radius:6px;background:#edf3ed;color:#155e50;font-size:14px;font-weight:650;transition:background .15s,border-color .15s}
+.evaluation-overview .actions .text-link:hover{background:#e0ecdf;border-color:#87aa94;color:#103f37}
 .pagination button[data-page=next]:not(:disabled){background:var(--green);border-color:var(--green);color:white;font-weight:650}
 .pagination-bottom{justify-content:flex-end}
 
