@@ -14,10 +14,10 @@
     },
     {
       "name": "Humanoid-GPT",
-      "status": "Inference / stability diagnosis",
-      "gap": "The 216 checkpoint run encountered a MuJoCo numerical reset. The author-recommended 264 checkpoint requires a separate inference comparison.",
-      "next_step": "Audit the 264 deployment contract, then rerun the complete suite. A numerical reset is not a valid complete trajectory.",
-      "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/tree/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "status": "264 inference contract audit",
+      "gap": "The author-recommended 264 checkpoint is downloaded and hash-verified. Its deployment smooths reference qpos with EMA (alpha 0.8) before conversion; the older adapter did not apply that preprocessing. Author-model reference cvel conventions also need verification. The earlier 216 run encountered a numerical reset.",
+      "next_step": "Match the 264 reference preprocessing and native inference, then run and independently repeat the complete suite.",
+      "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/scripts/inference.py#L107-L111",
       "checked": "2026-10-24",
       "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt"
     },
