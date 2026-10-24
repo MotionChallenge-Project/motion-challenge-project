@@ -18,7 +18,7 @@ def repository_location(value):
 
 
 def link(url, label, css=''):
-    return f'<a class="{css}" href="{esc(url)}">{esc(label)}</a>'
+    return f'<a class="{css}" href="{esc(repository_location(url))}">{esc(label)}</a>'
 
 
 def facts(items):

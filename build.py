@@ -9,7 +9,7 @@ for generated in ('models','evaluations','data/evidence'):
  if path.exists():shutil.rmtree(path)
 GH='https://github.com/MotionChallenge-Project'
 BASE=os.environ.get('SITE_BASE_PATH','/motion-challenge-project').rstrip('/')
-SITE_URL='https://motion-challenge-project.github.io'+BASE
+SITE_URL='https://motionchallenge-project.github.io'+BASE
 WEBSITE_SOURCE=GH+'/motion-challenge-project/tree/website'
 NAMES={'grit':'GRIT','heft':'HEFT','sonic':'SONIC','mimic-lite':'MimicLite','scalebfm':'ScaleBFM','holomotion':'HoloMotion','humanoid-gpt':'Humanoid-GPT','protomotions':'ProtoMotions','bfm-zero':'BFM-Zero','twist2':'TWIST2'}
 CONTENT=ROOT/'content'
@@ -23,6 +23,9 @@ RESULTS=json.loads((CONTENT/'results.json').read_text())
 RESULTS_REVISION=str(RESULTS['generated_unix'])
 ASSET_REVISION=hashlib.sha256((ROOT/'style.css').read_bytes()+(ROOT/'app.js').read_bytes()).hexdigest()[:12]
 rows=RESULTS['rows']
+for row in rows:
+ for field in ('adapter_code_url', 'core_code_url'):
+  row[field]=model_pages.repository_location(row[field])
 POLICY=json.loads((CONTENT/'publication_policy.json').read_text())
 EXCLUDED=POLICY.get('excluded_models', {})
 assert not any(k in EXCLUDED and not EXCLUDED[k].get('publish_results',True) for k in MODELS), 'Excluded models must stay out of the public catalog'
