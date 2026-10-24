@@ -13,7 +13,7 @@ def repository_location(value):
     """Resolve moved repositories while preserving evaluated revisions."""
     value = re.sub(r'(https://github\.com/|git@github\.com:)(?:MotionChallenge|motion-challenge-project)/',
                    r'\1MotionChallenge-Project/', value, flags=re.IGNORECASE)
-    return re.sub(r'(MotionChallenge-Project/)motion-challenge(?=\.git(?:\s|$)|[/\s]|$)',
+    return re.sub(r'(MotionChallenge-Project/)motion-challenge(?![\w-])',
                   r'\1MotionChallenge-Core', value)
 
 
