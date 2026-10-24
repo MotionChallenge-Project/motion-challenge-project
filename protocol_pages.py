@@ -1,18 +1,20 @@
-"""Public protocol highlights; detailed definitions live in Core docs."""
+"""Brief protocol overview, with versioned details linked to Core."""
+import json
+import admission_pages
 
 
-def render(page, intro, github):
+def render(content, page, intro, github):
+    data = json.loads((content / 'observation_admissions.json').read_text())
+    core = github + '/MotionChallenge-Core/blob/' + data['core_commit']
     body = intro('EVALUATION PROTOCOL', 'Evaluation protocol',
-                 'Conditions, failure thresholds and scoring.')
-    body += '''<div class="policy-content docs">
-<section><h2>Benchmark and controller</h2>
-<div class="rule-cards responsibility-cards">
-<article><span class="card-symbol" aria-hidden="true">≡</span><h3>Benchmark</h3><p>Data · robot · physics · reset · failure conditions · scoring.</p></article>
-<article id="inference"><span class="card-symbol" aria-hidden="true">↔</span><h3>Controller</h3><p>Author-native observations · history · policy clock · action processing.</p></article>
-</div></section>
-<section id="contract"><h2>LAFAN40 · G1</h2>
-<div class="protocol-tags"><span>40 complete motions</span><span>MuJoCo 3.17.0 batch</span><span>No noise / randomization</span><span>Friction 1</span></div>
-<p>Start at the first reference pose and velocity. Continue to the final frame, without resetting after failure.</p>
+                 'Evaluation conditions, permitted observations and scoring.')
+    body += '''<div class="docs-layout"><aside>
+<a href="#contract">Evaluation</a><a href="#observations">Observation rules</a>
+<a href="#alignment">Metrics</a><a href="#evidence">Model requirements</a>
+</aside><article class="docs">
+<section id="contract"><h2>Evaluation</h2>
+<p>The Core fixes data, robot, physics, reset, failures and scoring. Each controller keeps its author's inference, history and control timing.</p>
+<p><strong>LAFAN40 · G1:</strong> 40 complete motions, MuJoCo 3.17.0 batch, no noise or randomization, friction 1. Start at the first reference pose and velocity; continue to the final frame without resetting after failure.</p>
 <table class="rules-table"><thead><tr><th scope="col">Failure condition</th><th scope="col">Threshold</th></tr></thead><tbody>
 <tr><td>Absolute torso height error</td><td>&gt; 0.25 m</td></tr>
 <tr><td>Absolute projected-gravity Z difference: actual vs reference torso</td><td>&gt; 0.8</td></tr>
@@ -20,24 +22,31 @@ def render(page, intro, github):
 </tbody></table>
 <p class="small">Any condition records the first failure. No XY or yaw threshold. <a href="/benchmarks/lafan40/#failure-conditions">Exact definitions ↗</a></p>
 </section>
-<section id="alignment"><h2>Metrics</h2>
-<div class="rule-cards metric-cards">
-<article><span class="card-symbol" aria-hidden="true">%</span><h3>Success ↑</h3><p>Motions completed without failure.</p></article>
-<article><span class="card-symbol" aria-hidden="true">→</span><h3>Completion ↑</h3><p>Fraction of duration reached before first failure.</p></article>
-<article><span class="card-symbol" aria-hidden="true">mm</span><h3>MPBPE ↓</h3><p>Mean position error over 14 body origins.</p></article>
-</div>
+<section id="observations"><h2>Restricted observation track</h2>
+<p>Ideal proprioception, without actual world-position or contact feedback. Rules apply to initialization, preprocessing, history and inference.</p>'''
+    body += admission_pages.observation_table()
+    body += '''<p class="small">Root velocities use world axes at the body origin. Fixed origins, local FK and reference-only alignment require a validated author-supported path for the exact checkpoint. Arbitrary input zeroing is not accepted.</p>'''
+    body += ('<div class="actions"><a class="button" href="' + core + '/docs/OBSERVATIONS.md">Frozen rules ↗</a>'
+             '<a class="text-link" href="/models/">Model-specific handling ↗</a></div></section>')
+    body += '''<section id="alignment"><h2>Metrics</h2>
+<ul><li><strong>Success ↑:</strong> fraction of complete motions without failure.</li>
+<li><strong>Completion ↑:</strong> average fraction of duration reached before first failure.</li>
+<li><strong>MPBPE ↓:</strong> mean position error over 14 body origins, in mm; average frames within each motion, then weight motions equally.</li></ul>
 <table class="rules-table"><thead><tr><th scope="col">Alignment</th><th scope="col">Removed before measuring error</th></tr></thead><tbody>
 <tr><td>XY + yaw</td><td>Per-frame horizontal root translation and heading difference</td></tr>
 <tr><td>XY only</td><td>Per-frame horizontal root translation</td></tr>
 <tr><td>None</td><td>Nothing; compare world positions directly</td></tr>
 </tbody></table>
-<div class="metric-ranges"><div><strong>Early termination</strong><span>Through the first failure, including that frame.</span></div><div><strong>No termination</strong><span>Entire motion, including post-failure states.</span></div></div>
-<p class="small">3 alignments × 2 time ranges = 6 error views. Average frames within each motion, then weight motions equally. Alignment does not affect success or completion.</p>
+<p><strong>Six error views:</strong> each alignment is measured through the first failure (including that frame), and over the full motion (including post-failure states). Alignment does not change success or completion.</p>
 </section>
-<section id="evidence"><h2>Verification</h2>
-<div class="verification-flow"><span>Pinned weights &amp; code</span><span aria-hidden="true">→</span><span>Inference check</span><span aria-hidden="true">→</span><span>Full-suite traces</span><span aria-hidden="true">→</span><span>Independent verification &amp; repeat</span></div>
-<div class="actions"><a class="button" href="/admission/">Policy admission ↗</a>'''
-    body += ('<a class="text-link" href="' + github +
-             '/MotionChallenge-Core/blob/main/docs/PROTOCOL.md">Full protocol &amp; formulas ↗</a>')
-    body += '</div></section></div>'
+<section id="evidence"><h2>Model requirements</h2>
+<ul><li>Public general-controller checkpoint; the same weights for the complete suite.</li>
+<li id="inference">Author-faithful inference and permitted observations; disclose adaptations and training-data overlap.</li>
+<li>Public adapter, pinned Core and dependencies; complete traces, independent verification and a repeated run.</li></ul>
+<p class="small">Single-motion checkpoints do not qualify. No minimum score is required. Each model card links its exact-weight handling and evidence.</p>
+<div class="actions">'''
+    body += ('<a class="text-link" href="' + core + '/docs/PROTOCOL.md">Full protocol ↗</a>'
+             '<a class="text-link" href="' + core + '/docs/ADAPTERS.md">Adapter requirements ↗</a>'
+             '<a class="text-link" href="/data/observation-admissions.json">Checkpoint records (JSON) ↓</a>')
+    body += '</div></section></article></div>'
     page('/protocol/', 'Evaluation protocol', body, 'Protocol')

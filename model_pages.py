@@ -1,6 +1,7 @@
 """Checkpoint catalog and protocol-specific evaluation records."""
 import html
 import json
+import admission_pages
 import re
 from collections import defaultdict
 
@@ -114,6 +115,7 @@ def render(models, rows, tracks, content, github, page, intro):
         'Released model versions, checkpoint artifacts and inference interfaces.')
         + f'<p class="small"><a href="/coverage/">Coverage status and remaining gaps →</a></p><section class="section model-grid">{cards}</section>', 'Models')
 
+    admission_records=json.loads((content/'observation_admissions.json').read_text())['models']
     for key, model in models.items():
         rt, provenance = model['runtime'], model['provenance']
         repo = model.get('adapter_repository', f'{github}/MotionChallenge-{key}')
@@ -155,7 +157,8 @@ def render(models, rows, tracks, content, github, page, intro):
             detail += f'<div class="artifact-row"><div>{esc(name)}<br>{artifact_link}</div><code>{esc(sha)}</code></div>'
         detail += '</section><section class="section split"><div><h2>Inference interface</h2><p>The adapter declares its control clock and reference window below. Source and configuration describe the observation and action transforms.</p><div class="actions">'
         detail += link(repo + '/blob/main/adapter.py', 'Inference implementation ↗', 'text-link')
-        detail += link(repo + '/blob/main/provenance.json', 'Provenance ↗', 'text-link') + '</div></div>'
+        detail += link(repo + '/blob/main/provenance.json', 'Provenance ↗', 'text-link') + '</div>'
+        detail += admission_pages.model_handling(key, model, admission_records[key]) + '</div>'
         detail += facts([
             ('Control interval', f'{rt["control_period_s"] * 1000:g} ms'),
             ('Reference history', f'{rt.get("reference_history_s", 0) * 1000:g} ms'),
@@ -163,7 +166,6 @@ def render(models, rows, tracks, content, github, page, intro):
             ('Output interface', esc(rt.get('action_mode', 'See runtime contract'))),
             ('Configuration', link(repo + '/blob/main/' + rt['inference_config'], rt['inference_config'])),
         ]) + '</section>'
-        detail += '<p class="small"><a href="/admission/#'+esc(key)+'">Policy admission &amp; model-specific handling →</a></p>'
         related = [(track_by_id[tid], evaluation_path(tid, key)) for tid, mid in groups if mid == key]
         detail += '<section class="section model-evaluations"><h2>Evaluations</h2>'
         if related:

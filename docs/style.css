@@ -122,36 +122,16 @@
 
 .leaderboard-head{max-width:1800px;padding:28px 2.5% 24px}.leaderboard-head .eyebrow{margin-bottom:10px}.leaderboard-head h1{font-size:clamp(28px,3vw,40px);letter-spacing:-1.2px;margin-bottom:10px}.leaderboard-head .lede{font-size:14px;max-width:none;margin:0}
 
-.admission-record{border-bottom:1px solid var(--line)}.admission-record p{max-width:80ch}.admission-record code{font-size:.85em}
 
-/* Policy summaries keep definitions in the linked, versioned Core documents. */
-.policy-content{max-width:1120px;padding:12px 4.5% 60px;margin:auto}
-.policy-content.docs section{padding-bottom:48px}
-.rule-cards{display:grid;gap:14px}.rule-cards article{background:#f0f4ee;border:1px solid var(--line);border-radius:8px;padding:22px}
-.admission-cards,.responsibility-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.metric-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
-.rule-cards .card-symbol{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;border-radius:9px;background:#deebe1;color:var(--green);font-size:17px;font-weight:700;margin-bottom:16px;padding:0 8px}
-.rule-cards h2,.rule-cards h3{font-size:18px;letter-spacing:-.3px;margin:0 0 9px}
-.rule-cards p{font-size:14px;margin:0;line-height:1.6}
+/* Compact rule tables share the site's document layout. */
 .rules-table{white-space:normal;font-size:14px;margin:22px 0}
-.rules-table th{font-size:12px;background:transparent;text-transform:none}
+.rules-table th{font-size:12px;background:transparent}
 .rules-table th,.rules-table td{padding:13px 12px;vertical-align:middle}
 .rules-table th:first-child,.rules-table td:first-child{padding-left:0}
 .rules-table th:last-child,.rules-table td:last-child{padding-right:0}
-.observation-table th:last-child,.observation-table td:last-child{width:90px;text-align:center}
-.rule-verdict{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;font-size:19px;font-weight:600;line-height:1}
+.observation-table th:last-child,.observation-table td:last-child{width:75px;text-align:center}
+.rule-verdict{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;font-size:18px;font-weight:600;line-height:1}
 .rule-allowed{color:#187345;background:#e3f0e5}.rule-excluded{color:#b13b37;background:#f8e9e5}
-.rule-callout{display:flex;gap:24px;border-left:3px solid #9ebda8;background:#f0f4ee;padding:18px 20px;margin-top:24px}
-.rule-callout strong{white-space:nowrap;font-size:14px}.rule-callout p{margin:0;font-size:14px}
-.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px}.section-heading h2{margin-bottom:10px}
-.admission-record{padding:0;scroll-margin-top:24px}
-.admission-record summary{display:grid;grid-template-columns:minmax(170px,1fr) auto;gap:12px;align-items:center;cursor:pointer;padding:16px 24px 16px 0;position:relative;list-style:none}
-.admission-record summary::-webkit-details-marker{display:none}.admission-record summary::after{content:'+';position:absolute;right:0;color:var(--muted)}
-.admission-record[open] summary::after{content:'−'}
-.admission-model{font-size:15px;font-weight:650}.admission-status{font-size:11px;color:#6b7168;background:#ecefe8;padding:4px 9px;border-radius:4px;text-align:right}
-.admission-status.status-accepted{color:#226644;background:#e2eee3}.admission-status.status-pending{color:#766b40;background:#f1eddf}
-.admission-record>div{padding:0 0 18px}.admission-record .actions{margin:15px 0 0}.admission-record:target{background:var(--tint)}
-.protocol-tags{display:flex;flex-wrap:wrap;gap:8px}.protocol-tags span{background:#e8eee7;border:1px solid var(--line);border-radius:5px;font-size:12px;color:var(--green);padding:5px 10px}
-.metric-ranges{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.metric-ranges strong,.metric-ranges span{display:block;font-size:14px}.metric-ranges span{color:var(--muted);margin-top:5px}
-.verification-flow{display:flex;align-items:center;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:13px}.verification-flow span:not([aria-hidden]){padding:12px;border:1px solid var(--line);border-radius:5px;background:#f0f4ee;color:var(--ink)}
-@media(max-width:600px){.policy-content{padding:12px 5% 40px}.rules-table{font-size:13px}.rules-table th,.rules-table td{padding:11px 8px}.admission-cards,.responsibility-cards,.metric-cards{grid-template-columns:1fr}.rule-cards article{padding:18px}.rule-callout{display:block}.rule-callout p{margin-top:7px}.admission-record summary{grid-template-columns:1fr;gap:6px}.admission-status{text-align:left;justify-self:start}.metric-ranges{grid-template-columns:1fr;gap:16px}}
+.model-observation-note{border-top:1px solid var(--line);padding-top:16px;margin-top:26px;scroll-margin-top:24px}
+.model-observation-note h3{font-size:18px;margin:0 0 8px}.model-observation-note summary{font-size:14px;color:var(--green);cursor:pointer}.model-observation-note details p{font-size:14px}
+@media(max-width:600px){.rules-table{font-size:13px}.rules-table th,.rules-table td{padding:11px 8px}}

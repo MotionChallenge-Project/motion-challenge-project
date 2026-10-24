@@ -55,8 +55,8 @@
           "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/robots/g1-29dof-cpu-v0.json"
         },
         {
-          "label": "Observation admission and model-specific handling",
-          "url": "/admission/"
+          "label": "Observation rules and model handling",
+          "url": "/protocol/#observations"
         }
       ]
     },
