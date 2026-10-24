@@ -69,5 +69,12 @@
     "image_url": "https://avatars.githubusercontent.com/u/142372369?v=4&s=128",
     "sha256": "87da0598544a55e9306f10957868c1a24de413af718f3c3c01bf2b089126012d",
     "bytes": 3134
+  },
+  {
+    "file": "galbot.jpg",
+    "source": "https://github.com/GalaxyGeneralRobotics",
+    "image_url": "https://avatars.githubusercontent.com/u/169434821?v=4&s=128",
+    "sha256": "05160d2e2c7b09ee92757d9ea41168cfeb9fce31d4ee2ddf54ebaa70c5733925",
+    "bytes": 1747
   }
 ]

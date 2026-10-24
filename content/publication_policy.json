@@ -14,11 +14,6 @@
       "reason": "This adapter uses an ONNX export from a shared deployment archive. The upstream project link alone does not authenticate this converted file; the original-to-export conversion and equivalence evidence are not yet complete. Results are withheld.",
       "evaluate": false,
       "publish_results": false
-    },
-    "humanoid-gpt": {
-      "reason": "Full-motion MuJoCo 3.17 batch rollout triggers numerical reset; no valid unified LAFAN40 result. Kept for native-inference diagnosis, without a public ranking.",
-      "evaluate": true,
-      "publish_results": false
     }
   },
   "required_adapter_commits": {

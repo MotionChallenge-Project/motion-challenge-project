@@ -321,7 +321,8 @@
         "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
         "download_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/sonic_v1_1/model_decoder.onnx",
         "sha256": "34bae8570d4a4421a5391a5c2befd745d4a02d182ec539e5f9da44c091c67509"
-      }
+      },
+      "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
       "Unitree G1 \u00b7 29 DoF"
@@ -410,7 +411,8 @@
         "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
         "download_url": "https://huggingface.co/nvidia/GEAR-SONIC/resolve/6733128a3d8a523b1418b06bca3cdf61c8b0987f/low_latency/model_decoder.onnx",
         "sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab"
-      }
+      },
+      "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
       "Unitree G1 \u00b7 29 DoF"
@@ -464,7 +466,19 @@
       "checkpoint_sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26",
       "author_inference_review": "Maintainer native-source parity passed; not an author endorsement",
       "notes": "Original 286D PyTorch ActorCritic,512/256/128 ELU; normalizer epsilon0.01 from native class (mjlab demo differs). No action clipping. State body transforms relative to actual torso; actual root COM linear velocity and angular velocity in pelvis link frame; convert packet link-origin velocity with the canonical pelvis COM offset. Current reference at control time. Canonical benchmark physics, not IsaacLab training physics.",
-      "inference_validation": {
+      "inference_validation": "validation/native-parity.json",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
+        "author_release_label": "Mondo-Robotics/PMT",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
+        "original_filename": "multimotionv2_flat.pt",
+        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
+        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
+        "sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26"
+      },
+      "native_inference_summary": {
         "cases": 160,
         "resets": 4,
         "max_abs_error": {
@@ -487,17 +501,6 @@
           "native_pd_default_action_scale": true,
           "canonical_pelvis_com": true
         }
-      },
-      "checkpoint_origin": {
-        "author_release_url": "https://github.com/Mondo-Robotics/PMT/blob/1a92390077d329d22cbcdbf89c4a5c982003fbc8/README.md",
-        "author_release_label": "Mondo-Robotics/PMT",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/blob/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
-        "original_filename": "multimotionv2_flat.pt",
-        "verification": "The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.",
-        "download_url": "https://huggingface.co/datasets/aCodeDog/PMT-assets/resolve/38f9f7dba893385c6219620b72314396247c9e82/checkpoints/pretrained/multimotionv2_flat.pt",
-        "sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26"
       }
     },
     "supported_robots": [
@@ -2182,5 +2185,215 @@
     "icon": "/assets/model-icons/lecar-lab.jpg",
     "icon_source": "https://github.com/LeCAR-Lab",
     "icon_label": "LeCAR-Lab"
+  },
+  "humanoid-gpt": {
+    "organization": "Galbot / Tsinghua & collaborators",
+    "organization_source": "https://qizekun.github.io/Humanoid-GPT/",
+    "display_name": "Humanoid-GPT 264",
+    "family": "humanoid-gpt",
+    "version": "264 \u00b7 bbaac94b",
+    "version_kind": "author-released feed-forward checkpoint",
+    "version_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx",
+    "project_url": "https://qizekun.github.io/Humanoid-GPT/",
+    "description": "The author-recommended 264 ONNX policy, evaluated through the standard G1 inference route with native reference filtering and feature kinematics.",
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Released 136-input MLP with hidden widths 2048/1024/512 and 29 action outputs. This checkpoint is distinct from the Transformer described in the paper.",
+      "source": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt/blob/main/validation/checkpoint-graph.json"
+    },
+    "artifact_notes": [
+      "This record evaluates pns_wo_priv264.onnx. It does not report results for pns_wo_priv216_trans.onnx or the paper\u2019s Transformer."
+    ],
+    "icon": "/assets/model-icons/galbot.jpg",
+    "icon_label": "Galbot",
+    "icon_source": "https://github.com/GalaxyGeneralRobotics",
+    "runtime": {
+      "id": "humanoid-gpt-264-g1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        1
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.02
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.02,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+      "provenance_status": "native 264 inference comparison passed",
+      "official": false,
+      "source_repository": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "weights_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx",
+      "kinematics": "assets/g1_5010_kinematics.xml",
+      "kinematics_sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6"
+    },
+    "provenance": {
+      "model": "humanoid-gpt",
+      "submitter": "MotionChallenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+      "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+      "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+      "author_inference_review": "160 states, 4 resets and 32 endpoint cases passed the fixed 2e-5 tolerance on macOS and Linux. macOS comparisons were exact; Linux maximum observation/action difference was 5.25e-6 and motor-target difference 2.33e-6 rad.",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md",
+        "author_release_label": "GalaxyGeneralRobotics/Humanoid-GPT",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx",
+        "original_filename": "pns_wo_priv264.onnx",
+        "verification": "Original author-recommended264 ONNX; no conversion or weight modifications. Download bytes verified by SHA256 and author Git blob ff4b024a8f29a76f0c9453289eea48dff9120b7c.",
+        "download_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx",
+        "sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+        "bytes": 11675419
+      },
+      "display_name": "Humanoid-GPT 264",
+      "inference_validation": "validation/native-parity.json",
+      "deployment": {
+        "route": "scripts/inference.py --convert, privileged=false, G1_VERSION=5010, HAND=Default,50Hz; canonical packets are already sampled by the core at the policy clock.",
+        "reference_preprocessing": "Causal author EMA alpha0.8 with quaternion sign continuity and normalization, then author world-frame finite-difference qvel and5010 FK. Only policy input is filtered; scoring still uses unmodified canonical reference.",
+        "reference_window": "Current filtered reference supplies XY/yaw error; next filtered reference supplies joints,height,gravity,cvel. Endpoints reuse the final filtered feature rather than applying repeated EMA updates.",
+        "kinematics": "assets/g1_5010_kinematics.xml derives from pinned author XML by removing mesh assets/geoms only. All30 explicit inertials and body/joint transforms preserved. Used for reference features only, never simulation or scoring.",
+        "reset": "Fresh filter and zero last action for each clip, equivalent to an independently constructed author inference instance. Canonical initial pose/velocity remain fixed.",
+        "output": "Author gain/scaling constants without decimal truncation; float32 motor-target assignment; no additional action clipping. Native PD torque and canonical actuator limits remain kernel-owned.",
+        "legacy": "The unranked216 adapter/result is not reused. All264 benchmark results require fresh full-suite runs."
+      },
+      "inference_validation_platforms": {
+        "macOS": "validation/native-parity.json",
+        "Linux": "validation/native-parity-linux.json"
+      },
+      "checkpoint_architecture": "Released 264 ONNX: 136-input feed-forward MLP, hidden widths 2048/1024/512, 29-action output. See validation/checkpoint-graph.json. Scores do not apply to the separate 216_trans Transformer checkpoint."
+    },
+    "repository_available": true,
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ]
+  },
+  "omnixtreme": {
+    "organization": "BIGAI / Unitree & collaborators",
+    "organization_source": "https://extreme-humanoid.github.io/",
+    "display_name": "OmniXtreme",
+    "family": "omnixtreme",
+    "version": "Author release \u00b7 6f2716d",
+    "version_kind": "author checkpoint",
+    "version_source": "https://github.com/Perkins729/OmniXtreme/tree/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy",
+    "project_url": "https://extreme-humanoid.github.io/",
+    "description": "General motion tracker combining the released flow-matching base policy, residual controller and forward-kinematics model.",
+    "controller_type": {
+      "id": "flow",
+      "label": "Flow",
+      "description": "Flow-matching base policy with a residual controller and native motor-target limits.",
+      "source": "https://extreme-humanoid.github.io/#method"
+    },
+    "runtime": {
+      "id": "omnixtreme",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        0.0,
+        0.02
+      ],
+      "reference_history_s": 0.0,
+      "reference_preview_s": 0.02,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "ac2c390c351ca3de88e637fe794cfa25281284b34a2eae748235620768396ed5",
+      "weights": "checkpoints/base_policy_trt.onnx",
+      "weights_sha256": "b050772c0b49c813f457cdf21bb3e4f23a027e2e22c5279ab23423ea264007e2",
+      "weights_url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/base_policy_trt.onnx",
+      "source_repository": "https://github.com/Perkins729/OmniXtreme",
+      "source_commit": "6f2716d1b1d1132d513d86beb2193f5b18f11fcd",
+      "artifacts": {
+        "fk": {
+          "path": "checkpoints/fk_trt.onnx",
+          "url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/fk_trt.onnx",
+          "sha256": "16c1c04d431a15964db422180039c2d0fb688eeb246d0bdbc041de9a25d756ef"
+        },
+        "residual": {
+          "path": "checkpoints/residual_policy.onnx",
+          "url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/residual_policy.onnx",
+          "sha256": "6174205a430b84ec51d3f15e014907504a9ad0c38575535a509bc771ebbc1d85"
+        }
+      },
+      "official": false
+    },
+    "provenance": {
+      "model": "omnixtreme",
+      "display_name": "OmniXtreme",
+      "submitter": "MotionChallenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/Perkins729/OmniXtreme",
+      "project_url": "https://extreme-humanoid.github.io/",
+      "source_commit": "6f2716d1b1d1132d513d86beb2193f5b18f11fcd",
+      "checkpoint_sha256": "b050772c0b49c813f457cdf21bb3e4f23a027e2e22c5279ab23423ea264007e2",
+      "author_inference_review": "Passed 160 states, 4 resets, 24 endpoint clamps and shuffled joint order; all observed inputs, outputs and motor targets exactly equal to original inference under the same sampled initial_noise and nominal sensor state. 126 cases exercised native target limits.",
+      "inference_validation": "validation/native-parity.json",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/Perkins729/OmniXtreme/blob/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/README.md",
+        "author_release_label": "OmniXtreme authors",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://github.com/Perkins729/OmniXtreme/tree/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy",
+        "original_filename": "base_policy_trt.onnx + residual_policy.onnx + fk_trt.onnx",
+        "download_url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/base_policy_trt.onnx",
+        "sha256": "b050772c0b49c813f457cdf21bb3e4f23a027e2e22c5279ab23423ea264007e2",
+        "verification": "All three original ONNX files match pinned Git blob SHA1 and local SHA256; no conversion.",
+        "artifacts": [
+          {
+            "path": "policy/base_policy_trt.onnx",
+            "bytes": 101872427,
+            "git_blob_sha1": "f0aaf542932def091ffefd15947b3cdf5e448452",
+            "sha256": "b050772c0b49c813f457cdf21bb3e4f23a027e2e22c5279ab23423ea264007e2",
+            "url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/base_policy_trt.onnx"
+          },
+          {
+            "path": "policy/fk_trt.onnx",
+            "bytes": 40618,
+            "git_blob_sha1": "df1aaa38ee38ff0694537cc2ccfc7ea37adf69db",
+            "sha256": "16c1c04d431a15964db422180039c2d0fb688eeb246d0bdbc041de9a25d756ef",
+            "url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/fk_trt.onnx"
+          },
+          {
+            "path": "policy/residual_policy.onnx",
+            "bytes": 3555934,
+            "git_blob_sha1": "48e34f42c7c0685be3a2bcfe8f5a750e4175e842",
+            "sha256": "6174205a430b84ec51d3f15e014907504a9ad0c38575535a509bc771ebbc1d85",
+            "url": "https://raw.githubusercontent.com/Perkins729/OmniXtreme/6f2716d1b1d1132d513d86beb2193f5b18f11fcd/policy/residual_policy.onnx"
+          }
+        ]
+      },
+      "deployment": {
+        "history": "15x90 oldest-first zero initial history; base history uses previous base action; residual input uses previous combined action.",
+        "reference": "Next control frame, t+0.02 s; final canonical frame clamped. Reference frame zero initializes heading registration.",
+        "architecture": "Original flow base + residual (gain1, no tanh) + original FK; float32 CPU ONNX, named joint mapping and native torque-speed envelope target clipping.",
+        "randomness": "Per-clip Core seed initializes a dedicated CPU torch.Generator. Standard-normal initial_noise retained. Random warm-up and unused zero-amplitude sensor random draws are not replayed. Conditional native parity uses identical noise. No deterministic zero-noise replacement.",
+        "sensor_noise": "Nominal protocol requires no sensor noise; author config base_ang_vel noise0.1 is disabled explicitly.",
+        "physics": "Author pd_control_friction, simulator XML, initial height0.79 and action delay belong to the author simulator, not the learned policy. They do not override common Core initialization, dynamics, friction, motor limits or failure/scoring rules.",
+        "target_filter": "Native target envelope is computed at the control tick and retained; normal PD torque computation at physics ticks remains in Core."
+      }
+    },
+    "repository_available": true,
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-omnixtreme",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "icon": null,
+    "icon_label": "O",
+    "icon_source": null
   }
 }

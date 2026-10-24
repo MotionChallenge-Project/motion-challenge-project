@@ -4,24 +4,6 @@
   "selection": "Prioritize independent controller families and representative institutions. Count checkpoint versions separately from model families.",
   "entries": [
     {
-      "name": "OmniXtreme",
-      "status": "Evaluation running",
-      "gap": "Three author ONNX components and native inference comparison passed; full-suite evaluation and repeat remain incomplete.",
-      "next_step": "Finish both complete runs, trace verification and source checks.",
-      "author_source": "https://extreme-humanoid.github.io/",
-      "checked": "2026-10-24",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-omnixtreme"
-    },
-    {
-      "name": "Humanoid-GPT",
-      "status": "Full evaluation running",
-      "gap": "The author-recommended 264 checkpoint, EMA reference preprocessing and 5010 reference kinematics passed the 160-case native inference comparison on macOS and Linux. Complete LAFAN40 evaluation and its independent repeat are still running.",
-      "next_step": "Verify complete trajectories, numerical stability and repeatability before publishing a score.",
-      "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/tree/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
-      "checked": "2026-10-24",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt"
-    },
-    {
       "name": "YAHMP",
       "status": "Inference contract unresolved",
       "gap": "The inspected training and viewer implementations differ in history timing and angular-velocity frame. Viewer parity alone does not resolve this discrepancy.",
@@ -99,6 +81,14 @@
       "gap": "The existing converted artifact came from a shared deployment archive; its original-to-export equivalence chain is incomplete.",
       "next_step": "Reproduce conversion from the author checkpoint and compare inference.",
       "author_source": "https://github.com/zengweishuai/ScaleBFM/tree/abd6f17c02fe0baabc14709feb8d9ea4959aa621",
+      "checked": "2026-10-24"
+    },
+    {
+      "name": "Humanoid-GPT Transformer 216",
+      "status": "Released checkpoint adaptation pending",
+      "gap": "The author also publishes pns_wo_priv216_trans.onnx (42,977,083 bytes). Its temporal inference contract and complete-suite behavior have not been verified here. Ranked 264 results belong to a different feed-forward checkpoint.",
+      "next_step": "Audit the released Transformer inference and state/reset semantics before a separate full evaluation.",
+      "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
       "checked": "2026-10-24"
     }
   ]
