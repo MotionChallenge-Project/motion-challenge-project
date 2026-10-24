@@ -4,24 +4,6 @@
   "selection": "Models without released general-purpose checkpoints are outside the current coverage.",
   "entries": [
     {
-      "model": "teleopit",
-      "name": "TeleopIT G1",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://botrunner64.github.io/teleopit-page/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-teleopit"
-    },
-    {
-      "model": "sonic-v1-1",
-      "name": "SONIC v1.1",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://nvlabs.github.io/GEAR-SONIC/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-v1-1"
-    },
-    {
       "model": "sonic-low-latency",
       "name": "SONIC Low-Latency",
       "status": "Full evaluation pending",
@@ -92,15 +74,6 @@
       "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
       "author_source": "https://acodedog.github.io/perceptive-bfm/",
       "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-add"
-    },
-    {
-      "model": "sonic-original",
-      "name": "SONIC Original",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://nvlabs.github.io/GEAR-SONIC/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-original"
     },
     {
       "model": "textop",

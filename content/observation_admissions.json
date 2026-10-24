@@ -805,7 +805,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "b8797de45fb5c6b96d42256fb2e86359d164a5b9"
+      "published_adapter_commit": "b8797de45fb5c6b96d42256fb2e86359d164a5b9",
+      "evaluation_progress": "accepted"
     },
     "sonic-original": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -856,7 +857,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "42e6b31773199df1d671ed6040655d1a2885b4a4"
+      "published_adapter_commit": "42e6b31773199df1d671ed6040655d1a2885b4a4",
+      "evaluation_progress": "accepted"
     },
     "sonic-low-latency": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -956,7 +958,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "e269d6b11420170ec4bd0107734bd66cc102a87d"
+      "published_adapter_commit": "e269d6b11420170ec4bd0107734bd66cc102a87d",
+      "evaluation_progress": "accepted"
     },
     "ufo": {
       "schema": "MotionChallenge/observation-admission-v1",
