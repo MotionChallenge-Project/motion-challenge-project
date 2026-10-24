@@ -67,24 +67,6 @@
       "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-textop"
     },
     {
-      "model": "holomotion-v2-0-0",
-      "name": "HoloMotion v2.0.0",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://horizonrobotics.github.io/robot_lab/holomotion/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v2-0-0"
-    },
-    {
-      "model": "mosaic",
-      "name": "MOSAIC GMT",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://baai-humanoid.github.io/MOSAIC/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic"
-    },
-    {
       "model": "humanoid-gpt",
       "name": "Humanoid-GPT 264",
       "status": "Requires author deployment validation",
@@ -110,15 +92,6 @@
       "next_step": "Resolve the recorded author deployment and input-contract gap before evaluation.",
       "author_source": "https://qizekun.github.io/Humanoid-GPT/",
       "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216"
-    },
-    {
-      "model": "holomotion-v1-3-1",
-      "name": "HoloMotion v1.3.1",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://horizonrobotics.github.io/robot_lab/holomotion/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-1"
     },
     {
       "model": "scalebfm-m",

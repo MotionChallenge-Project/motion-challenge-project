@@ -1171,7 +1171,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "35338d961e6076920062a7f0e2be0e31f42c4552"
+      "published_adapter_commit": "35338d961e6076920062a7f0e2be0e31f42c4552",
+      "evaluation_progress": "accepted"
     },
     "humanoid-gpt-transformer-216": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1266,7 +1267,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "94e1566d606eb143ea01fb8a2b74029044b4ae9b"
+      "published_adapter_commit": "94e1566d606eb143ea01fb8a2b74029044b4ae9b",
+      "evaluation_progress": "accepted"
     },
     "scalebfm-m": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1443,7 +1445,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "c976ee5786fbb89fba71dfd8114137833d3e260b"
+      "published_adapter_commit": "c976ee5786fbb89fba71dfd8114137833d3e260b",
+      "evaluation_progress": "accepted"
     }
   }
 }
