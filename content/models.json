@@ -545,7 +545,7 @@
     "organization": "GRIT Team",
     "organization_source": "https://github.com/mrzuang/GRIT_teleop_deploy",
     "runtime": {
-      "id": "grit-g1-development-v1",
+      "id": "grit-g1-v1",
       "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
@@ -597,15 +597,17 @@
           ]
         }
       },
-      "provenance_status": "native-source inference parity passed",
+      "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
       "official": false,
       "source_repository": "https://github.com/mrzuang/GRIT_teleop_deploy",
       "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
       "weights_url": "https://raw.githubusercontent.com/mrzuang/GRIT_teleop_deploy/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.onnx",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "5ea892ff2f3bf34e55c37e8c825bfd83c96aabaddeddb6b01b472c81991cb62b"
-      }
+        "admission_sha256": "acea0f7a179349ce5dfaf0ca743ff40ef4e2b629cc8a9ac27e6ddad87f47b0fc"
+      },
+      "array_batch_entrypoint": "batch_adapter:create",
+      "inference_batch_size": 64
     },
     "provenance": {
       "model": "grit",
@@ -654,7 +656,8 @@
     },
     "icon": null,
     "icon_label": "G",
-    "icon_source": null
+    "icon_source": null,
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-grit"
   },
   "heft": {
     "organization": "Tsinghua / RobotEra / SQZ",

@@ -194,7 +194,8 @@
         "sha256": "79655975e0950d31cf0b4ad4bff28daf74268d27d21095bd8b58a74324b86f0f",
         "handling": "Same author observations, reset history and raw-action history; one ONNX batch call with independent slot state. Engine-specific batching remains in this adapter."
       },
-      "published_adapter_commit": "94197c9c4c47afea93089fda715e3a42c9b38c3f"
+      "published_adapter_commit": "94197c9c4c47afea93089fda715e3a42c9b38c3f",
+      "evaluation_progress": "accepted"
     },
     "holomotion-v1-3-2": {
       "schema": "MotionChallenge/observation-admission-v1",
