@@ -1,28 +1,77 @@
-"""Observation rules and per-weight admission, separate from score acceptance."""
-import html,json
+"""Visual policy summary with expandable exact-weight evidence."""
+import html
+import json
 
-def esc(v):return html.escape(str(v),quote=True)
-LABELS={'inference_verified':'Inference verified · fresh evaluation pending',
- 'pending_verification':'Input verification pending',
- 'requires_author_deployment_validation':'Author deployment path pending',
- 'incompatible_input_contract':'Not eligible with the current inference path'}
 
-def render(content,models,page,intro):
- data=json.loads((content/'observation_admissions.json').read_text())
- records=data['models'];assert set(records)==set(models)
- core='https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/'+data['core_commit']
- body=intro('POLICY ADMISSION','Policy admission','Checkpoint, inference and observation requirements for ranking. Every decision is recorded for an exact model version.')
- body+='<section class="section docs"><h2>Requirements for ranking</h2><ol><li><strong>Released general controller.</strong> A publicly available, traceable checkpoint capable of accepting different reference motions. Use the same weights for the complete suite; single-motion checkpoints do not qualify. Pin author source and all weight hashes, including auxiliary encoders. Any conversion must have numerical equivalence evidence.</li><li><strong>Faithful inference.</strong> Preserve the author-supported input construction, joint order, control clock, normalization, history/reset, recurrent state and action processing. Disclose benchmark adaptations and demonstrate consistency for this exact checkpoint.</li><li><strong>Declared observation access.</strong> Follow the selected track’s permitted inputs throughout initialization, preprocessing, reset and inference. The restricted-track rules below apply to every adapter; model-specific handling is listed separately.</li><li><strong>Complete and reproducible evaluation.</strong> Public adapter code, pinned Core and dependency lock; the complete selected suite (all 40 motions for LAFAN40), from first frame to endpoint; independent trace verification and a repeated complete run. New protocols require fresh scores. Record failures and retain difficult motions.</li></ol><p>Disclose known training-data overlap. Admission is based on a supported, auditable evaluation path, not a minimum success rate or tracking-accuracy threshold. These are maintainer reproductions unless explicitly identified as author submissions.</p><h2>Restricted observation track</h2><p><strong>Contract:</strong> <code>ideal-proprioceptive-no-position-v1</code>. Noise-free inputs; physics, references, reset, failure conditions and all six tracking-error views remain unchanged. Existing privileged-state scores stay in their original track. No previous score is copied into this track.</p>'
- body+='<div class="actions"><a class="button" href="'+core+'/docs/OBSERVATIONS.md">Frozen rules ↗</a><a class="text-link" href="/benchmarks/lafan40/?track=lafan40-g1-ideal-proprioception-v1">LAFAN40 conditions ↗</a><a class="text-link" href="/data/observation-admissions.json">Per-checkpoint records (JSON) ↓</a></div>'
- body+='<h2>Permitted inputs</h2><ul><li>Joint angles and velocities; full root orientation, including yaw.</li><li>Ideal linear and angular velocity at the root body origin, expressed in world axes.</li><li>Gravity projection and local forward kinematics derived from those inputs and fixed robot geometry.</li><li>Reference motion, including world coordinates, velocities and the declared history/future window.</li><li>Previous actions and author-native proprioceptive or recurrent history.</li></ul>'
- body+='<h2>Excluded information</h2><p>Actual global root XYZ, including height; actual global body positions; contact flags, forces and impulses; actual-position tracking errors; explicit velocity integration into displacement, odometry and root-position estimators. These restrictions also apply to initialization, reset, history caches, reference alignment and preprocessing.</p>'
- body+='<h2>Special handling</h2><p>Local FK or a synthetic fixed origin must preserve the released inference numerically, or implement a documented author deployment path for the exact checkpoint. Reference-only anchoring must be disclosed. A required actor input cannot simply be zeroed to obtain admission. Training critic or reward privilege does not determine deployment eligibility.</p><p>The Core removes forbidden fields before reset and action messages reach the adapter. Source audit, input-dependency tests, author inference comparison and a fresh complete verified evaluation are separate checks. Native recurrent state is permitted; this rule does not prove that a network never implicitly infers displacement. Ideal inputs do not establish real-world sensor feasibility.</p></section>'
- body+='<section class="section"><h2>'+str(len(records))+' checkpoint decisions</h2><p class="small">Status describes this observation track only. A pending or ineligible checkpoint retains its original, explicitly privileged-state result.</p>'
- for key,model in models.items():
-  row=records[key];assert row['checkpoint_sha256']==model['runtime']['weights_sha256']
-  url=row['repository']+'/blob/'+row['published_adapter_commit']+'/admission.json'
-  status=LABELS[row['status']]
-  if row.get('evaluation_progress')=='accepted':status='Admitted · fresh full-suite and repeat verified'
-  body+='<article class="admission-record" id="'+esc(key)+'"><h3><a href="/models/'+esc(key)+'/">'+esc(model['display_name'])+'</a></h3><p class="small"><strong>'+esc(status)+'</strong> · SHA256 <code>'+esc(row['checkpoint_sha256'][:12])+'…</code></p><p>'+esc(row['handling'])+'</p><a class="text-link" href="'+esc(url)+'">Exact weight, source and decision ↗</a></article>'
- body+='</section>'
- page('/admission/','Policy admission',body,'Admission')
+def esc(value):
+    return html.escape(str(value), quote=True)
+
+
+LABELS = {
+    'inference_verified': 'Input verified · evaluation pending',
+    'pending_verification': 'Input check pending',
+    'requires_author_deployment_validation': 'Author deployment check pending',
+    'incompatible_input_contract': 'Ineligible with current inputs',
+}
+OBSERVATIONS = [
+    ('Joint state, full root orientation (including yaw), angular velocity and gravity', True),
+    ('Base linear velocity, including ideal noise-free velocity', True),
+    ('Local body positions and orientations from forward kinematics (FK)', True),
+    ('Reference motion, world trajectory and future frames', True),
+    ('Native proprioceptive history, past actions and recurrent memory', True),
+    ('Actual root or body world positions, including actual height', False),
+    ('Actual contacts, forces and impulses', False),
+    ('Tracking errors derived from actual world position', False),
+    ('Velocity integration, odometry or explicit global-position estimators', False),
+]
+
+
+def render(content, models, page, intro):
+    data = json.loads((content / 'observation_admissions.json').read_text())
+    records = data['models']
+    assert set(records) == set(models)
+    core = 'https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/' + data['core_commit']
+    body = intro('POLICY ADMISSION', 'Policy admission',
+                 'Which policies qualify, and what they may observe.')
+    body += '''<div class="policy-content docs">
+<section><div class="rule-cards admission-cards">
+<article><span class="card-symbol" aria-hidden="true">01</span><h2>Public checkpoint</h2><p>General controller · one set of weights for the complete suite.</p></article>
+<article><span class="card-symbol" aria-hidden="true">02</span><h2>Faithful inference</h2><p>Author-consistent inputs, history, timing and actions.</p></article>
+<article><span class="card-symbol" aria-hidden="true">03</span><h2>Permitted inputs</h2><p>Track rules apply to reset, preprocessing and inference.</p></article>
+<article><span class="card-symbol" aria-hidden="true">04</span><h2>Verified results</h2><p>Public code · complete suite · trace checks · repeated run.</p></article>
+</div><p class="small">Disclose adaptations and training-data overlap. No minimum score is required; single-motion checkpoints do not qualify.</p></section>
+<section id="observations"><h2>Restricted observation track</h2>
+<p>Ideal proprioception, without actual world-position or contact feedback.</p>'''
+    body += ('<div class="actions"><a class="button" href="' + core + '/docs/OBSERVATIONS.md">Frozen rules ↗</a>'
+             '<a class="text-link" href="/benchmarks/lafan40/?track=lafan40-g1-ideal-proprioception-v1">LAFAN40 conditions ↗</a></div>')
+    body += '<table class="rules-table observation-table"><thead><tr><th scope="col">Input or computation</th><th scope="col">Allowed</th></tr></thead><tbody>'
+    for label, allowed in OBSERVATIONS:
+        kind, symbol, text = ('allowed', '✓', 'Allowed') if allowed else ('excluded', '×', 'Not allowed')
+        body += ('<tr><td>' + esc(label) + '</td><td><span class="rule-verdict rule-' + kind
+                 + '" aria-label="' + text + '">' + symbol + '</span></td></tr>')
+    body += '''</tbody></table>
+<div class="rule-callout"><strong>Special handling</strong><p>Fixed origins, local FK and reference-only alignment require a validated author-supported path for the exact checkpoint. Arbitrary input zeroing is not accepted.</p></div>
+<p class="small">Root velocities use world axes at the body origin. Rules cover initialization and history. Complete definitions and limitations are in the frozen rules.</p></section>'''
+    body += ('<section id="checkpoints"><div class="section-heading"><h2>' + str(len(records))
+             + ' checkpoint decisions</h2><a class="text-link" href="/data/observation-admissions.json">JSON ↓</a></div>'
+             '<p class="small">For this track. Expand a model for its handling and evidence.</p>')
+    for key, model in models.items():
+        row = records[key]
+        assert row['checkpoint_sha256'] == model['runtime']['weights_sha256']
+        url = row['repository'] + '/blob/' + row['published_adapter_commit'] + '/admission.json'
+        status = LABELS[row['status']]
+        kind = 'pending'
+        if row['status'] == 'incompatible_input_contract':
+            kind = 'ineligible'
+        if row.get('evaluation_progress') == 'accepted':
+            status, kind = 'Admitted · full evaluation verified', 'accepted'
+        body += ('<details class="admission-record" id="' + esc(key) + '"><summary>'
+                 '<span class="admission-model">' + esc(model['display_name']) + '</span>'
+                 '<span class="admission-status status-' + kind + '">' + esc(status) + '</span></summary><div>'
+                 '<p>' + esc(row['handling']) + '</p><p class="small">SHA256 <code>'
+                 + esc(row['checkpoint_sha256']) + '</code></p><div class="actions">'
+                 '<a class="text-link" href="/models/' + esc(key) + '/">Model card ↗</a>'
+                 '<a class="text-link" href="' + esc(url) + '">Weight, source &amp; evidence ↗</a>'
+                 '</div></div></details>')
+    body += '</section></div>'
+    page('/admission/', 'Policy admission', body, 'Admission')
