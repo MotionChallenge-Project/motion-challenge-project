@@ -2742,8 +2742,8 @@
     },
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-scalebfm-m",
     "version_source": "https://huggingface.co/WeishuaiZeng/ScaleBFM/blob/2eec74e0f326076a706702654168efc489ef604a/checkpoint/humanoid_transformer_m/model_22200.pt",
-    "icon": null,
-    "icon_label": "S",
-    "icon_source": null
+    "icon": "/assets/model-icons/shanghai-ai-lab.webp",
+    "icon_label": "Shanghai AI Lab",
+    "icon_source": "https://www.shlab.org.cn/aboutus"
   }
 }

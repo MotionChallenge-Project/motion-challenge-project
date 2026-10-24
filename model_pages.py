@@ -64,9 +64,10 @@ def evaluation_record(results, track, key, content, github):
         common += [('Evaluated adapter', link(unified['adapter_code_url'], unified['adapter_commit'])),
                    ('Evaluated core', link(unified['core_code_url'], unified['core_commit'])),
                    ('Verification', 'Both trajectory ranges recomputed · repeatability checked')]
-        check = json.loads((content/'inference_checks.json').read_text())['models'][key]
+        catalog = json.loads((content/'inference_checks.json').read_text())
+        check = catalog.get('tracks',{}).get(track['id'],{}).get(key,catalog['models'][key])
         report = json.loads((content/'inference'/check['report_file']).read_text())
-        common.append(('Author inference comparison',
+        common.append((check.get('label','Author inference comparison'),
                        f'{report["cases"]} inputs · {report["resets"]} resets · '
                        + link(check['report_url'], 'Report ↗') + ' · '
                        + link(check['code_url'], 'Comparison code ↗')))
@@ -162,7 +163,7 @@ def render(models, rows, tracks, content, github, page, intro):
             ('Output interface', esc(rt.get('action_mode', 'See runtime contract'))),
             ('Configuration', link(repo + '/blob/main/' + rt['inference_config'], rt['inference_config'])),
         ]) + '</section>'
-        detail += '<p class="small"><a href="/admission/#'+esc(key)+'">Observation admission &amp; model-specific handling →</a></p>'
+        detail += '<p class="small"><a href="/admission/#'+esc(key)+'">Policy admission &amp; model-specific handling →</a></p>'
         related = [(track_by_id[tid], evaluation_path(tid, key)) for tid, mid in groups if mid == key]
         detail += '<section class="section model-evaluations"><h2>Evaluations</h2>'
         if related:

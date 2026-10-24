@@ -104,7 +104,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "2125da72a4e5576d19657de595e0ab2c2dbc98ef"
+      "published_adapter_commit": "2125da72a4e5576d19657de595e0ab2c2dbc98ef",
+      "evaluation_progress": "accepted"
     },
     "holomotion": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1081,15 +1082,33 @@
       "prior_native_parity_sha256": {
         "validation/native-parity.json": "29d098ba1dbedd3361424addc4d970091511e48b7c9e98402aa3ef8b63151f61"
       },
-      "handling": "Current adapter subtracts actual root XYZ from future reference. Author hardware controller supplies a fixed zero position; exact released ONNX and the complete reference/lock-XY preprocessing need validation before switching paths.",
+      "handling": "Current simulation adapter uses actual position feedback. The pinned author hardware code sets odometry position to zero AND unconditionally zeros all 15 future position-error entries, with a separate initial-heading reference transform. This is not equivalent to merely setting our root position to zero. Verify the hardware policy file against this exact latest.onnx SHA and compare the complete C++ observation/reset/action path before admission.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "Current adapter subtracts actual root XYZ from future reference. Author hardware controller supplies a fixed zero position; exact released ONNX and the complete reference/lock-XY preprocessing need validation before switching paths.",
+      "special_handling": "Current simulation adapter uses actual position feedback. The pinned author hardware code sets odometry position to zero AND unconditionally zeros all 15 future position-error entries, with a separate initial-heading reference transform. This is not equivalent to merely setting our root position to zero. Verify the hardware policy file against this exact latest.onnx SHA and compare the complete C++ observation/reset/action path before admission.",
       "new_evaluation": {
         "status": "not_started",
         "inherited_scores": false
       },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-textop",
-      "published_adapter_commit": "bcacb43eda64283c8d2688bf8e1c5a2b00b0855c"
+      "additional_source_evidence": [
+        {
+          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/src/onnx_controller.cpp",
+          "sha256": "ba97b73629c8c88c92d202004ace0080a05a73407d6adf159e82df8f948c5e6d"
+        },
+        {
+          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/src/observation_computer.cpp",
+          "sha256": "a65fad0b4920d2e9357449e1f56b7aab90019c41488a45fa8ee4f8a21d0c9503"
+        },
+        {
+          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/src/motion_loader.cpp",
+          "sha256": "28ce152a53acd21730f5114cac2878755d8b7251c2249cd024489553776f7f62"
+        },
+        {
+          "url": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/TextOpDeploy/src/textop_ctrl/src/onnx_policy.cpp",
+          "sha256": "faf1bb99848a7e9bd24e08ef5de6dbf91ea206e1b09ec455447f79dc28079d4d"
+        }
+      ],
+      "published_adapter_commit": "fdbcaf8a3d39fd1f67dea9037ccfe8306d9206a7"
     },
     "holomotion-v2-0-0": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1185,49 +1204,6 @@
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt-transformer-216",
       "published_adapter_commit": "8aaca7d8c5e6e74d999b947222fffda1a2ad6eed"
     },
-    "mosaic": {
-      "schema": "MotionChallenge/observation-admission-v1",
-      "model": "mosaic",
-      "display_name": "MOSAIC GMT",
-      "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "pending_verification",
-      "checkpoint_sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
-      "auxiliary_artifacts": {},
-      "checkpoint_origin": {
-        "author_release_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/blob/2ab795d7420cf339bb803bfb145c18faf8137cb8/README.md",
-        "author_release_label": "MOSAIC authors",
-        "kind": "author_file",
-        "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/blob/2ab795d7420cf339bb803bfb145c18faf8137cb8/gmt.onnx",
-        "original_filename": "gmt.onnx",
-        "download_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/resolve/2ab795d7420cf339bb803bfb145c18faf8137cb8/gmt.onnx",
-        "sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
-        "verification": "Original general tracking ONNX; no conversion or fine-tuning.",
-        "bytes": 10020730
-      },
-      "author_source": "https://github.com/BAAI-Humanoid/MOSAIC",
-      "author_commit": "175287dd559c098d21b287a8a27c6bb48d4606ff",
-      "base_adapter_commit": "96799316f18f4e71cc5834a2f0eb7b8006dcb759",
-      "production_source_sha256": {
-        "adapter.py": "f760474840f7b9b8880aa9fdd710d75698e91e17544a46a0370ca736fff04fb9",
-        "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
-        "native-sources.json": "09105614980977309dc2bdf6bbae4ad05dec817bb429989c41e15988ddb607e5",
-        "policy.json": "66f14dc44b8f1560ead737acfeb848fe605fa2772c772cb66f53ca61dc1e55e4",
-        "validate_inference.py": "d1f330ff6c76dd44a83d9210e0d1ff4aa4bff42f2f69fcc291485df0b2d05cd5"
-      },
-      "prior_native_parity_sha256": {
-        "validation/native-parity.json": "26498323ebc75fffa5dc875f2945819164b70b60aa3588b45fd5a36536e298df"
-      },
-      "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
-      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-      "new_evaluation": {
-        "status": "not_started",
-        "inherited_scores": false
-      },
-      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic",
-      "published_adapter_commit": "f6001aa9015b08f05b785c16da4e2a45de8e131d"
-    },
     "holomotion-v1-3-1": {
       "schema": "MotionChallenge/observation-admission-v1",
       "model": "holomotion-v1-3-1",
@@ -1278,12 +1254,63 @@
       },
       "published_adapter_commit": "94e1566d606eb143ea01fb8a2b74029044b4ae9b"
     },
+    "scalebfm-m": {
+      "schema": "MotionChallenge/observation-admission-v1",
+      "model": "scalebfm-m",
+      "display_name": "ScaleBFM M",
+      "state_access": "ideal-proprioceptive-no-position-v1",
+      "status": "requires_author_deployment_validation",
+      "checkpoint_sha256": "88d5a79946c03ed25503f48b2af71d16290844ef066ca9b6c8fa8dc3837422e3",
+      "auxiliary_artifacts": {
+        "network": "0f09be3a6c5a7396ef7f28ea8a5365b9c723bb896eb4da71cc8809c840dccdec",
+        "export": "cc95d2b63a211219b4e5f6911b6bf790c7a33754b81fc293c7f51c3b5e007154",
+        "robot": "3773fff8e969da20c9c76ad82666a08877be04f94676911d913f33e981149f4c",
+        "metadata": "3024f18136314fade2676e22d6eafb1a8b2befa388da55b0885a53fcb1368d16",
+        "mode_table": "fca11f2399bced32517b51c7f9dcf13c97117ca469b0b32e207d8f7d664fbde9"
+      },
+      "checkpoint_origin": {
+        "author_release_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM",
+        "author_release_label": "Official ScaleBFM Hugging Face release",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM/blob/2eec74e0f326076a706702654168efc489ef604a/checkpoint/humanoid_transformer_m/model_22200.pt",
+        "download_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM/resolve/2eec74e0f326076a706702654168efc489ef604a/checkpoint/humanoid_transformer_m/model_22200.pt",
+        "original_filename": "checkpoint/humanoid_transformer_m/model_22200.pt",
+        "sha256": "88d5a79946c03ed25503f48b2af71d16290844ef066ca9b6c8fa8dc3837422e3",
+        "bytes": 72856655,
+        "verification": "Original raw PyTorch M checkpoint, strict actor/task-embedder loading. No conversion or modified weights; unrelated shared ONNX is not used."
+      },
+      "author_source": "https://github.com/zengweishuai/ScaleBFM",
+      "author_commit": "abd6f17c02fe0baabc14709feb8d9ea4959aa621",
+      "base_adapter_commit": "375672f236cce78802eee4855fe8f6333081f421",
+      "production_source_sha256": {
+        "adapter.py": "94a000b869028d9bd9f068702481661fca93d67eb755368d605d20a538c247a7",
+        "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+        "native-sources.json": "830d97f529e02ce8ac5e0e1c7c4a575999057e9d0a06cb7b705695fc1ae63a90",
+        "native_runtime.py": "30e7c4f8d91a97a823e5753332d3a193e60e7d9fafafcd23d502b5ec5d40e219",
+        "policy.json": "a8d4a72064e7e14a3889d28cf1f7a8d380501468f6d93cc2d9863b57f139e10f",
+        "validate_inference.py": "477e6bfa2e4a180895b2c6e2858123975142c4673af60ed5112f6d44ec3a1e7b"
+      },
+      "prior_native_parity_sha256": {
+        "validation/native-parity-linux.json": "641f765dd08dd763f994cb202814e9a961e263cd0853b938bac9a55bfa956f1f",
+        "validation/native-parity.json": "641f765dd08dd763f994cb202814e9a961e263cd0853b938bac9a55bfa956f1f"
+      },
+      "handling": "Author mode7/reference_forcing uses reference root after the first act, but initialization currently reads actual root. Need a same-weight, author-supported reference-only initialization path and full reset/history parity before admission.",
+      "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
+      "special_handling": "Author mode7/reference_forcing uses reference root after the first act, but initialization currently reads actual root. Need a same-weight, author-supported reference-only initialization path and full reset/history parity before admission.",
+      "new_evaluation": {
+        "status": "not_started",
+        "inherited_scores": false
+      },
+      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-scalebfm-m",
+      "published_adapter_commit": "173f3bd4654244dfb8445cb76d20ee753f9c61bc"
+    },
     "omnixtreme": {
       "schema": "MotionChallenge/observation-admission-v1",
       "model": "omnixtreme",
       "display_name": "OmniXtreme",
       "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "pending_verification",
+      "status": "inference_verified",
       "checkpoint_sha256": "b050772c0b49c813f457cdf21bb3e4f23a027e2e22c5279ab23423ea264007e2",
       "auxiliary_artifacts": {
         "fk": "16c1c04d431a15964db422180039c2d0fb688eeb246d0bdbc041de9a25d756ef",
@@ -1341,62 +1368,68 @@
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
       "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
       "new_evaluation": {
-        "status": "not_started",
+        "status": "queued",
         "inherited_scores": false
       },
       "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-omnixtreme",
-      "published_adapter_commit": "e4ca84c33e5abfd23959ad523b2d93b9773a2f51"
-    },
-    "scalebfm-m": {
-      "schema": "MotionChallenge/observation-admission-v1",
-      "model": "scalebfm-m",
-      "display_name": "ScaleBFM M",
-      "state_access": "ideal-proprioceptive-no-position-v1",
-      "status": "requires_author_deployment_validation",
-      "checkpoint_sha256": "88d5a79946c03ed25503f48b2af71d16290844ef066ca9b6c8fa8dc3837422e3",
-      "auxiliary_artifacts": {
-        "network": "0f09be3a6c5a7396ef7f28ea8a5365b9c723bb896eb4da71cc8809c840dccdec",
-        "export": "cc95d2b63a211219b4e5f6911b6bf790c7a33754b81fc293c7f51c3b5e007154",
-        "robot": "3773fff8e969da20c9c76ad82666a08877be04f94676911d913f33e981149f4c",
-        "metadata": "3024f18136314fade2676e22d6eafb1a8b2befa388da55b0885a53fcb1368d16",
-        "mode_table": "fca11f2399bced32517b51c7f9dcf13c97117ca469b0b32e207d8f7d664fbde9"
+      "dependency_test": {
+        "path": "validation/observation-access.json",
+        "sha256": "03794f522b1b79b3c6dac91c3e414c0d47b538959a66fef18c8992c70a305a0f",
+        "code": "validate_observations.py",
+        "cases": 160,
+        "resets": 4
       },
+      "published_adapter_commit": "043a67adaf412618dc694be74952f4e527fd942a"
+    },
+    "mosaic": {
+      "schema": "MotionChallenge/observation-admission-v1",
+      "model": "mosaic",
+      "display_name": "MOSAIC GMT",
+      "state_access": "ideal-proprioceptive-no-position-v1",
+      "status": "inference_verified",
+      "checkpoint_sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
+      "auxiliary_artifacts": {},
       "checkpoint_origin": {
-        "author_release_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM",
-        "author_release_label": "Official ScaleBFM Hugging Face release",
+        "author_release_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/blob/2ab795d7420cf339bb803bfb145c18faf8137cb8/README.md",
+        "author_release_label": "MOSAIC authors",
         "kind": "author_file",
         "kind_label": "Author-released checkpoint",
-        "artifact_page_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM/blob/2eec74e0f326076a706702654168efc489ef604a/checkpoint/humanoid_transformer_m/model_22200.pt",
-        "download_url": "https://huggingface.co/WeishuaiZeng/ScaleBFM/resolve/2eec74e0f326076a706702654168efc489ef604a/checkpoint/humanoid_transformer_m/model_22200.pt",
-        "original_filename": "checkpoint/humanoid_transformer_m/model_22200.pt",
-        "sha256": "88d5a79946c03ed25503f48b2af71d16290844ef066ca9b6c8fa8dc3837422e3",
-        "bytes": 72856655,
-        "verification": "Original raw PyTorch M checkpoint, strict actor/task-embedder loading. No conversion or modified weights; unrelated shared ONNX is not used."
+        "artifact_page_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/blob/2ab795d7420cf339bb803bfb145c18faf8137cb8/gmt.onnx",
+        "original_filename": "gmt.onnx",
+        "download_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/resolve/2ab795d7420cf339bb803bfb145c18faf8137cb8/gmt.onnx",
+        "sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
+        "verification": "Original general tracking ONNX; no conversion or fine-tuning.",
+        "bytes": 10020730
       },
-      "author_source": "https://github.com/zengweishuai/ScaleBFM",
-      "author_commit": "abd6f17c02fe0baabc14709feb8d9ea4959aa621",
-      "base_adapter_commit": "375672f236cce78802eee4855fe8f6333081f421",
+      "author_source": "https://github.com/BAAI-Humanoid/MOSAIC",
+      "author_commit": "175287dd559c098d21b287a8a27c6bb48d4606ff",
+      "base_adapter_commit": "96799316f18f4e71cc5834a2f0eb7b8006dcb759",
       "production_source_sha256": {
-        "adapter.py": "94a000b869028d9bd9f068702481661fca93d67eb755368d605d20a538c247a7",
+        "adapter.py": "f760474840f7b9b8880aa9fdd710d75698e91e17544a46a0370ca736fff04fb9",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
-        "native-sources.json": "830d97f529e02ce8ac5e0e1c7c4a575999057e9d0a06cb7b705695fc1ae63a90",
-        "native_runtime.py": "30e7c4f8d91a97a823e5753332d3a193e60e7d9fafafcd23d502b5ec5d40e219",
-        "policy.json": "a8d4a72064e7e14a3889d28cf1f7a8d380501468f6d93cc2d9863b57f139e10f",
-        "validate_inference.py": "477e6bfa2e4a180895b2c6e2858123975142c4673af60ed5112f6d44ec3a1e7b"
+        "native-sources.json": "09105614980977309dc2bdf6bbae4ad05dec817bb429989c41e15988ddb607e5",
+        "policy.json": "66f14dc44b8f1560ead737acfeb848fe605fa2772c772cb66f53ca61dc1e55e4",
+        "validate_inference.py": "d1f330ff6c76dd44a83d9210e0d1ff4aa4bff42f2f69fcc291485df0b2d05cd5"
       },
       "prior_native_parity_sha256": {
-        "validation/native-parity-linux.json": "641f765dd08dd763f994cb202814e9a961e263cd0853b938bac9a55bfa956f1f",
-        "validation/native-parity.json": "641f765dd08dd763f994cb202814e9a961e263cd0853b938bac9a55bfa956f1f"
+        "validation/native-parity.json": "26498323ebc75fffa5dc875f2945819164b70b60aa3588b45fd5a36536e298df"
       },
-      "handling": "Author mode7/reference_forcing uses reference root after the first act, but initialization currently reads actual root. Need a same-weight, author-supported reference-only initialization path and full reset/history parity before admission.",
+      "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
       "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-      "special_handling": "Author mode7/reference_forcing uses reference root after the first act, but initialization currently reads actual root. Need a same-weight, author-supported reference-only initialization path and full reset/history parity before admission.",
+      "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
       "new_evaluation": {
-        "status": "not_started",
+        "status": "queued",
         "inherited_scores": false
       },
-      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-scalebfm-m",
-      "published_adapter_commit": "173f3bd4654244dfb8445cb76d20ee753f9c61bc"
+      "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic",
+      "dependency_test": {
+        "path": "validation/observation-access.json",
+        "sha256": "4e361828f9be933d45a659d7b70349e4fd6bda13e15166695ca08f78a957a531",
+        "code": "validate_observations.py",
+        "cases": 160,
+        "resets": 4
+      },
+      "published_adapter_commit": "c976ee5786fbb89fba71dfd8114137833d3e260b"
     }
   }
 }

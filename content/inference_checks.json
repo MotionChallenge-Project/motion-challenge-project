@@ -556,5 +556,46 @@
       "production_inference_alignment": "identical",
       "limits": 2e-05
     }
+  },
+  "tracks": {
+    "lafan40-g1-ideal-proprioception-v1": {
+      "heft": {
+        "status": "passed",
+        "evaluated_adapter_commit": "2125da72a4e5576d19657de595e0ab2c2dbc98ef",
+        "checked_adapter_commit": "2125da72a4e5576d19657de595e0ab2c2dbc98ef",
+        "checkpoint_sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
+        "report_file": "heft.restricted.json",
+        "report_sha256": "c634d7efa655a376ed9f41374f522ced5f5fb3e9bbfef8308257f58da67a0823",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/2125da72a4e5576d19657de595e0ab2c2dbc98ef/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/2125da72a4e5576d19657de595e0ab2c2dbc98ef/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/2125da72a4e5576d19657de595e0ab2c2dbc98ef/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "6604e4815965d13ea248785deebde4632e9aa632",
+          "checked_adapter_commit": "b2929b81f2d6d4024a1cdaf18fb92cb9ea9cd398",
+          "checkpoint_sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
+          "report_file": "heft.json",
+          "report_sha256": "343f9df0b8c7e9254c31c627d27ed327f6a173c326f1a0b5e77dceb8f6de8f32",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/b2929b81f2d6d4024a1cdaf18fb92cb9ea9cd398/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/b2929b81f2d6d4024a1cdaf18fb92cb9ea9cd398/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/b2929b81f2d6d4024a1cdaf18fb92cb9ea9cd398/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "context": 0.0002,
+            "motion_command": 0.0002,
+            "target_motion": 0.0002,
+            "proprioception": 0.0002,
+            "network": 0.0,
+            "action": 0.0002,
+            "motor_target": 0.0002,
+            "synthetic_action_history": 0.0002,
+            "synthetic_motor_target": 0.0002
+          }
+        }
+      }
+    }
   }
 }

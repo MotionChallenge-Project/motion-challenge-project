@@ -39,6 +39,11 @@ def validate_inference(row, check, report):
 
 def validate_row(row, model, track, evidence):
     name=row['model']; result=evidence['result']; source=result['source']
+    require(result.get('state_access', 'privileged-state-v0') == track.get('state_access', 'privileged-state-v0'), name+': observation access')
+    if track.get('state_access') == 'ideal-proprioceptive-no-position-v1':
+        for scope, id_key, hash_key in [('until_first_failure','protocol_id','protocol_sha256'), ('full_motion','no_termination_protocol_id','no_termination_protocol_sha256')]:
+            require(result['protocols'][scope]['protocol_id']==track[id_key] and result['protocols'][scope]['protocol_sha256']==track[hash_key], name+': observation protocol identity')
+        validate_admission(row,evidence)
     require(evidence['model']==name, name+': wrong evidence')
     require(result['schema'] in ('MotionChallenge/unified-result-v1', 'motion-challenge/unified-result-v1') and
             result['status']=='trace_verified', name+': unverified result')
@@ -85,10 +90,30 @@ def validate_row(row, model, track, evidence):
             same_number(row[prefix+metric],value,name+': displayed '+prefix+metric)
 
 
+def validate_admission(row,evidence):
+    name=row['model'];source=evidence['result']['source']
+    admission=evidence['observation_admission']
+    digest=hashlib.sha256((json.dumps(admission,indent=2)+'\n').encode()).hexdigest()
+    require(digest==source['tracked_files_sha256']['admission.json'],name+': admission source hash')
+    require(admission['checkpoint_sha256']==row['checkpoint_sha256'] and admission['state_access']=='ideal-proprioceptive-no-position-v1' and admission['status']=='inference_verified',name+': admission identity')
+    for path,sha in admission['production_source_sha256'].items():
+        require(source['tracked_files_sha256'].get(path)==sha,name+': base inference source changed')
+    report=evidence['observation_dependency_report']
+    digest=hashlib.sha256((json.dumps(report,indent=2)+'\n').encode()).hexdigest()
+    require(digest==admission['dependency_test']['sha256']==source['tracked_files_sha256']['validation/observation-access.json'],name+': dependency report hash')
+    require(report['status']=='passed' and report['cases']>=160 and report['resets']>=4,name+': dependency test failed')
+    for value in report['max_abs_error'].values():
+        require(math.isfinite(value) and 0<=value<=report['tolerance_abs'],name+': restricted inference mismatch')
+    require(bool(admission['prior_native_parity_sha256']),name+': missing author comparison')
+    for path,sha in admission['prior_native_parity_sha256'].items():
+        require(source['tracked_files_sha256'].get(path)==sha,name+': author parity source changed')
+
+
 def validate(content, rows, models, tracks):
     by_id={t['id']:t for t in tracks};seen=set()
     require(set(models)=={r['model'] for r in rows}, 'Model cards and ranked models differ')
-    checks=json.loads((content/'inference_checks.json').read_text())['models']
+    catalog=json.loads((content/'inference_checks.json').read_text())
+    checks=catalog['models']
     require(set(checks)==set(models), 'Ranked models require inference checks')
     for row in rows:
         identity=(row['track_id'],row['model'])
@@ -97,7 +122,7 @@ def validate(content, rows, models, tracks):
         require(Path(filename).name==filename, 'Evidence must be a local JSON file')
         evidence=json.loads((content/'evidence'/filename).read_text())
         validate_row(row, models[row['model']], by_id[row['track_id']], evidence)
-        check=checks[row['model']]
+        check=catalog.get('tracks',{}).get(row['track_id'],{}).get(row['model'],checks[row['model']])
         require(Path(check['report_file']).name==check['report_file'], 'Inference report must be local')
         raw=(content/'inference'/check['report_file']).read_bytes()
         require(hashlib.sha256(raw).hexdigest()==check['report_sha256'], row['model']+': changed inference report')

@@ -46,3 +46,20 @@ class PublicationTests(unittest.TestCase):
         report['max_abs_error']['action']=1.0
         with self.assertRaisesRegex(ValueError,'inference error'):
             validate_inference(self.row,check,report)
+
+    def test_privileged_score_cannot_be_relabelled_as_restricted(self):
+        track=dict(self.tracks[0],state_access='ideal-proprioceptive-no-position-v1')
+        with self.assertRaisesRegex(ValueError,'observation access'):
+            validate_row(self.row,self.models['grit'],track,self.evidence)
+
+    def test_restricted_admission_and_protocol_are_bound_to_evidence(self):
+        row=next(r for r in self.rows if r['track_id']=='lafan40-g1-ideal-proprioception-v1')
+        evidence=json.loads((CONTENT/'evidence'/row['evidence_file']).read_text())
+        track=next(t for t in self.tracks if t['id']==row['track_id'])
+        altered=copy.deepcopy(evidence)
+        altered['observation_admission']['checkpoint_sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'admission source hash'):
+            validate_row(row,self.models[row['model']],track,altered)
+        altered_track=dict(track,protocol_sha256='0'*64)
+        with self.assertRaisesRegex(ValueError,'protocol identity'):
+            validate_row(row,self.models[row['model']],altered_track,evidence)

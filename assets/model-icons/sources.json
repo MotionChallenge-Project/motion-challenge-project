@@ -83,5 +83,12 @@
     "image_url": "https://www.bigai.ai/wp-content/uploads/2022/10/cropped-80x80-1-192x192.png",
     "sha256": "a6e6c65ea989757760118ffd69a7d0bb4b438882d047608854b21337b873b93d",
     "bytes": 11597
+  },
+  {
+    "file": "shanghai-ai-lab.webp",
+    "source": "https://www.shlab.org.cn/aboutus",
+    "image_url": "https://www.shlab.org.cn/static/img/logo_2.5957e86a.webp",
+    "sha256": "48ec3cea127dfa55e79b781e606be079ef19c495954a0c6cead1de5a9f838960",
+    "bytes": 45982
   }
 ]

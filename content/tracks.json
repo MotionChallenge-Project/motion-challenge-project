@@ -35,6 +35,8 @@
     "robot_short_label": "G1 29DoF",
     "suite_sha256": "113b15cbb133fc1f8f873ad310a13c433d552f77137bde1b43426a2b55af1060",
     "robot_profile_sha256": "27a89860a47c730b73156d945be9eb28736001afc16530165eccb31d1513b432",
-    "state_access": "ideal-proprioceptive-no-position-v1"
+    "state_access": "ideal-proprioceptive-no-position-v1",
+    "protocol_sha256": "35806b6c96e83b82e2f7273f2531114b2b620e7ce0decba86e68e3dfeb810a79",
+    "no_termination_protocol_sha256": "861febec8b0b2b7c77cebde792bbf79c402768d1d270efccc96ac3f90235d09f"
   }
 ]
