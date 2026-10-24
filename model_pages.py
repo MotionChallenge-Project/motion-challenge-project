@@ -1,11 +1,20 @@
 """Checkpoint catalog and protocol-specific evaluation records."""
 import html
 import json
+import re
 from collections import defaultdict
 
 
 def esc(value):
     return html.escape(str(value), quote=True)
+
+
+def repository_location(value):
+    """Resolve moved repositories while preserving evaluated revisions."""
+    value = re.sub(r'(https://github\.com/|git@github\.com:)(?:MotionChallenge|motion-challenge-project)/',
+                   r'\1MotionChallenge-Project/', value, flags=re.IGNORECASE)
+    return re.sub(r'(MotionChallenge-Project/)motion-challenge(?=\.git(?:\s|$)|[/\s]|$)',
+                  r'\1MotionChallenge-Core', value)
 
 
 def link(url, label, css=''):
@@ -46,7 +55,11 @@ def evaluation_record(results, track, key, content, github):
         common += [('Evaluated adapter', link(unified['adapter_code_url'], unified['adapter_commit'])),
                    ('Evaluated core', link(unified['core_code_url'], unified['core_commit'])),
                    ('Verification', 'Both trajectory ranges recomputed · repeatability checked')]
-        commands = evidence['reproduction']['commands']
+        commands = []
+        for command in evidence['reproduction']['commands']:
+            if command.startswith('git submodule update'):
+                commands.append('git config submodule.motion-challenge.url https://github.com/MotionChallenge-Project/MotionChallenge-Core.git')
+            commands.append(repository_location(command))
         downloads = link('/data/evidence/'+unified['evidence_file'], 'Complete results, source & verification (JSON) ↗', 'text-link')
         title = 'Reproduce this run'
         note = 'One command produces success, completion and all six MPBPE values in one result.json.'
