@@ -91,13 +91,13 @@
       "native_validation_source_commit": "5b51cc24eff71b67fe7e5acd539c06329137dc80"
     },
     "repository_available": true,
-    "version": "v1.4.0 · 14k",
+    "version": "v1.4.0 \u00b7 14k",
     "version_kind": "author checkpoint",
     "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
     "family": "holomotion",
     "display_name": "HoloMotion v1.4.0",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "moe",
@@ -167,7 +167,7 @@
     "family": "protomotions",
     "display_name": "ProtoMotions G1 BONES",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -182,7 +182,7 @@
   },
   "teleopit": {
     "organization": "Westlake / SII",
-    "version": "track_g1 · 1ebd341d",
+    "version": "track_g1 \u00b7 1ebd341d",
     "version_kind": "author checkpoint or pinned source revision",
     "family": "teleopit",
     "display_name": "TeleopIT G1",
@@ -235,7 +235,7 @@
       "parity_scope": "Offline VelCmdHistory playback defaults, shared canonical robot FK, original weights on CPU ONNX Runtime; hardware, retargeting and online transport excluded. No inference changes were needed."
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -324,7 +324,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "fsq",
@@ -341,7 +341,7 @@
     "display_name": "SONIC Low-Latency",
     "family": "sonic",
     "organization": "NVIDIA",
-    "version": "Low-Latency · 2026-06-16",
+    "version": "Low-Latency \u00b7 2026-06-16",
     "organization_source": "https://huggingface.co/nvidia/GEAR-SONIC",
     "version_kind": "Author release",
     "repository_available": true,
@@ -413,7 +413,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "fsq",
@@ -430,7 +430,7 @@
     "display_name": "PMT Flat MLP 20k",
     "family": "pmt",
     "organization": "Mondo Robotics / HKUST & collaborators",
-    "version": "Flat MLP · 20k",
+    "version": "Flat MLP \u00b7 20k",
     "version_kind": "author checkpoint or pinned source revision",
     "organization_source": "https://acodedog.github.io/perceptive-bfm/",
     "repository_available": true,
@@ -456,7 +456,7 @@
     },
     "provenance": {
       "model": "pmt-flat",
-      "display_name": "PMT Flat · iteration 19999",
+      "display_name": "PMT Flat \u00b7 iteration 19999",
       "submitter": "MotionChallenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
@@ -501,7 +501,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -586,13 +586,13 @@
       "correction": "Wrist PD gains match the original author sim2sim release: Kp 4 and Kd 0.2, replacing 40 and 5. Full benchmark rerun is required."
     },
     "repository_available": true,
-    "version": "1017 · 20k",
+    "version": "1017 \u00b7 20k",
     "version_kind": "author checkpoint filename",
     "version_source": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
     "family": "twist2",
     "display_name": "TWIST2 1017-20k",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -698,13 +698,13 @@
       ]
     },
     "repository_available": true,
-    "version": "99k · 39d573e9",
+    "version": "99k \u00b7 39d573e9",
     "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
     "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
     "family": "grit",
     "display_name": "GRIT 99k",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -819,7 +819,7 @@
     "family": "heft",
     "display_name": "HEFT PMG",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -928,7 +928,7 @@
     "family": "mimic-lite",
     "display_name": "MimicLite 031b8d67",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1015,7 +1015,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1103,7 +1103,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1191,7 +1191,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1279,7 +1279,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1344,7 +1344,7 @@
       "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1452,7 +1452,7 @@
       "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1542,7 +1542,7 @@
       "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "fsq",
@@ -1651,7 +1651,7 @@
     "family": "holomotion",
     "display_name": "HoloMotion v1.3.2",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "moe",
@@ -1760,7 +1760,7 @@
     "family": "holomotion",
     "display_name": "HoloMotion v1.4.1",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "moe",
@@ -1778,13 +1778,13 @@
     "organization_source": "https://text-op.github.io/",
     "family": "textop",
     "display_name": "TextOp Tracker 75k",
-    "version": "Tracker 75k · 8df6371c",
+    "version": "Tracker 75k \u00b7 8df6371c",
     "version_kind": "author-released ONNX checkpoint",
     "version_source": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/USAGE.md",
     "repository_available": true,
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-textop",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "description": "The released low-level universal motion tracker from TextOp. This entry evaluates reference-motion tracking, without the high-level text-to-motion generator.",
     "training_data": {
@@ -1854,13 +1854,13 @@
     "organization_source": "https://roboparty.github.io/UFO/",
     "family": "ufo",
     "display_name": "UFO FB-CPR-Aux 192M",
-    "version": "FB-CPR-Aux · 191,995,904 training steps",
+    "version": "FB-CPR-Aux \u00b7 191,995,904 training steps",
     "version_kind": "author-released checkpoint; 192M denotes training steps",
     "version_source": "https://huggingface.co/xuewang/ufo-g1-policy/blob/da3727034a058eae588a16af142764ee34bdada4/release_manifest.json",
     "repository_available": true,
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "description": "The released G1 forward-backward controller from UFO. A backward encoder turns reference poses into a latent command for its history-conditioned policy.",
     "runtime": {
@@ -2007,7 +2007,7 @@
     "family": "holomotion",
     "display_name": "HoloMotion v2.0.0",
     "supported_robots": [
-      "Unitree G1 · 29 DoF"
+      "Unitree G1 \u00b7 29 DoF"
     ],
     "controller_type": {
       "id": "moe",
@@ -2020,5 +2020,167 @@
     "icon_source": "https://github.com/HorizonRobotics",
     "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/",
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v2-0-0"
+  },
+  "mosaic": {
+    "organization": "BAAI / TUM / Tsinghua & collaborators",
+    "organization_source": "https://baai-humanoid.github.io/MOSAIC/",
+    "display_name": "MOSAIC GMT",
+    "family": "mosaic",
+    "version": "GMT \u00b7 d6e12412",
+    "version_kind": "author checkpoint",
+    "version_source": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/tree/2ab795d7420cf339bb803bfb145c18faf8137cb8",
+    "project_url": "https://baai-humanoid.github.io/MOSAIC/",
+    "description": "General motion tracker from MOSAIC, using the released GMT checkpoint and offline motion-replay inference.",
+    "controller_type": {
+      "id": "dense",
+      "label": "Dense",
+      "description": "Dense feed-forward policy with five-frame observation history.",
+      "source": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/blob/2ab795d7420cf339bb803bfb145c18faf8137cb8/gmt.onnx"
+    },
+    "runtime": {
+      "id": "mosaic-gmt",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_offsets_s": [
+        -0.02
+      ],
+      "reference_history_s": 0.02,
+      "reference_preview_s": 0.0,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "66f14dc44b8f1560ead737acfeb848fe605fa2772c772cb66f53ca61dc1e55e4",
+      "weights": "checkpoints/gmt.onnx",
+      "weights_sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
+      "weights_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/resolve/2ab795d7420cf339bb803bfb145c18faf8137cb8/gmt.onnx",
+      "source_repository": "https://github.com/BAAI-Humanoid/RobotBridge",
+      "source_commit": "175287dd559c098d21b287a8a27c6bb48d4606ff",
+      "official": false
+    },
+    "provenance": {
+      "model": "mosaic",
+      "display_name": "MOSAIC GMT",
+      "submitter": "MotionChallenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/BAAI-Humanoid/MOSAIC",
+      "project_url": "https://baai-humanoid.github.io/MOSAIC/",
+      "source_commit": "175287dd559c098d21b287a8a27c6bb48d4606ff",
+      "inference_repository": "https://github.com/BAAI-Humanoid/RobotBridge",
+      "checkpoint_sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
+      "author_inference_review": "Passed 160 states, 4 resets, 24 endpoint clamps, shuffled joint order and a common global-yaw transform; observation, action and motor target maximum absolute errors all zero.",
+      "inference_validation": "validation/native-parity.json",
+      "checkpoint_origin": {
+        "author_release_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/blob/2ab795d7420cf339bb803bfb145c18faf8137cb8/README.md",
+        "author_release_label": "MOSAIC authors",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/blob/2ab795d7420cf339bb803bfb145c18faf8137cb8/gmt.onnx",
+        "original_filename": "gmt.onnx",
+        "download_url": "https://huggingface.co/BAAI-Humanoid/MOSAIC_Model/resolve/2ab795d7420cf339bb803bfb145c18faf8137cb8/gmt.onnx",
+        "sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
+        "verification": "Original general tracking ONNX; no conversion or fine-tuning.",
+        "bytes": 10020730
+      },
+      "deployment": {
+        "history": "Five samples per observation term; zero-filled new buffers; two initial observations from BaseEnv.reset and MosaicEnv.reset.",
+        "reference_timing": "At action k, reference max(k-1,0); follows observation-before-reference-increment in original step sequence.",
+        "reference_coordinates": "Common initial-reference torso XY/yaw coordinate registration for actual and reference packets; no physics or scoring coordinates changed. Only orientation enters the policy.",
+        "offline_route": "MosaicEnv, eval_mode=true, use_teleop=false, use_estimator=false, history_length=5, command_horizon=1; the released default control YAML enables teleoperation and must be explicitly disabled for offline references.",
+        "canonical_reference": "Canonical first frame is retained. No NPZ file is used; the author MotionLoader [1:] file-format slicing is not applied to the canonical benchmark trajectory.",
+        "clip_reset": "Fresh per-clip controller history, equivalent to independent author environment construction. No model resets inside a clip.",
+        "endpoint": "Hold last canonical reference, no looping."
+      }
+    },
+    "repository_available": true,
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "icon": "/assets/model-icons/baai-humanoid.png",
+    "icon_source": "https://github.com/BAAI-Humanoid",
+    "icon_label": "BAAI-Humanoid"
+  },
+  "bfm-zero": {
+    "organization": "CMU / Meta",
+    "organization_source": "https://lecar-lab.github.io/BFM-Zero/",
+    "display_name": "BFM-Zero",
+    "family": "bfm-zero",
+    "version": "Author release \u00b7 62b4206",
+    "version_kind": "reproducible export from author checkpoint",
+    "version_source": "https://huggingface.co/LeCAR-Lab/BFM-Zero/tree/62b4206d68e026de5e5dc7efb1529bccfb95164c",
+    "project_url": "https://lecar-lab.github.io/BFM-Zero/",
+    "description": "Forward-backward behavioral foundation model, using the author's zero-shot motion-tracking inference.",
+    "controller_type": {
+      "id": "fb",
+      "label": "FB",
+      "description": "Forward-backward latent policy with a backward reference encoder.",
+      "source": "https://lecar-lab.github.io/BFM-Zero/"
+    },
+    "runtime": {
+      "id": "bfm-zero-g1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_offsets_s": [
+        -0.02,
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1,
+        0.12,
+        0.14
+      ],
+      "reference_history_s": 0.02,
+      "reference_preview_s": 0.14,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "39e4605b2a0dbb99379203fddc007d8b0ca23d4e1f9796569889097b78be71bf",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+      "provenance_status": "author-inference comparison passed; numerical tolerances disclosed",
+      "source_repository": "https://github.com/LeCAR-Lab/BFM-Zero",
+      "source_commit": "df9c4a9633aa155c727419e82c906010b1e1845f",
+      "tracking_inference": "official uniform 8-frame latent mean, not notebook customized discount variant",
+      "official": false,
+      "prepare_checkpoint": "conversion.prepare:prepare"
+    },
+    "provenance": {
+      "model": "bfm-zero",
+      "submitter": "MotionChallenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/LeCAR-Lab/BFM-Zero",
+      "source_commit": "df9c4a9633aa155c727419e82c906010b1e1845f",
+      "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+      "author_inference_review": "160 cases/4 resets/32 endpoint cases passed stated tolerances; zero actor-observation and identical-action PD mapping difference; CPU ONNX/PyTorch maximum motor-target difference 2.82e-4 rad.",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "legacy_results": "not transferable to this adapter revision without rerunning",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/LeCAR-Lab/BFM-Zero/blob/df9c4a9633aa155c727419e82c906010b1e1845f/README.md",
+        "author_release_label": "LeCAR-Lab/BFM-Zero",
+        "kind": "maintainer_export",
+        "kind_label": "Reproducible export from author checkpoint",
+        "artifact_page_url": "https://huggingface.co/LeCAR-Lab/BFM-Zero/blob/62b4206d68e026de5e5dc7efb1529bccfb95164c/model/checkpoint/model/model.safetensors",
+        "original_filename": "model/checkpoint/model/model.safetensors \u2192 policy.onnx",
+        "verification": "conversion/prepare.py verifies the original artifact and source hashes, strictly loads62 inference tensors and exports a hash-locked ONNX. Fresh macOS export matches prior Linux SHA256.",
+        "download_url": "https://huggingface.co/LeCAR-Lab/BFM-Zero/resolve/62b4206d68e026de5e5dc7efb1529bccfb95164c/model/checkpoint/model/model.safetensors",
+        "sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+        "original_sha256": "d8d07d7b83ad030286f44d55a48899dc42db4b48000132fffad063653a6eb49e",
+        "conversion_code": "conversion/prepare.py",
+        "source_manifest": "conversion/sources.json"
+      },
+      "inference_validation": "validation/native-parity.json"
+    },
+    "repository_available": true,
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero",
+    "supported_robots": [
+      "Unitree G1 \u00b7 29 DoF"
+    ],
+    "icon": "/assets/model-icons/lecar-lab.jpg",
+    "icon_source": "https://github.com/LeCAR-Lab",
+    "icon_label": "LeCAR-Lab"
   }
 }

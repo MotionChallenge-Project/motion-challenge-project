@@ -15,11 +15,6 @@
       "evaluate": false,
       "publish_results": false
     },
-    "bfm-zero": {
-      "reason": "Original author checkpoint conversion and native inference comparison are now public. A new complete evaluation and independent repeat are in progress; no score is released until both verify.",
-      "evaluate": true,
-      "publish_results": false
-    },
     "humanoid-gpt": {
       "reason": "Full-motion MuJoCo 3.17 batch rollout triggers numerical reset; no valid unified LAFAN40 result. Kept for native-inference diagnosis, without a public ranking.",
       "evaluate": true,

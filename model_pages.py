@@ -110,7 +110,7 @@ def render(models, rows, tracks, content, github, page, intro):
         rt, provenance = model['runtime'], model['provenance']
         repo = model.get('adapter_repository', f'{github}/MotionChallenge-{key}')
         revision = provenance.get('source_commit')
-        source = provenance['upstream']
+        source = provenance.get('inference_repository', provenance['upstream'])
         source_url = source.rstrip('/') + '/tree/' + revision if revision else source
         model_facts = [
             ('Organization', link(model['organization_source'], model['organization'])),
@@ -126,7 +126,7 @@ def render(models, rows, tracks, content, github, page, intro):
             training = model['training_data']
             detail += '<h3>Training data</h3><p>' + esc(training['description']) + '</p>' + link(training['source'], 'Author documentation ↗', 'text-link')
         detail += '</div>' + facts(model_facts) + '</section>'
-        artifacts = [('Policy checkpoint', rt['weights_url'], rt['weights_sha256'])]
+        artifacts = [('Policy checkpoint', rt.get('weights_url'), rt['weights_sha256'])]
         artifacts += [(name, a['url'], a['sha256']) for name, a in rt.get('artifacts', {}).items() if a.get('url')]
         detail += '<section class="section model-artifacts"><h2>Checkpoint artifacts</h2>'
         origin = provenance.get('checkpoint_origin', {})
@@ -142,7 +142,9 @@ def render(models, rows, tracks, content, github, page, intro):
         detail += ''.join('<p class="small">' + esc(note) + '</p>' for note in model.get('artifact_notes', []))
         detail += '<p class="small">Download links deliver the adapter files. The release links and verification notes distinguish author files from conversions; SHA256 identifies the bytes used.</p>'
         for name, url, sha in artifacts:
-            detail += f'<div class="artifact-row"><div>{esc(name)}<br>{link(url, "Download ↗")}</div><code>{esc(sha)}</code></div>'
+            artifact_link = link(url, 'Download ↗') if url else link(
+                repo + '/blob/main/' + origin.get('conversion_code', 'evaluate.py'), 'Reproduce export ↗')
+            detail += f'<div class="artifact-row"><div>{esc(name)}<br>{artifact_link}</div><code>{esc(sha)}</code></div>'
         detail += '</section><section class="section split"><div><h2>Inference interface</h2><p>The adapter declares its control clock and reference window below. Source and configuration describe the observation and action transforms.</p><div class="actions">'
         detail += link(repo + '/blob/main/adapter.py', 'Inference implementation ↗', 'text-link')
         detail += link(repo + '/blob/main/provenance.json', 'Provenance ↗', 'text-link') + '</div></div>'

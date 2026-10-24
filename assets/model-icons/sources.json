@@ -55,5 +55,19 @@
     "provided_by": "User attachment; unmodified PNG",
     "sha256": "6d60c98e7ecf6aad692cbfeda76daf9c8d5be710211d53f6fb558639bd1e493d",
     "bytes": 56016
+  },
+  {
+    "file": "baai-humanoid.png",
+    "source": "https://github.com/BAAI-Humanoid",
+    "image_url": "https://avatars.githubusercontent.com/u/260434314?v=4&s=128",
+    "sha256": "2a23c8a4b1ea9db484df0095a5d2754e9e49f03ef3e2459f65aa54c2bf2a2250",
+    "bytes": 4114
+  },
+  {
+    "file": "lecar-lab.jpg",
+    "source": "https://github.com/LeCAR-Lab",
+    "image_url": "https://avatars.githubusercontent.com/u/142372369?v=4&s=128",
+    "sha256": "87da0598544a55e9306f10957868c1a24de413af718f3c3c01bf2b089126012d",
+    "bytes": 3134
   }
 ]

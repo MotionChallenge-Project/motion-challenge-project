@@ -4,24 +4,6 @@
   "selection": "Prioritize independent controller families and representative institutions. Count checkpoint versions separately from model families.",
   "entries": [
     {
-      "name": "BFM-Zero",
-      "status": "Repeat running",
-      "gap": "Author checkpoint conversion and native inference comparison passed; independent full-suite repeat is still running.",
-      "next_step": "Complete the second 40-motion run and compare verified records.",
-      "author_source": "https://github.com/LeCAR-Lab/BFM-Zero",
-      "checked": "2026-10-24",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero"
-    },
-    {
-      "name": "MOSAIC GMT",
-      "status": "Repeat running",
-      "gap": "Author GMT artifact and native inference comparison passed; full-suite repeat is not yet complete.",
-      "next_step": "Complete and verify both full-suite runs.",
-      "author_source": "https://baai-humanoid.github.io/MOSAIC/",
-      "checked": "2026-10-24",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic"
-    },
-    {
       "name": "OmniXtreme",
       "status": "Evaluation running",
       "gap": "Three author ONNX components and native inference comparison passed; full-suite evaluation and repeat remain incomplete.",
