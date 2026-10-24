@@ -76,15 +76,6 @@
       "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt"
     },
     {
-      "model": "omnixtreme",
-      "name": "OmniXtreme",
-      "status": "Full evaluation pending",
-      "gap": "Author-inference access comparison passed; two complete repeatable runs are required.",
-      "next_step": "Complete all 40 motions twice and verify traces.",
-      "author_source": "https://extreme-humanoid.github.io/",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-omnixtreme"
-    },
-    {
       "model": "humanoid-gpt-transformer-216",
       "name": "Humanoid-GPT Transformer 216",
       "status": "Requires author deployment validation",

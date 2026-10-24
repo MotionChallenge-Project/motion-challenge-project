@@ -1395,7 +1395,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "043a67adaf412618dc694be74952f4e527fd942a"
+      "published_adapter_commit": "043a67adaf412618dc694be74952f4e527fd942a",
+      "evaluation_progress": "accepted"
     },
     "mosaic": {
       "schema": "MotionChallenge/observation-admission-v1",
