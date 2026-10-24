@@ -663,7 +663,7 @@
     "organization": "Tsinghua / RobotEra / SQZ",
     "organization_source": "https://heft.axell.top/",
     "runtime": {
-      "id": "heft-g1-development-v1",
+      "id": "heft-g1-v1",
       "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
@@ -723,14 +723,14 @@
           ]
         }
       },
-      "provenance_status": "author-inference parity passed",
+      "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
       "official": false,
       "source_repository": "https://github.com/Axellwppr/motion_tracking",
       "source_commit": "0d5ba31e33397f3543d350d98b637e26d92f470a",
       "weights_url": "https://drive.usercontent.google.com/download?id=1yZybFGcaU77QMi24Syc7iXaTlzdLpWkA&export=download",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "b82a2b0db0e7a286d966661474aa44a93db34d9ed7d4c1564db0fd2795366b1e"
+        "admission_sha256": "f058cf6e1ebfc0ba95d11cfa1c30ba31c048a11b3600fcb263af6e625d3d9bdb"
       }
     },
     "provenance": {
@@ -760,7 +760,7 @@
     },
     "repository_available": true,
     "version": "SHA 192aaacc",
-    "version_kind": "checkpoint SHA256; author version not verified",
+    "version_kind": "checkpoint SHA256",
     "version_source": "https://github.com/Axellwppr/motion_tracking",
     "family": "heft",
     "display_name": "HEFT PMG",
@@ -776,7 +776,8 @@
     "icon": "/assets/model-icons/robotera.png",
     "icon_label": "RobotEra",
     "icon_source": "https://www.robotera.com/",
-    "project_url": "https://heft.axell.top/"
+    "project_url": "https://heft.axell.top/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-heft"
   },
   "mimic-lite": {
     "organization": "RoboParty",
@@ -872,7 +873,7 @@
     },
     "repository_available": true,
     "version": "SHA 031b8d67",
-    "version_kind": "checkpoint SHA256; author version not verified",
+    "version_kind": "checkpoint SHA256",
     "version_source": "https://github.com/EGalahad/mimic-lite",
     "family": "mimic-lite",
     "display_name": "MimicLite 031b8d67",

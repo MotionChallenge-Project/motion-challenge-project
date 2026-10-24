@@ -437,17 +437,17 @@
     "lafan40-g1-ideal-proprioception-v1": {
       "heft": {
         "status": "passed",
-        "evaluated_adapter_commit": "2125da72a4e5576d19657de595e0ab2c2dbc98ef",
-        "checked_adapter_commit": "2125da72a4e5576d19657de595e0ab2c2dbc98ef",
+        "evaluated_adapter_commit": "5ae55351a1e5a2f08d073b47b1e7f3f1e89ea3da",
+        "checked_adapter_commit": "5ae55351a1e5a2f08d073b47b1e7f3f1e89ea3da",
         "checkpoint_sha256": "192aaacc49ce066b85bdc9822bc35eca9ae21b8efc8371c089f7bc0077a86791",
         "report_file": "heft.restricted.json",
         "report_sha256": "c634d7efa655a376ed9f41374f522ced5f5fb3e9bbfef8308257f58da67a0823",
-        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/2125da72a4e5576d19657de595e0ab2c2dbc98ef/validation/observation-access.json",
-        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/2125da72a4e5576d19657de595e0ab2c2dbc98ef/validate_observations.py",
-        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/2125da72a4e5576d19657de595e0ab2c2dbc98ef/runtime.json",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/5ae55351a1e5a2f08d073b47b1e7f3f1e89ea3da/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/5ae55351a1e5a2f08d073b47b1e7f3f1e89ea3da/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-heft/blob/5ae55351a1e5a2f08d073b47b1e7f3f1e89ea3da/runtime.json",
         "production_inference_alignment": "identical",
         "limits": 2e-05,
-        "label": "Restricted path vs author-verified inference",
+        "label": "Inference comparison",
         "base_author_comparison": {
           "status": "passed",
           "evaluated_adapter_commit": "6604e4815965d13ea248785deebde4632e9aa632",

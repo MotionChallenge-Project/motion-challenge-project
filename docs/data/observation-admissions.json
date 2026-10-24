@@ -96,7 +96,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "5ae55351a1e5a2f08d073b47b1e7f3f1e89ea3da"
+      "published_adapter_commit": "5ae55351a1e5a2f08d073b47b1e7f3f1e89ea3da",
+      "evaluation_progress": "accepted"
     },
     "holomotion": {
       "schema": "MotionChallenge/observation-admission-v1",
