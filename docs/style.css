@@ -82,9 +82,12 @@
 #leaderboard tbody tr:hover{filter:brightness(.985)}
 
 .type-tag{display:inline-block;padding:3px 9px;border-radius:4px;font-size:11px;font-weight:700;line-height:1.5;white-space:nowrap;background:#e9eeec;color:#40594f;border:1px solid #d8e2dc}
-.type-tag:hover{filter:brightness(.94)}
-.type-fsq{background:#eae8f6;color:#625291;border-color:#dcd5ee}
-.type-moe{background:#e6eff9;color:#3c628e;border-color:#d1e0f2}
+/* Controller families: muted, distinct colors; labels remain readable without color. */
+.type-dense{background:#edf1ef;color:#40594f;border-color:#d9e3dd}
+.type-flow{background:#fcece6;color:#93472b;border-color:#efd3c7}
+.type-fb{background:#e3f1f2;color:#226971;border-color:#c9e2e5}
+.type-fsq{background:#eee9f7;color:#6c4e91;border-color:#ded3ee}
+.type-moe{background:#e6eefb;color:#365f98;border-color:#d1def3}
 #leaderboard abbr{text-decoration:none;cursor:help}
 
 .pagination-top{padding:13px 16px;background:#edf2eb;border:1px solid var(--line);border-radius:5px;margin:0 0 16px}

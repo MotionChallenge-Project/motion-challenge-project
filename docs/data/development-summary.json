@@ -1674,9 +1674,9 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "omnixtreme.mujoco317.unified.json",
-      "icon": null,
-      "icon_label": "O",
-      "icon_source": null,
+      "icon": "/assets/model-icons/bigai.png",
+      "icon_label": "BIGAI",
+      "icon_source": "https://github.com/bigai-ai",
       "controller_type": {
         "id": "flow",
         "label": "Flow",

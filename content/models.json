@@ -2392,8 +2392,8 @@
     "supported_robots": [
       "Unitree G1 \u00b7 29 DoF"
     ],
-    "icon": null,
-    "icon_label": "O",
-    "icon_source": null
+    "icon": "/assets/model-icons/bigai.png",
+    "icon_label": "BIGAI",
+    "icon_source": "https://github.com/bigai-ai"
   }
 }

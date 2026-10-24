@@ -1,78 +1,14 @@
 {
   "updated": "2026-10-24",
-  "scope": "Candidate coverage for LAFAN40 / G1 29DoF. This is a dated, non-exhaustive inventory; unconfirmed means not verified in the inspected sources, not proof that no release exists.",
-  "selection": "Prioritize independent controller families and representative institutions. Count checkpoint versions separately from model families.",
+  "scope": "Follow-up coverage for LAFAN40 / G1 29DoF, limited to the three checkpoint releases below.",
+  "selection": "Only these three releases remain under inspection. Projects without a public checkpoint or with only single-motion checkpoints are no longer being followed.",
   "entries": [
     {
-      "name": "YAHMP",
-      "status": "Inference contract unresolved",
-      "gap": "The inspected training and viewer implementations differ in history timing and angular-velocity frame. Viewer parity alone does not resolve this discrepancy.",
-      "next_step": "Establish the intended released-checkpoint inference contract before ranking.",
-      "author_source": "https://github.com/hucebot/yahmp/tree/2111a998663e9f787b3ac36e8f8a7c17745ca83f",
-      "checked": "2026-10-24"
-    },
-    {
-      "name": "HoloMotion v1.3.1",
-      "status": "Long-sequence runtime diagnosis",
-      "gap": "The released ONNX cache fails at step 8192 in the inspected runtime; its paired author deployment does not supply a verified reset path.",
-      "next_step": "Verify an author-supported cache/reset procedure. Other HoloMotion versions have separate ranked records.",
-      "author_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/tree/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1",
-      "checked": "2026-10-24"
-    },
-    {
-      "name": "ULTRA tracking teacher",
-      "status": "Input adaptation pending",
-      "gap": "The released tracking teacher has object-conditioned inputs. The absent-object convention for this motion-only track is not yet verified.",
-      "next_step": "Check the original object-input and reference conventions; distinguish the tracking teacher from the multimodal student.",
-      "author_source": "https://github.com/Sirui-Xu/ULTRA/tree/146ddd5f63987f9b41304b368e40f69990e63ec2",
-      "checked": "2026-10-24"
-    },
-    {
-      "name": "FRoM-W1 H-ACT",
-      "status": "Different robot configuration",
-      "gap": "The inspected released G1 Full and Clean policy configurations use 21 actions.",
-      "next_step": "Evaluate in a compatible robot track or verify an official 29-action release.",
-      "author_source": "https://huggingface.co/OpenMOSS-Team/FRoM-W1/tree/c3c162263f52db7466841b6194695d7bd1c50478",
-      "checked": "2026-10-24"
-    },
-    {
-      "name": "GMT",
-      "status": "Different robot configuration",
-      "gap": "The inspected author deployment uses 23 actions.",
-      "next_step": "Evaluate in a compatible robot track or verify an official 29-action release.",
-      "author_source": "https://github.com/zixuan417/humanoid-general-motion-tracking/tree/2a590de25a1eb08e47491977a738549c22f16e1f",
-      "checked": "2026-10-24"
-    },
-    {
-      "name": "KungfuBot2 / PBHC",
-      "status": "Generalist checkpoint unconfirmed",
-      "gap": "Inspected checkpoints target individual motions; a generalist configuration does not establish a released generalist weight.",
-      "next_step": "Locate an author-released general-reference tracking checkpoint.",
-      "author_source": "https://github.com/TeleHuman/PBHC/tree/ffac5cded61fe78b39b051f09ac2ed0f6a1ccea0",
-      "checked": "2026-10-24"
-    },
-    {
-      "name": "UniTracker",
-      "status": "Public checkpoint unconfirmed",
-      "gap": "A downloadable official tracking checkpoint has not been verified in the inspected author sources.",
-      "next_step": "Confirm a public author artifact and its deployment contract.",
-      "author_source": "https://yinkangning0124.github.io/Humanoid-UniTracker/",
-      "checked": "2026-10-24"
-    },
-    {
-      "name": "PGMT",
-      "status": "Public checkpoint unconfirmed",
-      "gap": "The inspected project page describes the controller; a public policy artifact has not been verified.",
-      "next_step": "Confirm a public author artifact and supported terrain/robot inputs.",
-      "author_source": "https://luyili.github.io/pgmt/",
-      "checked": "2026-10-24"
-    },
-    {
-      "name": "MimicKit",
-      "status": "Released model inventory pending",
-      "gap": "The framework and model archive need inspection to distinguish G1 general-reference trackers from single-motion policies.",
-      "next_step": "Identify a compatible released checkpoint before creating a model entry.",
-      "author_source": "https://github.com/xbpeng/MimicKit/tree/fbe1a36e878f036d6bf5521defb8eb3b8ab4170d",
+      "name": "Humanoid-GPT Transformer 216",
+      "status": "Released checkpoint adaptation pending",
+      "gap": "The author also publishes pns_wo_priv216_trans.onnx (42,977,083 bytes). Its temporal inference contract and complete-suite behavior have not been verified here. Ranked 264 results belong to a different feed-forward checkpoint.",
+      "next_step": "Audit the released Transformer inference and state/reset semantics before a separate full evaluation.",
+      "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
       "checked": "2026-10-24"
     },
     {
@@ -84,11 +20,11 @@
       "checked": "2026-10-24"
     },
     {
-      "name": "Humanoid-GPT Transformer 216",
-      "status": "Released checkpoint adaptation pending",
-      "gap": "The author also publishes pns_wo_priv216_trans.onnx (42,977,083 bytes). Its temporal inference contract and complete-suite behavior have not been verified here. Ranked 264 results belong to a different feed-forward checkpoint.",
-      "next_step": "Audit the released Transformer inference and state/reset semantics before a separate full evaluation.",
-      "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216_trans.onnx",
+      "name": "HoloMotion v1.3.1",
+      "status": "Long-sequence runtime diagnosis",
+      "gap": "The released ONNX cache fails at step 8192 in the inspected runtime; its paired author deployment does not supply a verified reset path.",
+      "next_step": "Verify an author-supported cache/reset procedure. Other HoloMotion versions have separate ranked records.",
+      "author_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/tree/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.1",
       "checked": "2026-10-24"
     }
   ]

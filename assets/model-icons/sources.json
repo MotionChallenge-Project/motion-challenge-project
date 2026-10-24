@@ -76,5 +76,12 @@
     "image_url": "https://avatars.githubusercontent.com/u/169434821?v=4&s=128",
     "sha256": "05160d2e2c7b09ee92757d9ea41168cfeb9fce31d4ee2ddf54ebaa70c5733925",
     "bytes": 1747
+  },
+  {
+    "file": "bigai.png",
+    "source": "https://github.com/bigai-ai",
+    "image_url": "https://avatars.githubusercontent.com/u/135930219?v=4&s=128",
+    "sha256": "579ee52d80b47c3511d580a79324afbfd782013d3eb8f689b2f0dc6f532fa67c",
+    "bytes": 5026
   }
 ]
