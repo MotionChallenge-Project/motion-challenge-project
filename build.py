@@ -7,9 +7,9 @@ ROOT=Path(__file__).parent;D=ROOT/'docs';D.mkdir(exist_ok=True)
 for generated in ('models','evaluations','data/evidence'):
  path=D/generated
  if path.exists():shutil.rmtree(path)
-GH='https://github.com/motion-challenge-project'
+GH='https://github.com/MotionChallenge'
 BASE=os.environ.get('SITE_BASE_PATH','/motion-challenge-project').rstrip('/')
-SITE_URL='https://motion-challenge-project.github.io'+BASE
+SITE_URL='https://motionchallenge.github.io'+BASE
 WEBSITE_SOURCE=GH+'/motion-challenge-project/tree/website'
 NAMES={'grit':'GRIT','heft':'HEFT','sonic':'SONIC','mimic-lite':'MimicLite','scalebfm':'ScaleBFM','holomotion':'HoloMotion','humanoid-gpt':'Humanoid-GPT','protomotions':'ProtoMotions','bfm-zero':'BFM-Zero','twist2':'TWIST2'}
 CONTENT=ROOT/'content'
