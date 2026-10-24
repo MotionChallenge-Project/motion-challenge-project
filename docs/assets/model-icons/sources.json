@@ -28,31 +28,24 @@
     "bytes": 15358
   },
   {
-    "file": "robotera.jpg",
-    "source": "https://github.com/roboterax",
-    "image_url": "https://avatars.githubusercontent.com/u/161814278?v=4&s=128",
-    "sha256": "77db57a3dab29770e22e67e3665bc8de69dbbbd4f37c7716bae47e49a9e3a93f",
-    "bytes": 2704
-  },
-  {
-    "file": "textop.png",
-    "source": "https://text-op.github.io/",
-    "image_url": "https://text-op.github.io/static/images/logo-small-nobg.png",
-    "sha256": "bd85c6aa70b7426cefb26a69e23901db1f6087a7946ae75912612e458da769e3",
-    "bytes": 524815
-  },
-  {
-    "file": "teleopit.png",
-    "source": "https://botrunner64.github.io/teleopit-page/",
-    "image_url": "https://botrunner64.github.io/teleopit-page/assets/images/apple-touch-icon.png",
-    "sha256": "0fb4911173a6cbe076d4be82b145b12b958a7253124fefa55c6d3f36c9945181",
-    "bytes": 66722
-  },
-  {
     "file": "nvidia.png",
     "source": "https://huggingface.co/nvidia",
     "image_url": "https://cdn-avatars.huggingface.co/v1/production/uploads/65df9200dc3292a8983e5017/Vs5FPVCH-VZBipV3qKTuy.png",
     "sha256": "75f85aa1b5c95694f9199ae163b0a42ccd45c8ef2870d7dc494c1733b869444d",
     "bytes": 3568
+  },
+  {
+    "file": "teleai.png",
+    "source": "https://text-op.github.io/",
+    "image_url": "https://text-op.github.io/static/images/logo-teleai.png",
+    "sha256": "fb141a8fc3219281f4903273b1860a523e2faf4ca952a7bfc2925c78f29bb7c9",
+    "bytes": 1271018
+  },
+  {
+    "file": "robotera.png",
+    "source": "https://www.robotera.com/",
+    "image_url": "https://www.robotera.com/icon.png",
+    "sha256": "9e14b0e249f22a77ae030c8b3a2af2bb5db1dbdaea2d0b5287c2c5af221bf96a",
+    "bytes": 2197
   }
 ]

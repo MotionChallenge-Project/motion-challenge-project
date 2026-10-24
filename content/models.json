@@ -107,7 +107,8 @@
     },
     "icon": "/assets/model-icons/horizon.jpg",
     "icon_label": "Horizon Robotics",
-    "icon_source": "https://github.com/HorizonRobotics"
+    "icon_source": "https://github.com/HorizonRobotics",
+    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/"
   },
   "protomotions": {
     "organization": "NVIDIA",
@@ -176,7 +177,8 @@
     },
     "icon": "/assets/model-icons/nvidia.png",
     "icon_label": "NVIDIA",
-    "icon_source": "https://huggingface.co/nvidia"
+    "icon_source": "https://huggingface.co/nvidia",
+    "project_url": "https://nvlabs.github.io/ProtoMotions/"
   },
   "teleopit": {
     "organization": "Westlake / SII",
@@ -241,9 +243,10 @@
       "description": "Temporal convolutional encoder and dense policy head.",
       "source": "https://huggingface.co/12e21/Teleopit-models/blob/94cf996444fea6894b87c28e86606cd4c2f1408f/checkpoints/track_g1.onnx"
     },
-    "icon": "/assets/model-icons/teleopit.png",
+    "icon": null,
     "icon_label": "TeleopIT",
-    "icon_source": "https://botrunner64.github.io/teleopit-page/"
+    "icon_source": null,
+    "project_url": "https://botrunner64.github.io/teleopit-page/"
   },
   "sonic-v1-1": {
     "display_name": "SONIC v1.1",
@@ -331,7 +334,8 @@
     },
     "icon": "/assets/model-icons/nvidia.png",
     "icon_label": "NVIDIA",
-    "icon_source": "https://huggingface.co/nvidia"
+    "icon_source": "https://huggingface.co/nvidia",
+    "project_url": "https://nvlabs.github.io/GEAR-SONIC/"
   },
   "sonic-low-latency": {
     "display_name": "SONIC Low-Latency",
@@ -419,7 +423,8 @@
     },
     "icon": "/assets/model-icons/nvidia.png",
     "icon_label": "NVIDIA",
-    "icon_source": "https://huggingface.co/nvidia"
+    "icon_source": "https://huggingface.co/nvidia",
+    "project_url": "https://nvlabs.github.io/GEAR-SONIC/"
   },
   "pmt-flat": {
     "display_name": "PMT Flat MLP 20k",
@@ -506,7 +511,8 @@
     },
     "icon": "/assets/model-icons/mondo.png",
     "icon_label": "Mondo Robotics",
-    "icon_source": "https://github.com/Mondo-Robotics"
+    "icon_source": "https://github.com/Mondo-Robotics",
+    "project_url": "https://acodedog.github.io/perceptive-bfm/"
   },
   "twist2": {
     "organization": "Amazon FAR",
@@ -596,7 +602,8 @@
     },
     "icon": "/assets/model-icons/amazon-far.png",
     "icon_label": "Amazon FAR",
-    "icon_source": "https://github.com/amazon-far"
+    "icon_source": "https://github.com/amazon-far",
+    "project_url": "https://yanjieze.com/projects/TWIST2/"
   },
   "grit": {
     "organization": "GRIT Team",
@@ -820,9 +827,10 @@
       "description": "Dense policy with fully connected layers and normalized hidden features.",
       "source": "https://github.com/Axellwppr/motion_tracking/tree/0d5ba31e33397f3543d350d98b637e26d92f470a/sim2real/config/g1/ckpts/G1_PMG"
     },
-    "icon": "/assets/model-icons/robotera.jpg",
+    "icon": "/assets/model-icons/robotera.png",
     "icon_label": "RobotEra",
-    "icon_source": "https://github.com/roboterax"
+    "icon_source": "https://www.robotera.com/",
+    "project_url": "https://heft.axell.top/"
   },
   "mimic-lite": {
     "organization": "RoboParty",
@@ -1017,7 +1025,8 @@
     },
     "icon": "/assets/model-icons/mondo.png",
     "icon_label": "Mondo Robotics",
-    "icon_source": "https://github.com/Mondo-Robotics"
+    "icon_source": "https://github.com/Mondo-Robotics",
+    "project_url": "https://acodedog.github.io/perceptive-bfm/"
   },
   "pmt-streaming": {
     "display_name": "PMT Streaming MLP 20k",
@@ -1104,7 +1113,8 @@
     },
     "icon": "/assets/model-icons/mondo.png",
     "icon_label": "Mondo Robotics",
-    "icon_source": "https://github.com/Mondo-Robotics"
+    "icon_source": "https://github.com/Mondo-Robotics",
+    "project_url": "https://acodedog.github.io/perceptive-bfm/"
   },
   "pmt-uniform": {
     "display_name": "PMT Uniform MLP 20k",
@@ -1191,7 +1201,8 @@
     },
     "icon": "/assets/model-icons/mondo.png",
     "icon_label": "Mondo Robotics",
-    "icon_source": "https://github.com/Mondo-Robotics"
+    "icon_source": "https://github.com/Mondo-Robotics",
+    "project_url": "https://acodedog.github.io/perceptive-bfm/"
   },
   "pmt-bpo": {
     "display_name": "PMT BPO MLP 20k",
@@ -1278,7 +1289,8 @@
     },
     "icon": "/assets/model-icons/mondo.png",
     "icon_label": "Mondo Robotics",
-    "icon_source": "https://github.com/Mondo-Robotics"
+    "icon_source": "https://github.com/Mondo-Robotics",
+    "project_url": "https://acodedog.github.io/perceptive-bfm/"
   },
   "pmt-add": {
     "display_name": "PMT ADD MLP 20k",
@@ -1342,7 +1354,8 @@
     },
     "icon": "/assets/model-icons/mondo.png",
     "icon_label": "Mondo Robotics",
-    "icon_source": "https://github.com/Mondo-Robotics"
+    "icon_source": "https://github.com/Mondo-Robotics",
+    "project_url": "https://acodedog.github.io/perceptive-bfm/"
   },
   "pmt-rgmt": {
     "display_name": "PMT RGMT Transformer 20k",
@@ -1449,7 +1462,8 @@
     },
     "icon": "/assets/model-icons/mondo.png",
     "icon_label": "Mondo Robotics",
-    "icon_source": "https://github.com/Mondo-Robotics"
+    "icon_source": "https://github.com/Mondo-Robotics",
+    "project_url": "https://acodedog.github.io/perceptive-bfm/"
   },
   "sonic-original": {
     "display_name": "SONIC Original",
@@ -1538,7 +1552,8 @@
     },
     "icon": "/assets/model-icons/nvidia.png",
     "icon_label": "NVIDIA",
-    "icon_source": "https://huggingface.co/nvidia"
+    "icon_source": "https://huggingface.co/nvidia",
+    "project_url": "https://nvlabs.github.io/GEAR-SONIC/"
   },
   "holomotion-v1-3-2": {
     "organization": "Horizon Robotics",
@@ -1646,7 +1661,8 @@
     },
     "icon": "/assets/model-icons/horizon.jpg",
     "icon_label": "Horizon Robotics",
-    "icon_source": "https://github.com/HorizonRobotics"
+    "icon_source": "https://github.com/HorizonRobotics",
+    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/"
   },
   "holomotion-v1-4-1": {
     "organization": "Horizon Robotics",
@@ -1754,7 +1770,8 @@
     },
     "icon": "/assets/model-icons/horizon.jpg",
     "icon_label": "Horizon Robotics",
-    "icon_source": "https://github.com/HorizonRobotics"
+    "icon_source": "https://github.com/HorizonRobotics",
+    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/"
   },
   "textop": {
     "organization": "TeleAI / SJTU / ECUST",
@@ -1827,8 +1844,9 @@
       "description": "Dense MLP Tracker; the upstream text-to-motion generator is not evaluated.",
       "source": "https://huggingface.co/datasets/Yochish/TextOp-Data/blob/bb9604ce36ad4c0a77b5cccde89ebbb7c3ca93c9/TextOpTracker/logs/rsl_rl/Pretrained/checkpoints/latest.onnx"
     },
-    "icon": "/assets/model-icons/textop.png",
-    "icon_label": "TextOp",
-    "icon_source": "https://text-op.github.io/"
+    "icon": "/assets/model-icons/teleai.png",
+    "icon_label": "TeleAI",
+    "icon_source": "https://text-op.github.io/",
+    "project_url": "https://text-op.github.io/"
   }
 }

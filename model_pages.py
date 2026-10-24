@@ -121,7 +121,7 @@ def render(models, rows, tracks, content, github, page, intro):
         ]
         description = model.get('description', 'Checkpoint artifacts and an independent Motion Challenge inference adapter.')
         detail = f'<section class="section split"><div><h2>Model</h2><p>{esc(description)}</p><div class="actions">'
-        detail += link(source, 'Author source ↗', 'button') + link(repo, 'Inference adapter ↗', 'text-link') + '</div>'
+        detail += link(model.get('project_url') or source, 'Author source ↗', 'button') + link(repo, 'Inference adapter ↗', 'text-link') + '</div>'
         if model.get('training_data'):
             training = model['training_data']
             detail += '<h3>Training data</h3><p>' + esc(training['description']) + '</p>' + link(training['source'], 'Author documentation ↗', 'text-link')
