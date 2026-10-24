@@ -49,7 +49,7 @@ def evaluation_record(results, track, key, content, github):
     common = [('Benchmark', esc(track['benchmark_label']+' × '+track['robot_short_label']+' · '+track['label'])),
               ('Engine', 'MuJoCo '+esc(early['mujoco_version'])+' · official CPU batch'),
               ('Checkpoint SHA256', '<code>'+esc(early['checkpoint_sha256'])+'</code>')]
-    repo = github+'/motion-challenge-'+key
+    repo = early.get('adapter_repository', github+'/motion-challenge-'+key)
     if unified:
         evidence = json.loads((content/'evidence'/unified['evidence_file']).read_text())
         common += [('Evaluated adapter', link(unified['adapter_code_url'], unified['adapter_commit'])),
@@ -102,7 +102,7 @@ def render(models, rows, tracks, content, github, page, intro):
 
     for key, model in models.items():
         rt, provenance = model['runtime'], model['provenance']
-        repo = f'{github}/motion-challenge-{key}'
+        repo = model.get('adapter_repository', f'{github}/motion-challenge-{key}')
         revision = provenance.get('source_commit')
         source = provenance['upstream']
         source_url = source.rstrip('/') + '/tree/' + revision if revision else source
