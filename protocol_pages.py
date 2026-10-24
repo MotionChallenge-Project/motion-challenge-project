@@ -14,24 +14,19 @@ def render(content, page, intro, github):
 </aside><article class="docs">
 <section id="contract"><h2>Evaluation</h2>
 <p>The Core fixes data, robot, physics, reset, failures and scoring. Each controller keeps its author's inference, history and control timing.</p>
-<p><strong>LAFAN40 · G1:</strong> 40 complete motions, MuJoCo 3.17.0 batch, no noise or randomization, friction 1. Start at the first reference pose and velocity; continue to the final frame without resetting after failure.</p>
-<table class="rules-table"><thead><tr><th scope="col">Failure condition</th><th scope="col">Threshold</th></tr></thead><tbody>
-<tr><td>Absolute torso height error</td><td>&gt; 0.25 m</td></tr>
-<tr><td>Absolute projected-gravity Z difference: actual vs reference torso</td><td>&gt; 0.8</td></tr>
-<tr><td>Maximum wrist or ankle world-height error</td><td>&gt; 0.25 m</td></tr>
-</tbody></table>
-<p class="small">Any condition records the first failure. No XY or yaw threshold. <a href="/benchmarks/lafan40/#failure-conditions">Exact definitions ↗</a></p>
+<p>Each benchmark declares its motion set, robot, simulator settings, initialization and failure conditions. Evaluate every declared motion with one checkpoint, from first frame to endpoint; record the first failure and continue without resetting.</p>
+<p><a class="text-link" href="/benchmarks/">Dataset &amp; benchmark conditions ↗</a></p>
 </section>
 <section id="observations"><h2>Restricted observation track</h2>
 <p>Ideal proprioception, without actual world-position or contact feedback. Rules apply to initialization, preprocessing, history and inference.</p>'''
     body += admission_pages.observation_table()
     body += '''<p class="small">Root velocities use world axes at the body origin. Fixed origins, local FK and reference-only alignment require a validated author-supported path for the exact checkpoint. Arbitrary input zeroing is not accepted.</p>'''
-    body += ('<div class="actions"><a class="button" href="' + core + '/docs/OBSERVATIONS.md">Frozen rules ↗</a>'
+    body += ('<div class="actions"><a class="text-link" href="' + core + '/docs/OBSERVATIONS.md">Frozen rules ↗</a>'
              '<a class="text-link" href="/models/">Model-specific handling ↗</a></div></section>')
     body += '''<section id="alignment"><h2>Metrics</h2>
 <ul><li><strong>Success ↑:</strong> fraction of complete motions without failure.</li>
 <li><strong>Completion ↑:</strong> average fraction of duration reached before first failure.</li>
-<li><strong>MPBPE ↓:</strong> mean position error over 14 body origins, in mm; average frames within each motion, then weight motions equally.</li></ul>
+<li><strong>MPBPE ↓:</strong> mean position error over the benchmark’s declared body origins, in mm; average frames within each motion, then weight motions equally.</li></ul>
 <table class="rules-table"><thead><tr><th scope="col">Alignment</th><th scope="col">Removed before measuring error</th></tr></thead><tbody>
 <tr><td>XY + yaw</td><td>Per-frame horizontal root translation and heading difference</td></tr>
 <tr><td>XY only</td><td>Per-frame horizontal root translation</td></tr>
