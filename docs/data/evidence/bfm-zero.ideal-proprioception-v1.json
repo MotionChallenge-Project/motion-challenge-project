@@ -1,0 +1,2353 @@
+{
+  "model": "bfm-zero",
+  "submitter": "MotionChallenge",
+  "result_sha256": "c6c3e779d8d4577a236554a12a9ba9359c0dbab7c96cff1465e2142993c06ec9",
+  "result": {
+    "schema": "MotionChallenge/unified-result-v1",
+    "status": "trace_verified",
+    "source": {
+      "adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5",
+      "adapter_dirty": false,
+      "tracked_files_sha256": {
+        ".gitignore": "b447497e458b207d7f8aec37307b7a049eba4174f67890a66ead43fe37b83288",
+        ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
+        ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+        "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
+        "README.md": "b5eef62a9db9173d007a9a02a116246031e81bf5eb16db2965adb70bd655dd1e",
+        "THIRD_PARTY_NOTICES.md": "0fbdb1c0c66d2434eab9a936eca616577f34a67b4b1e26807e7d056c556ffa39",
+        "adapter.py": "426843e9256987333a449c823c1098f9e8e9e07fc89932128ebec8371f6e392e",
+        "admission.json": "30fa11d4acaf6937de74d4c610f2af4f028ce871df89432a5d00a3d546b1c699",
+        "conversion/__init__.py": "c86cc98a6167759c4050768626735330f39ee9767643fd3fc679887da72eab67",
+        "conversion/prepare.py": "f0fa099ce845da9afc51ea44ff35d43b3eae1eefe859e326a754248273c7f9c4",
+        "conversion/sources.json": "d0b3810bd1dd55d7312cde6d9aaec04150a4388afda5234576992415dcfa0a62",
+        "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+        "policy.json": "39e4605b2a0dbb99379203fddc007d8b0ca23d4e1f9796569889097b78be71bf",
+        "provenance.json": "78635ab79bebe7108da97c667f576c38bde6761ac65e55b1704b1b4738f13650",
+        "pyproject.toml": "fedce9510ce33a17cf42d8a7c5655c3e87ab303aeb16b36b442e3db86c2f807c",
+        "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
+        "runtime.json": "c43249b36bdffbccd0680ff9effc7950831509a375386503724625f1be4bb48f",
+        "uv.lock": "bc5d8579ca1b380c5d2047b11cb24ef59909dc873859bac54ad0b4aa40de3308",
+        "validate_inference.py": "827e3d4dd3a6cfe42ea754eaf22373284cbc350fd5c76bd2a5140ce9e23fe96f",
+        "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
+        "validation/README.md": "aa650c06dd3ad31644f4838133f9d0c7d2dd37a4621aa569eeff0b07f42ec40c",
+        "validation/native-parity.json": "c111dd6792b8430db750bcf997fcbae74d7707c7762c913630fa7a808cc553b8",
+        "validation/observation-access.json": "f77d02ad54e0ce9b2d3c137ac3cb637dd16d4b3b6645ca7177a778a83f7163c3"
+      },
+      "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+      "core_dirty": false
+    },
+    "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+    "state_access": "ideal-proprioceptive-no-position-v1",
+    "protocols": {
+      "until_first_failure": {
+        "protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-v1",
+        "protocol_sha256": "35806b6c96e83b82e2f7273f2531114b2b620e7ce0decba86e68e3dfeb810a79"
+      },
+      "full_motion": {
+        "protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-no-termination-v1",
+        "protocol_sha256": "861febec8b0b2b7c77cebde792bbf79c402768d1d270efccc96ac3f90235d09f"
+      }
+    },
+    "controller_id": "bfm-zero-g1",
+    "suite_sha256": "113b15cbb133fc1f8f873ad310a13c433d552f77137bde1b43426a2b55af1060",
+    "robot_profile_sha256": "27a89860a47c730b73156d945be9eb28736001afc16530165eccb31d1513b432",
+    "mujoco_version": "3.17.0",
+    "backend": "batch",
+    "success_count": 1,
+    "total": 40,
+    "macro_completion": 0.17722651933923894,
+    "metrics": {
+      "until_first_failure": {
+        "joint_mae_rad": 0.10279858148161428,
+        "root_position_error_m": 1.7746567522227674,
+        "root_orientation_error_rad": 0.6532142999451842,
+        "mpjpe_world_m": 1.7813970262149692,
+        "mpjpe_root_relative_world_axes_m": 0.10272838098589702,
+        "anchor_height_error_m": 0.013443090549202705,
+        "anchor_gravity_z_error": 0.012411747853552358,
+        "end_effector_height_error_m": 0.0591397994494378,
+        "mpjpe_xy_aligned_m": 0.10546190308389507,
+        "mpjpe_xy_yaw_aligned_m": 0.04403242282763121,
+        "root_xy_error_m": 1.7736751559867177,
+        "root_height_error_m": 0.013328371879264372,
+        "root_yaw_correction_abs_rad": 0.6398530013862576,
+        "yaw_alignment_degenerate_fraction": 0.0
+      },
+      "full_motion": {
+        "joint_mae_rad": 0.15213420219540025,
+        "root_position_error_m": 11.204864275657412,
+        "root_orientation_error_rad": 1.4711428000093432,
+        "mpjpe_world_m": 11.211635231525353,
+        "mpjpe_root_relative_world_axes_m": 0.22241867742626914,
+        "anchor_height_error_m": 0.03737059073591381,
+        "anchor_gravity_z_error": 0.04557864379926822,
+        "end_effector_height_error_m": 0.09963198973351271,
+        "mpjpe_xy_aligned_m": 0.23084881183865713,
+        "mpjpe_xy_yaw_aligned_m": 0.08507348642438053,
+        "root_xy_error_m": 11.204152812283308,
+        "root_height_error_m": 0.036604194621023114,
+        "root_yaw_correction_abs_rad": 1.4480209145146206,
+        "yaw_alignment_degenerate_fraction": 0.0
+      }
+    },
+    "clips": [
+      {
+        "id": "g1/dance1_subject1.csv",
+        "duration_s": 131.46666666666667,
+        "success": false,
+        "completion": 0.18498985801217038,
+        "failure_time_s": 24.339999999995378,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.08407619515317037,
+            "root_position_error_m": 1.5078620279082453,
+            "root_orientation_error_rad": 0.5825262832163753,
+            "mpjpe_world_m": 1.5144510261969242,
+            "mpjpe_root_relative_world_axes_m": 0.09478089558077182,
+            "anchor_height_error_m": 0.017051830545513114,
+            "anchor_gravity_z_error": 0.014507434203235782,
+            "end_effector_height_error_m": 0.04625395114285254,
+            "mpjpe_xy_aligned_m": 0.09790120436916341,
+            "mpjpe_xy_yaw_aligned_m": 0.04209163615944244,
+            "root_xy_error_m": 1.507259502976416,
+            "root_height_error_m": 0.016894974383200756,
+            "root_yaw_correction_abs_rad": 0.5721178977663495,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.161944953581443,
+            "root_position_error_m": 3.13417953057826,
+            "root_orientation_error_rad": 1.471789315779368,
+            "mpjpe_world_m": 3.1529108936494565,
+            "mpjpe_root_relative_world_axes_m": 0.2155131933342987,
+            "anchor_height_error_m": 0.030632195019234237,
+            "anchor_gravity_z_error": 0.04401943946301372,
+            "end_effector_height_error_m": 0.11377985308858499,
+            "mpjpe_xy_aligned_m": 0.22183740140276625,
+            "mpjpe_xy_yaw_aligned_m": 0.0892327076117164,
+            "root_xy_error_m": 3.1336592857983327,
+            "root_height_error_m": 0.03048025151616684,
+            "root_yaw_correction_abs_rad": 1.453535517708019,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 1217,
+          "full_motion": 6574
+        }
+      },
+      {
+        "id": "g1/dance1_subject2.csv",
+        "duration_s": 131.46666666666667,
+        "success": false,
+        "completion": 0.11303245436105476,
+        "failure_time_s": 14.88,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.09480474666054237,
+            "root_position_error_m": 0.11033428444597486,
+            "root_orientation_error_rad": 0.4580607345654841,
+            "mpjpe_world_m": 0.12725942418045186,
+            "mpjpe_root_relative_world_axes_m": 0.08473764458279401,
+            "anchor_height_error_m": 0.011267729615768315,
+            "anchor_gravity_z_error": 0.004461812950560282,
+            "end_effector_height_error_m": 0.054470403368178974,
+            "mpjpe_xy_aligned_m": 0.08690178010238721,
+            "mpjpe_xy_yaw_aligned_m": 0.036454454553873236,
+            "root_xy_error_m": 0.1091038221461447,
+            "root_height_error_m": 0.01122011777783559,
+            "root_yaw_correction_abs_rad": 0.43599199603408423,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.16511357176100178,
+            "root_position_error_m": 3.7820942430620828,
+            "root_orientation_error_rad": 1.332496460536335,
+            "mpjpe_world_m": 3.8035500470740624,
+            "mpjpe_root_relative_world_axes_m": 0.21667824929855803,
+            "anchor_height_error_m": 0.026670398046257808,
+            "anchor_gravity_z_error": 0.0190384540089314,
+            "end_effector_height_error_m": 0.105446175613321,
+            "mpjpe_xy_aligned_m": 0.22185072068577708,
+            "mpjpe_xy_yaw_aligned_m": 0.07596102644911139,
+            "root_xy_error_m": 3.7817266450663616,
+            "root_height_error_m": 0.026602734892271968,
+            "root_yaw_correction_abs_rad": 1.3205832234865778,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 744,
+          "full_motion": 6574
+        }
+      },
+      {
+        "id": "g1/dance1_subject3.csv",
+        "duration_s": 131.46666666666667,
+        "success": false,
+        "completion": 0.35598377281947263,
+        "failure_time_s": 46.82,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.10133034649453303,
+            "root_position_error_m": 0.15084605145068616,
+            "root_orientation_error_rad": 0.25217198942077484,
+            "mpjpe_world_m": 0.1645253749412894,
+            "mpjpe_root_relative_world_axes_m": 0.05516760194292836,
+            "anchor_height_error_m": 0.01271639142784636,
+            "anchor_gravity_z_error": 0.013631241642173057,
+            "end_effector_height_error_m": 0.047487970938844035,
+            "mpjpe_xy_aligned_m": 0.05792629272401754,
+            "mpjpe_xy_yaw_aligned_m": 0.03804496705984391,
+            "root_xy_error_m": 0.14925385951397707,
+            "root_height_error_m": 0.012384013003955984,
+            "root_yaw_correction_abs_rad": 0.23638182290159448,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.12364486422236344,
+            "root_position_error_m": 4.250978691058122,
+            "root_orientation_error_rad": 0.6126474123557014,
+            "mpjpe_world_m": 4.2571620502133785,
+            "mpjpe_root_relative_world_axes_m": 0.10935501810802302,
+            "anchor_height_error_m": 0.01981108144255498,
+            "anchor_gravity_z_error": 0.012392254954063387,
+            "end_effector_height_error_m": 0.07323771045446852,
+            "mpjpe_xy_aligned_m": 0.11368053641999426,
+            "mpjpe_xy_yaw_aligned_m": 0.05759326640842304,
+            "root_xy_error_m": 4.250276208316567,
+            "root_height_error_m": 0.019612636275026702,
+            "root_yaw_correction_abs_rad": 0.5994592515193253,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 2341,
+          "full_motion": 6574
+        }
+      },
+      {
+        "id": "g1/dance2_subject1.csv",
+        "duration_s": 225.66666666666666,
+        "success": false,
+        "completion": 0.12327917282127032,
+        "failure_time_s": 27.839999999993438,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.104000685006989,
+            "root_position_error_m": 0.31192571827730897,
+            "root_orientation_error_rad": 0.692958356142746,
+            "mpjpe_world_m": 0.3596492132261913,
+            "mpjpe_root_relative_world_axes_m": 0.11926799647494639,
+            "anchor_height_error_m": 0.013236116473270691,
+            "anchor_gravity_z_error": 0.012917205819868702,
+            "end_effector_height_error_m": 0.04382402742573799,
+            "mpjpe_xy_aligned_m": 0.12115415786873956,
+            "mpjpe_xy_yaw_aligned_m": 0.04432882563045355,
+            "root_xy_error_m": 0.3107590790385406,
+            "root_height_error_m": 0.013224199242550519,
+            "root_yaw_correction_abs_rad": 0.6877154370577429,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.17164886972166832,
+            "root_position_error_m": 13.995606030311578,
+            "root_orientation_error_rad": 1.4828864595109066,
+            "mpjpe_world_m": 13.995891221808796,
+            "mpjpe_root_relative_world_axes_m": 0.22416845610119437,
+            "anchor_height_error_m": 0.0315821738953978,
+            "anchor_gravity_z_error": 0.03485878722322517,
+            "end_effector_height_error_m": 0.11352390327764783,
+            "mpjpe_xy_aligned_m": 0.23080584634167334,
+            "mpjpe_xy_yaw_aligned_m": 0.08668891967189524,
+            "root_xy_error_m": 13.995396691419877,
+            "root_height_error_m": 0.0314237617354464,
+            "root_yaw_correction_abs_rad": 1.4726715705347126,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 1392,
+          "full_motion": 11284
+        }
+      },
+      {
+        "id": "g1/dance2_subject2.csv",
+        "duration_s": 225.66666666666666,
+        "success": false,
+        "completion": 0.04280649926144756,
+        "failure_time_s": 9.6799999999999,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.06775093674826606,
+            "root_position_error_m": 0.11054360536833176,
+            "root_orientation_error_rad": 0.44829217173319746,
+            "mpjpe_world_m": 0.12110229187473878,
+            "mpjpe_root_relative_world_axes_m": 0.07547880006805283,
+            "anchor_height_error_m": 0.0031598446918599554,
+            "anchor_gravity_z_error": 0.0032877123757376,
+            "end_effector_height_error_m": 0.024470747650264836,
+            "mpjpe_xy_aligned_m": 0.07573902645330899,
+            "mpjpe_xy_yaw_aligned_m": 0.02503020752450841,
+            "root_xy_error_m": 0.11044025049239463,
+            "root_height_error_m": 0.0031577152050000007,
+            "root_yaw_correction_abs_rad": 0.4419139904532495,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.15855272267922646,
+            "root_position_error_m": 5.0252398618351,
+            "root_orientation_error_rad": 1.6499724613367608,
+            "mpjpe_world_m": 5.0337590023994325,
+            "mpjpe_root_relative_world_axes_m": 0.24069806515983153,
+            "anchor_height_error_m": 0.029780056699649348,
+            "anchor_gravity_z_error": 0.019645274349211168,
+            "end_effector_height_error_m": 0.09757524983471914,
+            "mpjpe_xy_aligned_m": 0.2465047880013767,
+            "mpjpe_xy_yaw_aligned_m": 0.07476314418245257,
+            "root_xy_error_m": 5.025070333056696,
+            "root_height_error_m": 0.0297363719739427,
+            "root_yaw_correction_abs_rad": 1.6444067283790096,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 484,
+          "full_motion": 11284
+        }
+      },
+      {
+        "id": "g1/dance2_subject3.csv",
+        "duration_s": 225.66666666666666,
+        "success": false,
+        "completion": 0.06903988183161004,
+        "failure_time_s": 15.6,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.08861692358861371,
+            "root_position_error_m": 0.1101083162231886,
+            "root_orientation_error_rad": 0.20311116880110522,
+            "mpjpe_world_m": 0.11451826500573631,
+            "mpjpe_root_relative_world_axes_m": 0.05077193696956554,
+            "anchor_height_error_m": 0.004956223931058152,
+            "anchor_gravity_z_error": 0.002894012972320073,
+            "end_effector_height_error_m": 0.046549828239624835,
+            "mpjpe_xy_aligned_m": 0.05156255117636507,
+            "mpjpe_xy_yaw_aligned_m": 0.030688486136024953,
+            "root_xy_error_m": 0.10968125307404865,
+            "root_height_error_m": 0.004951834117663551,
+            "root_yaw_correction_abs_rad": 0.19118763654844256,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.13107932026785815,
+            "root_position_error_m": 6.956372788244472,
+            "root_orientation_error_rad": 1.129464182445746,
+            "mpjpe_world_m": 6.975492562779009,
+            "mpjpe_root_relative_world_axes_m": 0.17768811812724233,
+            "anchor_height_error_m": 0.019080431997917653,
+            "anchor_gravity_z_error": 0.016156572001668538,
+            "end_effector_height_error_m": 0.0797943074872372,
+            "mpjpe_xy_aligned_m": 0.18121586869912404,
+            "mpjpe_xy_yaw_aligned_m": 0.060716651643561374,
+            "root_xy_error_m": 6.956216975191623,
+            "root_height_error_m": 0.01901228883596299,
+            "root_yaw_correction_abs_rad": 1.121292296614021,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 780,
+          "full_motion": 11284
+        }
+      },
+      {
+        "id": "g1/dance2_subject4.csv",
+        "duration_s": 225.66666666666666,
+        "success": false,
+        "completion": 0.09296898079763664,
+        "failure_time_s": 20.99999999999723,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.11415083870503366,
+            "root_position_error_m": 0.20582715199409957,
+            "root_orientation_error_rad": 0.25929314540424075,
+            "mpjpe_world_m": 0.2199697227922022,
+            "mpjpe_root_relative_world_axes_m": 0.06394865685670159,
+            "anchor_height_error_m": 0.010389207913555283,
+            "anchor_gravity_z_error": 0.004270153426249241,
+            "end_effector_height_error_m": 0.06298946147847558,
+            "mpjpe_xy_aligned_m": 0.0659727426058698,
+            "mpjpe_xy_yaw_aligned_m": 0.042055697502566096,
+            "root_xy_error_m": 0.20499657077382502,
+            "root_height_error_m": 0.010236775855434284,
+            "root_yaw_correction_abs_rad": 0.23535021727152441,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.14502193488936643,
+            "root_position_error_m": 2.599410509219815,
+            "root_orientation_error_rad": 1.5341956985413991,
+            "mpjpe_world_m": 2.619609493133343,
+            "mpjpe_root_relative_world_axes_m": 0.21838809901784398,
+            "anchor_height_error_m": 0.024686281102372632,
+            "anchor_gravity_z_error": 0.017697088593960037,
+            "end_effector_height_error_m": 0.09509000483954967,
+            "mpjpe_xy_aligned_m": 0.2232550724154369,
+            "mpjpe_xy_yaw_aligned_m": 0.0663809406287763,
+            "root_xy_error_m": 2.598975486161836,
+            "root_height_error_m": 0.024692747791438003,
+            "root_yaw_correction_abs_rad": 1.5233721966586222,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 1050,
+          "full_motion": 11284
+        }
+      },
+      {
+        "id": "g1/dance2_subject5.csv",
+        "duration_s": 225.66666666666666,
+        "success": false,
+        "completion": 0.17610044313146234,
+        "failure_time_s": 39.76,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.07759692829573557,
+            "root_position_error_m": 0.6160108413226829,
+            "root_orientation_error_rad": 1.0943100489374644,
+            "mpjpe_world_m": 0.6288159776939662,
+            "mpjpe_root_relative_world_axes_m": 0.1568072586671909,
+            "anchor_height_error_m": 0.015039070352324463,
+            "anchor_gravity_z_error": 0.005680448914535936,
+            "end_effector_height_error_m": 0.044167814580600116,
+            "mpjpe_xy_aligned_m": 0.1594174069622469,
+            "mpjpe_xy_yaw_aligned_m": 0.038737206036696246,
+            "root_xy_error_m": 0.6155317067271391,
+            "root_height_error_m": 0.01502470404886626,
+            "root_yaw_correction_abs_rad": 1.089967881819405,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.13432675129065472,
+            "root_position_error_m": 4.321664638763751,
+            "root_orientation_error_rad": 1.5392311838752408,
+            "mpjpe_world_m": 4.324540942439319,
+            "mpjpe_root_relative_world_axes_m": 0.22222848737407105,
+            "anchor_height_error_m": 0.025806524442714276,
+            "anchor_gravity_z_error": 0.01340855343510735,
+            "end_effector_height_error_m": 0.09298704505435468,
+            "mpjpe_xy_aligned_m": 0.22741180521242063,
+            "mpjpe_xy_yaw_aligned_m": 0.07138822171461152,
+            "root_xy_error_m": 4.321294427898457,
+            "root_height_error_m": 0.02575752742826807,
+            "root_yaw_correction_abs_rad": 1.5313163999030797,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 1988,
+          "full_motion": 11284
+        }
+      },
+      {
+        "id": "g1/fallAndGetUp1_subject1.csv",
+        "duration_s": 168.2,
+        "success": false,
+        "completion": 0.032461355529131986,
+        "failure_time_s": 5.479999999999617,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.0901817225226429,
+            "root_position_error_m": 0.06434560352264768,
+            "root_orientation_error_rad": 0.08793002884964866,
+            "mpjpe_world_m": 0.06257124442902523,
+            "mpjpe_root_relative_world_axes_m": 0.031892134645136065,
+            "anchor_height_error_m": 0.01460300587063252,
+            "anchor_gravity_z_error": 0.008485742891521576,
+            "end_effector_height_error_m": 0.04494487768222897,
+            "mpjpe_xy_aligned_m": 0.03638421806141676,
+            "mpjpe_xy_yaw_aligned_m": 0.034495120577676404,
+            "root_xy_error_m": 0.06203115416442712,
+            "root_height_error_m": 0.014644310997620893,
+            "root_yaw_correction_abs_rad": 0.06038476904548437,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.22278487861214935,
+            "root_position_error_m": 8.978966481606644,
+            "root_orientation_error_rad": 1.591552095918005,
+            "mpjpe_world_m": 9.014071275566174,
+            "mpjpe_root_relative_world_axes_m": 0.2986716539121729,
+            "anchor_height_error_m": 0.08173390772604983,
+            "anchor_gravity_z_error": 0.11803157363731678,
+            "end_effector_height_error_m": 0.16400967415838405,
+            "mpjpe_xy_aligned_m": 0.3166999277620922,
+            "mpjpe_xy_yaw_aligned_m": 0.1359441872788509,
+            "root_xy_error_m": 8.976551055871115,
+            "root_height_error_m": 0.07738669750377661,
+            "root_yaw_correction_abs_rad": 1.5292792790048042,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 274,
+          "full_motion": 8410
+        }
+      },
+      {
+        "id": "g1/fallAndGetUp1_subject4.csv",
+        "duration_s": 168.2,
+        "success": false,
+        "completion": 0.037336504161712254,
+        "failure_time_s": 6.299999999999526,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.09352163858696863,
+            "root_position_error_m": 0.07150001094589074,
+            "root_orientation_error_rad": 0.14752600592743165,
+            "mpjpe_world_m": 0.08375271222601643,
+            "mpjpe_root_relative_world_axes_m": 0.0396704177087404,
+            "anchor_height_error_m": 0.008905394330155606,
+            "anchor_gravity_z_error": 0.005703779780305537,
+            "end_effector_height_error_m": 0.055395370696900606,
+            "mpjpe_xy_aligned_m": 0.04218776168349519,
+            "mpjpe_xy_yaw_aligned_m": 0.029450003704633392,
+            "root_xy_error_m": 0.07047173782601564,
+            "root_height_error_m": 0.00885005238510081,
+            "root_yaw_correction_abs_rad": 0.1337583453025481,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.22075008484932773,
+            "root_position_error_m": 5.6758597100260975,
+            "root_orientation_error_rad": 1.560292736026962,
+            "mpjpe_world_m": 5.683817033574491,
+            "mpjpe_root_relative_world_axes_m": 0.2985673327637095,
+            "anchor_height_error_m": 0.08724896229682402,
+            "anchor_gravity_z_error": 0.10351754442230895,
+            "end_effector_height_error_m": 0.156709218307254,
+            "mpjpe_xy_aligned_m": 0.320430823356722,
+            "mpjpe_xy_yaw_aligned_m": 0.13467779033182675,
+            "root_xy_error_m": 5.67348566682172,
+            "root_height_error_m": 0.08296260175412991,
+            "root_yaw_correction_abs_rad": 1.4778419898670632,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 315,
+          "full_motion": 8410
+        }
+      },
+      {
+        "id": "g1/fallAndGetUp1_subject5.csv",
+        "duration_s": 168.2,
+        "success": false,
+        "completion": 0.021403091557669444,
+        "failure_time_s": 3.6199999999998216,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.08737597647663159,
+            "root_position_error_m": 0.03072177794590239,
+            "root_orientation_error_rad": 0.0968335674600625,
+            "mpjpe_world_m": 0.03763888404156484,
+            "mpjpe_root_relative_world_axes_m": 0.030074361277186604,
+            "anchor_height_error_m": 0.0015041239460137454,
+            "anchor_gravity_z_error": 0.000940778379686682,
+            "end_effector_height_error_m": 0.049004036987125424,
+            "mpjpe_xy_aligned_m": 0.03022451764667103,
+            "mpjpe_xy_yaw_aligned_m": 0.020933878264908883,
+            "root_xy_error_m": 0.03061035775079858,
+            "root_height_error_m": 0.0015025497709584695,
+            "root_yaw_correction_abs_rad": 0.08831078665165018,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.21782932282679723,
+            "root_position_error_m": 6.465008542316591,
+            "root_orientation_error_rad": 1.3787396709375586,
+            "mpjpe_world_m": 6.4824301114322145,
+            "mpjpe_root_relative_world_axes_m": 0.2641611643143923,
+            "anchor_height_error_m": 0.085077951808954,
+            "anchor_gravity_z_error": 0.10719822545408936,
+            "end_effector_height_error_m": 0.15755818853688042,
+            "mpjpe_xy_aligned_m": 0.2820003701082065,
+            "mpjpe_xy_yaw_aligned_m": 0.13811013770431368,
+            "root_xy_error_m": 6.461527757632342,
+            "root_height_error_m": 0.08210808104337249,
+            "root_yaw_correction_abs_rad": 1.307570724367353,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 181,
+          "full_motion": 8410
+        }
+      },
+      {
+        "id": "g1/fallAndGetUp2_subject2.csv",
+        "duration_s": 163.9,
+        "success": false,
+        "completion": 0.03831604636973764,
+        "failure_time_s": 6.299999999999526,
+        "failure_reasons": [
+          "anchor_height",
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.08508303009777059,
+            "root_position_error_m": 0.048885468192013115,
+            "root_orientation_error_rad": 0.06646035878819327,
+            "mpjpe_world_m": 0.04856715532318897,
+            "mpjpe_root_relative_world_axes_m": 0.032704814757048145,
+            "anchor_height_error_m": 0.015201550730537838,
+            "anchor_gravity_z_error": 0.008426627751531489,
+            "end_effector_height_error_m": 0.037422656588154656,
+            "mpjpe_xy_aligned_m": 0.037843514478524416,
+            "mpjpe_xy_yaw_aligned_m": 0.035748961106319185,
+            "root_xy_error_m": 0.04323467782862324,
+            "root_height_error_m": 0.01515689797342392,
+            "root_yaw_correction_abs_rad": 0.04749504626916553,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.21490709933040136,
+            "root_position_error_m": 4.048385791298531,
+            "root_orientation_error_rad": 1.2107065853226067,
+            "mpjpe_world_m": 4.078671997652024,
+            "mpjpe_root_relative_world_axes_m": 0.2561496123283798,
+            "anchor_height_error_m": 0.08306705955903367,
+            "anchor_gravity_z_error": 0.12679994858952423,
+            "end_effector_height_error_m": 0.1484489814745624,
+            "mpjpe_xy_aligned_m": 0.27705846541344614,
+            "mpjpe_xy_yaw_aligned_m": 0.13516704229918583,
+            "root_xy_error_m": 4.040830309013955,
+            "root_height_error_m": 0.08067772265755252,
+            "root_yaw_correction_abs_rad": 1.1248012197213222,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 315,
+          "full_motion": 8195
+        }
+      },
+      {
+        "id": "g1/fallAndGetUp2_subject3.csv",
+        "duration_s": 163.9,
+        "success": false,
+        "completion": 0.0364856619890177,
+        "failure_time_s": 5.9999999999995595,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.09580244241271688,
+            "root_position_error_m": 0.06841092892293112,
+            "root_orientation_error_rad": 0.12045259581942089,
+            "mpjpe_world_m": 0.07411755392386234,
+            "mpjpe_root_relative_world_axes_m": 0.04107119964994678,
+            "anchor_height_error_m": 0.01951705267585374,
+            "anchor_gravity_z_error": 0.03189257849239815,
+            "end_effector_height_error_m": 0.054336826154978465,
+            "mpjpe_xy_aligned_m": 0.045337067568514564,
+            "mpjpe_xy_yaw_aligned_m": 0.03879343044737737,
+            "root_xy_error_m": 0.06392528945037121,
+            "root_height_error_m": 0.01870433343519562,
+            "root_yaw_correction_abs_rad": 0.08980012039806651,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.201143780787336,
+            "root_position_error_m": 3.700907490610289,
+            "root_orientation_error_rad": 1.7170625462684685,
+            "mpjpe_world_m": 3.688212499464315,
+            "mpjpe_root_relative_world_axes_m": 0.3278866804006434,
+            "anchor_height_error_m": 0.0655046614208176,
+            "anchor_gravity_z_error": 0.11657628183633818,
+            "end_effector_height_error_m": 0.1390395242260779,
+            "mpjpe_xy_aligned_m": 0.3407317485271776,
+            "mpjpe_xy_yaw_aligned_m": 0.10968939650061414,
+            "root_xy_error_m": 3.6987304592760384,
+            "root_height_error_m": 0.06390367592330537,
+            "root_yaw_correction_abs_rad": 1.6737092825600268,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 300,
+          "full_motion": 8195
+        }
+      },
+      {
+        "id": "g1/fallAndGetUp3_subject1.csv",
+        "duration_s": 102.16666666666667,
+        "success": false,
+        "completion": 0.0865252854812398,
+        "failure_time_s": 8.859999999999626,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.10203555073830962,
+            "root_position_error_m": 0.5956488971198045,
+            "root_orientation_error_rad": 0.5975716215739394,
+            "mpjpe_world_m": 0.6085593134541109,
+            "mpjpe_root_relative_world_axes_m": 0.10102890905065283,
+            "anchor_height_error_m": 0.013652026814801424,
+            "anchor_gravity_z_error": 0.0060532046219164545,
+            "end_effector_height_error_m": 0.07702086612548063,
+            "mpjpe_xy_aligned_m": 0.10266434813917949,
+            "mpjpe_xy_yaw_aligned_m": 0.04924233920024295,
+            "root_xy_error_m": 0.5947338498949407,
+            "root_height_error_m": 0.01348061101189896,
+            "root_yaw_correction_abs_rad": 0.5856830401047074,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.1700013105839779,
+            "root_position_error_m": 7.198685074351051,
+            "root_orientation_error_rad": 1.8821385948483107,
+            "mpjpe_world_m": 7.185853529273562,
+            "mpjpe_root_relative_world_axes_m": 0.2931591015077335,
+            "anchor_height_error_m": 0.06524822912825401,
+            "anchor_gravity_z_error": 0.11692324628034531,
+            "end_effector_height_error_m": 0.12606421902623738,
+            "mpjpe_xy_aligned_m": 0.3092047569820856,
+            "mpjpe_xy_yaw_aligned_m": 0.10823975456710148,
+            "root_xy_error_m": 7.197336473020719,
+            "root_height_error_m": 0.06287013129923831,
+            "root_yaw_correction_abs_rad": 1.8555095507116892,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 443,
+          "full_motion": 5109
+        }
+      },
+      {
+        "id": "g1/fight1_subject2.csv",
+        "duration_s": 244.86666666666667,
+        "success": false,
+        "completion": 0.06305472365913421,
+        "failure_time_s": 15.46,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.1311310750691941,
+            "root_position_error_m": 3.048972426331771,
+            "root_orientation_error_rad": 1.6928089137038222,
+            "mpjpe_world_m": 3.0147778314732885,
+            "mpjpe_root_relative_world_axes_m": 0.22389016851561824,
+            "anchor_height_error_m": 0.03430904881782118,
+            "anchor_gravity_z_error": 0.029871429846774062,
+            "end_effector_height_error_m": 0.08280145626732403,
+            "mpjpe_xy_aligned_m": 0.22990110341476516,
+            "mpjpe_xy_yaw_aligned_m": 0.08375033842673832,
+            "root_xy_error_m": 3.0484219567090953,
+            "root_height_error_m": 0.03375363702204794,
+            "root_yaw_correction_abs_rad": 1.6809604267560467,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.16178805612986505,
+            "root_position_error_m": 15.960553065408435,
+            "root_orientation_error_rad": 1.319533039241959,
+            "mpjpe_world_m": 15.963857596106505,
+            "mpjpe_root_relative_world_axes_m": 0.20459571140176214,
+            "anchor_height_error_m": 0.03806655910624915,
+            "anchor_gravity_z_error": 0.039546640437717426,
+            "end_effector_height_error_m": 0.10920941416451617,
+            "mpjpe_xy_aligned_m": 0.2135859346360279,
+            "mpjpe_xy_yaw_aligned_m": 0.09337796661061164,
+            "root_xy_error_m": 15.960262186773091,
+            "root_height_error_m": 0.03769345947846026,
+            "root_yaw_correction_abs_rad": 1.2976235845836832,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 773,
+          "full_motion": 12244
+        }
+      },
+      {
+        "id": "g1/fight1_subject3.csv",
+        "duration_s": 244.86666666666667,
+        "success": false,
+        "completion": 0.06722025592158998,
+        "failure_time_s": 16.479999999999734,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.11972781135078206,
+            "root_position_error_m": 1.7655288491841545,
+            "root_orientation_error_rad": 0.5502237921208062,
+            "mpjpe_world_m": 1.7890226911405775,
+            "mpjpe_root_relative_world_axes_m": 0.1118523168417781,
+            "anchor_height_error_m": 0.0327922900133323,
+            "anchor_gravity_z_error": 0.02664391352059543,
+            "end_effector_height_error_m": 0.07111860396911035,
+            "mpjpe_xy_aligned_m": 0.12076425635273594,
+            "mpjpe_xy_yaw_aligned_m": 0.06132057758248821,
+            "root_xy_error_m": 1.7648356470187285,
+            "root_height_error_m": 0.032669667370931,
+            "root_yaw_correction_abs_rad": 0.5235939351748666,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.13692933575883148,
+            "root_position_error_m": 12.703154177173776,
+            "root_orientation_error_rad": 1.3298520895393313,
+            "mpjpe_world_m": 12.703897157333964,
+            "mpjpe_root_relative_world_axes_m": 0.21310441603547706,
+            "anchor_height_error_m": 0.033347712411474585,
+            "anchor_gravity_z_error": 0.02725321431794105,
+            "end_effector_height_error_m": 0.09204179887967064,
+            "mpjpe_xy_aligned_m": 0.22047665903444552,
+            "mpjpe_xy_yaw_aligned_m": 0.07481617785826569,
+            "root_xy_error_m": 12.703015333487988,
+            "root_height_error_m": 0.03298803579674427,
+            "root_yaw_correction_abs_rad": 1.3156998606101393,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 824,
+          "full_motion": 12244
+        }
+      },
+      {
+        "id": "g1/fight1_subject5.csv",
+        "duration_s": 244.86666666666667,
+        "success": false,
+        "completion": 0.10258644160087123,
+        "failure_time_s": 25.139999999994934,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.12551969692288445,
+            "root_position_error_m": 3.0671780634589014,
+            "root_orientation_error_rad": 1.5701653745590218,
+            "mpjpe_world_m": 3.0365984494461564,
+            "mpjpe_root_relative_world_axes_m": 0.26104609245734783,
+            "anchor_height_error_m": 0.0319126295853948,
+            "anchor_gravity_z_error": 0.0251274364426143,
+            "end_effector_height_error_m": 0.07835279037564516,
+            "mpjpe_xy_aligned_m": 0.2670465113373313,
+            "mpjpe_xy_yaw_aligned_m": 0.06870793489730768,
+            "root_xy_error_m": 3.0668112042057833,
+            "root_height_error_m": 0.03190570711102663,
+            "root_yaw_correction_abs_rad": 1.5630942892650248,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.13643754127237487,
+            "root_position_error_m": 12.773588356877136,
+            "root_orientation_error_rad": 1.4314424470095206,
+            "mpjpe_world_m": 12.749704571077762,
+            "mpjpe_root_relative_world_axes_m": 0.2296440852271519,
+            "anchor_height_error_m": 0.028486387234942304,
+            "anchor_gravity_z_error": 0.022543035341940215,
+            "end_effector_height_error_m": 0.08503932981640053,
+            "mpjpe_xy_aligned_m": 0.23578622586528353,
+            "mpjpe_xy_yaw_aligned_m": 0.07485772964719581,
+            "root_xy_error_m": 12.773467404267342,
+            "root_height_error_m": 0.028504591309690477,
+            "root_yaw_correction_abs_rad": 1.4206751600452703,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 1257,
+          "full_motion": 12244
+        }
+      },
+      {
+        "id": "g1/fightAndSports1_subject1.csv",
+        "duration_s": 245.13333333333333,
+        "success": false,
+        "completion": 0.03296165352189285,
+        "failure_time_s": 8.099999999999373,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.10077749554661695,
+            "root_position_error_m": 0.19245296801274656,
+            "root_orientation_error_rad": 0.1795518850739826,
+            "mpjpe_world_m": 0.2004417091838659,
+            "mpjpe_root_relative_world_axes_m": 0.05256679479110158,
+            "anchor_height_error_m": 0.01621391620974677,
+            "anchor_gravity_z_error": 0.014255021206923079,
+            "end_effector_height_error_m": 0.0698908147540845,
+            "mpjpe_xy_aligned_m": 0.05677162421279239,
+            "mpjpe_xy_yaw_aligned_m": 0.042812379113294004,
+            "root_xy_error_m": 0.1904598965825833,
+            "root_height_error_m": 0.015274628383727966,
+            "root_yaw_correction_abs_rad": 0.1525337545630605,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.14275084866610413,
+            "root_position_error_m": 24.466003897445503,
+            "root_orientation_error_rad": 1.521407394110874,
+            "mpjpe_world_m": 24.48773998191282,
+            "mpjpe_root_relative_world_axes_m": 0.23602580520070185,
+            "anchor_height_error_m": 0.042169437382028246,
+            "anchor_gravity_z_error": 0.028926074684791123,
+            "end_effector_height_error_m": 0.09594207447937048,
+            "mpjpe_xy_aligned_m": 0.2460986671449142,
+            "mpjpe_xy_yaw_aligned_m": 0.08297021264867056,
+            "root_xy_error_m": 24.465640304684467,
+            "root_height_error_m": 0.041914871604932964,
+            "root_yaw_correction_abs_rad": 1.507573235156292,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 405,
+          "full_motion": 12257
+        }
+      },
+      {
+        "id": "g1/fightAndSports1_subject4.csv",
+        "duration_s": 245.13333333333333,
+        "success": false,
+        "completion": 0.03402230078868643,
+        "failure_time_s": 8.35999999999946,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.1095698137295895,
+            "root_position_error_m": 0.04296627934774082,
+            "root_orientation_error_rad": 0.1240238773251893,
+            "mpjpe_world_m": 0.052399414912223795,
+            "mpjpe_root_relative_world_axes_m": 0.03726319777041553,
+            "anchor_height_error_m": 0.011226438677573489,
+            "anchor_gravity_z_error": 0.014488781206273438,
+            "end_effector_height_error_m": 0.06631950987683866,
+            "mpjpe_xy_aligned_m": 0.04041384825117334,
+            "mpjpe_xy_yaw_aligned_m": 0.034727424608215006,
+            "root_xy_error_m": 0.03983638706450066,
+            "root_height_error_m": 0.011196191117824312,
+            "root_yaw_correction_abs_rad": 0.10124630614278421,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.1524230297273485,
+            "root_position_error_m": 2.830775848055338,
+            "root_orientation_error_rad": 1.3149086762759827,
+            "mpjpe_world_m": 2.856787250206094,
+            "mpjpe_root_relative_world_axes_m": 0.21253536531296094,
+            "anchor_height_error_m": 0.028592088274933994,
+            "anchor_gravity_z_error": 0.027771964650786383,
+            "end_effector_height_error_m": 0.09474796602824909,
+            "mpjpe_xy_aligned_m": 0.21861213032700422,
+            "mpjpe_xy_yaw_aligned_m": 0.07493159576326713,
+            "root_xy_error_m": 2.8301837789503153,
+            "root_height_error_m": 0.028573037213041313,
+            "root_yaw_correction_abs_rad": 1.3010259852503934,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 418,
+          "full_motion": 12257
+        }
+      },
+      {
+        "id": "g1/jumps1_subject1.csv",
+        "duration_s": 244.43333333333334,
+        "success": false,
+        "completion": 0.008918587208509477,
+        "failure_time_s": 2.199999999999978,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.10323958243148303,
+            "root_position_error_m": 0.034606381014232614,
+            "root_orientation_error_rad": 0.06711774474659349,
+            "mpjpe_world_m": 0.046951239687076145,
+            "mpjpe_root_relative_world_axes_m": 0.036584625485544336,
+            "anchor_height_error_m": 0.0061558955449128065,
+            "anchor_gravity_z_error": 0.0007107565812420851,
+            "end_effector_height_error_m": 0.0909355201515702,
+            "mpjpe_xy_aligned_m": 0.03578349908575651,
+            "mpjpe_xy_yaw_aligned_m": 0.03467236868760269,
+            "root_xy_error_m": 0.03357243659565506,
+            "root_height_error_m": 0.0059696896005046315,
+            "root_yaw_correction_abs_rad": 0.04708365330870837,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.13208239568841254,
+            "root_position_error_m": 13.236665926070014,
+            "root_orientation_error_rad": 1.4855602747832377,
+            "mpjpe_world_m": 13.240559824499416,
+            "mpjpe_root_relative_world_axes_m": 0.1950613688794646,
+            "anchor_height_error_m": 0.03146078651341638,
+            "anchor_gravity_z_error": 0.021620847011779402,
+            "end_effector_height_error_m": 0.08954130561437787,
+            "mpjpe_xy_aligned_m": 0.2025162022935451,
+            "mpjpe_xy_yaw_aligned_m": 0.07390945748374464,
+            "root_xy_error_m": 13.236557076085601,
+            "root_height_error_m": 0.03142624650265752,
+            "root_yaw_correction_abs_rad": 1.475640800408735,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 110,
+          "full_motion": 12222
+        }
+      },
+      {
+        "id": "g1/jumps1_subject2.csv",
+        "duration_s": 244.43333333333334,
+        "success": false,
+        "completion": 0.04704759307241238,
+        "failure_time_s": 11.52,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.09435430960183355,
+            "root_position_error_m": 0.6024890455522363,
+            "root_orientation_error_rad": 0.22916901257804476,
+            "mpjpe_world_m": 0.5961984591861215,
+            "mpjpe_root_relative_world_axes_m": 0.06389662531044199,
+            "anchor_height_error_m": 0.018996927438310916,
+            "anchor_gravity_z_error": 0.013283987893926647,
+            "end_effector_height_error_m": 0.0713556749165477,
+            "mpjpe_xy_aligned_m": 0.067771170398916,
+            "mpjpe_xy_yaw_aligned_m": 0.04604840561342131,
+            "root_xy_error_m": 0.6015526600250555,
+            "root_height_error_m": 0.01914017571484662,
+            "root_yaw_correction_abs_rad": 0.21732794944407502,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.17155961061535735,
+            "root_position_error_m": 18.989187275150826,
+            "root_orientation_error_rad": 1.5135480841013444,
+            "mpjpe_world_m": 18.98379780225799,
+            "mpjpe_root_relative_world_axes_m": 0.25643111031595744,
+            "anchor_height_error_m": 0.05101575027480418,
+            "anchor_gravity_z_error": 0.0641275897074069,
+            "end_effector_height_error_m": 0.13586250239810874,
+            "mpjpe_xy_aligned_m": 0.26798821313939963,
+            "mpjpe_xy_yaw_aligned_m": 0.10547884296442515,
+            "root_xy_error_m": 18.98882526394572,
+            "root_height_error_m": 0.050435137663403136,
+            "root_yaw_correction_abs_rad": 1.4453683052144082,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 576,
+          "full_motion": 12222
+        }
+      },
+      {
+        "id": "g1/jumps1_subject5.csv",
+        "duration_s": 244.43333333333334,
+        "success": false,
+        "completion": 0.018900859129960455,
+        "failure_time_s": 4.639999999999709,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.11171675980028892,
+            "root_position_error_m": 0.18024821848557876,
+            "root_orientation_error_rad": 0.2995149027630711,
+            "mpjpe_world_m": 0.1865801532657436,
+            "mpjpe_root_relative_world_axes_m": 0.06732525877861269,
+            "anchor_height_error_m": 0.01424392084645489,
+            "anchor_gravity_z_error": 0.009275086381495101,
+            "end_effector_height_error_m": 0.08330346017962525,
+            "mpjpe_xy_aligned_m": 0.07061954804005738,
+            "mpjpe_xy_yaw_aligned_m": 0.045462527654674366,
+            "root_xy_error_m": 0.17866090926228467,
+            "root_height_error_m": 0.014174033454922654,
+            "root_yaw_correction_abs_rad": 0.2864501108018115,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.12061865295577032,
+            "root_position_error_m": 21.445712800597132,
+            "root_orientation_error_rad": 1.5987623514502258,
+            "mpjpe_world_m": 21.44860659430268,
+            "mpjpe_root_relative_world_axes_m": 0.20911558417881967,
+            "anchor_height_error_m": 0.02889372596384744,
+            "anchor_gravity_z_error": 0.018764457644912087,
+            "end_effector_height_error_m": 0.08655136236235386,
+            "mpjpe_xy_aligned_m": 0.21564174299802766,
+            "mpjpe_xy_yaw_aligned_m": 0.06634198454182137,
+            "root_xy_error_m": 21.445495875623905,
+            "root_height_error_m": 0.02889111744829946,
+            "root_yaw_correction_abs_rad": 1.5929925094696944,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 232,
+          "full_motion": 12222
+        }
+      },
+      {
+        "id": "g1/run1_subject2.csv",
+        "duration_s": 237.8,
+        "success": false,
+        "completion": 0.20773759461732547,
+        "failure_time_s": 49.42,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.12261044215351641,
+            "root_position_error_m": 2.890303528381436,
+            "root_orientation_error_rad": 0.7719741388490201,
+            "mpjpe_world_m": 2.900504379357467,
+            "mpjpe_root_relative_world_axes_m": 0.12653989895201426,
+            "anchor_height_error_m": 0.024870670175193687,
+            "anchor_gravity_z_error": 0.013053065414595345,
+            "end_effector_height_error_m": 0.07175053265824059,
+            "mpjpe_xy_aligned_m": 0.13214212291296618,
+            "mpjpe_xy_yaw_aligned_m": 0.06464708015023993,
+            "root_xy_error_m": 2.8899141667838353,
+            "root_height_error_m": 0.024760803474141446,
+            "root_yaw_correction_abs_rad": 0.7607041406144843,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.1613429849430046,
+            "root_position_error_m": 13.187824320481454,
+            "root_orientation_error_rad": 1.415484265818557,
+            "mpjpe_world_m": 13.195180508382315,
+            "mpjpe_root_relative_world_axes_m": 0.20760521878931693,
+            "anchor_height_error_m": 0.045894530121053545,
+            "anchor_gravity_z_error": 0.049085082490856545,
+            "end_effector_height_error_m": 0.11468674200991268,
+            "mpjpe_xy_aligned_m": 0.2197936148440996,
+            "mpjpe_xy_yaw_aligned_m": 0.10424520792402996,
+            "root_xy_error_m": 13.187365412713492,
+            "root_height_error_m": 0.044460202581028216,
+            "root_yaw_correction_abs_rad": 1.3846487147358386,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 2471,
+          "full_motion": 11890
+        }
+      },
+      {
+        "id": "g1/run1_subject5.csv",
+        "duration_s": 237.8,
+        "success": false,
+        "completion": 0.027670311185870478,
+        "failure_time_s": 6.599999999999493,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.10544800756112539,
+            "root_position_error_m": 0.32900685395206636,
+            "root_orientation_error_rad": 0.2484734912453773,
+            "mpjpe_world_m": 0.33634117322035467,
+            "mpjpe_root_relative_world_axes_m": 0.06359319678354715,
+            "anchor_height_error_m": 0.00831600755353742,
+            "anchor_gravity_z_error": 0.011837312039134157,
+            "end_effector_height_error_m": 0.0730106684384406,
+            "mpjpe_xy_aligned_m": 0.06559959994022221,
+            "mpjpe_xy_yaw_aligned_m": 0.04832786317009148,
+            "root_xy_error_m": 0.32877669914825364,
+            "root_height_error_m": 0.008149665450617783,
+            "root_yaw_correction_abs_rad": 0.23762056053838015,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.18824414324633135,
+            "root_position_error_m": 25.069931354110803,
+            "root_orientation_error_rad": 1.510475325015862,
+            "mpjpe_world_m": 25.06354473933063,
+            "mpjpe_root_relative_world_axes_m": 0.22757513806007496,
+            "anchor_height_error_m": 0.045008895009623906,
+            "anchor_gravity_z_error": 0.04051752545580455,
+            "end_effector_height_error_m": 0.12737371616924129,
+            "mpjpe_xy_aligned_m": 0.23799682547277556,
+            "mpjpe_xy_yaw_aligned_m": 0.12088575086589837,
+            "root_xy_error_m": 25.069720200816143,
+            "root_height_error_m": 0.044044124425908326,
+            "root_yaw_correction_abs_rad": 1.4884520319131,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 330,
+          "full_motion": 11890
+        }
+      },
+      {
+        "id": "g1/run2_subject1.csv",
+        "duration_s": 244.8,
+        "success": false,
+        "completion": 0.02418300653594771,
+        "failure_time_s": 5.939999999999566,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.07296430337278863,
+            "root_position_error_m": 0.05313880835863039,
+            "root_orientation_error_rad": 0.06347118259482197,
+            "mpjpe_world_m": 0.05627375520655603,
+            "mpjpe_root_relative_world_axes_m": 0.027687833278921013,
+            "anchor_height_error_m": 0.008083065142001097,
+            "anchor_gravity_z_error": 0.0047842398496655844,
+            "end_effector_height_error_m": 0.03573760499590483,
+            "mpjpe_xy_aligned_m": 0.02956003043542258,
+            "mpjpe_xy_yaw_aligned_m": 0.02866189902309268,
+            "root_xy_error_m": 0.05213333789747949,
+            "root_height_error_m": 0.008116428684593934,
+            "root_yaw_correction_abs_rad": 0.04126110458392454,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.18045796537652564,
+            "root_position_error_m": 17.437889228669874,
+            "root_orientation_error_rad": 1.5956709893909888,
+            "mpjpe_world_m": 17.44731079645066,
+            "mpjpe_root_relative_world_axes_m": 0.22673070611272989,
+            "anchor_height_error_m": 0.040610241855392845,
+            "anchor_gravity_z_error": 0.05685210880730042,
+            "end_effector_height_error_m": 0.1219420295141704,
+            "mpjpe_xy_aligned_m": 0.23682180989958998,
+            "mpjpe_xy_yaw_aligned_m": 0.11186012676972223,
+            "root_xy_error_m": 17.437658864550343,
+            "root_height_error_m": 0.03970942104571203,
+            "root_yaw_correction_abs_rad": 1.5644409905889431,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 297,
+          "full_motion": 12240
+        }
+      },
+      {
+        "id": "g1/run2_subject4.csv",
+        "duration_s": 244.8,
+        "success": false,
+        "completion": 0.019934640522875816,
+        "failure_time_s": 4.899999999999681,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.12119373928177864,
+            "root_position_error_m": 0.10210492770708084,
+            "root_orientation_error_rad": 0.09811416962020549,
+            "mpjpe_world_m": 0.10945927628529858,
+            "mpjpe_root_relative_world_axes_m": 0.04983533425385094,
+            "anchor_height_error_m": 0.01328798095741848,
+            "anchor_gravity_z_error": 0.021008519005280904,
+            "end_effector_height_error_m": 0.07827942298717838,
+            "mpjpe_xy_aligned_m": 0.05519004248928791,
+            "mpjpe_xy_yaw_aligned_m": 0.05366390460437603,
+            "root_xy_error_m": 0.1003617764595751,
+            "root_height_error_m": 0.013190333572439622,
+            "root_yaw_correction_abs_rad": 0.06682963519558958,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.17123029489112726,
+            "root_position_error_m": 17.930014249250846,
+            "root_orientation_error_rad": 1.7694030560134184,
+            "mpjpe_world_m": 17.937785030538883,
+            "mpjpe_root_relative_world_axes_m": 0.24598179339849177,
+            "anchor_height_error_m": 0.035547107471373116,
+            "anchor_gravity_z_error": 0.05101433355282971,
+            "end_effector_height_error_m": 0.11443996885075138,
+            "mpjpe_xy_aligned_m": 0.253537115187564,
+            "mpjpe_xy_yaw_aligned_m": 0.10396332828922354,
+            "root_xy_error_m": 17.929859147678407,
+            "root_height_error_m": 0.034793961735554976,
+            "root_yaw_correction_abs_rad": 1.7492908611153097,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 245,
+          "full_motion": 12240
+        }
+      },
+      {
+        "id": "g1/sprint1_subject2.csv",
+        "duration_s": 273.1,
+        "success": false,
+        "completion": 0.029220065909923106,
+        "failure_time_s": 7.999999999999339,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.0959559434978567,
+            "root_position_error_m": 0.6875499879407042,
+            "root_orientation_error_rad": 1.2815997623150535,
+            "mpjpe_world_m": 0.7027026799155393,
+            "mpjpe_root_relative_world_axes_m": 0.15567346112542493,
+            "anchor_height_error_m": 0.010344121670470559,
+            "anchor_gravity_z_error": 0.00885956596594184,
+            "end_effector_height_error_m": 0.04585498613309302,
+            "mpjpe_xy_aligned_m": 0.15705407155550813,
+            "mpjpe_xy_yaw_aligned_m": 0.04624341207450332,
+            "root_xy_error_m": 0.6872697428614951,
+            "root_height_error_m": 0.010262398749826327,
+            "root_yaw_correction_abs_rad": 1.278867113323722,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.14556729518928058,
+            "root_position_error_m": 26.472393873613058,
+            "root_orientation_error_rad": 1.8932325068318507,
+            "mpjpe_world_m": 26.47772137397695,
+            "mpjpe_root_relative_world_axes_m": 0.24100918758784212,
+            "anchor_height_error_m": 0.04918458383180274,
+            "anchor_gravity_z_error": 0.07750608510351019,
+            "end_effector_height_error_m": 0.11601091705926382,
+            "mpjpe_xy_aligned_m": 0.2566628205486752,
+            "mpjpe_xy_yaw_aligned_m": 0.10447293293700971,
+            "root_xy_error_m": 26.47194191988845,
+            "root_height_error_m": 0.04704112291095911,
+            "root_yaw_correction_abs_rad": 1.848491878259101,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 400,
+          "full_motion": 13655
+        }
+      },
+      {
+        "id": "g1/sprint1_subject4.csv",
+        "duration_s": 273.1,
+        "success": false,
+        "completion": 0.04987184181618455,
+        "failure_time_s": 13.64,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.09417787281928534,
+            "root_position_error_m": 0.4121141058199728,
+            "root_orientation_error_rad": 0.7712456706738904,
+            "mpjpe_world_m": 0.41367696637647083,
+            "mpjpe_root_relative_world_axes_m": 0.11393670993898614,
+            "anchor_height_error_m": 0.008554822207249718,
+            "anchor_gravity_z_error": 0.007685774329254497,
+            "end_effector_height_error_m": 0.037950157107068526,
+            "mpjpe_xy_aligned_m": 0.11521039557309079,
+            "mpjpe_xy_yaw_aligned_m": 0.03819037442255405,
+            "root_xy_error_m": 0.4111272566985578,
+            "root_height_error_m": 0.00845959364180199,
+            "root_yaw_correction_abs_rad": 0.7619166369679718,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.15682607437658241,
+            "root_position_error_m": 13.900874518620668,
+            "root_orientation_error_rad": 1.6985038227869416,
+            "mpjpe_world_m": 13.88923357238678,
+            "mpjpe_root_relative_world_axes_m": 0.2347348108170955,
+            "anchor_height_error_m": 0.047116183599330654,
+            "anchor_gravity_z_error": 0.10185656750035271,
+            "end_effector_height_error_m": 0.11352531737078078,
+            "mpjpe_xy_aligned_m": 0.24991001194582316,
+            "mpjpe_xy_yaw_aligned_m": 0.10967081694575545,
+            "root_xy_error_m": 13.899948489085391,
+            "root_height_error_m": 0.04513104837862255,
+            "root_yaw_correction_abs_rad": 1.6394190000277125,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 682,
+          "full_motion": 13655
+        }
+      },
+      {
+        "id": "g1/walk1_subject1.csv",
+        "duration_s": 261.3,
+        "success": false,
+        "completion": 0.5774205893608878,
+        "failure_time_s": 150.9,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.1177081210770836,
+            "root_position_error_m": 8.396591369536992,
+            "root_orientation_error_rad": 1.6796142599683,
+            "mpjpe_world_m": 8.39525820430171,
+            "mpjpe_root_relative_world_axes_m": 0.21310537322346415,
+            "anchor_height_error_m": 0.016223021191773386,
+            "anchor_gravity_z_error": 0.006352637916916436,
+            "end_effector_height_error_m": 0.05969148894462083,
+            "mpjpe_xy_aligned_m": 0.21561691556695395,
+            "mpjpe_xy_yaw_aligned_m": 0.05758919043545098,
+            "root_xy_error_m": 8.396480739788343,
+            "root_height_error_m": 0.016195509100451432,
+            "root_yaw_correction_abs_rad": 1.675318640402317,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.12171577650947134,
+            "root_position_error_m": 14.460399293835264,
+            "root_orientation_error_rad": 1.5519727241492898,
+            "mpjpe_world_m": 14.470756943105028,
+            "mpjpe_root_relative_world_axes_m": 0.211846147270824,
+            "anchor_height_error_m": 0.018752366567120395,
+            "anchor_gravity_z_error": 0.012489006513422423,
+            "end_effector_height_error_m": 0.05959760689805862,
+            "mpjpe_xy_aligned_m": 0.21475260998639742,
+            "mpjpe_xy_yaw_aligned_m": 0.05780795211626243,
+            "root_xy_error_m": 14.460326002710513,
+            "root_height_error_m": 0.018701690056809498,
+            "root_yaw_correction_abs_rad": 1.5464639325278096,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 7545,
+          "full_motion": 13065
+        }
+      },
+      {
+        "id": "g1/walk1_subject2.csv",
+        "duration_s": 261.3,
+        "success": false,
+        "completion": 0.5779563719862227,
+        "failure_time_s": 151.04,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.12383619356489767,
+            "root_position_error_m": 8.89253536626274,
+            "root_orientation_error_rad": 1.531655895217767,
+            "mpjpe_world_m": 8.898083554384918,
+            "mpjpe_root_relative_world_axes_m": 0.20652018510776612,
+            "anchor_height_error_m": 0.017345098934725686,
+            "anchor_gravity_z_error": 0.00883268011744453,
+            "end_effector_height_error_m": 0.06513389491756326,
+            "mpjpe_xy_aligned_m": 0.20912083380296492,
+            "mpjpe_xy_yaw_aligned_m": 0.0659107347104788,
+            "root_xy_error_m": 8.892476673596597,
+            "root_height_error_m": 0.017219108285385292,
+            "root_yaw_correction_abs_rad": 1.5244088872749229,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.13104959604700295,
+            "root_position_error_m": 19.45353567066309,
+            "root_orientation_error_rad": 1.4322211286618869,
+            "mpjpe_world_m": 19.457735516881776,
+            "mpjpe_root_relative_world_axes_m": 0.2010343530130396,
+            "anchor_height_error_m": 0.019811280187063542,
+            "anchor_gravity_z_error": 0.011652575587590655,
+            "end_effector_height_error_m": 0.07011404088098662,
+            "mpjpe_xy_aligned_m": 0.20409366957835814,
+            "mpjpe_xy_yaw_aligned_m": 0.07069017049522887,
+            "root_xy_error_m": 19.453495817079776,
+            "root_height_error_m": 0.019696204996888286,
+            "root_yaw_correction_abs_rad": 1.423351104163928,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 7552,
+          "full_motion": 13065
+        }
+      },
+      {
+        "id": "g1/walk1_subject5.csv",
+        "duration_s": 261.3,
+        "success": false,
+        "completion": 0.06039035591274398,
+        "failure_time_s": 15.8,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.1259053897551596,
+            "root_position_error_m": 1.526692836716319,
+            "root_orientation_error_rad": 1.2657877707210272,
+            "mpjpe_world_m": 1.5474502482266759,
+            "mpjpe_root_relative_world_axes_m": 0.16830260431062857,
+            "anchor_height_error_m": 0.015447568067112841,
+            "anchor_gravity_z_error": 0.0056911182546878145,
+            "end_effector_height_error_m": 0.07872145588377479,
+            "mpjpe_xy_aligned_m": 0.17144622513812444,
+            "mpjpe_xy_yaw_aligned_m": 0.06724585412647073,
+            "root_xy_error_m": 1.5263515133813075,
+            "root_height_error_m": 0.015431462314544597,
+            "root_yaw_correction_abs_rad": 1.2584540134979076,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.1427691015779481,
+            "root_position_error_m": 8.97245137020204,
+            "root_orientation_error_rad": 1.5936573944724441,
+            "mpjpe_world_m": 8.976938018616881,
+            "mpjpe_root_relative_world_axes_m": 0.21956733466994882,
+            "anchor_height_error_m": 0.02076022639343079,
+            "anchor_gravity_z_error": 0.011829227497053414,
+            "end_effector_height_error_m": 0.08096906261372484,
+            "mpjpe_xy_aligned_m": 0.22345011387486025,
+            "mpjpe_xy_yaw_aligned_m": 0.08046708388638993,
+            "root_xy_error_m": 8.972372731755547,
+            "root_height_error_m": 0.020705547901647938,
+            "root_yaw_correction_abs_rad": 1.5864692751286615,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 790,
+          "full_motion": 13065
+        }
+      },
+      {
+        "id": "g1/walk2_subject1.csv",
+        "duration_s": 238.16666666666666,
+        "success": false,
+        "completion": 0.5098110566829951,
+        "failure_time_s": 121.43999999996616,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.12787064619686794,
+            "root_position_error_m": 4.767315357372978,
+            "root_orientation_error_rad": 1.1783645430692484,
+            "mpjpe_world_m": 4.77265518231971,
+            "mpjpe_root_relative_world_axes_m": 0.1586903998126167,
+            "anchor_height_error_m": 0.01594845020465756,
+            "anchor_gravity_z_error": 0.018326493455057706,
+            "end_effector_height_error_m": 0.0669529543147557,
+            "mpjpe_xy_aligned_m": 0.16126135333417263,
+            "mpjpe_xy_yaw_aligned_m": 0.057661757452883405,
+            "root_xy_error_m": 4.767188546994519,
+            "root_height_error_m": 0.015946859995809585,
+            "root_yaw_correction_abs_rad": 1.170255678780392,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.13416338732982042,
+            "root_position_error_m": 7.003312597956685,
+            "root_orientation_error_rad": 1.0080205221093217,
+            "mpjpe_world_m": 7.007092948867989,
+            "mpjpe_root_relative_world_axes_m": 0.15306284990895977,
+            "anchor_height_error_m": 0.02380792192625669,
+            "anchor_gravity_z_error": 0.024075429034211393,
+            "end_effector_height_error_m": 0.07545955573739514,
+            "mpjpe_xy_aligned_m": 0.15795811774643045,
+            "mpjpe_xy_yaw_aligned_m": 0.06585507690987283,
+            "root_xy_error_m": 7.00319912118354,
+            "root_height_error_m": 0.02382635252595724,
+            "root_yaw_correction_abs_rad": 0.9971273541836884,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 6072,
+          "full_motion": 11909
+        }
+      },
+      {
+        "id": "g1/walk2_subject3.csv",
+        "duration_s": 238.16666666666666,
+        "success": false,
+        "completion": 0.012932120363890834,
+        "failure_time_s": 3.099999999999879,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.11782956489468456,
+            "root_position_error_m": 0.047124122327017404,
+            "root_orientation_error_rad": 0.030820786780290637,
+            "mpjpe_world_m": 0.04268608795657348,
+            "mpjpe_root_relative_world_axes_m": 0.030367600909907696,
+            "anchor_height_error_m": 0.0024456899334653346,
+            "anchor_gravity_z_error": 0.00015424578159497205,
+            "end_effector_height_error_m": 0.07562123243167039,
+            "mpjpe_xy_aligned_m": 0.031486187985263814,
+            "mpjpe_xy_yaw_aligned_m": 0.03138766010617751,
+            "root_xy_error_m": 0.04690873101964346,
+            "root_height_error_m": 0.002386757353178254,
+            "root_yaw_correction_abs_rad": 0.017004516978624134,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.12299483855676263,
+            "root_position_error_m": 18.379658740234294,
+            "root_orientation_error_rad": 1.1724289610473886,
+            "mpjpe_world_m": 18.397831521018357,
+            "mpjpe_root_relative_world_axes_m": 0.18014257224072064,
+            "anchor_height_error_m": 0.02629186416437953,
+            "anchor_gravity_z_error": 0.03927654927351482,
+            "end_effector_height_error_m": 0.0782125266425392,
+            "mpjpe_xy_aligned_m": 0.18549813427926073,
+            "mpjpe_xy_yaw_aligned_m": 0.06656846921900865,
+            "root_xy_error_m": 18.37959212732339,
+            "root_height_error_m": 0.026121458602753358,
+            "root_yaw_correction_abs_rad": 1.1606152363462447,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 155,
+          "full_motion": 11909
+        }
+      },
+      {
+        "id": "g1/walk2_subject4.csv",
+        "duration_s": 238.16666666666666,
+        "success": false,
+        "completion": 0.5597760671798461,
+        "failure_time_s": 133.33999999997636,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.09494428286142154,
+            "root_position_error_m": 4.438437662266239,
+            "root_orientation_error_rad": 1.52724954062956,
+            "mpjpe_world_m": 4.444992144692498,
+            "mpjpe_root_relative_world_axes_m": 0.19134381445189227,
+            "anchor_height_error_m": 0.011022197138580873,
+            "anchor_gravity_z_error": 0.014095237129011813,
+            "end_effector_height_error_m": 0.047802306284542274,
+            "mpjpe_xy_aligned_m": 0.19285932453672852,
+            "mpjpe_xy_yaw_aligned_m": 0.04187353364026169,
+            "root_xy_error_m": 4.438397902932727,
+            "root_height_error_m": 0.01099401120086276,
+            "root_yaw_correction_abs_rad": 1.5241687734551004,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.10429107437937661,
+            "root_position_error_m": 5.82350290391095,
+            "root_orientation_error_rad": 1.4442804912662224,
+            "mpjpe_world_m": 5.8234965420133005,
+            "mpjpe_root_relative_world_axes_m": 0.18902561888530292,
+            "anchor_height_error_m": 0.015371383526013712,
+            "anchor_gravity_z_error": 0.016403715085796623,
+            "end_effector_height_error_m": 0.06012384873512547,
+            "mpjpe_xy_aligned_m": 0.19161024208350838,
+            "mpjpe_xy_yaw_aligned_m": 0.05043305220500186,
+            "root_xy_error_m": 5.823439164617194,
+            "root_height_error_m": 0.015330264843494588,
+            "root_yaw_correction_abs_rad": 1.4394452646744424,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 6667,
+          "full_motion": 11909
+        }
+      },
+      {
+        "id": "g1/walk3_subject1.csv",
+        "duration_s": 246.6,
+        "success": false,
+        "completion": 0.6643957826439578,
+        "failure_time_s": 163.86,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.10385306156837858,
+            "root_position_error_m": 8.553243142168826,
+            "root_orientation_error_rad": 1.2257983391916325,
+            "mpjpe_world_m": 8.564416113336398,
+            "mpjpe_root_relative_world_axes_m": 0.16847528503437642,
+            "anchor_height_error_m": 0.015551075278318376,
+            "anchor_gravity_z_error": 0.01596105131389816,
+            "end_effector_height_error_m": 0.053476989059900164,
+            "mpjpe_xy_aligned_m": 0.17108553540476562,
+            "mpjpe_xy_yaw_aligned_m": 0.04913230228675037,
+            "root_xy_error_m": 8.553164697658211,
+            "root_height_error_m": 0.015463914827664965,
+            "root_yaw_correction_abs_rad": 1.220411198536971,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.12915072052155224,
+            "root_position_error_m": 12.430747480816537,
+            "root_orientation_error_rad": 1.4753178043866204,
+            "mpjpe_world_m": 12.44430109376337,
+            "mpjpe_root_relative_world_axes_m": 0.2150089315758743,
+            "anchor_height_error_m": 0.028352272599943586,
+            "anchor_gravity_z_error": 0.02435329773647296,
+            "end_effector_height_error_m": 0.07293294320331603,
+            "mpjpe_xy_aligned_m": 0.22002264628671858,
+            "mpjpe_xy_yaw_aligned_m": 0.06371420616355128,
+            "root_xy_error_m": 12.430604911688489,
+            "root_height_error_m": 0.027524284306267393,
+            "root_yaw_correction_abs_rad": 1.4677324646655792,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 8193,
+          "full_motion": 12330
+        }
+      },
+      {
+        "id": "g1/walk3_subject2.csv",
+        "duration_s": 246.6,
+        "success": false,
+        "completion": 0.26407137064071373,
+        "failure_time_s": 65.13999999999734,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.1040889818451192,
+            "root_position_error_m": 4.604069889808373,
+            "root_orientation_error_rad": 1.0273620337224938,
+            "mpjpe_world_m": 4.613929484034252,
+            "mpjpe_root_relative_world_axes_m": 0.14180769687131484,
+            "anchor_height_error_m": 0.011780235186846526,
+            "anchor_gravity_z_error": 0.010210506339689696,
+            "end_effector_height_error_m": 0.049034691262587186,
+            "mpjpe_xy_aligned_m": 0.1437818970070837,
+            "mpjpe_xy_yaw_aligned_m": 0.04619488155774195,
+            "root_xy_error_m": 4.603814956932005,
+            "root_height_error_m": 0.011723734074153757,
+            "root_yaw_correction_abs_rad": 1.0204246414694578,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.11239545392169906,
+            "root_position_error_m": 8.685772924358943,
+            "root_orientation_error_rad": 1.6323728265544664,
+            "mpjpe_world_m": 8.69115424112747,
+            "mpjpe_root_relative_world_axes_m": 0.20891690156091858,
+            "anchor_height_error_m": 0.015548868141794828,
+            "anchor_gravity_z_error": 0.010483431621961558,
+            "end_effector_height_error_m": 0.057670755134409675,
+            "mpjpe_xy_aligned_m": 0.21138569477186844,
+            "mpjpe_xy_yaw_aligned_m": 0.05740737952463611,
+            "root_xy_error_m": 8.685676813943488,
+            "root_height_error_m": 0.015465560157971646,
+            "root_yaw_correction_abs_rad": 1.626891543746633,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 3257,
+          "full_motion": 12330
+        }
+      },
+      {
+        "id": "g1/walk3_subject3.csv",
+        "duration_s": 246.6,
+        "success": false,
+        "completion": 0.7005677210056772,
+        "failure_time_s": 172.78,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.0918120222691666,
+            "root_position_error_m": 3.2982758764287943,
+            "root_orientation_error_rad": 1.6560833211364574,
+            "mpjpe_world_m": 3.3084004362231503,
+            "mpjpe_root_relative_world_axes_m": 0.19629443865020754,
+            "anchor_height_error_m": 0.01215134360675738,
+            "anchor_gravity_z_error": 0.02902512000790726,
+            "end_effector_height_error_m": 0.0421795088746695,
+            "mpjpe_xy_aligned_m": 0.1982298098372116,
+            "mpjpe_xy_yaw_aligned_m": 0.04195370319223121,
+            "root_xy_error_m": 3.2981804101240635,
+            "root_height_error_m": 0.012187764820430217,
+            "root_yaw_correction_abs_rad": 1.6527261272573308,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.11946994484845641,
+            "root_position_error_m": 3.8814811981503055,
+            "root_orientation_error_rad": 1.8695526656560681,
+            "mpjpe_world_m": 3.874415082133588,
+            "mpjpe_root_relative_world_axes_m": 0.25452838342632705,
+            "anchor_height_error_m": 0.037418351956315626,
+            "anchor_gravity_z_error": 0.04339619650153666,
+            "end_effector_height_error_m": 0.079901610504549,
+            "mpjpe_xy_aligned_m": 0.26360485111245224,
+            "mpjpe_xy_yaw_aligned_m": 0.06993796333246004,
+            "root_xy_error_m": 3.881111208969795,
+            "root_height_error_m": 0.03729445794819816,
+            "root_yaw_correction_abs_rad": 1.8663888470132222,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 8639,
+          "full_motion": 12330
+        }
+      },
+      {
+        "id": "g1/walk3_subject4.csv",
+        "duration_s": 246.6,
+        "success": false,
+        "completion": 0.008840227088402272,
+        "failure_time_s": 2.199999999999978,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.09668124804327173,
+            "root_position_error_m": 0.022636637661724555,
+            "root_orientation_error_rad": 0.0433035656929473,
+            "mpjpe_world_m": 0.03240536731604244,
+            "mpjpe_root_relative_world_axes_m": 0.025482033149073692,
+            "anchor_height_error_m": 0.006231694481787466,
+            "anchor_gravity_z_error": 0.00025876962141013255,
+            "end_effector_height_error_m": 0.06101124773597463,
+            "mpjpe_xy_aligned_m": 0.027291668826618584,
+            "mpjpe_xy_yaw_aligned_m": 0.025560847546326673,
+            "root_xy_error_m": 0.020782769896772798,
+            "root_height_error_m": 0.006220103498419055,
+            "root_yaw_correction_abs_rad": 0.025877998582979577,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.1312928375801201,
+            "root_position_error_m": 15.460676779986782,
+            "root_orientation_error_rad": 1.2381188951681903,
+            "mpjpe_world_m": 15.45746543622643,
+            "mpjpe_root_relative_world_axes_m": 0.17897071168386938,
+            "anchor_height_error_m": 0.021429349482412673,
+            "anchor_gravity_z_error": 0.01577002596245063,
+            "end_effector_height_error_m": 0.06862261106999876,
+            "mpjpe_xy_aligned_m": 0.1827566702923414,
+            "mpjpe_xy_yaw_aligned_m": 0.06309041862737703,
+            "root_xy_error_m": 15.46060228256283,
+            "root_height_error_m": 0.0209373579414736,
+            "root_yaw_correction_abs_rad": 1.2228874912717203,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 110,
+          "full_motion": 12330
+        }
+      },
+      {
+        "id": "g1/walk3_subject5.csv",
+        "duration_s": 246.6,
+        "success": false,
+        "completion": 0.008840227088402272,
+        "failure_time_s": 2.199999999999978,
+        "failure_reasons": [
+          "end_effector_height"
+        ],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.10181610565482865,
+            "root_position_error_m": 0.03918411505724843,
+            "root_orientation_error_rad": 0.04329898538200484,
+            "mpjpe_world_m": 0.036594519343755585,
+            "mpjpe_root_relative_world_axes_m": 0.03207974866947489,
+            "anchor_height_error_m": 0.0010098436786927234,
+            "anchor_gravity_z_error": 0.0014822600909516583,
+            "end_effector_height_error_m": 0.07330021043012604,
+            "mpjpe_xy_aligned_m": 0.03225937686230769,
+            "mpjpe_xy_yaw_aligned_m": 0.031597298181344484,
+            "root_xy_error_m": 0.039067848909280695,
+            "root_height_error_m": 0.0010146971052021367,
+            "root_yaw_correction_abs_rad": 0.029843011635038295,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.1281848353965689,
+            "root_position_error_m": 8.116571205257877,
+            "root_orientation_error_rad": 1.072527899341705,
+            "mpjpe_world_m": 8.130939089539824,
+            "mpjpe_root_relative_world_axes_m": 0.17360784301914817,
+            "anchor_height_error_m": 0.03389574074873544,
+            "anchor_gravity_z_error": 0.05772535599191822,
+            "end_effector_height_error_m": 0.07383057185675036,
+            "mpjpe_xy_aligned_m": 0.18171103765493185,
+            "mpjpe_xy_yaw_aligned_m": 0.06877492031738609,
+            "root_xy_error_m": 8.116249017136711,
+            "root_height_error_m": 0.033836086798035125,
+            "root_yaw_correction_abs_rad": 1.057093955173848,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 110,
+          "full_motion": 12330
+        }
+      },
+      {
+        "id": "g1/walk4_subject1.csv",
+        "duration_s": 163.9,
+        "success": true,
+        "completion": 1.0,
+        "failure_time_s": null,
+        "failure_reasons": [],
+        "metrics": {
+          "until_first_failure": {
+            "joint_mae_rad": 0.11088282690674363,
+            "root_position_error_m": 8.98853258611649,
+            "root_orientation_error_rad": 1.8642809614866576,
+            "mpjpe_world_m": 8.99158336849707,
+            "mpjpe_root_relative_world_axes_m": 0.20757191672989095,
+            "anchor_height_error_m": 0.012060100106780767,
+            "anchor_gravity_z_error": 0.062042170207767075,
+            "end_effector_height_error_m": 0.04766595596720797,
+            "mpjpe_xy_aligned_m": 0.20899258121368194,
+            "mpjpe_xy_yaw_aligned_m": 0.041857445935964396,
+            "root_xy_error_m": 8.988424259264693,
+            "root_height_error_m": 0.011894910036514389,
+            "root_yaw_correction_abs_rad": 1.8596779632747948,
+            "yaw_alignment_degenerate_fraction": 0.0
+          },
+          "full_motion": {
+            "joint_mae_rad": 0.11088282690674363,
+            "root_position_error_m": 8.98853258611649,
+            "root_orientation_error_rad": 1.8642809614866576,
+            "mpjpe_world_m": 8.99158336849707,
+            "mpjpe_root_relative_world_axes_m": 0.20757191672989095,
+            "anchor_height_error_m": 0.012060100106780767,
+            "anchor_gravity_z_error": 0.062042170207767075,
+            "end_effector_height_error_m": 0.04766595596720797,
+            "mpjpe_xy_aligned_m": 0.20899258121368194,
+            "mpjpe_xy_yaw_aligned_m": 0.041857445935964396,
+            "root_xy_error_m": 8.988424259264693,
+            "root_height_error_m": 0.011894910036514389,
+            "root_yaw_correction_abs_rad": 1.8596779632747948,
+            "yaw_alignment_degenerate_fraction": 0.0
+          }
+        },
+        "sample_count": {
+          "until_first_failure": 8195,
+          "full_motion": 8195
+        }
+      }
+    ],
+    "execution": "single_full_rollout",
+    "components": {
+      "early": {
+        "result": "rollout/prefix-result.json",
+        "result_sha256": "d63a7c335e562b9218d1707f3c68ec2d478bcc2307f3d7986aa6ecbf3eff6421",
+        "receipt": "rollout/receipt.json",
+        "receipt_sha256": "8d0460397fc58c0839c6c3305b72db9b0a20afaaba9454dd96ed2f3b76282fcf"
+      },
+      "none": {
+        "result": "rollout/result.json",
+        "result_sha256": "a9e641fc6a11e3084e3624e4f053f6c51ab9cf021eba6e2d06123bf68469d017",
+        "receipt": "rollout/receipt.json",
+        "receipt_sha256": "8d0460397fc58c0839c6c3305b72db9b0a20afaaba9454dd96ed2f3b76282fcf"
+      }
+    }
+  },
+  "summary": {
+    "schema": "MotionChallenge/paired-evaluation-v1",
+    "status": "trace_verified",
+    "execution": "single_full_rollout",
+    "started_utc": "20261024T150758.141692Z",
+    "source": {
+      "adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5",
+      "adapter_dirty": false,
+      "tracked_files_sha256": {
+        ".gitignore": "b447497e458b207d7f8aec37307b7a049eba4174f67890a66ead43fe37b83288",
+        ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
+        ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+        "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
+        "README.md": "b5eef62a9db9173d007a9a02a116246031e81bf5eb16db2965adb70bd655dd1e",
+        "THIRD_PARTY_NOTICES.md": "0fbdb1c0c66d2434eab9a936eca616577f34a67b4b1e26807e7d056c556ffa39",
+        "adapter.py": "426843e9256987333a449c823c1098f9e8e9e07fc89932128ebec8371f6e392e",
+        "admission.json": "30fa11d4acaf6937de74d4c610f2af4f028ce871df89432a5d00a3d546b1c699",
+        "conversion/__init__.py": "c86cc98a6167759c4050768626735330f39ee9767643fd3fc679887da72eab67",
+        "conversion/prepare.py": "f0fa099ce845da9afc51ea44ff35d43b3eae1eefe859e326a754248273c7f9c4",
+        "conversion/sources.json": "d0b3810bd1dd55d7312cde6d9aaec04150a4388afda5234576992415dcfa0a62",
+        "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+        "policy.json": "39e4605b2a0dbb99379203fddc007d8b0ca23d4e1f9796569889097b78be71bf",
+        "provenance.json": "78635ab79bebe7108da97c667f576c38bde6761ac65e55b1704b1b4738f13650",
+        "pyproject.toml": "fedce9510ce33a17cf42d8a7c5655c3e87ab303aeb16b36b442e3db86c2f807c",
+        "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
+        "runtime.json": "c43249b36bdffbccd0680ff9effc7950831509a375386503724625f1be4bb48f",
+        "uv.lock": "bc5d8579ca1b380c5d2047b11cb24ef59909dc873859bac54ad0b4aa40de3308",
+        "validate_inference.py": "827e3d4dd3a6cfe42ea754eaf22373284cbc350fd5c76bd2a5140ce9e23fe96f",
+        "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
+        "validation/README.md": "aa650c06dd3ad31644f4838133f9d0c7d2dd37a4621aa569eeff0b07f42ec40c",
+        "validation/native-parity.json": "c111dd6792b8430db750bcf997fcbae74d7707c7762c913630fa7a808cc553b8",
+        "validation/observation-access.json": "f77d02ad54e0ce9b2d3c137ac3cb637dd16d4b3b6645ca7177a778a83f7163c3"
+      },
+      "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+      "core_dirty": false
+    },
+    "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+    "modes": {
+      "early": {
+        "status": "trace_verified",
+        "receipt": "rollout/receipt.json",
+        "result": "rollout/prefix-result.json",
+        "success_count": 1,
+        "macro_completion": 0.17722651933923894,
+        "metrics": {
+          "joint_mae_rad": 0.10279858148161428,
+          "root_position_error_m": 1.7746567522227674,
+          "root_orientation_error_rad": 0.6532142999451842,
+          "mpjpe_world_m": 1.7813970262149692,
+          "mpjpe_root_relative_world_axes_m": 0.10272838098589702,
+          "anchor_height_error_m": 0.013443090549202705,
+          "anchor_gravity_z_error": 0.012411747853552358,
+          "end_effector_height_error_m": 0.0591397994494378,
+          "mpjpe_xy_aligned_m": 0.10546190308389507,
+          "mpjpe_xy_yaw_aligned_m": 0.04403242282763121,
+          "root_xy_error_m": 1.7736751559867177,
+          "root_height_error_m": 0.013328371879264372,
+          "root_yaw_correction_abs_rad": 0.6398530013862576,
+          "yaw_alignment_degenerate_fraction": 0.0
+        }
+      },
+      "none": {
+        "status": "trace_verified",
+        "receipt": "rollout/receipt.json",
+        "result": "rollout/result.json",
+        "success_count": 1,
+        "macro_completion": 0.17722651933923894,
+        "metrics": {
+          "joint_mae_rad": 0.15213420219540025,
+          "root_position_error_m": 11.204864275657412,
+          "root_orientation_error_rad": 1.4711428000093432,
+          "mpjpe_world_m": 11.211635231525353,
+          "mpjpe_root_relative_world_axes_m": 0.22241867742626914,
+          "anchor_height_error_m": 0.03737059073591381,
+          "anchor_gravity_z_error": 0.04557864379926822,
+          "end_effector_height_error_m": 0.09963198973351271,
+          "mpjpe_xy_aligned_m": 0.23084881183865713,
+          "mpjpe_xy_yaw_aligned_m": 0.08507348642438053,
+          "root_xy_error_m": 11.204152812283308,
+          "root_height_error_m": 0.036604194621023114,
+          "root_yaw_correction_abs_rad": 1.4480209145146206,
+          "yaw_alignment_degenerate_fraction": 0.0
+        }
+      }
+    },
+    "result": "result.json",
+    "finished_utc": "2026-10-24T15:23:55.483003+00:00"
+  },
+  "receipts": {
+    "early": {
+      "submitter": "local-run",
+      "source": {
+        "adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5",
+        "adapter_dirty": false,
+        "tracked_files_sha256": {
+          ".gitignore": "b447497e458b207d7f8aec37307b7a049eba4174f67890a66ead43fe37b83288",
+          ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
+          ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+          "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
+          "README.md": "b5eef62a9db9173d007a9a02a116246031e81bf5eb16db2965adb70bd655dd1e",
+          "THIRD_PARTY_NOTICES.md": "0fbdb1c0c66d2434eab9a936eca616577f34a67b4b1e26807e7d056c556ffa39",
+          "adapter.py": "426843e9256987333a449c823c1098f9e8e9e07fc89932128ebec8371f6e392e",
+          "admission.json": "30fa11d4acaf6937de74d4c610f2af4f028ce871df89432a5d00a3d546b1c699",
+          "conversion/__init__.py": "c86cc98a6167759c4050768626735330f39ee9767643fd3fc679887da72eab67",
+          "conversion/prepare.py": "f0fa099ce845da9afc51ea44ff35d43b3eae1eefe859e326a754248273c7f9c4",
+          "conversion/sources.json": "d0b3810bd1dd55d7312cde6d9aaec04150a4388afda5234576992415dcfa0a62",
+          "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+          "policy.json": "39e4605b2a0dbb99379203fddc007d8b0ca23d4e1f9796569889097b78be71bf",
+          "provenance.json": "78635ab79bebe7108da97c667f576c38bde6761ac65e55b1704b1b4738f13650",
+          "pyproject.toml": "fedce9510ce33a17cf42d8a7c5655c3e87ab303aeb16b36b442e3db86c2f807c",
+          "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
+          "runtime.json": "c43249b36bdffbccd0680ff9effc7950831509a375386503724625f1be4bb48f",
+          "uv.lock": "bc5d8579ca1b380c5d2047b11cb24ef59909dc873859bac54ad0b4aa40de3308",
+          "validate_inference.py": "827e3d4dd3a6cfe42ea754eaf22373284cbc350fd5c76bd2a5140ce9e23fe96f",
+          "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
+          "validation/README.md": "aa650c06dd3ad31644f4838133f9d0c7d2dd37a4621aa569eeff0b07f42ec40c",
+          "validation/native-parity.json": "c111dd6792b8430db750bcf997fcbae74d7707c7762c913630fa7a808cc553b8",
+          "validation/observation-access.json": "f77d02ad54e0ce9b2d3c137ac3cb637dd16d4b3b6645ca7177a778a83f7163c3"
+        },
+        "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+        "core_dirty": false
+      },
+      "source_runtime_sha256": "c43249b36bdffbccd0680ff9effc7950831509a375386503724625f1be4bb48f",
+      "resolved_runtime_sha256": "5b9fd4f96d5184e95c94024983db42d93165b1c5d64466df9e41f54f70ece858",
+      "suite": "lafan40",
+      "observation_track": "ideal-proprioception",
+      "state_access": "ideal-proprioceptive-no-position-v1",
+      "started_utc": "20261024T150758.141692Z",
+      "author_inference_review": "not_granted_by_runner",
+      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-v1/bfm-zero/run-01/rollout",
+      "status": "trace_verified",
+      "backend": "batch",
+      "termination_mode": "no_termination",
+      "batch_size": 40,
+      "timings_s": {
+        "rollout": 936.9233358278871,
+        "verification": 16.977214101701975,
+        "total": 953.9216755144298
+      },
+      "verification": {
+        "verification": "trace_consistent",
+        "official": false,
+        "clips": 40,
+        "samples": 441120,
+        "full_suite": true,
+        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
+        "derived_prefix": {
+          "result": "prefix-result.json",
+          "result_sha256": "d63a7c335e562b9218d1707f3c68ec2d478bcc2307f3d7986aa6ecbf3eff6421",
+          "samples": 78129
+        }
+      },
+      "full_suite": true,
+      "source_unchanged_during_run": true,
+      "finished_utc": "2026-10-24T15:23:55.475314+00:00"
+    },
+    "none": {
+      "submitter": "local-run",
+      "source": {
+        "adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5",
+        "adapter_dirty": false,
+        "tracked_files_sha256": {
+          ".gitignore": "b447497e458b207d7f8aec37307b7a049eba4174f67890a66ead43fe37b83288",
+          ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
+          ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+          "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
+          "README.md": "b5eef62a9db9173d007a9a02a116246031e81bf5eb16db2965adb70bd655dd1e",
+          "THIRD_PARTY_NOTICES.md": "0fbdb1c0c66d2434eab9a936eca616577f34a67b4b1e26807e7d056c556ffa39",
+          "adapter.py": "426843e9256987333a449c823c1098f9e8e9e07fc89932128ebec8371f6e392e",
+          "admission.json": "30fa11d4acaf6937de74d4c610f2af4f028ce871df89432a5d00a3d546b1c699",
+          "conversion/__init__.py": "c86cc98a6167759c4050768626735330f39ee9767643fd3fc679887da72eab67",
+          "conversion/prepare.py": "f0fa099ce845da9afc51ea44ff35d43b3eae1eefe859e326a754248273c7f9c4",
+          "conversion/sources.json": "d0b3810bd1dd55d7312cde6d9aaec04150a4388afda5234576992415dcfa0a62",
+          "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+          "policy.json": "39e4605b2a0dbb99379203fddc007d8b0ca23d4e1f9796569889097b78be71bf",
+          "provenance.json": "78635ab79bebe7108da97c667f576c38bde6761ac65e55b1704b1b4738f13650",
+          "pyproject.toml": "fedce9510ce33a17cf42d8a7c5655c3e87ab303aeb16b36b442e3db86c2f807c",
+          "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
+          "runtime.json": "c43249b36bdffbccd0680ff9effc7950831509a375386503724625f1be4bb48f",
+          "uv.lock": "bc5d8579ca1b380c5d2047b11cb24ef59909dc873859bac54ad0b4aa40de3308",
+          "validate_inference.py": "827e3d4dd3a6cfe42ea754eaf22373284cbc350fd5c76bd2a5140ce9e23fe96f",
+          "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
+          "validation/README.md": "aa650c06dd3ad31644f4838133f9d0c7d2dd37a4621aa569eeff0b07f42ec40c",
+          "validation/native-parity.json": "c111dd6792b8430db750bcf997fcbae74d7707c7762c913630fa7a808cc553b8",
+          "validation/observation-access.json": "f77d02ad54e0ce9b2d3c137ac3cb637dd16d4b3b6645ca7177a778a83f7163c3"
+        },
+        "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+        "core_dirty": false
+      },
+      "source_runtime_sha256": "c43249b36bdffbccd0680ff9effc7950831509a375386503724625f1be4bb48f",
+      "resolved_runtime_sha256": "5b9fd4f96d5184e95c94024983db42d93165b1c5d64466df9e41f54f70ece858",
+      "suite": "lafan40",
+      "observation_track": "ideal-proprioception",
+      "state_access": "ideal-proprioceptive-no-position-v1",
+      "started_utc": "20261024T150758.141692Z",
+      "author_inference_review": "not_granted_by_runner",
+      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-v1/bfm-zero/run-01/rollout",
+      "status": "trace_verified",
+      "backend": "batch",
+      "termination_mode": "no_termination",
+      "batch_size": 40,
+      "timings_s": {
+        "rollout": 936.9233358278871,
+        "verification": 16.977214101701975,
+        "total": 953.9216755144298
+      },
+      "verification": {
+        "verification": "trace_consistent",
+        "official": false,
+        "clips": 40,
+        "samples": 441120,
+        "full_suite": true,
+        "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
+        "derived_prefix": {
+          "result": "prefix-result.json",
+          "result_sha256": "d63a7c335e562b9218d1707f3c68ec2d478bcc2307f3d7986aa6ecbf3eff6421",
+          "samples": 78129
+        }
+      },
+      "full_suite": true,
+      "source_unchanged_during_run": true,
+      "finished_utc": "2026-10-24T15:23:55.475314+00:00"
+    }
+  },
+  "repeatability": {
+    "status": "passed",
+    "differences": [],
+    "pose_samples": 441120,
+    "first_result_sha256": "c6c3e779d8d4577a236554a12a9ba9359c0dbab7c96cff1465e2142993c06ec9",
+    "second_result_sha256": "177c5d8036e3c2910e213faac6a929381eee8d6e687f63035d5ceb59db8d53b4"
+  },
+  "raw_trace_hashes_verified": 80,
+  "observation_admission": {
+    "schema": "MotionChallenge/observation-admission-v1",
+    "model": "bfm-zero",
+    "display_name": "BFM-Zero",
+    "state_access": "ideal-proprioceptive-no-position-v1",
+    "status": "inference_verified",
+    "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+    "auxiliary_artifacts": {},
+    "checkpoint_origin": {
+      "author_release_url": "https://github.com/LeCAR-Lab/BFM-Zero/blob/df9c4a9633aa155c727419e82c906010b1e1845f/README.md",
+      "author_release_label": "LeCAR-Lab/BFM-Zero",
+      "kind": "maintainer_export",
+      "kind_label": "Reproducible export from author checkpoint",
+      "artifact_page_url": "https://huggingface.co/LeCAR-Lab/BFM-Zero/blob/62b4206d68e026de5e5dc7efb1529bccfb95164c/model/checkpoint/model/model.safetensors",
+      "original_filename": "model/checkpoint/model/model.safetensors \u2192 policy.onnx",
+      "verification": "conversion/prepare.py verifies the original artifact and source hashes, strictly loads62 inference tensors and exports a hash-locked ONNX. Fresh macOS export matches prior Linux SHA256.",
+      "download_url": "https://huggingface.co/LeCAR-Lab/BFM-Zero/resolve/62b4206d68e026de5e5dc7efb1529bccfb95164c/model/checkpoint/model/model.safetensors",
+      "sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+      "original_sha256": "d8d07d7b83ad030286f44d55a48899dc42db4b48000132fffad063653a6eb49e",
+      "conversion_code": "conversion/prepare.py",
+      "source_manifest": "conversion/sources.json"
+    },
+    "author_source": "https://github.com/LeCAR-Lab/BFM-Zero",
+    "author_commit": "df9c4a9633aa155c727419e82c906010b1e1845f",
+    "base_adapter_commit": "4b02a1a093d5beb5aad757b65f8b508ee4490395",
+    "production_source_sha256": {
+      "adapter.py": "426843e9256987333a449c823c1098f9e8e9e07fc89932128ebec8371f6e392e",
+      "conversion/__init__.py": "c86cc98a6167759c4050768626735330f39ee9767643fd3fc679887da72eab67",
+      "conversion/prepare.py": "f0fa099ce845da9afc51ea44ff35d43b3eae1eefe859e326a754248273c7f9c4",
+      "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+      "policy.json": "39e4605b2a0dbb99379203fddc007d8b0ca23d4e1f9796569889097b78be71bf",
+      "validate_inference.py": "827e3d4dd3a6cfe42ea754eaf22373284cbc350fd5c76bd2a5140ce9e23fe96f"
+    },
+    "prior_native_parity_sha256": {
+      "validation/native-parity.json": "c111dd6792b8430db750bcf997fcbae74d7707c7762c913630fa7a808cc553b8"
+    },
+    "handling": "reference_privileged is a REFERENCE-only backward-encoder input. Actor proprioception and the author double history insertion are retained; no measured translation.",
+    "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
+    "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
+    "new_evaluation": {
+      "status": "queued",
+      "inherited_scores": false
+    },
+    "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero",
+    "dependency_test": {
+      "path": "validation/observation-access.json",
+      "sha256": "f77d02ad54e0ce9b2d3c137ac3cb637dd16d4b3b6645ca7177a778a83f7163c3",
+      "code": "validate_observations.py",
+      "cases": 160,
+      "resets": 4
+    }
+  },
+  "observation_dependency_report": {
+    "model": "bfm-zero",
+    "status": "passed",
+    "cases": 160,
+    "resets": 4,
+    "tolerance_abs": 2e-05,
+    "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+    "network_calls": 160,
+    "max_abs_error": {
+      "observation": 0.0,
+      "network_output": 0.0,
+      "motor_command": 0.0
+    },
+    "checks": [
+      "160 matched state sequences / 4 resets",
+      "large actual translation perturbations",
+      "reference windows preserved including endpoints",
+      "all captured ONNX inputs and outputs",
+      "all PD command fields",
+      "forbidden-field counterfactual before transport"
+    ],
+    "limits": "Finite numerical regression plus source audit; not a proof against malicious code or implicit neural odometry."
+  },
+  "reproduction": {
+    "adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5",
+    "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero/tree/af540867febcb1f2e9073bb307be328e0f6b7cf5",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+    "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+    "commands": [
+      "git clone --recurse-submodules https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero.git",
+      "cd MotionChallenge-bfm-zero",
+      "git checkout af540867febcb1f2e9073bb307be328e0f6b7cf5",
+      "git submodule update --init --recursive",
+      "uv sync --frozen",
+      "uv run evaluate.py --track ideal-proprioception"
+    ]
+  }
+}

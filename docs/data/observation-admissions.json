@@ -53,7 +53,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5"
+      "published_adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5",
+      "evaluation_progress": "accepted"
     },
     "heft": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -154,7 +155,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "7eb0689f5ef868d9d9dd605d5ac2e5e3e3c0306a"
+      "published_adapter_commit": "7eb0689f5ef868d9d9dd605d5ac2e5e3e3c0306a",
+      "evaluation_progress": "accepted"
     },
     "grit": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -203,7 +205,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "6d799be5789ef54db5381a81600e3c8577093e32"
+      "published_adapter_commit": "6d799be5789ef54db5381a81600e3c8577093e32",
+      "evaluation_progress": "accepted"
     },
     "holomotion-v1-3-2": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -252,7 +255,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "a931815b835f04a2cef4054e7e8395760d15bb05"
+      "published_adapter_commit": "a931815b835f04a2cef4054e7e8395760d15bb05",
+      "evaluation_progress": "accepted"
     },
     "holomotion-v1-4-1": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -301,7 +305,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "cc02689c9c9ab4b02dd9a8627a181e2bc115933f"
+      "published_adapter_commit": "cc02689c9c9ab4b02dd9a8627a181e2bc115933f",
+      "evaluation_progress": "accepted"
     },
     "mimic-lite": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -350,7 +355,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "3578223dc8788809f814fc3c81e982ebbe85ffa7"
+      "published_adapter_commit": "3578223dc8788809f814fc3c81e982ebbe85ffa7",
+      "evaluation_progress": "accepted"
     },
     "humanoid-gpt": {
       "schema": "MotionChallenge/observation-admission-v1",

@@ -595,6 +595,215 @@
             "synthetic_motor_target": 0.0002
           }
         }
+      },
+      "bfm-zero": {
+        "status": "passed",
+        "evaluated_adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5",
+        "checked_adapter_commit": "af540867febcb1f2e9073bb307be328e0f6b7cf5",
+        "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+        "report_file": "bfm-zero.restricted.json",
+        "report_sha256": "f77d02ad54e0ce9b2d3c137ac3cb637dd16d4b3b6645ca7177a778a83f7163c3",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero/blob/af540867febcb1f2e9073bb307be328e0f6b7cf5/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero/blob/af540867febcb1f2e9073bb307be328e0f6b7cf5/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero/blob/af540867febcb1f2e9073bb307be328e0f6b7cf5/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "e894bd913ac79fc33690d6b101a4b7b0a2154592",
+          "checked_adapter_commit": "4b02a1a093d5beb5aad757b65f8b508ee4490395",
+          "checkpoint_sha256": "cdc9d6454d72b00fabfd1c2ab26ad463a5638cde4e3ac82946975d1e459d9939",
+          "report_file": "bfm-zero.json",
+          "report_sha256": "c111dd6792b8430db750bcf997fcbae74d7707c7762c913630fa7a808cc553b8",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero/blob/4b02a1a093d5beb5aad757b65f8b508ee4490395/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero/blob/4b02a1a093d5beb5aad757b65f8b508ee4490395/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero/blob/4b02a1a093d5beb5aad757b65f8b508ee4490395/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "actor_observation": 2e-05,
+            "reference_state": 2e-05,
+            "reference_privileged": 2e-05,
+            "latent": 0.0001,
+            "action": 0.0002,
+            "pd_torque": 1e-06,
+            "same_inputs_action": 0.0002,
+            "same_inputs_latent": 0.0001,
+            "motor_target_end_to_end": 0.001
+          }
+        }
+      },
+      "grit": {
+        "status": "passed",
+        "evaluated_adapter_commit": "6d799be5789ef54db5381a81600e3c8577093e32",
+        "checked_adapter_commit": "6d799be5789ef54db5381a81600e3c8577093e32",
+        "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+        "report_file": "grit.restricted.json",
+        "report_sha256": "ccf06effd894fb479726067fb47c6cf632499d3e0ff30d1dff999a64fd6d7e86",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-grit/blob/6d799be5789ef54db5381a81600e3c8577093e32/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-grit/blob/6d799be5789ef54db5381a81600e3c8577093e32/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-grit/blob/6d799be5789ef54db5381a81600e3c8577093e32/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "6f04b73653abe8a819cd19245b869b72f5d81b36",
+          "checked_adapter_commit": "f8192cf06a50668e6dd65b908432f17536af1d48",
+          "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
+          "report_file": "grit.json",
+          "report_sha256": "5d618e8702905b717140ab90f284f88228b920aec6a4f86103ba5a75c05ab97a",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-grit/blob/f8192cf06a50668e6dd65b908432f17536af1d48/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-grit/blob/f8192cf06a50668e6dd65b908432f17536af1d48/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-grit/blob/f8192cf06a50668e6dd65b908432f17536af1d48/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "reference": 2e-05,
+            "history": 0.0002,
+            "network": 0.0,
+            "action": 0.0002,
+            "motor_target": 0.0002,
+            "reset_history": 2e-05,
+            "synthetic_action_target": 2e-05
+          }
+        }
+      },
+      "holomotion": {
+        "status": "passed",
+        "evaluated_adapter_commit": "7eb0689f5ef868d9d9dd605d5ac2e5e3e3c0306a",
+        "checked_adapter_commit": "7eb0689f5ef868d9d9dd605d5ac2e5e3e3c0306a",
+        "checkpoint_sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe",
+        "report_file": "holomotion.restricted.json",
+        "report_sha256": "56701832c6f6eace871a817764d99dd8724e55d089d7cd05bb6f3aea3653179e",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion/blob/7eb0689f5ef868d9d9dd605d5ac2e5e3e3c0306a/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion/blob/7eb0689f5ef868d9d9dd605d5ac2e5e3e3c0306a/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion/blob/7eb0689f5ef868d9d9dd605d5ac2e5e3e3c0306a/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "555f40dd820858fc31402fc92f0f50bea020524c",
+          "checked_adapter_commit": "1a7e27540002e3c2164e7d6223bb61c90da72398",
+          "checkpoint_sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe",
+          "report_file": "holomotion.json",
+          "report_sha256": "e51be5604d15e745070452c04d20ced9ca0087948778bbebee61cfeeb95703fa",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion/blob/1a7e27540002e3c2164e7d6223bb61c90da72398/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion/blob/1a7e27540002e3c2164e7d6223bb61c90da72398/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion/blob/1a7e27540002e3c2164e7d6223bb61c90da72398/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "observation": 0.0002,
+            "network": 0.0,
+            "action": 0.002,
+            "motor_target": 0.002,
+            "cache": 0.002,
+            "reset_cache": 0.0
+          }
+        }
+      },
+      "holomotion-v1-3-2": {
+        "status": "passed",
+        "evaluated_adapter_commit": "a931815b835f04a2cef4054e7e8395760d15bb05",
+        "checked_adapter_commit": "a931815b835f04a2cef4054e7e8395760d15bb05",
+        "checkpoint_sha256": "f3fa8cecf98080fe255348fd94627038f90db64246ca7309de15e80ad6bc6f22",
+        "report_file": "holomotion-v1-3-2.restricted.json",
+        "report_sha256": "28c37ac704c30ca8c2fa9c9b5485765fd212cea18b8981641f7b7f7a9045e56c",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-2/blob/a931815b835f04a2cef4054e7e8395760d15bb05/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-2/blob/a931815b835f04a2cef4054e7e8395760d15bb05/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-2/blob/a931815b835f04a2cef4054e7e8395760d15bb05/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "a2f24c0ffbfb6c3dff82cf1a31fda5e61d54c28d",
+          "checked_adapter_commit": "c61eff4b0c900b2a3d0a6b8810a283c0f666608b",
+          "checkpoint_sha256": "f3fa8cecf98080fe255348fd94627038f90db64246ca7309de15e80ad6bc6f22",
+          "report_file": "holomotion-v1-3-2.json",
+          "report_sha256": "e4eb7f15be3d06739df186d315c6877fb414f667963aa4b8b27b6a7432f235dd",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-2/blob/c61eff4b0c900b2a3d0a6b8810a283c0f666608b/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-2/blob/c61eff4b0c900b2a3d0a6b8810a283c0f666608b/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-2/blob/c61eff4b0c900b2a3d0a6b8810a283c0f666608b/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "observation": 0.0002,
+            "network": 0.0,
+            "action": 0.002,
+            "motor_target": 0.002,
+            "cache": 0.002,
+            "reset_cache": 0.0
+          }
+        }
+      },
+      "holomotion-v1-4-1": {
+        "status": "passed",
+        "evaluated_adapter_commit": "cc02689c9c9ab4b02dd9a8627a181e2bc115933f",
+        "checked_adapter_commit": "cc02689c9c9ab4b02dd9a8627a181e2bc115933f",
+        "checkpoint_sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7",
+        "report_file": "holomotion-v1-4-1.restricted.json",
+        "report_sha256": "23d8922667c65dc69dab5325c971644465eb9a1ff3d1ca9f26a8658593507287",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1/blob/cc02689c9c9ab4b02dd9a8627a181e2bc115933f/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1/blob/cc02689c9c9ab4b02dd9a8627a181e2bc115933f/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1/blob/cc02689c9c9ab4b02dd9a8627a181e2bc115933f/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "b83654d2d25b922cd9ae553813ea4935d652a315",
+          "checked_adapter_commit": "a129f01e79c42c62995bb27b139f8009afc6dffb",
+          "checkpoint_sha256": "2aabb53bd86b1860dd07b24d02710f4b988f9c201655becb45a2378604599ad7",
+          "report_file": "holomotion-v1-4-1.json",
+          "report_sha256": "6167c3fa092395b1a52a78b3b738bfea9e962f7df3c0340d545d24d5f3778ca2",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1/blob/a129f01e79c42c62995bb27b139f8009afc6dffb/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1/blob/a129f01e79c42c62995bb27b139f8009afc6dffb/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1/blob/a129f01e79c42c62995bb27b139f8009afc6dffb/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "observation": 0.0002,
+            "network": 0.0,
+            "action": 0.002,
+            "motor_target": 0.002,
+            "cache": 0.002,
+            "reset_cache": 0.0
+          }
+        }
+      },
+      "mimic-lite": {
+        "status": "passed",
+        "evaluated_adapter_commit": "3578223dc8788809f814fc3c81e982ebbe85ffa7",
+        "checked_adapter_commit": "3578223dc8788809f814fc3c81e982ebbe85ffa7",
+        "checkpoint_sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b",
+        "report_file": "mimic-lite.restricted.json",
+        "report_sha256": "b8ddaea9655093ed7321ac91f5644e9cccbac0a4943f9750e7d9bbda4c166258",
+        "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-mimic-lite/blob/3578223dc8788809f814fc3c81e982ebbe85ffa7/validation/observation-access.json",
+        "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-mimic-lite/blob/3578223dc8788809f814fc3c81e982ebbe85ffa7/validate_observations.py",
+        "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-mimic-lite/blob/3578223dc8788809f814fc3c81e982ebbe85ffa7/runtime.json",
+        "production_inference_alignment": "identical",
+        "limits": 2e-05,
+        "label": "Restricted path vs author-verified inference",
+        "base_author_comparison": {
+          "status": "passed",
+          "evaluated_adapter_commit": "0e95ec2f35b36925c330e5c31b6499a3fe8a833f",
+          "checked_adapter_commit": "2593d5e844237e9bf80cd0da2579cc039506e490",
+          "checkpoint_sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b",
+          "report_file": "mimic-lite.json",
+          "report_sha256": "b676ce11aee1b9e6d89abc6acfb26d648b4cb82bf0b8b3b9651444c311c04c56",
+          "report_url": "https://github.com/MotionChallenge-Project/MotionChallenge-mimic-lite/blob/2593d5e844237e9bf80cd0da2579cc039506e490/validation/native-parity.json",
+          "code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-mimic-lite/blob/2593d5e844237e9bf80cd0da2579cc039506e490/validate_inference.py",
+          "runtime_url": "https://github.com/MotionChallenge-Project/MotionChallenge-mimic-lite/blob/2593d5e844237e9bf80cd0da2579cc039506e490/runtime.json",
+          "production_inference_alignment": "identical",
+          "limits": {
+            "policy": 0.0002,
+            "command": 0.0002,
+            "network": 0.0,
+            "action": 0.0002,
+            "motor_target": 0.0002,
+            "reset_history": 0.0002,
+            "synthetic_motor_target": 0.0002
+          }
+        }
       }
     }
   }
