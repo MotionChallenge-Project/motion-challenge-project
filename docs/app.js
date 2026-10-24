@@ -65,7 +65,7 @@
   $('#track-caption').textContent=`${track.benchmark_label} · ${track.robot_label} · ${track.label} · ${track.clip_count} full motions`;
   $('#track-details').href=base+'/benchmarks/'+encodeURIComponent(track.benchmark_id)+'/';
   const url=new URL(location.href);url.searchParams.set('benchmark',track.benchmark_id);url.searchParams.set('robot',track.robot_id);url.searchParams.set('track',track.id);history.replaceState(null,'',url);
-  const needle=search.value.toLowerCase().trim(),limit=Number(size.value);
+  const needle=search.value.toLowerCase().trim(),limit=size.value==='all'?Math.max(1,trackData.length):Number(size.value);
   const filtered=trackData.filter(r=>(r.label+' '+(r.version||'')+' '+(r.organization||'')+' '+(r.controller_type?.label||'')).toLowerCase().includes(needle)).sort((a,b)=>{
    const av=a[sort],bv=b[sort];
    if(av==null&&bv!=null)return 1;if(av!=null&&bv==null)return -1;
@@ -74,7 +74,7 @@
   const pages=Math.max(1,Math.ceil(filtered.length/limit));page=Math.min(page,pages);
   const start=(page-1)*limit,rows=filtered.slice(start,start+limit);
   body.replaceChildren();table.hidden=!rows.length;empty.hidden=!!rows.length;empty.textContent=trackData.length?'No models match your search.':'No completed results for this protocol yet. Batch evaluation is in progress.';
-  for(const range of ranges)range.textContent=filtered.length?`${start+1}–${Math.min(start+limit,filtered.length)} of ${filtered.length} · Page ${page}/${pages}`:'0 models';prev.forEach(b=>b.disabled=page<=1);next.forEach(b=>b.disabled=page>=pages);
+  for(const range of ranges)range.textContent=filtered.length?(size.value==='all'?`${filtered.length} models`:`${start+1}–${Math.min(start+limit,filtered.length)} of ${filtered.length} · Page ${page}/${pages}`):'0 models';prev.forEach(b=>{b.disabled=page<=1;b.hidden=pages<=1});next.forEach(b=>{b.disabled=page>=pages;b.hidden=pages<=1});
   for(const [rowIndex,r] of rows.entries()){const tr=document.createElement('tr');
    const rank=start+rowIndex+1,medal=rank<=3?['gold','silver','bronze'][rank-1]:null;
    if(medal)tr.className='podium-'+medal;
