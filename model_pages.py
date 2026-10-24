@@ -13,6 +13,9 @@ def repository_location(value):
     """Resolve moved repositories while preserving evaluated revisions."""
     value = re.sub(r'(https://github\.com/|git@github\.com:)(?:MotionChallenge|motion-challenge-project)/',
                    r'\1MotionChallenge-Project/', value, flags=re.IGNORECASE)
+    value = value.replace('MotionChallenge-Project/motion-challenge-project',
+                          'MotionChallenge-Project/MotionChallenge')
+    value = re.sub(r'(MotionChallenge-Project/)motion-challenge-', r'\1MotionChallenge-', value)
     return re.sub(r'(MotionChallenge-Project/)motion-challenge(?![\w-])',
                   r'\1MotionChallenge-Core', value)
 
@@ -55,7 +58,7 @@ def evaluation_record(results, track, key, content, github):
     common = [('Benchmark', esc(track['benchmark_label']+' × '+track['robot_short_label']+' · '+track['label'])),
               ('Engine', 'MuJoCo '+esc(early['mujoco_version'])+' · official CPU batch'),
               ('Checkpoint SHA256', '<code>'+esc(early['checkpoint_sha256'])+'</code>')]
-    repo = early.get('adapter_repository', github+'/motion-challenge-'+key)
+    repo = repository_location(early.get('adapter_repository', github+'/MotionChallenge-'+key))
     if unified:
         evidence = json.loads((content/'evidence'/unified['evidence_file']).read_text())
         common += [('Evaluated adapter', link(unified['adapter_code_url'], unified['adapter_commit'])),
@@ -78,7 +81,7 @@ def evaluation_record(results, track, key, content, github):
         common.append(('Recorded source versions', '<br>'.join(source_items)))
         reruns = json.loads((content/'unified_reruns.json').read_text())
         revision = reruns[key]['commit']
-        commands = ['git clone '+repo+'.git', 'cd motion-challenge-'+key, 'git checkout '+revision,
+        commands = ['git clone '+repo+'.git', 'cd MotionChallenge-'+key, 'git checkout '+revision,
                     'git submodule update --init --recursive', 'uv sync --locked', 'uv run evaluate.py']
         title = 'Run the unified evaluation'
         note = 'The one-command rerun is being checked against these recorded scores. Its source and complete result will replace the previous records after verification.'
@@ -105,7 +108,7 @@ def render(models, rows, tracks, content, github, page, intro):
 
     for key, model in models.items():
         rt, provenance = model['runtime'], model['provenance']
-        repo = model.get('adapter_repository', f'{github}/motion-challenge-{key}')
+        repo = model.get('adapter_repository', f'{github}/MotionChallenge-{key}')
         revision = provenance.get('source_commit')
         source = provenance['upstream']
         source_url = source.rstrip('/') + '/tree/' + revision if revision else source
@@ -116,7 +119,7 @@ def render(models, rows, tracks, content, github, page, intro):
             ('Robot support', esc(' · '.join(model.get('supported_robots', ['Unitree G1 · 29 DoF'])))),
             ('Author source revision', link(source_url, revision or 'Not recorded')),
         ]
-        description = model.get('description', 'Checkpoint artifacts and an independent Motion Challenge inference adapter.')
+        description = model.get('description', 'Checkpoint artifacts and an independent MotionChallenge inference adapter.')
         detail = f'<section class="section split"><div><h2>Model</h2><p>{esc(description)}</p><div class="actions">'
         detail += link(model.get('project_url') or source, 'Author source ↗', 'button') + link(repo, 'Inference adapter ↗', 'text-link') + '</div>'
         if model.get('training_data'):
@@ -168,7 +171,7 @@ def render(models, rows, tracks, content, github, page, intro):
         detail += link('/models/' + key + '/', 'Model card ↗', 'text-link')
         detail += link('/benchmarks/' + track['benchmark_id'] + '/?robot=' + track['robot_id'] + '&track=' + track_id, 'Benchmark conditions ↗', 'text-link')
         detail += link('/?track=' + track_id + '&benchmark=' + track['benchmark_id'] + '&robot=' + track['robot_id'], 'Leaderboard ↗', 'text-link') + '</div>'
-        detail += '<p class="small">Evaluated by Motion Challenge using the shared protocol. This is an independent evaluation, not an author submission.</p></section>'
+        detail += '<p class="small">Evaluated by MotionChallenge using the shared protocol. This is an independent evaluation, not an author submission.</p></section>'
         key_notes = notes.get(track_id, {}).get(key, [])
         if key_notes:
             detail += '<section class="section evaluation-context"><h2>Evaluation context</h2>' + ''.join('<p>' + esc(n['text']) + (' ' + link(n['source'], 'Source ↗', 'text-link') if n.get('source') else '') + '</p>' for n in key_notes) + '</section>'

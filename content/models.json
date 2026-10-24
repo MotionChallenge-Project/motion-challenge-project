@@ -67,7 +67,7 @@
     },
     "provenance": {
       "model": "holomotion",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "fcb8d4d8e96af9535c2adcc2b53e267019f865a2",
@@ -137,7 +137,7 @@
     },
     "provenance": {
       "model": "protomotions",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/NVlabs/ProtoMotions",
       "source_commit": "f69fdcaabff31846b4d2247207417b57dc788828",
@@ -212,7 +212,7 @@
     "provenance": {
       "model": "teleopit",
       "display_name": "TeleopIT G1",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/BotRunner64/Teleopit",
       "source_commit": "f9263865c581802ad531854b8e547e2403a945f3",
@@ -295,7 +295,7 @@
     "provenance": {
       "model": "sonic-v1-1",
       "display_name": "SONIC v1.1",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
       "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
@@ -384,7 +384,7 @@
     "provenance": {
       "model": "sonic-low-latency",
       "display_name": "SONIC Low-Latency",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
       "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
@@ -457,7 +457,7 @@
     "provenance": {
       "model": "pmt-flat",
       "display_name": "PMT Flat · iteration 19999",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
@@ -562,7 +562,7 @@
     },
     "provenance": {
       "model": "twist2",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/amazon-far/TWIST2",
       "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
@@ -669,7 +669,7 @@
     },
     "provenance": {
       "model": "grit",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/mrzuang/GRIT_teleop_deploy",
       "source_commit": "5660177cf63f72803367d1e24eb7385a8cdc877c",
@@ -788,7 +788,7 @@
     },
     "provenance": {
       "model": "heft",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/Axellwppr/motion_tracking",
       "source_commit": "0d5ba31e33397f3543d350d98b637e26d92f470a",
@@ -896,7 +896,7 @@
     },
     "provenance": {
       "model": "mimic-lite",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/EGalahad/mimic-lite",
       "source_commit": "3253810ce21dbcc05d8f4942a017ea3eaffc6cf1",
@@ -971,7 +971,7 @@
     "provenance": {
       "model": "pmt-adaptive",
       "display_name": "PMT Adaptive MLP 20k",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
@@ -1059,7 +1059,7 @@
     "provenance": {
       "model": "pmt-streaming",
       "display_name": "PMT Streaming MLP 20k",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
@@ -1147,7 +1147,7 @@
     "provenance": {
       "model": "pmt-uniform",
       "display_name": "PMT Uniform MLP 20k",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
@@ -1235,7 +1235,7 @@
     "provenance": {
       "model": "pmt-bpo",
       "display_name": "PMT BPO MLP 20k",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
@@ -1323,7 +1323,7 @@
     "provenance": {
       "model": "pmt-add",
       "display_name": "PMT ADD MLP 20k",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
@@ -1431,7 +1431,7 @@
     "provenance": {
       "model": "pmt-rgmt",
       "display_name": "PMT RGMT Transformer 20k",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
       "source_commit": "1a92390077d329d22cbcdbf89c4a5c982003fbc8",
@@ -1512,7 +1512,7 @@
     "provenance": {
       "model": "sonic-original",
       "display_name": "SONIC Original",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/NVlabs/GR00T-WholeBodyControl",
       "source_commit": "45c03facbf848e0c743091b7d9c17952096ff908",
@@ -1622,7 +1622,7 @@
     },
     "provenance": {
       "model": "holomotion-v1-3-2",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "799302097ac60971db049f3861d3e67c96bffd32",
@@ -1731,7 +1731,7 @@
     },
     "provenance": {
       "model": "holomotion-v1-4-1",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "cf2018a282249a04df1db4fa639760884f97b41b",
@@ -1818,7 +1818,7 @@
     "provenance": {
       "model": "textop",
       "display_name": "TextOp Tracker 75k",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/TeleHuman/TextOp",
       "source_commit": "ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22",
@@ -1896,7 +1896,7 @@
     "provenance": {
       "model": "ufo",
       "display_name": "UFO FB-CPR-Aux 192M",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/Roboparty/UFO",
       "source_commit": "ee5c57082bb4223bdac215bff7a607cbe0a93cd1",
@@ -1969,7 +1969,7 @@
     "provenance": {
       "model": "holomotion-v2-0-0",
       "display_name": "HoloMotion v2.0.0",
-      "submitter": "Motion Challenge",
+      "submitter": "MotionChallenge",
       "submission_type": "maintainer reproduction, not author submission",
       "upstream": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "ebb3747ad3b6dab57e4b621611efef87317bdc3b",

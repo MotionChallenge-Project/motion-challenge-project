@@ -22,7 +22,7 @@ def same_number(a, b, label):
 def validate_row(row, model, track, evidence):
     name=row['model']; result=evidence['result']; source=result['source']
     require(evidence['model']==name, name+': wrong evidence')
-    require(result['schema']=='motion-challenge/unified-result-v1' and
+    require(result['schema'] in ('MotionChallenge/unified-result-v1', 'motion-challenge/unified-result-v1') and
             result['status']=='trace_verified', name+': unverified result')
     digest=hashlib.sha256((json.dumps(result, indent=2)+'\n').encode()).hexdigest()
     require(digest==evidence['result_sha256'], name+': changed result')

@@ -10,7 +10,7 @@
    const chosen=templates.find(t=>t.dataset.benchmarkTrack===protocolChoice.value);if(!chosen)return;
    document.querySelector('#benchmark-document').replaceChildren(chosen.content.cloneNode(true));
    document.querySelector('#benchmark-robot-title').textContent=chosen.dataset.robotLabel;
-   document.title=benchmarkControls.dataset.benchmarkLabel+' × '+chosen.dataset.robotLabel+' · Motion Challenge';
+   document.title=benchmarkControls.dataset.benchmarkLabel+' × '+chosen.dataset.robotLabel+' · MotionChallenge';
    const params=new URLSearchParams({benchmark:benchmarkControls.dataset.benchmarkId,robot:chosen.dataset.robotId,track:chosen.dataset.benchmarkTrack});
    document.querySelector('#benchmark-results').href=base+'/?'+params;
    const url=new URL(location.href);url.searchParams.set('robot',chosen.dataset.robotId);url.searchParams.set('track',chosen.dataset.benchmarkTrack);history.replaceState(null,'',url);

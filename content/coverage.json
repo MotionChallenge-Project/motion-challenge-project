@@ -10,7 +10,7 @@
       "next_step": "Complete the second 40-motion run and compare verified records.",
       "author_source": "https://github.com/LeCAR-Lab/BFM-Zero",
       "checked": "2026-10-24",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/motion-challenge-bfm-zero"
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-bfm-zero"
     },
     {
       "name": "MOSAIC GMT",
@@ -37,7 +37,7 @@
       "next_step": "Audit the 264 deployment contract, then rerun the complete suite. A numerical reset is not a valid complete trajectory.",
       "author_source": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/tree/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
       "checked": "2026-10-24",
-      "evaluation_code": "https://github.com/MotionChallenge-Project/motion-challenge-humanoid-gpt"
+      "evaluation_code": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt"
     },
     {
       "name": "YAHMP",

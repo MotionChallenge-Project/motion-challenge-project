@@ -1,13 +1,13 @@
-# Motion Challenge website
+# MotionChallenge website
 
-[Website & leaderboard](https://motionchallenge-project.github.io/motion-challenge-project/) · [Evaluation core](https://github.com/MotionChallenge-Project/MotionChallenge-Core)
+[Website & leaderboard](https://motionchallenge-project.github.io/MotionChallenge/) · [Evaluation core](https://github.com/MotionChallenge-Project/MotionChallenge-Core)
 
 ```sh
 SITE_BASE_PATH='' python3 build.py
 python3 -m http.server 8768 --directory docs
 ```
 
-GitHub Pages serves `website:/docs`. Run `python3 build.py` before publishing to restore the GitHub Pages URL prefix.
+GitHub Pages serves `website:/docs`. Run `python3 build.py` before publishing.
 
 `content/` contains published model records, result summaries and trace receipts. Full traces, weights and datasets remain outside Git. Each checkpoint version has a separate entry; scores never transfer between versions. The evaluation kernel and model adapters remain independent repositories.
 
