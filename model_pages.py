@@ -61,14 +61,11 @@ def evaluation_record(results, track, key, content, github):
         common += [('Evaluated adapter', link(unified['adapter_code_url'], unified['adapter_commit'])),
                    ('Evaluated core', link(unified['core_code_url'], unified['core_commit'])),
                    ('Verification', 'Both trajectory ranges recomputed · repeatability checked')]
-        commands = []
-        for command in evidence['reproduction']['commands']:
-            if command.startswith('git submodule update'):
-                commands.append('git config submodule.motion-challenge.url https://github.com/MotionChallenge-Project/MotionChallenge-Core.git')
-            commands.append(repository_location(command))
+        commands = ['git clone --recurse-submodules '+repo+'.git',
+                    'cd '+repo.rsplit('/', 1)[-1], 'uv sync', 'uv run evaluate.py']
         downloads = link('/data/evidence/'+unified['evidence_file'], 'Complete results, source & verification (JSON) ↗', 'text-link')
         title = 'Reproduce this run'
-        note = 'One command produces success, completion and all six MPBPE values in one result.json.'
+        note = 'Runs the maintained main branch. The evaluated source commits and complete result remain linked alongside.'
     else:
         # Preserve actual old sources until a new shared-source run passes comparison.
         source_items = []
@@ -104,7 +101,7 @@ def render(models, rows, tracks, content, github, page, intro):
     )
     page('/models/', 'Models', intro('MODEL CATALOG', 'Models',
         'Released model versions, checkpoint artifacts and inference interfaces.')
-        + f'<section class="section model-grid">{cards}</section>', 'Models')
+        + f'<p class="small"><a href="/coverage/">Coverage status and remaining gaps →</a></p><section class="section model-grid">{cards}</section>', 'Models')
 
     for key, model in models.items():
         rt, provenance = model['runtime'], model['provenance']

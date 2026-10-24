@@ -1,5 +1,5 @@
 {
-  "generated_unix": 1792814369.1400845,
+  "generated_unix": 1792821427.3171039,
   "rows": [
     {
       "model": "holomotion",
@@ -945,6 +945,51 @@
       "mujoco_version": "3.17.0",
       "track_id": "lafan40-g1-mujoco317-v1",
       "evidence_file": "ufo.mujoco317.unified.json"
+    },
+    {
+      "model": "holomotion-v2-0-0",
+      "adapter_commit": "83ae91e1f4d93e223762be85a3d52a7f7729cb07",
+      "core_commit": "bc1cdca5e89a5cda613f676dc5fe97133c2601f6",
+      "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v2-0-0",
+      "adapter_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v2-0-0/tree/83ae91e1f4d93e223762be85a3d52a7f7729cb07",
+      "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/bc1cdca5e89a5cda613f676dc5fe97133c2601f6",
+      "passed": 6,
+      "total": 40,
+      "completion_pct": 40.7311154660643,
+      "joint_mae_rad": 0.0857836746045251,
+      "root_position_error_m": 0.9958398975307896,
+      "root_orientation_error_rad": 0.11481151984428188,
+      "mpjpe_world_m": 0.9983170510321993,
+      "mpjpe_root_relative_world_axes_m": 0.03178670996793702,
+      "anchor_height_error_m": 0.015548984504095207,
+      "anchor_gravity_z_error": 0.016627569994861875,
+      "end_effector_height_error_m": 0.03966131030300544,
+      "mpjpe_xy_aligned_m": 0.03740856932528732,
+      "mpjpe_xy_yaw_aligned_m": 0.03277822473382409,
+      "root_xy_error_m": 0.9948045802051968,
+      "root_height_error_m": 0.015357871089612262,
+      "root_yaw_correction_abs_rad": 0.07578283438400643,
+      "yaw_alignment_degenerate_fraction": 0.0,
+      "full_joint_mae_rad": 0.17450449386599157,
+      "full_root_position_error_m": 2.283381129053974,
+      "full_root_orientation_error_rad": 0.5264669700205782,
+      "full_mpjpe_world_m": 2.2775323434738177,
+      "full_mpjpe_root_relative_world_axes_m": 0.11523715168003923,
+      "full_anchor_height_error_m": 0.1196812974847852,
+      "full_anchor_gravity_z_error": 0.11565538158000307,
+      "full_end_effector_height_error_m": 0.14250677830882627,
+      "full_mpjpe_xy_aligned_m": 0.15502563872062494,
+      "full_mpjpe_xy_yaw_aligned_m": 0.14029902693834795,
+      "full_root_xy_error_m": 2.268441462199095,
+      "full_root_height_error_m": 0.11211767623425459,
+      "full_root_yaw_correction_abs_rad": 0.3349997771034027,
+      "full_yaw_alignment_degenerate_fraction": 0.0,
+      "verification": "trace_consistent_and_repeatable",
+      "termination_mode": "unified",
+      "checkpoint_sha256": "b0681976135eed572d1d20aefc52ec65c149bdc636f2594a6436fa7136a3fc86",
+      "mujoco_version": "3.17.0",
+      "track_id": "lafan40-g1-mujoco317-v1",
+      "evidence_file": "holomotion-v2-0-0.mujoco317.unified.json"
     }
   ]
 }

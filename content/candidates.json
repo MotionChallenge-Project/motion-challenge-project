@@ -24,7 +24,7 @@
     "notes": "The author deployment specifies 29 actuated joints and three ONNX components. Adaptation must preserve the base/residual composition and native action processing.",
     "robot_id": "g1-29dof",
     "benchmark_id": "lafan40",
-    "status": "Public checkpoint; adapter integration pending",
+    "status": "Public adapter; native inference comparison passed; complete evaluation running",
     "checked_date": "2026-10-23",
     "family": "omnixtreme",
     "version": "commit 6f2716d",
@@ -49,7 +49,7 @@
     "notes": "A distinct transformer checkpoint from the same PMT release. It is attributed to the PMT implementation and is not presented as an independent author submission by another project.",
     "robot_id": "g1-29dof",
     "benchmark_id": "lafan40",
-    "status": "Public checkpoint; adapter integration pending",
+    "status": "Published with complete verified evaluation",
     "checked_date": "2026-10-23",
     "family": "pmt",
     "version": "RGMT \u00b7 20k",
@@ -79,7 +79,7 @@
     "notes": "Official G1 release with a 29-joint control order, actor ONNX and backward encoder. Tracking latents must be computed from each supplied reference using the author inference procedure.",
     "robot_id": "g1-29dof",
     "benchmark_id": "lafan40",
-    "status": "Public checkpoint; adapter integration pending",
+    "status": "Published with complete verified evaluation",
     "checked_date": "2026-10-23",
     "family": "ufo",
     "version": "G1 FB \u00b7 fe58bf17",
@@ -100,7 +100,7 @@
     "notes": "Official G1 29DoF motion-tracking release; configuration declares 29 actions. This checkpoint is separate from the v1.4.0 checkpoint already evaluated.",
     "robot_id": "g1-29dof",
     "benchmark_id": "lafan40",
-    "status": "Public checkpoint; adapter integration pending",
+    "status": "Published with complete verified evaluation",
     "checked_date": "2026-10-23",
     "artifacts": [
       {
@@ -128,7 +128,7 @@
     "notes": "Official G1 29DoF release with link-command modes. Its reference interface requires a separate adaptation; v1.4 results do not transfer to this checkpoint.",
     "robot_id": "g1-29dof",
     "benchmark_id": "lafan40",
-    "status": "Public checkpoint; adapter integration pending",
+    "status": "Published with complete verified evaluation",
     "checked_date": "2026-10-23",
     "artifacts": [
       {

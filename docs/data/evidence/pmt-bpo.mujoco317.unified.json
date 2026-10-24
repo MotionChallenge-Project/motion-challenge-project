@@ -2234,12 +2234,12 @@
   "reproduction": {
     "adapter_commit": "640ca090eb6d421c75db5b55814896c9b8e6c98f",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-pmt-bpo",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-pmt-bpo/tree/640ca090eb6d421c75db5b55814896c9b8e6c98f",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-bpo",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-bpo/tree/640ca090eb6d421c75db5b55814896c9b8e6c98f",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "72daa7ae41aad80a247aa57c47e68d33f0d40d03efd3bc4621f585e253d3a759",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-pmt-bpo.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-pmt-bpo.git",
       "cd motion-challenge-pmt-bpo",
       "git checkout 640ca090eb6d421c75db5b55814896c9b8e6c98f",
       "git submodule update --init --recursive",

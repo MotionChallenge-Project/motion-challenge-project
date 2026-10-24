@@ -2223,12 +2223,12 @@
   "reproduction": {
     "adapter_commit": "ac9a2082b9b066dca136a8f5c984eb829f745ba8",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-pmt-adaptive",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-pmt-adaptive/tree/ac9a2082b9b066dca136a8f5c984eb829f745ba8",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-adaptive",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-adaptive/tree/ac9a2082b9b066dca136a8f5c984eb829f745ba8",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "48b267f01a632b90577148ea1801d291e2e1f3d5321807153a26f38cd4104b25",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-pmt-adaptive.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-pmt-adaptive.git",
       "cd motion-challenge-pmt-adaptive",
       "git checkout ac9a2082b9b066dca136a8f5c984eb829f745ba8",
       "git submodule update --init --recursive",

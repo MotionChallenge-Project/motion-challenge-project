@@ -16,8 +16,8 @@
       "publish_results": false
     },
     "bfm-zero": {
-      "reason": "Motion Challenge exported the actor/backward map from the original safetensors checkpoint. The public conversion chain is incomplete and the configured release download currently returns 404; results are withheld.",
-      "evaluate": false,
+      "reason": "Original author checkpoint conversion and native inference comparison are now public. A new complete evaluation and independent repeat are in progress; no score is released until both verify.",
+      "evaluate": true,
       "publish_results": false
     },
     "humanoid-gpt": {

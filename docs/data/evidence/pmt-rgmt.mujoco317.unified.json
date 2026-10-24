@@ -2209,12 +2209,12 @@
   "reproduction": {
     "adapter_commit": "7ee22ccf48bac293749d598f419764dd4b9cde69",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-pmt-rgmt",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-pmt-rgmt/tree/7ee22ccf48bac293749d598f419764dd4b9cde69",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-rgmt",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-rgmt/tree/7ee22ccf48bac293749d598f419764dd4b9cde69",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "38e8070882d9e397a4850a7b76337fb9260155f6dcc1887759db070f2c014f12",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-pmt-rgmt.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-pmt-rgmt.git",
       "cd motion-challenge-pmt-rgmt",
       "git checkout 7ee22ccf48bac293749d598f419764dd4b9cde69",
       "git submodule update --init --recursive",

@@ -2209,12 +2209,12 @@
   "reproduction": {
     "adapter_commit": "0e95ec2f35b36925c330e5c31b6499a3fe8a833f",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-mimic-lite",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-mimic-lite/tree/0e95ec2f35b36925c330e5c31b6499a3fe8a833f",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-mimic-lite",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-mimic-lite/tree/0e95ec2f35b36925c330e5c31b6499a3fe8a833f",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "031b8d67557795d86e4ed3f30e7a707414534feba65f330c64f1b07a1f5c7a0b",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-mimic-lite.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-mimic-lite.git",
       "cd motion-challenge-mimic-lite",
       "git checkout 0e95ec2f35b36925c330e5c31b6499a3fe8a833f",
       "git submodule update --init --recursive",

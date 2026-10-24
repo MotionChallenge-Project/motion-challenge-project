@@ -2211,12 +2211,12 @@
   "reproduction": {
     "adapter_commit": "dced158abb2471670eeb2881f07491c4cd0ee03c",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-pmt-uniform",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-pmt-uniform/tree/dced158abb2471670eeb2881f07491c4cd0ee03c",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-uniform",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-uniform/tree/dced158abb2471670eeb2881f07491c4cd0ee03c",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "349471acdddcc497a83d397eb540ace4eb4222c7f7a2a3243b1f42d4b538a6a1",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-pmt-uniform.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-pmt-uniform.git",
       "cd motion-challenge-pmt-uniform",
       "git checkout dced158abb2471670eeb2881f07491c4cd0ee03c",
       "git submodule update --init --recursive",

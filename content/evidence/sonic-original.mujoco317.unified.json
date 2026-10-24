@@ -2193,12 +2193,12 @@
   "reproduction": {
     "adapter_commit": "e4df937e61becacdae5692fd895dbcc3fa9234d4",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-sonic-original",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-sonic-original/tree/e4df937e61becacdae5692fd895dbcc3fa9234d4",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-sonic-original",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-sonic-original/tree/e4df937e61becacdae5692fd895dbcc3fa9234d4",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-sonic-original.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-sonic-original.git",
       "cd motion-challenge-sonic-original",
       "git checkout e4df937e61becacdae5692fd895dbcc3fa9234d4",
       "git submodule update --init --recursive",

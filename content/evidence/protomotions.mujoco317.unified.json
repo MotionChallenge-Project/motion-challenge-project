@@ -2296,12 +2296,12 @@
   "reproduction": {
     "adapter_commit": "1389b7e99fde95a6206222974a45f26947e40f95",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-protomotions",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-protomotions/tree/1389b7e99fde95a6206222974a45f26947e40f95",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-protomotions",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-protomotions/tree/1389b7e99fde95a6206222974a45f26947e40f95",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "a59baa3e04a951e5cf0b4cc68f24ebaafa9272714226618b99a5017dfc805b4c",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-protomotions.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-protomotions.git",
       "cd motion-challenge-protomotions",
       "git checkout 1389b7e99fde95a6206222974a45f26947e40f95",
       "git submodule update --init --recursive",

@@ -2217,12 +2217,12 @@
   "reproduction": {
     "adapter_commit": "c5a6494ea108f7eff8b8fb0eca0c3451bbc6eed6",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-pmt-streaming",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-pmt-streaming/tree/c5a6494ea108f7eff8b8fb0eca0c3451bbc6eed6",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-streaming",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-streaming/tree/c5a6494ea108f7eff8b8fb0eca0c3451bbc6eed6",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "4a13d0e41ad868acf88c5599821b1e983dd845f89d4e2fee1c106f7a6b46337f",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-pmt-streaming.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-pmt-streaming.git",
       "cd motion-challenge-pmt-streaming",
       "git checkout c5a6494ea108f7eff8b8fb0eca0c3451bbc6eed6",
       "git submodule update --init --recursive",

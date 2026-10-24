@@ -91,13 +91,13 @@
       "native_validation_source_commit": "5b51cc24eff71b67fe7e5acd539c06329137dc80"
     },
     "repository_available": true,
-    "version": "v1.4.0 \u00b7 14k",
+    "version": "v1.4.0 · 14k",
     "version_kind": "author checkpoint",
     "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
     "family": "holomotion",
     "display_name": "HoloMotion v1.4.0",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "moe",
@@ -167,7 +167,7 @@
     "family": "protomotions",
     "display_name": "ProtoMotions G1 BONES",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -182,7 +182,7 @@
   },
   "teleopit": {
     "organization": "Westlake / SII",
-    "version": "track_g1 \u00b7 1ebd341d",
+    "version": "track_g1 · 1ebd341d",
     "version_kind": "author checkpoint or pinned source revision",
     "family": "teleopit",
     "display_name": "TeleopIT G1",
@@ -235,7 +235,7 @@
       "parity_scope": "Offline VelCmdHistory playback defaults, shared canonical robot FK, original weights on CPU ONNX Runtime; hardware, retargeting and online transport excluded. No inference changes were needed."
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -324,7 +324,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "fsq",
@@ -341,7 +341,7 @@
     "display_name": "SONIC Low-Latency",
     "family": "sonic",
     "organization": "NVIDIA",
-    "version": "Low-Latency \u00b7 2026-06-16",
+    "version": "Low-Latency · 2026-06-16",
     "organization_source": "https://huggingface.co/nvidia/GEAR-SONIC",
     "version_kind": "Author release",
     "repository_available": true,
@@ -413,7 +413,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "fsq",
@@ -430,7 +430,7 @@
     "display_name": "PMT Flat MLP 20k",
     "family": "pmt",
     "organization": "Mondo Robotics / HKUST & collaborators",
-    "version": "Flat MLP \u00b7 20k",
+    "version": "Flat MLP · 20k",
     "version_kind": "author checkpoint or pinned source revision",
     "organization_source": "https://acodedog.github.io/perceptive-bfm/",
     "repository_available": true,
@@ -456,7 +456,7 @@
     },
     "provenance": {
       "model": "pmt-flat",
-      "display_name": "PMT Flat \u00b7 iteration 19999",
+      "display_name": "PMT Flat · iteration 19999",
       "submitter": "Motion Challenge",
       "submission_type": "maintainer adaptation, not author submission",
       "upstream": "https://github.com/Mondo-Robotics/PMT",
@@ -501,7 +501,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -586,13 +586,13 @@
       "correction": "Wrist PD gains match the original author sim2sim release: Kp 4 and Kd 0.2, replacing 40 and 5. Full benchmark rerun is required."
     },
     "repository_available": true,
-    "version": "1017 \u00b7 20k",
+    "version": "1017 · 20k",
     "version_kind": "author checkpoint filename",
     "version_source": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
     "family": "twist2",
     "display_name": "TWIST2 1017-20k",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -698,13 +698,13 @@
       ]
     },
     "repository_available": true,
-    "version": "99k \u00b7 39d573e9",
+    "version": "99k · 39d573e9",
     "version_kind": "post-v0.0.1 checkpoint; differs from the tagged release",
     "version_source": "https://github.com/mrzuang/GRIT_teleop_deploy/blob/5660177cf63f72803367d1e24eb7385a8cdc877c/sim2real/checkpoints/policy.json",
     "family": "grit",
     "display_name": "GRIT 99k",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -819,7 +819,7 @@
     "family": "heft",
     "display_name": "HEFT PMG",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -928,7 +928,7 @@
     "family": "mimic-lite",
     "display_name": "MimicLite 031b8d67",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1015,7 +1015,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1103,7 +1103,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1191,7 +1191,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1279,7 +1279,7 @@
       }
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1344,7 +1344,7 @@
       "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1452,7 +1452,7 @@
       "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "dense",
@@ -1542,7 +1542,7 @@
       "inference_validation": "validation/native-parity.json"
     },
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "fsq",
@@ -1651,7 +1651,7 @@
     "family": "holomotion",
     "display_name": "HoloMotion v1.3.2",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "moe",
@@ -1760,7 +1760,7 @@
     "family": "holomotion",
     "display_name": "HoloMotion v1.4.1",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "controller_type": {
       "id": "moe",
@@ -1778,13 +1778,13 @@
     "organization_source": "https://text-op.github.io/",
     "family": "textop",
     "display_name": "TextOp Tracker 75k",
-    "version": "Tracker 75k \u00b7 8df6371c",
+    "version": "Tracker 75k · 8df6371c",
     "version_kind": "author-released ONNX checkpoint",
     "version_source": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/USAGE.md",
     "repository_available": true,
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-textop",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "description": "The released low-level universal motion tracker from TextOp. This entry evaluates reference-motion tracking, without the high-level text-to-motion generator.",
     "training_data": {
@@ -1854,13 +1854,13 @@
     "organization_source": "https://roboparty.github.io/UFO/",
     "family": "ufo",
     "display_name": "UFO FB-CPR-Aux 192M",
-    "version": "FB-CPR-Aux \u00b7 191,995,904 training steps",
+    "version": "FB-CPR-Aux · 191,995,904 training steps",
     "version_kind": "author-released checkpoint; 192M denotes training steps",
     "version_source": "https://huggingface.co/xuewang/ufo-g1-policy/blob/da3727034a058eae588a16af142764ee34bdada4/release_manifest.json",
     "repository_available": true,
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-ufo",
     "supported_robots": [
-      "Unitree G1 \u00b7 29 DoF"
+      "Unitree G1 · 29 DoF"
     ],
     "description": "The released G1 forward-backward controller from UFO. A backward encoder turns reference poses into a latent command for its history-conditioned policy.",
     "runtime": {
@@ -1928,5 +1928,97 @@
     "icon_label": "RoboParty",
     "icon_source": "https://github.com/Roboparty",
     "project_url": "https://roboparty.github.io/UFO/"
+  },
+  "holomotion-v2-0-0": {
+    "organization": "Horizon Robotics",
+    "organization_source": "https://github.com/HorizonRobotics/HoloMotion",
+    "runtime": {
+      "id": "holomotion-v2-0-0-g1-v1",
+      "entrypoint": "adapter:create",
+      "control_period_s": 0.02,
+      "reference_step_s": 0.02,
+      "reference_steps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reference_offsets_s": [
+        0.0,
+        0.02,
+        0.04,
+        0.06,
+        0.08,
+        0.1
+      ],
+      "reference_history_s": 0,
+      "reference_preview_s": 0.1,
+      "state_access": "privileged-state-v0",
+      "action_mode": "joint-pd-feedforward",
+      "inference_config": "policy.json",
+      "inference_config_sha256": "a2ca89e2a34bb2493cb31ec515893fcdf55f41e14c9eb2a4aab068dc6a038ddd",
+      "weights": "checkpoints/policy.onnx",
+      "weights_sha256": "b0681976135eed572d1d20aefc52ec65c149bdc636f2594a6436fa7136a3fc86",
+      "official": false,
+      "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
+      "source_commit": "ebb3747ad3b6dab57e4b621611efef87317bdc3b",
+      "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/exported/model_10500.onnx"
+    },
+    "provenance": {
+      "model": "holomotion-v2-0-0",
+      "display_name": "HoloMotion v2.0.0",
+      "submitter": "Motion Challenge",
+      "submission_type": "maintainer reproduction, not author submission",
+      "upstream": "https://github.com/HorizonRobotics/HoloMotion",
+      "source_commit": "ebb3747ad3b6dab57e4b621611efef87317bdc3b",
+      "checkpoint_sha256": "b0681976135eed572d1d20aefc52ec65c149bdc636f2594a6436fa7136a3fc86",
+      "author_inference_review": "Passed native CUDA FK/observation, motion-entry heading, recurrent CPU inference and motor-target comparison: 160 states, 4 resets, 20 endpoint cases and RoPE reset at step 8128.",
+      "inference_validation": "validation/native-parity.json",
+      "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+      "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
+      "checkpoint_origin": {
+        "author_release_url": "https://github.com/HorizonRobotics/HoloMotion/tree/ebb3747ad3b6dab57e4b621611efef87317bdc3b",
+        "author_release_label": "HorizonRobotics/HoloMotion v2.0.0",
+        "kind": "author_file",
+        "kind_label": "Author-released checkpoint",
+        "artifact_page_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/exported/model_10500.onnx",
+        "original_filename": "HoloMotion_motion_tracking_model_v2.0.0/exported/model_10500.onnx",
+        "verification": "SHA256 pins the author artifact. Native inference parity is recorded separately.",
+        "download_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/exported/model_10500.onnx",
+        "sha256": "b0681976135eed572d1d20aefc52ec65c149bdc636f2594a6436fa7136a3fc86"
+      },
+      "inference_contract": {
+        "mode": "WholeBody-14",
+        "future_frames": 5,
+        "future_step_s": 0.02,
+        "reference_anchor": "current reference pelvis; motion-entry heading alignment; all target transforms in actual pelvis frame",
+        "rotation_6d": "rotated X axis followed by rotated Z axis",
+        "endpoint": "shared core clamps future references at final frame; native VR provider time-valid mask stays one",
+        "cache_reset_step": 8128,
+        "action": "raw ONNX action; float32 default + action scale; no clipping or EMA"
+      }
+    },
+    "repository_available": true,
+    "version": "v2.0.0",
+    "version_kind": "author checkpoint",
+    "version_source": "https://huggingface.co/HorizonRobotics/HoloMotion_models",
+    "family": "holomotion",
+    "display_name": "HoloMotion v2.0.0",
+    "supported_robots": [
+      "Unitree G1 · 29 DoF"
+    ],
+    "controller_type": {
+      "id": "moe",
+      "label": "MoE",
+      "description": "Reference-routed mixture-of-experts Transformer policy.",
+      "source": "https://huggingface.co/HorizonRobotics/HoloMotion_models/blob/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v2.0.0/config.yaml"
+    },
+    "icon": "/assets/model-icons/horizon.jpg",
+    "icon_label": "Horizon Robotics",
+    "icon_source": "https://github.com/HorizonRobotics",
+    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v2-0-0"
   }
 }

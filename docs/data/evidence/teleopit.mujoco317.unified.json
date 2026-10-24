@@ -2285,12 +2285,12 @@
   "reproduction": {
     "adapter_commit": "f88b8b7d17b375c8db706bd98c2865cfb0531946",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-teleopit",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-teleopit/tree/f88b8b7d17b375c8db706bd98c2865cfb0531946",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-teleopit",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-teleopit/tree/f88b8b7d17b375c8db706bd98c2865cfb0531946",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "1ebd341d9193e1c49a986450f6043ba1a9473ad46636ce0bcb1c7755c856e0de",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-teleopit.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-teleopit.git",
       "cd motion-challenge-teleopit",
       "git checkout f88b8b7d17b375c8db706bd98c2865cfb0531946",
       "git submodule update --init --recursive",

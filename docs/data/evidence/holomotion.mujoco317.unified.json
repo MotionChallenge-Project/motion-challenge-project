@@ -2289,12 +2289,12 @@
   "reproduction": {
     "adapter_commit": "555f40dd820858fc31402fc92f0f50bea020524c",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-holomotion",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-holomotion/tree/555f40dd820858fc31402fc92f0f50bea020524c",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-holomotion",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-holomotion/tree/555f40dd820858fc31402fc92f0f50bea020524c",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "859174937272747e762075db482e2b8d05d40dacb3a09884fc9d7d42086bbffe",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-holomotion.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-holomotion.git",
       "cd motion-challenge-holomotion",
       "git checkout 555f40dd820858fc31402fc92f0f50bea020524c",
       "git submodule update --init --recursive",

@@ -2237,12 +2237,12 @@
   "reproduction": {
     "adapter_commit": "d1e5b041cca86b454168b2f3a581d4973962dc0b",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-twist2",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-twist2/tree/d1e5b041cca86b454168b2f3a581d4973962dc0b",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-twist2",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-twist2/tree/d1e5b041cca86b454168b2f3a581d4973962dc0b",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-twist2.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-twist2.git",
       "cd motion-challenge-twist2",
       "git checkout d1e5b041cca86b454168b2f3a581d4973962dc0b",
       "git submodule update --init --recursive",

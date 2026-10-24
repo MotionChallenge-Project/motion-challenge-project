@@ -2307,12 +2307,12 @@
   "reproduction": {
     "adapter_commit": "e85017d151e8aefa002a868c20f43653c05429dd",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-pmt-flat",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-pmt-flat/tree/e85017d151e8aefa002a868c20f43653c05429dd",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-flat",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-pmt-flat/tree/e85017d151e8aefa002a868c20f43653c05429dd",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "dce21ee052099c49b847e04a4bfe5aa4baea94bc8992b72e5f30d2b67f13dd26",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-pmt-flat.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-pmt-flat.git",
       "cd motion-challenge-pmt-flat",
       "git checkout e85017d151e8aefa002a868c20f43653c05429dd",
       "git submodule update --init --recursive",

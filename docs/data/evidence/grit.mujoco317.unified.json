@@ -2181,12 +2181,12 @@
   "reproduction": {
     "adapter_commit": "6f04b73653abe8a819cd19245b869b72f5d81b36",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-grit",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-grit/tree/6f04b73653abe8a819cd19245b869b72f5d81b36",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-grit",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-grit/tree/6f04b73653abe8a819cd19245b869b72f5d81b36",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "39d573e970b7088275ed68ec8a9597fa9c402d98d5ad211991db7d8d0f5a82b9",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-grit.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-grit.git",
       "cd motion-challenge-grit",
       "git checkout 6f04b73653abe8a819cd19245b869b72f5d81b36",
       "git submodule update --init --recursive",

@@ -2273,12 +2273,12 @@
   "reproduction": {
     "adapter_commit": "288660d68eaebbdeb7a581a82099b1869643807d",
     "core_commit": "f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
-    "adapter_repository": "https://github.com/motion-challenge-project/motion-challenge-sonic-low-latency",
-    "adapter_code_url": "https://github.com/motion-challenge-project/motion-challenge-sonic-low-latency/tree/288660d68eaebbdeb7a581a82099b1869643807d",
-    "core_code_url": "https://github.com/motion-challenge-project/motion-challenge/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/motion-challenge-sonic-low-latency",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/motion-challenge-sonic-low-latency/tree/288660d68eaebbdeb7a581a82099b1869643807d",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876",
     "checkpoint_sha256": "c4ac2e74045e7cbfb568f15e6bf47ea7ce023df7a94322af50be223e0a628bab",
     "commands": [
-      "git clone https://github.com/motion-challenge-project/motion-challenge-sonic-low-latency.git",
+      "git clone https://github.com/MotionChallenge-Project/motion-challenge-sonic-low-latency.git",
       "cd motion-challenge-sonic-low-latency",
       "git checkout 288660d68eaebbdeb7a581a82099b1869643807d",
       "git submodule update --init --recursive",
