@@ -92,7 +92,7 @@ def render(models, rows, tracks, content, github, page, intro):
     )
     page('/models/', 'Models', intro('MODEL CATALOG', 'Models',
         'Released model versions, checkpoint artifacts and inference interfaces.')
-        + f'<p class="small"><a href="/coverage/">Coverage status and remaining gaps →</a></p><section class="section model-grid">{cards}</section>', 'Models')
+        + f'<section class="section model-grid">{cards}</section>', 'Models')
 
     admission_records=json.loads((content/'observation_admissions.json').read_text())['models']
     for key, model in models.items():
@@ -163,7 +163,7 @@ def render(models, rows, tracks, content, github, page, intro):
         detail += link('/models/' + key + '/', 'Model card ↗', 'text-link')
         detail += link('/benchmarks/' + track['benchmark_id'] + '/?robot=' + track['robot_id'] + '&track=' + track_id, 'Benchmark conditions ↗', 'text-link')
         detail += link('/?track=' + track_id + '&benchmark=' + track['benchmark_id'] + '&robot=' + track['robot_id'], 'Leaderboard ↗', 'text-link') + '</div>'
-        detail += '<p class="small">Evaluated by MotionChallenge using the shared protocol. This is an independent evaluation, not an author submission.</p></section>'
+        detail += '<p class="small">Evaluated by MotionChallenge using the shared protocol.</p></section>'
         key_notes = notes.get(track_id, {}).get(key, [])
         if key_notes:
             detail += '<section class="section evaluation-context"><h2>Evaluation context</h2>' + ''.join('<p>' + esc(n['text']) + (' ' + link(n['source'], 'Source ↗', 'text-link') if n.get('source') else '') + '</p>' for n in key_notes) + '</section>'

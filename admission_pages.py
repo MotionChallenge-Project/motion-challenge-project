@@ -7,12 +7,6 @@ def esc(value):
     return html.escape(str(value), quote=True)
 
 
-LABELS = {
-    'inference_verified': 'Input verified · evaluation pending',
-    'pending_verification': 'Input check pending',
-    'requires_author_deployment_validation': 'Author deployment check pending',
-    'incompatible_input_contract': 'Ineligible with current inputs',
-}
 OBSERVATIONS = [
     ('Joint state, full root orientation (including yaw), base linear and angular velocity, and gravity', True),
     ('Local body positions and orientations from forward kinematics (FK)', True),
@@ -37,12 +31,10 @@ def observation_table():
 
 def model_handling(key, model, record):
     assert record['checkpoint_sha256'] == model['runtime']['weights_sha256']
-    status = LABELS[record['status']]
-    if record.get('evaluation_progress') == 'accepted':
-        status = 'Admitted · full evaluation verified'
+    assert record['status'] == 'inference_verified'
     url = record['repository'] + '/blob/' + record['published_adapter_commit'] + '/admission.json'
     return ('<div class="model-observation-note" id="observations"><h3>Observation requirements</h3>'
-            '<p class="small">' + esc(status) + ' · <a href="/protocol/#observations">Observation rules ↗</a></p>'
+            '<p class="small"><a href="/protocol/#observations">Observation rules ↗</a></p>'
             '<details><summary>Model-specific handling</summary><p>' + esc(record['handling']) + '</p>'
             '<a class="text-link" href="' + esc(url) + '">Exact checkpoint &amp; evidence ↗</a>'
             '</details></div>')

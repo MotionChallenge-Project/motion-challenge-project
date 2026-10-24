@@ -22,7 +22,7 @@
  const $=s=>document.querySelector(s),body=table.querySelector('tbody'),search=$('#model-search'),empty=$('#empty'),size=$('#page-size'),prev=[...document.querySelectorAll('[data-page=previous]')],next=[...document.querySelectorAll('[data-page=next]')],ranges=[...document.querySelectorAll('[data-page-range]')];
  const benchmark=$('#benchmark-select'),robot=$('#robot-select');
  let data=[],tracks=[],sort='passed',page=1;
- try{const response=await fetch(base+'/data/development-summary.json?v='+encodeURIComponent(document.querySelector('meta[name="results-revision"]')?.content||''),{cache:'no-cache'});if(!response.ok)throw new Error();const payload=await response.json();data=payload.rows;tracks=payload.tracks;if(!tracks.length)throw new Error();}
+ try{const response=await fetch(base+'/data/results.json?v='+encodeURIComponent(document.querySelector('meta[name="results-revision"]')?.content||''),{cache:'no-cache'});if(!response.ok)throw new Error();const payload=await response.json();data=payload.rows;tracks=payload.tracks;if(!tracks.length)throw new Error();}
  catch{empty.hidden=false;empty.textContent='Results could not be loaded. Please reload or download the summary JSON.';table.hidden=true;return;}
  const query=new URLSearchParams(location.search);
  function options(select,entries,preferred){select.replaceChildren();for(const [value,label] of new Map(entries)){const option=document.createElement('option');option.value=value;option.textContent=label;select.append(option);}if([...select.options].some(o=>o.value===preferred))select.value=preferred;}

@@ -1,6 +1,6 @@
 {
   "schema": "MotionChallenge/observation-admissions-v1",
-  "core_commit": "953860095d0ff85d19a19e8ebfeaeebadbc9f5be",
+  "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
   "models": {
     "bfm-zero": {
       "schema": "MotionChallenge/observation-admission-v1",
