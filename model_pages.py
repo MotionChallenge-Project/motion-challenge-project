@@ -46,7 +46,7 @@ def evaluation_record(results, track, key, content, github):
     fields = [('XY + yaw', 'mpjpe_xy_yaw_aligned_m'), ('XY only', 'mpjpe_xy_aligned_m'), ('No alignment', 'mpjpe_world_m')]
     text = '<section class="section evaluation-mode" id="results"><h2>Results</h2>'
     text += f'<div class="evaluation-score"><strong>{early["passed"]} / {early["total"]}</strong><span>motions passed</span><span>Completion {early["completion_pct"]:.2f}%</span></div>'
-    text += '<p>Success and completion use the first declared failure. MPBPE reports 14 key-body position errors with three alignments over two time ranges.</p>'
+    text += '<p>Success and completion use the first declared failure. MPBPE measures position errors over the benchmark’s declared body origins, with three alignments over two time ranges.</p>'
     text += '<div class="table-scroll"><table class="evaluation-metrics"><caption>Mean per-body position error · MPBPE · mm ↓</caption><thead><tr><th colspan="3" scope="colgroup" id="early">Until first failure</th><th colspan="3" scope="colgroup" id="none">Entire motion</th></tr><tr>'
     text += ''.join('<th scope="col">'+label+'</th>' for label, _ in fields*2)+'</tr></thead><tbody><tr>'
     for row, prefix in [(early, ''), (full, 'full_' if unified else '')]:
@@ -105,7 +105,7 @@ def render(models, rows, tracks, content, github, page, intro):
             ('Organization', link(model['organization_source'], model['organization'])),
             ('Type', link(model['controller_type']['source'], model['controller_type']['label']) + '<br><span class="small">' + esc(model['controller_type']['description']) + '</span>'),
             ('Version', esc(model['version']) + '<br><span class="small">' + esc(model['version_kind']) + '</span>'),
-            ('Robot support', esc(' · '.join(model.get('supported_robots', ['Unitree G1 · 29 DoF'])))),
+            ('Robot support', esc(' · '.join(model['supported_robots']))),
             ('Author source revision', link(source_url, revision or 'Not recorded')),
         ]
         description = model.get('description', 'Checkpoint artifacts and an independent MotionChallenge inference adapter.')
