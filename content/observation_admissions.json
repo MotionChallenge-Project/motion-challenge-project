@@ -142,7 +142,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "3c2e9bb1fc4c4244f7eccfecc1b3451ace3555c9"
+      "published_adapter_commit": "3c2e9bb1fc4c4244f7eccfecc1b3451ace3555c9",
+      "evaluation_progress": "accepted"
     },
     "grit": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -241,7 +242,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "525624c8ee52df905547f348ebca6185bad9b753"
+      "published_adapter_commit": "525624c8ee52df905547f348ebca6185bad9b753",
+      "evaluation_progress": "accepted"
     },
     "holomotion-v1-4-1": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -286,7 +288,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "b3bcbc9e18cc17cf3da3204a7390b03cb2afb6a5"
+      "published_adapter_commit": "b3bcbc9e18cc17cf3da3204a7390b03cb2afb6a5",
+      "evaluation_progress": "accepted"
     },
     "mimic-lite": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -331,7 +334,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "cba683d2a3c5ceb9ceff1da152e94352a4ea123b"
+      "published_adapter_commit": "cba683d2a3c5ceb9ceff1da152e94352a4ea123b",
+      "evaluation_progress": "accepted"
     },
     "humanoid-gpt": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -427,7 +431,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "b591bce93ec630a1e74347fe3729b9877ca39e47"
+      "published_adapter_commit": "b591bce93ec630a1e74347fe3729b9877ca39e47",
+      "evaluation_progress": "accepted"
     },
     "protomotions": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -472,7 +477,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "110bf276302778124079bb31d30d57589117d444"
+      "published_adapter_commit": "110bf276302778124079bb31d30d57589117d444",
+      "evaluation_progress": "accepted"
     },
     "sonic-v1-1": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -565,7 +571,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "098406681daa63394c68a3d0cebf943eb4c6e8ab"
+      "published_adapter_commit": "098406681daa63394c68a3d0cebf943eb4c6e8ab",
+      "evaluation_progress": "accepted"
     },
     "sonic-low-latency": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -657,7 +664,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "e3ea1127b19813c88dfc6bf107facae1de5654c8"
+      "published_adapter_commit": "e3ea1127b19813c88dfc6bf107facae1de5654c8",
+      "evaluation_progress": "accepted"
     },
     "ufo": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -704,7 +712,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "db080c3b3393d1dc52e2f8da7fa4538a913ce7e2"
+      "published_adapter_commit": "db080c3b3393d1dc52e2f8da7fa4538a913ce7e2",
+      "evaluation_progress": "accepted"
     },
     "twist2": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -749,7 +758,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "616d0d65593328be3bdf989db650c9c04a52d250"
+      "published_adapter_commit": "616d0d65593328be3bdf989db650c9c04a52d250",
+      "evaluation_progress": "accepted"
     },
     "textop": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -911,7 +921,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "c07b32c7a6bd9ee9d3608ca51996fae9c6b9b1c4"
+      "published_adapter_commit": "c07b32c7a6bd9ee9d3608ca51996fae9c6b9b1c4",
+      "evaluation_progress": "accepted"
     },
     "holomotion-v1-3-1": {
       "schema": "MotionChallenge/observation-admission-v1",
@@ -1011,7 +1022,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "ccf148b1cbe56a243e47305227343ebb25a46ff0"
+      "published_adapter_commit": "ccf148b1cbe56a243e47305227343ebb25a46ff0",
+      "evaluation_progress": "accepted"
     },
     "omnixtreme": {
       "schema": "MotionChallenge/observation-admission-v1",

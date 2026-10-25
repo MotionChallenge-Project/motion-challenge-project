@@ -3,7 +3,7 @@
     "organization": "Horizon Robotics",
     "organization_source": "https://github.com/HorizonRobotics/HoloMotion",
     "runtime": {
-      "id": "holomotion-g1-development-v1",
+      "id": "holomotion-g1-v1",
       "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
@@ -59,14 +59,14 @@
           ]
         }
       },
-      "provenance_status": "author-inference review in progress",
+      "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
       "official": false,
       "source_repository": "https://github.com/HorizonRobotics/HoloMotion",
       "source_commit": "fcb8d4d8e96af9535c2adcc2b53e267019f865a2",
       "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.0/exported/model_14000.onnx",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "bf4b2a4778bab89870833a39e0a1a5ed5a2f70657213d4c93bb6533f923189aa"
+        "admission_sha256": "ae69887016e0922140ddf8e85ab75be29011446d36d97f6ee87eb571398caabd"
       }
     },
     "provenance": {
@@ -111,13 +111,14 @@
     "icon": "/assets/model-icons/horizon.jpg",
     "icon_label": "Horizon Robotics",
     "icon_source": "https://github.com/HorizonRobotics",
-    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/"
+    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion"
   },
   "protomotions": {
     "organization": "NVIDIA",
     "organization_source": "https://github.com/NVlabs/ProtoMotions",
     "runtime": {
-      "id": "protomotions-g1-development-v1",
+      "id": "protomotions-g1-v1",
       "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_offsets_s": [
@@ -140,7 +141,7 @@
       "state_access": "ideal-proprioceptive-no-position-v1",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "17ecee339d9fe3bc7e19929da8f3f1c1309f9c1082d230b401b8891fc5506e42"
+        "admission_sha256": "8119ff438ea4735876d7b8c0afba4930db24ad0d9001f21c769965830090e0f0"
       }
     },
     "provenance": {
@@ -185,7 +186,8 @@
     "icon": "/assets/model-icons/nvidia.png",
     "icon_label": "NVIDIA",
     "icon_source": "https://huggingface.co/nvidia",
-    "project_url": "https://nvlabs.github.io/ProtoMotions/"
+    "project_url": "https://nvlabs.github.io/ProtoMotions/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-protomotions"
   },
   "teleopit": {
     "organization": "Westlake / SII",
@@ -217,7 +219,7 @@
       "official": false,
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "5e134834226648edcec1450bc4bdc969cb41188a4e07819cbb8edf625320199b"
+        "admission_sha256": "9d3382b867989e8b1cf17293347a7a0abb20ab5958d497c375ffa12b9aa8b927"
       }
     },
     "provenance": {
@@ -257,7 +259,8 @@
     "icon": "/assets/model-icons/westlake.png",
     "icon_label": "Westlake University",
     "icon_source": "https://www.urongda.com/logos/4133014626",
-    "project_url": "https://botrunner64.github.io/teleopit-page/"
+    "project_url": "https://botrunner64.github.io/teleopit-page/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-teleopit"
   },
   "sonic-v1-1": {
     "display_name": "SONIC v1.1",
@@ -451,7 +454,7 @@
     "organization": "Amazon FAR",
     "organization_source": "https://github.com/amazon-far/TWIST2",
     "runtime": {
-      "id": "twist2-g1-development-v1",
+      "id": "twist2-g1-v1",
       "entrypoint": "restricted:create",
       "control_period_s": 0.01,
       "reference_step_s": 0.02,
@@ -487,14 +490,14 @@
           ]
         }
       },
-      "provenance_status": "author-inference parity passed",
+      "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
       "official": false,
       "source_repository": "https://github.com/amazon-far/TWIST2",
       "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
       "weights_url": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "52c5cf19008294e14bd845bb5b57b42883c2295270824a3ad0f5264737789e2b"
+        "admission_sha256": "31cdd275777e2208ec3eff33bb30ee17793c7133a55b47d5832b53771bf73a88"
       }
     },
     "provenance": {
@@ -539,7 +542,8 @@
     "icon": "/assets/model-icons/amazon-far.png",
     "icon_label": "Amazon FAR",
     "icon_source": "https://github.com/amazon-far",
-    "project_url": "https://yanjieze.com/projects/TWIST2/"
+    "project_url": "https://yanjieze.com/projects/TWIST2/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2"
   },
   "grit": {
     "organization": "GRIT Team",
@@ -783,7 +787,7 @@
     "organization": "RoboParty",
     "organization_source": "https://github.com/Roboparty/MimicLite",
     "runtime": {
-      "id": "mimic-lite-g1-development-v1",
+      "id": "mimic-lite-g1-v1",
       "entrypoint": "restricted:create",
       "control_period_s": 0.02,
       "reference_step_s": 0.02,
@@ -833,7 +837,7 @@
           ]
         }
       },
-      "provenance_status": "author-inference parity passed",
+      "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
       "official": false,
       "source_repository": "https://github.com/EGalahad/mimic-lite",
       "source_commit": "3253810ce21dbcc05d8f4942a017ea3eaffc6cf1",
@@ -842,7 +846,7 @@
       "author_inference_commit": "287ac157e6a7143340da7a9fc2fa5ff552031bc8",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "ab7da992b0be10b5e0484811ae90dbc446b4c505742d80b911c1eed92e726bc4"
+        "admission_sha256": "06c3cc48778104a3b60062ae613bea3c3ff33308cc492ac288ca882adf7af183"
       }
     },
     "provenance": {
@@ -888,7 +892,8 @@
     },
     "icon": "/assets/model-icons/roboparty.png",
     "icon_label": "RoboParty",
-    "icon_source": "https://github.com/Roboparty"
+    "icon_source": "https://github.com/Roboparty",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-mimic-lite"
   },
   "pmt-rgmt": {
     "display_name": "PMT RGMT Transformer 20k",
@@ -962,7 +967,7 @@
       ],
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "e909a5058aca108499a63e0cb9dc00426f8d726608c95a48ad825f90a77de554"
+        "admission_sha256": "203c7b7078f76c658880945724774a6bbed8fb6c9807102baca0761a344cd504"
       }
     },
     "provenance": {
@@ -1000,7 +1005,8 @@
     "icon": "/assets/model-icons/mondo.png",
     "icon_label": "Mondo Robotics",
     "icon_source": "https://github.com/Mondo-Robotics",
-    "project_url": "https://acodedog.github.io/perceptive-bfm/"
+    "project_url": "https://acodedog.github.io/perceptive-bfm/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-pmt-rgmt"
   },
   "sonic-original": {
     "display_name": "SONIC Original",
@@ -1047,7 +1053,7 @@
       },
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "a8a43ea75fc252388be7ec7b1027e2322eea5225e4562823a380771b13fd4133"
+        "admission_sha256": "c435efecf5ef7acca277f2fc4dbee3d1f1da15d862463315935033cd582c695c"
       }
     },
     "provenance": {
@@ -1094,7 +1100,8 @@
     "icon": "/assets/model-icons/nvidia.png",
     "icon_label": "NVIDIA",
     "icon_source": "https://huggingface.co/nvidia",
-    "project_url": "https://nvlabs.github.io/GEAR-SONIC/"
+    "project_url": "https://nvlabs.github.io/GEAR-SONIC/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-original"
   },
   "holomotion-v1-3-2": {
     "organization": "Horizon Robotics",
@@ -1162,7 +1169,7 @@
       "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.3.2/exported/motion_tracking_model.onnx",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "359dd6a913cb97314884a23f31a1458745c756cf0de9f6d0ec1ec515470bbba0"
+        "admission_sha256": "70c31e6a554f6ec9226e78c8b91c637231ab19d6caf982972170875d9bb14ccb"
       }
     },
     "provenance": {
@@ -1207,7 +1214,8 @@
     "icon": "/assets/model-icons/horizon.jpg",
     "icon_label": "Horizon Robotics",
     "icon_source": "https://github.com/HorizonRobotics",
-    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/"
+    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-3-2"
   },
   "holomotion-v1-4-1": {
     "organization": "Horizon Robotics",
@@ -1275,7 +1283,7 @@
       "weights_url": "https://huggingface.co/HorizonRobotics/HoloMotion_models/resolve/e3c90dd1f7483d02d3b4d2e5fb3a359c6ff9c67a/HoloMotion_motion_tracking_model_v1.4.1/exported/model_16200.onnx",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "8a1911f309559bfe6f969cf3975e6dfbc23094c3055f03a3ec2acd439e5a0d6d"
+        "admission_sha256": "956e208a1ae4e32a8e28b7fbbfb1e222c1366dd7d7833cf699689ea710930718"
       }
     },
     "provenance": {
@@ -1320,7 +1328,8 @@
     "icon": "/assets/model-icons/horizon.jpg",
     "icon_label": "Horizon Robotics",
     "icon_source": "https://github.com/HorizonRobotics",
-    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/"
+    "project_url": "https://horizonrobotics.github.io/robot_lab/holomotion/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-holomotion-v1-4-1"
   },
   "textop": {
     "organization": "TeleAI / SJTU / ECUST",
@@ -1447,7 +1456,7 @@
       "official": false,
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "80dcbf685477ec07fd494a3c3acc52d960e0ab5e966d87b286c9396923122ca2"
+        "admission_sha256": "08cf9c2424a42e24040145bf2cf6f2a3729b24183940430d2ea98e430c78d5eb"
       }
     },
     "provenance": {
@@ -2010,7 +2019,7 @@
       "inference_config_sha256": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
       "weights": "checkpoints/policy.onnx",
       "weights_sha256": "82313c76869ca796395abf80ee4288cced424d25087e74e32f9ec739ff59c853",
-      "provenance_status": "author inference comparison passed on macOS and Linux",
+      "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
       "official": false,
       "source_repository": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
       "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
@@ -2020,7 +2029,7 @@
       "history_len": 16,
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "2509a40af09449d3f8ce33b0de7d523db8297c77a3140a8c13d1bbd0e447633e"
+        "admission_sha256": "6c6379f9c3586ff01b62f41aa19e17dedcdc6288b11636d3fb6ab10a35fb0e7e"
       }
     },
     "provenance": {
@@ -2282,7 +2291,7 @@
       "official": false,
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "220bfde4331217c067fb41b7e58d57435177419e29dbd47546f8d408f709c1d3"
+        "admission_sha256": "4bba40f5c054f0948168c9002b4a78937ba8af725c5a78efcf3e109cb01f1e09"
       }
     },
     "provenance": {

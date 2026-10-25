@@ -1,36 +1,36 @@
 {
   "model": "protomotions",
   "submitter": "MotionChallenge",
-  "result_sha256": "758f709b26d1869b131151ba8ddd8e4de148700904a66d474b36fe6b606ac400",
+  "result_sha256": "83ce88a104442f4db56fa6bee796c3fb3f0cca852b3e6bacdd0e9970cace839f",
   "result": {
     "schema": "MotionChallenge/unified-result-v1",
     "status": "trace_verified",
     "source": {
-      "adapter_commit": "319b56c64e9c2635074023291a7f547b7149ffef",
+      "adapter_commit": "110bf276302778124079bb31d30d57589117d444",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
         ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
         ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
         "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
-        "README.md": "b66023e9043515565b6dfcd7a2510187da7213ec5b6d1e06452566e7366b4c22",
+        "README.md": "fe4a69be3b819a75f4c8cd9fbb3f5ee5589c412245038da415d59fffbf304f76",
         "THIRD_PARTY_NOTICES.md": "26da1ba78ad8532f87f8df193957ee43b9071388ba62ca816e1377362b858e38",
         "adapter.py": "d7f043b1388aa453b4d662da63ae23492663e74672aea88e5e0c16c041de96af",
-        "admission.json": "17ecee339d9fe3bc7e19929da8f3f1c1309f9c1082d230b401b8891fc5506e42",
+        "admission.json": "8119ff438ea4735876d7b8c0afba4930db24ad0d9001f21c769965830090e0f0",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
         "native-sources.json": "b1e3be12125aebbf01ac47d59b72288614b2b768781684341c73a1c24626c2c9",
         "policy.yaml": "9b7896f3355a9d9d5e7d3139b83924eeb2e45c62c30bfda44afe996cfc6cf01c",
-        "provenance.json": "403b9368983cf7d47e077520018a2a193f873d79af0ac7d95ed359d962b29782",
+        "provenance.json": "5730a86b660a1eb2b873434c7f9cdb119672385a2fce3a2bd6c74fc6f9763d37",
         "pyproject.toml": "b4ff856ecc171cdbb2f83aaa744ee1c71f7374376fd1e74a4f2d6528e89d44c0",
         "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
-        "runtime.json": "b0a8a4287b20fea1ee590e715b113b27ea0e2048eae47708014e545deb1d625f",
-        "uv.lock": "cd069729546696e46e3cfbca3256a53243a0e455a40d8d0374b418c6d4114465",
+        "runtime.json": "aa6ac837005c599fc064306481997d611e9184927628261d4264c24c0a20f236",
+        "uv.lock": "783b20334a08ba591ff978ed3ec07a406e4dc9678431d409356c57a9fda9c7ee",
         "validate_inference.py": "b74faa4ed53798ab5ecc359f4bb15c1a9d6d9f0e17a44b3fff63a7d181d37a99",
         "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
         "validation/native-parity.json": "cff8fbee0c1ad1bcee8061402d48bd9c12ad5983c24a65b1abaea7121d5d2f7d",
         "validation/observation-access.json": "75694096fd0828987667697700d4c5b6836a5c3bd506710089573d1263db2b60"
       },
-      "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+      "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
       "core_dirty": false
     },
     "checkpoint_sha256": "a59baa3e04a951e5cf0b4cc68f24ebaafa9272714226618b99a5017dfc805b4c",
@@ -45,7 +45,7 @@
         "protocol_sha256": "861febec8b0b2b7c77cebde792bbf79c402768d1d270efccc96ac3f90235d09f"
       }
     },
-    "controller_id": "protomotions-g1-development-v1",
+    "controller_id": "protomotions-g1-v1",
     "suite_sha256": "113b15cbb133fc1f8f873ad310a13c433d552f77137bde1b43426a2b55af1060",
     "robot_profile_sha256": "27a89860a47c730b73156d945be9eb28736001afc16530165eccb31d1513b432",
     "mujoco_version": "3.17.0",
@@ -153,7 +153,7 @@
             "mpjpe_world_m": 1.2731171595974895,
             "mpjpe_root_relative_world_axes_m": 0.06219651063533905,
             "anchor_height_error_m": 0.02500928468500216,
-            "anchor_gravity_z_error": 0.016301936984031127,
+            "anchor_gravity_z_error": 0.016301936984031123,
             "end_effector_height_error_m": 0.09158277894765611,
             "mpjpe_xy_aligned_m": 0.06921495280716669,
             "mpjpe_xy_yaw_aligned_m": 0.06587242134318255,
@@ -296,8 +296,8 @@
             "root_orientation_error_rad": 0.11142547644263964,
             "mpjpe_world_m": 0.08564169291931012,
             "mpjpe_root_relative_world_axes_m": 0.04422247208102293,
-            "anchor_height_error_m": 0.006417019978902673,
-            "anchor_gravity_z_error": 0.0035806041266271084,
+            "anchor_height_error_m": 0.006417019978902674,
+            "anchor_gravity_z_error": 0.0035806041266271075,
             "end_effector_height_error_m": 0.04952494390056351,
             "mpjpe_xy_aligned_m": 0.045424055031104256,
             "mpjpe_xy_yaw_aligned_m": 0.04305759722896344,
@@ -393,7 +393,7 @@
             "mpjpe_world_m": 0.2516485658644341,
             "mpjpe_root_relative_world_axes_m": 0.04499033174515086,
             "anchor_height_error_m": 0.007690741034871229,
-            "anchor_gravity_z_error": 0.0035666562664256438,
+            "anchor_gravity_z_error": 0.0035666562664256433,
             "end_effector_height_error_m": 0.06801859688852482,
             "mpjpe_xy_aligned_m": 0.047103430395392505,
             "mpjpe_xy_yaw_aligned_m": 0.046548989620237256,
@@ -655,7 +655,7 @@
             "mpjpe_xy_yaw_aligned_m": 0.20796909015656453,
             "root_xy_error_m": 1.567806953641392,
             "root_height_error_m": 0.1344541387284453,
-            "root_yaw_correction_abs_rad": 0.6768018048839181,
+            "root_yaw_correction_abs_rad": 0.6768018048839182,
             "yaw_alignment_degenerate_fraction": 0.0
           }
         },
@@ -729,10 +729,10 @@
             "mpjpe_world_m": 0.5217987119403423,
             "mpjpe_root_relative_world_axes_m": 0.04584461976362954,
             "anchor_height_error_m": 0.012813673361650178,
-            "anchor_gravity_z_error": 0.005306938602721698,
+            "anchor_gravity_z_error": 0.0053069386027216996,
             "end_effector_height_error_m": 0.0602226684886511,
             "mpjpe_xy_aligned_m": 0.048466249005798434,
-            "mpjpe_xy_yaw_aligned_m": 0.045050502821145755,
+            "mpjpe_xy_yaw_aligned_m": 0.04505050282114576,
             "root_xy_error_m": 0.5197774876604623,
             "root_height_error_m": 0.012928616950768258,
             "root_yaw_correction_abs_rad": 0.08219717643529026,
@@ -827,7 +827,7 @@
             "anchor_height_error_m": 0.02575603509679596,
             "anchor_gravity_z_error": 0.02014116062457957,
             "end_effector_height_error_m": 0.0931209826442122,
-            "mpjpe_xy_aligned_m": 0.06511565541999079,
+            "mpjpe_xy_aligned_m": 0.06511565541999077,
             "mpjpe_xy_yaw_aligned_m": 0.06122380632521188,
             "root_xy_error_m": 0.6266186361809493,
             "root_height_error_m": 0.024875860046049164,
@@ -892,7 +892,7 @@
             "anchor_gravity_z_error": 0.07722238286477126,
             "end_effector_height_error_m": 0.13114923118984523,
             "mpjpe_xy_aligned_m": 0.10107646023500114,
-            "mpjpe_xy_yaw_aligned_m": 0.09675753011286739,
+            "mpjpe_xy_yaw_aligned_m": 0.0967575301128674,
             "root_xy_error_m": 4.029792029042332,
             "root_height_error_m": 0.061309342397620765,
             "root_yaw_correction_abs_rad": 0.18807549585991198,
@@ -1402,7 +1402,7 @@
             "mpjpe_world_m": 0.22435252089174595,
             "mpjpe_root_relative_world_axes_m": 0.04024057937607291,
             "anchor_height_error_m": 0.006583363088634118,
-            "anchor_gravity_z_error": 0.0033177248761749657,
+            "anchor_gravity_z_error": 0.003317724876174963,
             "end_effector_height_error_m": 0.039924769939613795,
             "mpjpe_xy_aligned_m": 0.04181002012164146,
             "mpjpe_xy_yaw_aligned_m": 0.03804881950638572,
@@ -1467,7 +1467,7 @@
             "anchor_gravity_z_error": 0.010261641307630385,
             "end_effector_height_error_m": 0.0554648497560121,
             "mpjpe_xy_aligned_m": 0.050566637994580985,
-            "mpjpe_xy_yaw_aligned_m": 0.04637053394088549,
+            "mpjpe_xy_yaw_aligned_m": 0.0463705339408855,
             "root_xy_error_m": 3.0056251613110683,
             "root_height_error_m": 0.01113923339113472,
             "root_yaw_correction_abs_rad": 0.10084032158107115,
@@ -1513,7 +1513,7 @@
             "anchor_gravity_z_error": 0.008008686664937327,
             "end_effector_height_error_m": 0.04142196381423898,
             "mpjpe_xy_aligned_m": 0.04851204260765675,
-            "mpjpe_xy_yaw_aligned_m": 0.045271835906186185,
+            "mpjpe_xy_yaw_aligned_m": 0.04527183590618619,
             "root_xy_error_m": 4.380043251806424,
             "root_height_error_m": 0.012072473063489051,
             "root_yaw_correction_abs_rad": 0.10335232970251561,
@@ -1594,7 +1594,7 @@
             "mpjpe_xy_yaw_aligned_m": 0.04761215789835393,
             "root_xy_error_m": 1.5754127362948591,
             "root_height_error_m": 0.011328894490499819,
-            "root_yaw_correction_abs_rad": 0.14483173610952324,
+            "root_yaw_correction_abs_rad": 0.14483173610952327,
             "yaw_alignment_degenerate_fraction": 0.0
           },
           "full_motion": {
@@ -1684,8 +1684,8 @@
             "mpjpe_world_m": 3.1469647805577785,
             "mpjpe_root_relative_world_axes_m": 0.04030977057155902,
             "anchor_height_error_m": 0.008967103862319912,
-            "anchor_gravity_z_error": 0.010695506306138273,
-            "end_effector_height_error_m": 0.04848245897994625,
+            "anchor_gravity_z_error": 0.010695506306138271,
+            "end_effector_height_error_m": 0.048482458979946255,
             "mpjpe_xy_aligned_m": 0.0423972589807246,
             "mpjpe_xy_yaw_aligned_m": 0.041052295939479164,
             "root_xy_error_m": 3.146166985587228,
@@ -1797,7 +1797,7 @@
             "anchor_gravity_z_error": 0.009666769691262848,
             "end_effector_height_error_m": 0.04425814103776879,
             "mpjpe_xy_aligned_m": 0.04593676085691461,
-            "mpjpe_xy_yaw_aligned_m": 0.04235035529881525,
+            "mpjpe_xy_yaw_aligned_m": 0.04235035529881526,
             "root_xy_error_m": 1.7411669896279178,
             "root_height_error_m": 0.012028264735413175,
             "root_yaw_correction_abs_rad": 0.10107167619642433,
@@ -1874,7 +1874,7 @@
             "mpjpe_world_m": 0.5562517075465876,
             "mpjpe_root_relative_world_axes_m": 0.036483539413264765,
             "anchor_height_error_m": 0.013170297129575717,
-            "anchor_gravity_z_error": 0.010319010044428088,
+            "anchor_gravity_z_error": 0.01031901004442809,
             "end_effector_height_error_m": 0.044918669776124194,
             "mpjpe_xy_aligned_m": 0.039880249429679396,
             "mpjpe_xy_yaw_aligned_m": 0.03732994061075876,
@@ -1939,7 +1939,7 @@
             "anchor_gravity_z_error": 0.0719853783077015,
             "end_effector_height_error_m": 0.14144419782959142,
             "mpjpe_xy_aligned_m": 0.08028522897071681,
-            "mpjpe_xy_yaw_aligned_m": 0.0746636746141056,
+            "mpjpe_xy_yaw_aligned_m": 0.07466367461410561,
             "root_xy_error_m": 4.992749748078114,
             "root_height_error_m": 0.044397036444860566,
             "root_yaw_correction_abs_rad": 0.13504500340411704,
@@ -1965,7 +1965,7 @@
             "root_orientation_error_rad": 0.26433277244567394,
             "mpjpe_world_m": 1.345758619416973,
             "mpjpe_root_relative_world_axes_m": 0.054978000792692765,
-            "anchor_height_error_m": 0.012559432218604045,
+            "anchor_height_error_m": 0.012559432218604043,
             "anchor_gravity_z_error": 0.10074581979876829,
             "end_effector_height_error_m": 0.0614875728118759,
             "mpjpe_xy_aligned_m": 0.05642419809233217,
@@ -1981,7 +1981,7 @@
             "root_orientation_error_rad": 0.26433277244567394,
             "mpjpe_world_m": 1.345758619416973,
             "mpjpe_root_relative_world_axes_m": 0.054978000792692765,
-            "anchor_height_error_m": 0.012559432218604045,
+            "anchor_height_error_m": 0.012559432218604043,
             "anchor_gravity_z_error": 0.10074581979876829,
             "end_effector_height_error_m": 0.0614875728118759,
             "mpjpe_xy_aligned_m": 0.05642419809233217,
@@ -2002,15 +2002,15 @@
     "components": {
       "early": {
         "result": "rollout/prefix-result.json",
-        "result_sha256": "892ff371cfff0ec0e50ea92f00a77c6ec0cf8767e38c4a442faa98d6cc91fdfb",
+        "result_sha256": "bad1befaa86c5ee8361ff48f8a7b4b73e87fd0a73b4aa94db71db0fadbd55303",
         "receipt": "rollout/receipt.json",
-        "receipt_sha256": "d2337ac4af37979dff5c9525a41452d21991b9770b6804edf5dab7d38f7f2cca"
+        "receipt_sha256": "89817f9fbb4b55336e23313e91b315f5fe4f726fd02175f10f2fbdcb4c86b1a5"
       },
       "none": {
         "result": "rollout/result.json",
-        "result_sha256": "4a362fc4d83d6014e479f57b1c8b2179a366c0f07bd2415569736582333961cc",
+        "result_sha256": "c7a6c30b4e99a2a03cb1d62356026925a75279d9dfb0714f8568a9353bbdf11e",
         "receipt": "rollout/receipt.json",
-        "receipt_sha256": "d2337ac4af37979dff5c9525a41452d21991b9770b6804edf5dab7d38f7f2cca"
+        "receipt_sha256": "89817f9fbb4b55336e23313e91b315f5fe4f726fd02175f10f2fbdcb4c86b1a5"
       }
     }
   },
@@ -2018,33 +2018,33 @@
     "schema": "MotionChallenge/paired-evaluation-v1",
     "status": "trace_verified",
     "execution": "single_full_rollout",
-    "started_utc": "20261024T160416.046812Z",
+    "started_utc": "20261024T224644.004165Z",
     "source": {
-      "adapter_commit": "319b56c64e9c2635074023291a7f547b7149ffef",
+      "adapter_commit": "110bf276302778124079bb31d30d57589117d444",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
         ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
         ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
         "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
-        "README.md": "b66023e9043515565b6dfcd7a2510187da7213ec5b6d1e06452566e7366b4c22",
+        "README.md": "fe4a69be3b819a75f4c8cd9fbb3f5ee5589c412245038da415d59fffbf304f76",
         "THIRD_PARTY_NOTICES.md": "26da1ba78ad8532f87f8df193957ee43b9071388ba62ca816e1377362b858e38",
         "adapter.py": "d7f043b1388aa453b4d662da63ae23492663e74672aea88e5e0c16c041de96af",
-        "admission.json": "17ecee339d9fe3bc7e19929da8f3f1c1309f9c1082d230b401b8891fc5506e42",
+        "admission.json": "8119ff438ea4735876d7b8c0afba4930db24ad0d9001f21c769965830090e0f0",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
         "native-sources.json": "b1e3be12125aebbf01ac47d59b72288614b2b768781684341c73a1c24626c2c9",
         "policy.yaml": "9b7896f3355a9d9d5e7d3139b83924eeb2e45c62c30bfda44afe996cfc6cf01c",
-        "provenance.json": "403b9368983cf7d47e077520018a2a193f873d79af0ac7d95ed359d962b29782",
+        "provenance.json": "5730a86b660a1eb2b873434c7f9cdb119672385a2fce3a2bd6c74fc6f9763d37",
         "pyproject.toml": "b4ff856ecc171cdbb2f83aaa744ee1c71f7374376fd1e74a4f2d6528e89d44c0",
         "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
-        "runtime.json": "b0a8a4287b20fea1ee590e715b113b27ea0e2048eae47708014e545deb1d625f",
-        "uv.lock": "cd069729546696e46e3cfbca3256a53243a0e455a40d8d0374b418c6d4114465",
+        "runtime.json": "aa6ac837005c599fc064306481997d611e9184927628261d4264c24c0a20f236",
+        "uv.lock": "783b20334a08ba591ff978ed3ec07a406e4dc9678431d409356c57a9fda9c7ee",
         "validate_inference.py": "b74faa4ed53798ab5ecc359f4bb15c1a9d6d9f0e17a44b3fff63a7d181d37a99",
         "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
         "validation/native-parity.json": "cff8fbee0c1ad1bcee8061402d48bd9c12ad5983c24a65b1abaea7121d5d2f7d",
         "validation/observation-access.json": "75694096fd0828987667697700d4c5b6836a5c3bd506710089573d1263db2b60"
       },
-      "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+      "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
       "core_dirty": false
     },
     "checkpoint_sha256": "a59baa3e04a951e5cf0b4cc68f24ebaafa9272714226618b99a5017dfc805b4c",
@@ -2097,55 +2097,54 @@
       }
     },
     "result": "result.json",
-    "finished_utc": "2026-10-24T16:09:17.799492+00:00"
+    "finished_utc": "2026-10-24T23:12:47.020187+00:00"
   },
   "receipts": {
     "early": {
       "submitter": "local-run",
       "source": {
-        "adapter_commit": "319b56c64e9c2635074023291a7f547b7149ffef",
+        "adapter_commit": "110bf276302778124079bb31d30d57589117d444",
         "adapter_dirty": false,
         "tracked_files_sha256": {
           ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
           ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
           ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
           "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
-          "README.md": "b66023e9043515565b6dfcd7a2510187da7213ec5b6d1e06452566e7366b4c22",
+          "README.md": "fe4a69be3b819a75f4c8cd9fbb3f5ee5589c412245038da415d59fffbf304f76",
           "THIRD_PARTY_NOTICES.md": "26da1ba78ad8532f87f8df193957ee43b9071388ba62ca816e1377362b858e38",
           "adapter.py": "d7f043b1388aa453b4d662da63ae23492663e74672aea88e5e0c16c041de96af",
-          "admission.json": "17ecee339d9fe3bc7e19929da8f3f1c1309f9c1082d230b401b8891fc5506e42",
+          "admission.json": "8119ff438ea4735876d7b8c0afba4930db24ad0d9001f21c769965830090e0f0",
           "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
           "native-sources.json": "b1e3be12125aebbf01ac47d59b72288614b2b768781684341c73a1c24626c2c9",
           "policy.yaml": "9b7896f3355a9d9d5e7d3139b83924eeb2e45c62c30bfda44afe996cfc6cf01c",
-          "provenance.json": "403b9368983cf7d47e077520018a2a193f873d79af0ac7d95ed359d962b29782",
+          "provenance.json": "5730a86b660a1eb2b873434c7f9cdb119672385a2fce3a2bd6c74fc6f9763d37",
           "pyproject.toml": "b4ff856ecc171cdbb2f83aaa744ee1c71f7374376fd1e74a4f2d6528e89d44c0",
           "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
-          "runtime.json": "b0a8a4287b20fea1ee590e715b113b27ea0e2048eae47708014e545deb1d625f",
-          "uv.lock": "cd069729546696e46e3cfbca3256a53243a0e455a40d8d0374b418c6d4114465",
+          "runtime.json": "aa6ac837005c599fc064306481997d611e9184927628261d4264c24c0a20f236",
+          "uv.lock": "783b20334a08ba591ff978ed3ec07a406e4dc9678431d409356c57a9fda9c7ee",
           "validate_inference.py": "b74faa4ed53798ab5ecc359f4bb15c1a9d6d9f0e17a44b3fff63a7d181d37a99",
           "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
           "validation/native-parity.json": "cff8fbee0c1ad1bcee8061402d48bd9c12ad5983c24a65b1abaea7121d5d2f7d",
           "validation/observation-access.json": "75694096fd0828987667697700d4c5b6836a5c3bd506710089573d1263db2b60"
         },
-        "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+        "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
         "core_dirty": false
       },
-      "source_runtime_sha256": "b0a8a4287b20fea1ee590e715b113b27ea0e2048eae47708014e545deb1d625f",
-      "resolved_runtime_sha256": "67e6b0b6bf9452bd1bfacc19c0426b972c87fdde906353390fc755f5b6f74ae6",
+      "source_runtime_sha256": "aa6ac837005c599fc064306481997d611e9184927628261d4264c24c0a20f236",
+      "resolved_runtime_sha256": "b9ccfb69eed30ace57cf33fa9deb983ffe6bc3e6a35e0c3b70b94371bedd340f",
       "suite": "lafan40",
-      "observation_track": "ideal-proprioception",
       "state_access": "ideal-proprioceptive-no-position-v1",
-      "started_utc": "20261024T160416.046812Z",
+      "started_utc": "20261024T224644.004165Z",
       "author_inference_review": "not_granted_by_runner",
-      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-v1/protomotions/run-01/rollout",
+      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-cpu-final-v1/protomotions/run-01/rollout",
       "status": "trace_verified",
       "backend": "batch",
       "termination_mode": "no_termination",
       "batch_size": 40,
       "timings_s": {
-        "rollout": 279.2491530366242,
-        "verification": 19.351843237876892,
-        "total": 298.62171076238155
+        "rollout": 1494.5902413390577,
+        "verification": 67.32267869636416,
+        "total": 1561.935497108847
       },
       "verification": {
         "verification": "trace_consistent",
@@ -2156,60 +2155,59 @@
         "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
         "derived_prefix": {
           "result": "prefix-result.json",
-          "result_sha256": "892ff371cfff0ec0e50ea92f00a77c6ec0cf8767e38c4a442faa98d6cc91fdfb",
+          "result_sha256": "bad1befaa86c5ee8361ff48f8a7b4b73e87fd0a73b4aa94db71db0fadbd55303",
           "samples": 161311
         }
       },
       "full_suite": true,
       "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-24T16:09:17.792111+00:00"
+      "finished_utc": "2026-10-24T23:12:47.009614+00:00"
     },
     "none": {
       "submitter": "local-run",
       "source": {
-        "adapter_commit": "319b56c64e9c2635074023291a7f547b7149ffef",
+        "adapter_commit": "110bf276302778124079bb31d30d57589117d444",
         "adapter_dirty": false,
         "tracked_files_sha256": {
           ".gitignore": "f598f7c2b82f122fa8cd48480c4a78e294f10c09f20cc65d0f450f7d82b5e4b5",
           ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
           ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
           "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
-          "README.md": "b66023e9043515565b6dfcd7a2510187da7213ec5b6d1e06452566e7366b4c22",
+          "README.md": "fe4a69be3b819a75f4c8cd9fbb3f5ee5589c412245038da415d59fffbf304f76",
           "THIRD_PARTY_NOTICES.md": "26da1ba78ad8532f87f8df193957ee43b9071388ba62ca816e1377362b858e38",
           "adapter.py": "d7f043b1388aa453b4d662da63ae23492663e74672aea88e5e0c16c041de96af",
-          "admission.json": "17ecee339d9fe3bc7e19929da8f3f1c1309f9c1082d230b401b8891fc5506e42",
+          "admission.json": "8119ff438ea4735876d7b8c0afba4930db24ad0d9001f21c769965830090e0f0",
           "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
           "native-sources.json": "b1e3be12125aebbf01ac47d59b72288614b2b768781684341c73a1c24626c2c9",
           "policy.yaml": "9b7896f3355a9d9d5e7d3139b83924eeb2e45c62c30bfda44afe996cfc6cf01c",
-          "provenance.json": "403b9368983cf7d47e077520018a2a193f873d79af0ac7d95ed359d962b29782",
+          "provenance.json": "5730a86b660a1eb2b873434c7f9cdb119672385a2fce3a2bd6c74fc6f9763d37",
           "pyproject.toml": "b4ff856ecc171cdbb2f83aaa744ee1c71f7374376fd1e74a4f2d6528e89d44c0",
           "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
-          "runtime.json": "b0a8a4287b20fea1ee590e715b113b27ea0e2048eae47708014e545deb1d625f",
-          "uv.lock": "cd069729546696e46e3cfbca3256a53243a0e455a40d8d0374b418c6d4114465",
+          "runtime.json": "aa6ac837005c599fc064306481997d611e9184927628261d4264c24c0a20f236",
+          "uv.lock": "783b20334a08ba591ff978ed3ec07a406e4dc9678431d409356c57a9fda9c7ee",
           "validate_inference.py": "b74faa4ed53798ab5ecc359f4bb15c1a9d6d9f0e17a44b3fff63a7d181d37a99",
           "validate_observations.py": "86c951c8756a7a1b0bdb7ba8ef17ab8d070210883d0235fc4c5fba801a38ae32",
           "validation/native-parity.json": "cff8fbee0c1ad1bcee8061402d48bd9c12ad5983c24a65b1abaea7121d5d2f7d",
           "validation/observation-access.json": "75694096fd0828987667697700d4c5b6836a5c3bd506710089573d1263db2b60"
         },
-        "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+        "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
         "core_dirty": false
       },
-      "source_runtime_sha256": "b0a8a4287b20fea1ee590e715b113b27ea0e2048eae47708014e545deb1d625f",
-      "resolved_runtime_sha256": "67e6b0b6bf9452bd1bfacc19c0426b972c87fdde906353390fc755f5b6f74ae6",
+      "source_runtime_sha256": "aa6ac837005c599fc064306481997d611e9184927628261d4264c24c0a20f236",
+      "resolved_runtime_sha256": "b9ccfb69eed30ace57cf33fa9deb983ffe6bc3e6a35e0c3b70b94371bedd340f",
       "suite": "lafan40",
-      "observation_track": "ideal-proprioception",
       "state_access": "ideal-proprioceptive-no-position-v1",
-      "started_utc": "20261024T160416.046812Z",
+      "started_utc": "20261024T224644.004165Z",
       "author_inference_review": "not_granted_by_runner",
-      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-v1/protomotions/run-01/rollout",
+      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-cpu-final-v1/protomotions/run-01/rollout",
       "status": "trace_verified",
       "backend": "batch",
       "termination_mode": "no_termination",
       "batch_size": 40,
       "timings_s": {
-        "rollout": 279.2491530366242,
-        "verification": 19.351843237876892,
-        "total": 298.62171076238155
+        "rollout": 1494.5902413390577,
+        "verification": 67.32267869636416,
+        "total": 1561.935497108847
       },
       "verification": {
         "verification": "trace_consistent",
@@ -2220,21 +2218,21 @@
         "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
         "derived_prefix": {
           "result": "prefix-result.json",
-          "result_sha256": "892ff371cfff0ec0e50ea92f00a77c6ec0cf8767e38c4a442faa98d6cc91fdfb",
+          "result_sha256": "bad1befaa86c5ee8361ff48f8a7b4b73e87fd0a73b4aa94db71db0fadbd55303",
           "samples": 161311
         }
       },
       "full_suite": true,
       "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-24T16:09:17.792111+00:00"
+      "finished_utc": "2026-10-24T23:12:47.009614+00:00"
     }
   },
   "repeatability": {
     "status": "passed",
     "differences": [],
     "pose_samples": 441120,
-    "first_result_sha256": "758f709b26d1869b131151ba8ddd8e4de148700904a66d474b36fe6b606ac400",
-    "second_result_sha256": "684ca5c12ddf34da808d59f590272bd0f905f4e2f21dd6a949047924a0597a53"
+    "first_result_sha256": "83ce88a104442f4db56fa6bee796c3fb3f0cca852b3e6bacdd0e9970cace839f",
+    "second_result_sha256": "05dcd37b42a53c19d1b90a50bbb3f413436e53e5ce90d725fe96d5e2298d2583"
   },
   "raw_trace_hashes_verified": 80,
   "observation_admission": {
@@ -2272,10 +2270,6 @@
     "handling": "The actual torso orientation is FK-derived. The released pipeline takes joint state, local angular velocity, past actions and future reference torso rotations/joints; no actual translation.",
     "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
     "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-    "new_evaluation": {
-      "status": "queued",
-      "inherited_scores": false
-    },
     "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-protomotions",
     "dependency_test": {
       "path": "validation/observation-access.json",
@@ -2309,19 +2303,19 @@
     "limits": "Finite numerical regression plus source audit; not a proof against malicious code or implicit neural odometry."
   },
   "reproduction": {
-    "adapter_commit": "319b56c64e9c2635074023291a7f547b7149ffef",
-    "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+    "adapter_commit": "110bf276302778124079bb31d30d57589117d444",
+    "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-protomotions",
-    "adapter_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-protomotions/tree/319b56c64e9c2635074023291a7f547b7149ffef",
-    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-protomotions/tree/110bf276302778124079bb31d30d57589117d444",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/11873584f838ba29fd2a2327ca15016192c3f3e1",
     "checkpoint_sha256": "a59baa3e04a951e5cf0b4cc68f24ebaafa9272714226618b99a5017dfc805b4c",
     "commands": [
       "git clone --recurse-submodules https://github.com/MotionChallenge-Project/MotionChallenge-protomotions.git",
       "cd MotionChallenge-protomotions",
-      "git checkout 319b56c64e9c2635074023291a7f547b7149ffef",
+      "git checkout 110bf276302778124079bb31d30d57589117d444",
       "git submodule update --init --recursive",
       "uv sync --frozen",
-      "uv run evaluate.py --track ideal-proprioception"
+      "uv run evaluate.py"
     ]
   }
 }
