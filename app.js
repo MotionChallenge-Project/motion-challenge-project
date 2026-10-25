@@ -1,5 +1,18 @@
 (async()=>{
  const base=document.querySelector('meta[name="site-base-path"]')?.content||'';
+ const copyCitation=document.querySelector('[data-copy-citation]');
+ copyCitation?.addEventListener('click',async()=>{
+  const code=document.querySelector('#citation-code');
+  try{
+   await navigator.clipboard.writeText(code.textContent);
+   copyCitation.textContent='Copied!';
+  }catch{
+   const range=document.createRange();range.selectNodeContents(code);
+   const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);
+   copyCitation.textContent='Selected — copy manually';
+  }
+  setTimeout(()=>{copyCitation.textContent='Copy BibTeX'},2500);
+ });
  const benchmarkControls=document.querySelector('.benchmark-controls');
  if(benchmarkControls){
   const robotChoice=document.querySelector('#benchmark-robot');

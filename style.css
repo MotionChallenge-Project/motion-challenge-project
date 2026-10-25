@@ -136,3 +136,14 @@
 .model-observation-note{border-top:1px solid var(--line);padding-top:16px;margin-top:26px;scroll-margin-top:24px}
 .model-observation-note h3{font-size:18px;margin:0 0 8px}.model-observation-note summary{font-size:14px;color:var(--green);cursor:pointer}.model-observation-note details p{font-size:14px}
 @media(max-width:600px){.rules-table th,.rules-table td{padding:13px 12px}}
+
+.citation{border-top:1px solid var(--line);scroll-margin-top:24px;padding-top:40px;padding-bottom:40px}
+.citation-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.citation h2{font-size:26px;margin:0 0 6px}.citation p{font-size:14px;margin:0}
+.citation-actions{display:flex;align-items:center;gap:18px;font-size:13px;color:var(--green)}
+.citation-actions a{text-decoration:underline;text-underline-offset:3px}
+.citation-actions button{border:1px solid #b7cbbd;background:transparent;color:var(--green);border-radius:4px;padding:8px 13px;font-size:13px}
+.citation-actions button:hover{background:var(--tint)}
+.citation pre{margin:20px 0 0;font-size:13px;line-height:1.7}
+.citation pre code{font-size:inherit;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:600px){.citation pre{font-size:12px}}
