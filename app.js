@@ -62,7 +62,6 @@
   const sortColumn=['passed','completion_pct','mpjpe_xy_yaw_aligned_m','mpjpe_xy_aligned_m','mpjpe_world_m','full_mpjpe_xy_yaw_aligned_m','full_mpjpe_xy_aligned_m','full_mpjpe_world_m'].indexOf(sort)+4;
   $('#sort-caption').textContent='Sorted by '+sortingLabel+' · '+(descending?'High → low':'Low → high')+' · Best first';
   const trackData=data.filter(r=>r.track_id===track.id&&r.termination_mode==='unified');
-  $('#track-caption').textContent=`${track.benchmark_label} · ${track.robot_label} · ${track.label} · ${track.clip_count} full motions`;
   $('#track-details').href=base+'/benchmarks/'+encodeURIComponent(track.benchmark_id)+'/';
   const url=new URL(location.href);url.searchParams.set('benchmark',track.benchmark_id);url.searchParams.set('robot',track.robot_id);url.searchParams.set('track',track.id);history.replaceState(null,'',url);
   const needle=search.value.toLowerCase().trim(),limit=size.value==='all'?Math.max(1,trackData.length):Number(size.value);
