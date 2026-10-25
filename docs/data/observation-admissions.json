@@ -969,7 +969,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "75f045684e7cb5150c8e040e6383f568dfb88ef8"
+      "published_adapter_commit": "75f045684e7cb5150c8e040e6383f568dfb88ef8",
+      "evaluation_progress": "accepted"
     },
     "scalebfm-m": {
       "schema": "MotionChallenge/observation-admission-v1",
