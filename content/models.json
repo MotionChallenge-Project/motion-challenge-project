@@ -307,7 +307,7 @@
       },
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "5e8d9dfd1fb04565c27950aa3d68a24d67505dca2276c47cabf4978250a0a40b"
+        "admission_sha256": "7ee73b5ef39e2a528b986cc18c17252f4229405ce44aca70ac5a02faefc1353b"
       }
     },
     "provenance": {
@@ -354,7 +354,8 @@
     "icon": "/assets/model-icons/nvidia.png",
     "icon_label": "NVIDIA",
     "icon_source": "https://huggingface.co/nvidia",
-    "project_url": "https://nvlabs.github.io/GEAR-SONIC/"
+    "project_url": "https://nvlabs.github.io/GEAR-SONIC/",
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-sonic-v1-1"
   },
   "sonic-low-latency": {
     "display_name": "SONIC Low-Latency",
