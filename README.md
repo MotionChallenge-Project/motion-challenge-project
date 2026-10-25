@@ -1,5 +1,7 @@
 # MotionChallenge website
 
+An open and reproducible benchmark for humanoid motion tracking.
+
 [Website & leaderboard](https://motionchallenge-project.github.io/motionchallenge/) · [Evaluation core](https://github.com/MotionChallenge-Project/MotionChallenge-Core)
 
 ```sh
