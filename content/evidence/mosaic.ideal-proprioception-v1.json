@@ -1,36 +1,36 @@
 {
   "model": "mosaic",
   "submitter": "MotionChallenge",
-  "result_sha256": "d29f6bc48d2f3cd3549f147c187e8938f7978816eec5d041b914cfad8981d955",
+  "result_sha256": "5336c4a24f5a7eed8cfbed14b35717f767bfb076adb373ad6402ee3580dd4ba7",
   "result": {
     "schema": "MotionChallenge/unified-result-v1",
     "status": "trace_verified",
     "source": {
-      "adapter_commit": "c976ee5786fbb89fba71dfd8114137833d3e260b",
+      "adapter_commit": "2599069bc7a9cbebd88915c9f4d28e76e20dd8d4",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "b447497e458b207d7f8aec37307b7a049eba4174f67890a66ead43fe37b83288",
         ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
         ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
         "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
-        "README.md": "9912602d0c45917457081a60283d9133d0415ed3a883ae4126dc2080e249ac06",
+        "README.md": "4c648f366bde6610c9f883fa22882ed9493990dd1e47697882208bfb88958706",
         "adapter.py": "f760474840f7b9b8880aa9fdd710d75698e91e17544a46a0370ca736fff04fb9",
-        "admission.json": "dbeff0283f373b7b15224b56ad999c73fd758deefe2c9bf161f09f818d5a7610",
+        "admission.json": "0c697f8cd348fdbd84c5f4643234b261f6187c993d6fb34af896a5c1c02bab21",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
         "native-sources.json": "09105614980977309dc2bdf6bbae4ad05dec817bb429989c41e15988ddb607e5",
         "policy.json": "66f14dc44b8f1560ead737acfeb848fe605fa2772c772cb66f53ca61dc1e55e4",
-        "provenance.json": "2dfdae0030eef0a1edd9169b347bf775edf39f815e27c964938866ab25ef3268",
+        "provenance.json": "79a5809f0eccf2be303df964390bdd9e896d3434d93072db4b0f65cfb19f87e7",
         "pyproject.toml": "be1f2672838cf495c44888a930ee504065fd46d91567439c6159312d8ec34a50",
         "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
-        "runtime.json": "3472bdf98254b08e82145f1f7b6b70c86a4e58a62cfd4316d9b3326a9ae1c897",
-        "uv.lock": "fe61772342793d06c6596449f2a674a9ff9f76527dbf22342d73c544b9a092b1",
+        "runtime.json": "c266cd803b1ee8bedaabdfbb9779b02b8daacd1db4fbdbf017ac10f717c9495f",
+        "uv.lock": "b8bdca4f50f9139ad6f260ace8dcfd3368e00ead6e9af04b24ca5ba8b50c251f",
         "validate_inference.py": "d1f330ff6c76dd44a83d9210e0d1ff4aa4bff42f2f69fcc291485df0b2d05cd5",
         "validate_observations.py": "ea48f04a1888fd6b25474156259272f3b101039d689849e9a232e959948057ef",
         "validation/README.md": "7eb0653b4cc21ed6779a8f07e50a807d8c2804b01d82afb5f1845cab9df4e192",
         "validation/native-parity.json": "26498323ebc75fffa5dc875f2945819164b70b60aa3588b45fd5a36536e298df",
         "validation/observation-access.json": "4e361828f9be933d45a659d7b70349e4fd6bda13e15166695ca08f78a957a531"
       },
-      "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+      "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
       "core_dirty": false
     },
     "checkpoint_sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
@@ -175,7 +175,7 @@
             "mpjpe_xy_yaw_aligned_m": 0.28157813248802604,
             "root_xy_error_m": 3.267333196005027,
             "root_height_error_m": 0.2184023348662455,
-            "root_yaw_correction_abs_rad": 0.3763758543146079,
+            "root_yaw_correction_abs_rad": 0.37637585431460785,
             "yaw_alignment_degenerate_fraction": 0.0
           }
         },
@@ -297,7 +297,7 @@
             "mpjpe_world_m": 0.6857544818560093,
             "mpjpe_root_relative_world_axes_m": 0.03848360004801558,
             "anchor_height_error_m": 0.008673540373572274,
-            "anchor_gravity_z_error": 0.005174843602429275,
+            "anchor_gravity_z_error": 0.005174843602429272,
             "end_effector_height_error_m": 0.041581499759554566,
             "mpjpe_xy_aligned_m": 0.040390819758862585,
             "mpjpe_xy_yaw_aligned_m": 0.040072492019452684,
@@ -316,7 +316,7 @@
             "anchor_gravity_z_error": 0.20811125100806854,
             "end_effector_height_error_m": 0.21918422616461486,
             "mpjpe_xy_aligned_m": 0.18797807678254005,
-            "mpjpe_xy_yaw_aligned_m": 0.18033249449326097,
+            "mpjpe_xy_yaw_aligned_m": 0.180332494493261,
             "root_xy_error_m": 2.3156384740680833,
             "root_height_error_m": 0.1365965507500799,
             "root_yaw_correction_abs_rad": 0.42789081180310257,
@@ -361,10 +361,10 @@
             "mpjpe_world_m": 1.1409600478460802,
             "mpjpe_root_relative_world_axes_m": 0.0488669261631831,
             "anchor_height_error_m": 0.017353335269478683,
-            "anchor_gravity_z_error": 0.010615562553728058,
+            "anchor_gravity_z_error": 0.010615562553728057,
             "end_effector_height_error_m": 0.05372062456650613,
             "mpjpe_xy_aligned_m": 0.053530370269675796,
-            "mpjpe_xy_yaw_aligned_m": 0.052536276648163835,
+            "mpjpe_xy_yaw_aligned_m": 0.05253627664816385,
             "root_xy_error_m": 1.1368993664566367,
             "root_height_error_m": 0.017196827425188826,
             "root_yaw_correction_abs_rad": 0.09830361313817138,
@@ -508,10 +508,10 @@
             "anchor_gravity_z_error": 0.5936826701064364,
             "end_effector_height_error_m": 0.46194045652608523,
             "mpjpe_xy_aligned_m": 0.5457583767223302,
-            "mpjpe_xy_yaw_aligned_m": 0.46396103837253544,
+            "mpjpe_xy_yaw_aligned_m": 0.4639610383725355,
             "root_xy_error_m": 2.6710179956697333,
             "root_height_error_m": 0.37399914167346066,
-            "root_yaw_correction_abs_rad": 1.5836635707858042,
+            "root_yaw_correction_abs_rad": 1.5836635707858047,
             "yaw_alignment_degenerate_fraction": 0.0
           }
         },
@@ -585,7 +585,7 @@
             "mpjpe_world_m": 0.10810995226477338,
             "mpjpe_root_relative_world_axes_m": 0.03196069873920541,
             "anchor_height_error_m": 0.014382828921421304,
-            "anchor_gravity_z_error": 0.017533763341599475,
+            "anchor_gravity_z_error": 0.01753376334159948,
             "end_effector_height_error_m": 0.04422091266737937,
             "mpjpe_xy_aligned_m": 0.038512208593869356,
             "mpjpe_xy_yaw_aligned_m": 0.041879287541557494,
@@ -655,7 +655,7 @@
             "mpjpe_xy_yaw_aligned_m": 0.4360407282804823,
             "root_xy_error_m": 2.159979781736535,
             "root_height_error_m": 0.3196324288528344,
-            "root_yaw_correction_abs_rad": 1.5035876345356947,
+            "root_yaw_correction_abs_rad": 1.5035876345356949,
             "yaw_alignment_degenerate_fraction": 0.0
           }
         },
@@ -687,7 +687,7 @@
             "mpjpe_xy_yaw_aligned_m": 0.043021916035150425,
             "root_xy_error_m": 0.07471548754479244,
             "root_height_error_m": 0.02829121590929368,
-            "root_yaw_correction_abs_rad": 0.07386207700206564,
+            "root_yaw_correction_abs_rad": 0.07386207700206562,
             "yaw_alignment_degenerate_fraction": 0.0
           },
           "full_motion": {
@@ -825,7 +825,7 @@
             "mpjpe_world_m": 0.7138154913600421,
             "mpjpe_root_relative_world_axes_m": 0.06730767366404924,
             "anchor_height_error_m": 0.0393798850621164,
-            "anchor_gravity_z_error": 0.02709860785902295,
+            "anchor_gravity_z_error": 0.027098607859022954,
             "end_effector_height_error_m": 0.06402933328310673,
             "mpjpe_xy_aligned_m": 0.07610919895811363,
             "mpjpe_xy_yaw_aligned_m": 0.07419194176237554,
@@ -969,7 +969,7 @@
             "mpjpe_world_m": 0.16414174055644962,
             "mpjpe_root_relative_world_axes_m": 0.0616432729407781,
             "anchor_height_error_m": 0.038403566149795704,
-            "anchor_gravity_z_error": 0.013634352454339357,
+            "anchor_gravity_z_error": 0.013634352454339358,
             "end_effector_height_error_m": 0.07399606982905561,
             "mpjpe_xy_aligned_m": 0.07213410662162827,
             "mpjpe_xy_yaw_aligned_m": 0.06430691857479064,
@@ -1017,7 +1017,7 @@
             "mpjpe_world_m": 0.8461753318274218,
             "mpjpe_root_relative_world_axes_m": 0.052774104763372215,
             "anchor_height_error_m": 0.03704938884735725,
-            "anchor_gravity_z_error": 0.015070668309147515,
+            "anchor_gravity_z_error": 0.015070668309147519,
             "end_effector_height_error_m": 0.06992247129105411,
             "mpjpe_xy_aligned_m": 0.06997454999739372,
             "mpjpe_xy_yaw_aligned_m": 0.0677353717325391,
@@ -1209,7 +1209,7 @@
             "mpjpe_world_m": 2.2135461508591296,
             "mpjpe_root_relative_world_axes_m": 0.07113568612254331,
             "anchor_height_error_m": 0.04121387952649011,
-            "anchor_gravity_z_error": 0.023460138606369866,
+            "anchor_gravity_z_error": 0.023460138606369873,
             "end_effector_height_error_m": 0.0819287809019448,
             "mpjpe_xy_aligned_m": 0.08250272082786968,
             "mpjpe_xy_yaw_aligned_m": 0.08072966132132683,
@@ -1305,7 +1305,7 @@
             "mpjpe_world_m": 0.23601266169741641,
             "mpjpe_root_relative_world_axes_m": 0.05476866135205166,
             "anchor_height_error_m": 0.021869233329089178,
-            "anchor_gravity_z_error": 0.009744448621765165,
+            "anchor_gravity_z_error": 0.009744448621765166,
             "end_effector_height_error_m": 0.06896886826758969,
             "mpjpe_xy_aligned_m": 0.06091177405250597,
             "mpjpe_xy_yaw_aligned_m": 0.06178197070782102,
@@ -1353,7 +1353,7 @@
             "mpjpe_world_m": 0.156294094687455,
             "mpjpe_root_relative_world_axes_m": 0.046116209858432726,
             "anchor_height_error_m": 0.01506308990700436,
-            "anchor_gravity_z_error": 0.012300027711703512,
+            "anchor_gravity_z_error": 0.01230002771170351,
             "end_effector_height_error_m": 0.05648593098449476,
             "mpjpe_xy_aligned_m": 0.04937267263356059,
             "mpjpe_xy_yaw_aligned_m": 0.04970237906760268,
@@ -1401,7 +1401,7 @@
             "mpjpe_world_m": 0.14628014444922235,
             "mpjpe_root_relative_world_axes_m": 0.036070386183473344,
             "anchor_height_error_m": 0.0063651221146112475,
-            "anchor_gravity_z_error": 0.0063050959571143705,
+            "anchor_gravity_z_error": 0.006305095957114369,
             "end_effector_height_error_m": 0.03198644548586703,
             "mpjpe_xy_aligned_m": 0.03753660366487227,
             "mpjpe_xy_yaw_aligned_m": 0.037720503156752905,
@@ -1447,7 +1447,7 @@
             "mpjpe_world_m": 1.6199802662024356,
             "mpjpe_root_relative_world_axes_m": 0.039774171134254924,
             "anchor_height_error_m": 0.012195518023598861,
-            "anchor_gravity_z_error": 0.007621369169477795,
+            "anchor_gravity_z_error": 0.007621369169477796,
             "end_effector_height_error_m": 0.03874899610391312,
             "mpjpe_xy_aligned_m": 0.04296158357480201,
             "mpjpe_xy_yaw_aligned_m": 0.04216106980808057,
@@ -1469,7 +1469,7 @@
             "mpjpe_xy_yaw_aligned_m": 0.04216106980808057,
             "root_xy_error_m": 1.6195193250032827,
             "root_height_error_m": 0.012178767517246426,
-            "root_yaw_correction_abs_rad": 0.08185244504997463,
+            "root_yaw_correction_abs_rad": 0.08185244504997462,
             "yaw_alignment_degenerate_fraction": 0.0
           }
         },
@@ -1700,7 +1700,7 @@
             "mpjpe_root_relative_world_axes_m": 0.04140143874183288,
             "anchor_height_error_m": 0.015838575220681682,
             "anchor_gravity_z_error": 0.009051011698344507,
-            "end_effector_height_error_m": 0.045513568785250834,
+            "end_effector_height_error_m": 0.04551356878525084,
             "mpjpe_xy_aligned_m": 0.04589905734596894,
             "mpjpe_xy_yaw_aligned_m": 0.046269765167643445,
             "root_xy_error_m": 1.2059595011371445,
@@ -1737,7 +1737,7 @@
             "mpjpe_xy_yaw_aligned_m": 0.04875759308913942,
             "root_xy_error_m": 1.2272969887754905,
             "root_height_error_m": 0.012148163590102807,
-            "root_yaw_correction_abs_rad": 0.0906942810014408,
+            "root_yaw_correction_abs_rad": 0.09069428100144078,
             "yaw_alignment_degenerate_fraction": 0.0
           },
           "full_motion": {
@@ -1872,8 +1872,8 @@
             "root_orientation_error_rad": 0.12788730599111545,
             "mpjpe_world_m": 0.6284788108022286,
             "mpjpe_root_relative_world_axes_m": 0.038307001751489385,
-            "anchor_height_error_m": 0.008414306059333992,
-            "anchor_gravity_z_error": 0.004554799202486829,
+            "anchor_height_error_m": 0.00841430605933399,
+            "anchor_gravity_z_error": 0.0045547992024868285,
             "end_effector_height_error_m": 0.03184120287838962,
             "mpjpe_xy_aligned_m": 0.04000468980651079,
             "mpjpe_xy_yaw_aligned_m": 0.03998977365518898,
@@ -1886,7 +1886,7 @@
             "joint_mae_rad": 0.19426048681399208,
             "root_position_error_m": 1.7511459849407578,
             "root_orientation_error_rad": 0.41740970697876717,
-            "mpjpe_world_m": 1.7598048963441009,
+            "mpjpe_world_m": 1.7598048963441013,
             "mpjpe_root_relative_world_axes_m": 0.09364432768332237,
             "anchor_height_error_m": 0.09165157713827123,
             "anchor_gravity_z_error": 0.09913191779988047,
@@ -1938,7 +1938,7 @@
             "anchor_gravity_z_error": 0.033149531263931435,
             "end_effector_height_error_m": 0.059976207829756385,
             "mpjpe_xy_aligned_m": 0.07379598724586894,
-            "mpjpe_xy_yaw_aligned_m": 0.07210965226564162,
+            "mpjpe_xy_yaw_aligned_m": 0.07210965226564163,
             "root_xy_error_m": 4.471264885137806,
             "root_height_error_m": 0.04484564438373335,
             "root_yaw_correction_abs_rad": 0.14513862072502237,
@@ -1984,7 +1984,7 @@
             "anchor_gravity_z_error": 0.037506361325510267,
             "end_effector_height_error_m": 0.09822231548553777,
             "mpjpe_xy_aligned_m": 0.06728004180290903,
-            "mpjpe_xy_yaw_aligned_m": 0.06647979186679102,
+            "mpjpe_xy_yaw_aligned_m": 0.06647979186679101,
             "root_xy_error_m": 0.9856872598297202,
             "root_height_error_m": 0.010997158093111378,
             "root_yaw_correction_abs_rad": 0.0978385346423873,
@@ -2001,15 +2001,15 @@
     "components": {
       "early": {
         "result": "rollout/prefix-result.json",
-        "result_sha256": "35d4b35f142fb0ac38e9b6c378a789c594d6b8da2aeda1c9eee6787de466dbb5",
+        "result_sha256": "96148dfd8dbc494890bf81343abc2b5f421ab380b771b512a59c6a56c0e0e530",
         "receipt": "rollout/receipt.json",
-        "receipt_sha256": "e6edb4fc4f32f49e0e6c79086cbff8e615985219690a9648c28cbb8d88e4f8a9"
+        "receipt_sha256": "8badee6f90873b5466ec6eb97f17a7c0c33d4f9ca89ab2f83dc988a7b4e149d9"
       },
       "none": {
         "result": "rollout/result.json",
-        "result_sha256": "22a13646ded4dfffd0546bdaa272833c4987bddcd0c3d50e9c7c4545a5d970c2",
+        "result_sha256": "bdeb3ca0ca7e753b400dc0c54bc7a48672fc3973bbaf1258daf70f465aca3299",
         "receipt": "rollout/receipt.json",
-        "receipt_sha256": "e6edb4fc4f32f49e0e6c79086cbff8e615985219690a9648c28cbb8d88e4f8a9"
+        "receipt_sha256": "8badee6f90873b5466ec6eb97f17a7c0c33d4f9ca89ab2f83dc988a7b4e149d9"
       }
     }
   },
@@ -2017,33 +2017,33 @@
     "schema": "MotionChallenge/paired-evaluation-v1",
     "status": "trace_verified",
     "execution": "single_full_rollout",
-    "started_utc": "20261024T173658.580251Z",
+    "started_utc": "20261025T014914.820170Z",
     "source": {
-      "adapter_commit": "c976ee5786fbb89fba71dfd8114137833d3e260b",
+      "adapter_commit": "2599069bc7a9cbebd88915c9f4d28e76e20dd8d4",
       "adapter_dirty": false,
       "tracked_files_sha256": {
         ".gitignore": "b447497e458b207d7f8aec37307b7a049eba4174f67890a66ead43fe37b83288",
         ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
         ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
         "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
-        "README.md": "9912602d0c45917457081a60283d9133d0415ed3a883ae4126dc2080e249ac06",
+        "README.md": "4c648f366bde6610c9f883fa22882ed9493990dd1e47697882208bfb88958706",
         "adapter.py": "f760474840f7b9b8880aa9fdd710d75698e91e17544a46a0370ca736fff04fb9",
-        "admission.json": "dbeff0283f373b7b15224b56ad999c73fd758deefe2c9bf161f09f818d5a7610",
+        "admission.json": "0c697f8cd348fdbd84c5f4643234b261f6187c993d6fb34af896a5c1c02bab21",
         "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
         "native-sources.json": "09105614980977309dc2bdf6bbae4ad05dec817bb429989c41e15988ddb607e5",
         "policy.json": "66f14dc44b8f1560ead737acfeb848fe605fa2772c772cb66f53ca61dc1e55e4",
-        "provenance.json": "2dfdae0030eef0a1edd9169b347bf775edf39f815e27c964938866ab25ef3268",
+        "provenance.json": "79a5809f0eccf2be303df964390bdd9e896d3434d93072db4b0f65cfb19f87e7",
         "pyproject.toml": "be1f2672838cf495c44888a930ee504065fd46d91567439c6159312d8ec34a50",
         "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
-        "runtime.json": "3472bdf98254b08e82145f1f7b6b70c86a4e58a62cfd4316d9b3326a9ae1c897",
-        "uv.lock": "fe61772342793d06c6596449f2a674a9ff9f76527dbf22342d73c544b9a092b1",
+        "runtime.json": "c266cd803b1ee8bedaabdfbb9779b02b8daacd1db4fbdbf017ac10f717c9495f",
+        "uv.lock": "b8bdca4f50f9139ad6f260ace8dcfd3368e00ead6e9af04b24ca5ba8b50c251f",
         "validate_inference.py": "d1f330ff6c76dd44a83d9210e0d1ff4aa4bff42f2f69fcc291485df0b2d05cd5",
         "validate_observations.py": "ea48f04a1888fd6b25474156259272f3b101039d689849e9a232e959948057ef",
         "validation/README.md": "7eb0653b4cc21ed6779a8f07e50a807d8c2804b01d82afb5f1845cab9df4e192",
         "validation/native-parity.json": "26498323ebc75fffa5dc875f2945819164b70b60aa3588b45fd5a36536e298df",
         "validation/observation-access.json": "4e361828f9be933d45a659d7b70349e4fd6bda13e15166695ca08f78a957a531"
       },
-      "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+      "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
       "core_dirty": false
     },
     "checkpoint_sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
@@ -2096,55 +2096,54 @@
       }
     },
     "result": "result.json",
-    "finished_utc": "2026-10-24T17:42:48.726980+00:00"
+    "finished_utc": "2026-10-25T02:00:05.630998+00:00"
   },
   "receipts": {
     "early": {
       "submitter": "local-run",
       "source": {
-        "adapter_commit": "c976ee5786fbb89fba71dfd8114137833d3e260b",
+        "adapter_commit": "2599069bc7a9cbebd88915c9f4d28e76e20dd8d4",
         "adapter_dirty": false,
         "tracked_files_sha256": {
           ".gitignore": "b447497e458b207d7f8aec37307b7a049eba4174f67890a66ead43fe37b83288",
           ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
           ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
           "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
-          "README.md": "9912602d0c45917457081a60283d9133d0415ed3a883ae4126dc2080e249ac06",
+          "README.md": "4c648f366bde6610c9f883fa22882ed9493990dd1e47697882208bfb88958706",
           "adapter.py": "f760474840f7b9b8880aa9fdd710d75698e91e17544a46a0370ca736fff04fb9",
-          "admission.json": "dbeff0283f373b7b15224b56ad999c73fd758deefe2c9bf161f09f818d5a7610",
+          "admission.json": "0c697f8cd348fdbd84c5f4643234b261f6187c993d6fb34af896a5c1c02bab21",
           "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
           "native-sources.json": "09105614980977309dc2bdf6bbae4ad05dec817bb429989c41e15988ddb607e5",
           "policy.json": "66f14dc44b8f1560ead737acfeb848fe605fa2772c772cb66f53ca61dc1e55e4",
-          "provenance.json": "2dfdae0030eef0a1edd9169b347bf775edf39f815e27c964938866ab25ef3268",
+          "provenance.json": "79a5809f0eccf2be303df964390bdd9e896d3434d93072db4b0f65cfb19f87e7",
           "pyproject.toml": "be1f2672838cf495c44888a930ee504065fd46d91567439c6159312d8ec34a50",
           "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
-          "runtime.json": "3472bdf98254b08e82145f1f7b6b70c86a4e58a62cfd4316d9b3326a9ae1c897",
-          "uv.lock": "fe61772342793d06c6596449f2a674a9ff9f76527dbf22342d73c544b9a092b1",
+          "runtime.json": "c266cd803b1ee8bedaabdfbb9779b02b8daacd1db4fbdbf017ac10f717c9495f",
+          "uv.lock": "b8bdca4f50f9139ad6f260ace8dcfd3368e00ead6e9af04b24ca5ba8b50c251f",
           "validate_inference.py": "d1f330ff6c76dd44a83d9210e0d1ff4aa4bff42f2f69fcc291485df0b2d05cd5",
           "validate_observations.py": "ea48f04a1888fd6b25474156259272f3b101039d689849e9a232e959948057ef",
           "validation/README.md": "7eb0653b4cc21ed6779a8f07e50a807d8c2804b01d82afb5f1845cab9df4e192",
           "validation/native-parity.json": "26498323ebc75fffa5dc875f2945819164b70b60aa3588b45fd5a36536e298df",
           "validation/observation-access.json": "4e361828f9be933d45a659d7b70349e4fd6bda13e15166695ca08f78a957a531"
         },
-        "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+        "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
         "core_dirty": false
       },
-      "source_runtime_sha256": "3472bdf98254b08e82145f1f7b6b70c86a4e58a62cfd4316d9b3326a9ae1c897",
-      "resolved_runtime_sha256": "76bc26690be2d1aa3f67ed69b0c6e89816dda99ee246f46a37cc1aea22c3a5aa",
+      "source_runtime_sha256": "c266cd803b1ee8bedaabdfbb9779b02b8daacd1db4fbdbf017ac10f717c9495f",
+      "resolved_runtime_sha256": "a1c5a63eb057df618366b7462147b475a6b24df46a297b1003ea51e43276c077",
       "suite": "lafan40",
-      "observation_track": "ideal-proprioception",
       "state_access": "ideal-proprioceptive-no-position-v1",
-      "started_utc": "20261024T173658.580251Z",
+      "started_utc": "20261025T014914.820170Z",
       "author_inference_review": "not_granted_by_runner",
-      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-v1/mosaic/run-01/rollout",
+      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-cpu-final-v1/mosaic/run-01/rollout",
       "status": "trace_verified",
       "backend": "batch",
       "termination_mode": "no_termination",
       "batch_size": 40,
       "timings_s": {
-        "rollout": 317.10805305466056,
-        "verification": 29.881254710257053,
-        "total": 347.0255052410066
+        "rollout": 582.210621766746,
+        "verification": 67.48825012519956,
+        "total": 649.7219843417406
       },
       "verification": {
         "verification": "trace_consistent",
@@ -2155,60 +2154,59 @@
         "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
         "derived_prefix": {
           "result": "prefix-result.json",
-          "result_sha256": "35d4b35f142fb0ac38e9b6c378a789c594d6b8da2aeda1c9eee6787de466dbb5",
+          "result_sha256": "96148dfd8dbc494890bf81343abc2b5f421ab380b771b512a59c6a56c0e0e530",
           "samples": 169880
         }
       },
       "full_suite": true,
       "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-24T17:42:48.715919+00:00"
+      "finished_utc": "2026-10-25T02:00:05.619299+00:00"
     },
     "none": {
       "submitter": "local-run",
       "source": {
-        "adapter_commit": "c976ee5786fbb89fba71dfd8114137833d3e260b",
+        "adapter_commit": "2599069bc7a9cbebd88915c9f4d28e76e20dd8d4",
         "adapter_dirty": false,
         "tracked_files_sha256": {
           ".gitignore": "b447497e458b207d7f8aec37307b7a049eba4174f67890a66ead43fe37b83288",
           ".gitmodules": "781c11a6cc102e0e20879ba669abdf21f2aa0967e26c303551ad54b1348dfe32",
           ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
           "LICENSE": "b2f3d01317f7cb4094c92f7c206a2a0cbe72a9a91cf621c04154b88f56dfbb4a",
-          "README.md": "9912602d0c45917457081a60283d9133d0415ed3a883ae4126dc2080e249ac06",
+          "README.md": "4c648f366bde6610c9f883fa22882ed9493990dd1e47697882208bfb88958706",
           "adapter.py": "f760474840f7b9b8880aa9fdd710d75698e91e17544a46a0370ca736fff04fb9",
-          "admission.json": "dbeff0283f373b7b15224b56ad999c73fd758deefe2c9bf161f09f818d5a7610",
+          "admission.json": "0c697f8cd348fdbd84c5f4643234b261f6187c993d6fb34af896a5c1c02bab21",
           "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
           "native-sources.json": "09105614980977309dc2bdf6bbae4ad05dec817bb429989c41e15988ddb607e5",
           "policy.json": "66f14dc44b8f1560ead737acfeb848fe605fa2772c772cb66f53ca61dc1e55e4",
-          "provenance.json": "2dfdae0030eef0a1edd9169b347bf775edf39f815e27c964938866ab25ef3268",
+          "provenance.json": "79a5809f0eccf2be303df964390bdd9e896d3434d93072db4b0f65cfb19f87e7",
           "pyproject.toml": "be1f2672838cf495c44888a930ee504065fd46d91567439c6159312d8ec34a50",
           "restricted.py": "8f8fdcc4dc41813cf5d8f8c55e4b219310145f74a540457b52c41843a49bd831",
-          "runtime.json": "3472bdf98254b08e82145f1f7b6b70c86a4e58a62cfd4316d9b3326a9ae1c897",
-          "uv.lock": "fe61772342793d06c6596449f2a674a9ff9f76527dbf22342d73c544b9a092b1",
+          "runtime.json": "c266cd803b1ee8bedaabdfbb9779b02b8daacd1db4fbdbf017ac10f717c9495f",
+          "uv.lock": "b8bdca4f50f9139ad6f260ace8dcfd3368e00ead6e9af04b24ca5ba8b50c251f",
           "validate_inference.py": "d1f330ff6c76dd44a83d9210e0d1ff4aa4bff42f2f69fcc291485df0b2d05cd5",
           "validate_observations.py": "ea48f04a1888fd6b25474156259272f3b101039d689849e9a232e959948057ef",
           "validation/README.md": "7eb0653b4cc21ed6779a8f07e50a807d8c2804b01d82afb5f1845cab9df4e192",
           "validation/native-parity.json": "26498323ebc75fffa5dc875f2945819164b70b60aa3588b45fd5a36536e298df",
           "validation/observation-access.json": "4e361828f9be933d45a659d7b70349e4fd6bda13e15166695ca08f78a957a531"
         },
-        "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+        "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
         "core_dirty": false
       },
-      "source_runtime_sha256": "3472bdf98254b08e82145f1f7b6b70c86a4e58a62cfd4316d9b3326a9ae1c897",
-      "resolved_runtime_sha256": "76bc26690be2d1aa3f67ed69b0c6e89816dda99ee246f46a37cc1aea22c3a5aa",
+      "source_runtime_sha256": "c266cd803b1ee8bedaabdfbb9779b02b8daacd1db4fbdbf017ac10f717c9495f",
+      "resolved_runtime_sha256": "a1c5a63eb057df618366b7462147b475a6b24df46a297b1003ea51e43276c077",
       "suite": "lafan40",
-      "observation_track": "ideal-proprioception",
       "state_access": "ideal-proprioceptive-no-position-v1",
-      "started_utc": "20261024T173658.580251Z",
+      "started_utc": "20261025T014914.820170Z",
       "author_inference_review": "not_granted_by_runner",
-      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-v1/mosaic/run-01/rollout",
+      "output": "/mnt/volumes/nexus-train-bd-ga/swd/motion-challenge/runs/ideal-proprioception-cpu-final-v1/mosaic/run-01/rollout",
       "status": "trace_verified",
       "backend": "batch",
       "termination_mode": "no_termination",
       "batch_size": 40,
       "timings_s": {
-        "rollout": 317.10805305466056,
-        "verification": 29.881254710257053,
-        "total": 347.0255052410066
+        "rollout": 582.210621766746,
+        "verification": 67.48825012519956,
+        "total": 649.7219843417406
       },
       "verification": {
         "verification": "trace_consistent",
@@ -2219,21 +2217,21 @@
         "scope": "hashes, canonical FK, timing, failure rules and metrics; not execution attestation",
         "derived_prefix": {
           "result": "prefix-result.json",
-          "result_sha256": "35d4b35f142fb0ac38e9b6c378a789c594d6b8da2aeda1c9eee6787de466dbb5",
+          "result_sha256": "96148dfd8dbc494890bf81343abc2b5f421ab380b771b512a59c6a56c0e0e530",
           "samples": 169880
         }
       },
       "full_suite": true,
       "source_unchanged_during_run": true,
-      "finished_utc": "2026-10-24T17:42:48.715919+00:00"
+      "finished_utc": "2026-10-25T02:00:05.619299+00:00"
     }
   },
   "repeatability": {
     "status": "passed",
     "differences": [],
     "pose_samples": 441120,
-    "first_result_sha256": "d29f6bc48d2f3cd3549f147c187e8938f7978816eec5d041b914cfad8981d955",
-    "second_result_sha256": "a0348f4226ba8c193b9dbec99e75a3e421b6c2d1ac841d88395df8ad979d3515"
+    "first_result_sha256": "5336c4a24f5a7eed8cfbed14b35717f767bfb076adb373ad6402ee3580dd4ba7",
+    "second_result_sha256": "2034b84d57b8ad3d183cd422778a965456a7c81ad3864e010f18b1b55eaf9fae"
   },
   "raw_trace_hashes_verified": 80,
   "observation_admission": {
@@ -2272,10 +2270,6 @@
     "handling": "Released actor uses joint state, angular velocity/gravity or orientation and reference features. Retain author normalization, history/recurrent state, action processing and declared lookahead; validate numerical independence from actual translation.",
     "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
     "special_handling": "FK of allowed state at fixed synthetic origin (0,0,0); never actual measured origin.",
-    "new_evaluation": {
-      "status": "queued",
-      "inherited_scores": false
-    },
     "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic",
     "dependency_test": {
       "path": "validation/observation-access.json",
@@ -2309,19 +2303,19 @@
     "limits": "Finite numerical regression plus source audit; not a proof against malicious code or implicit neural odometry."
   },
   "reproduction": {
-    "adapter_commit": "c976ee5786fbb89fba71dfd8114137833d3e260b",
-    "core_commit": "4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+    "adapter_commit": "2599069bc7a9cbebd88915c9f4d28e76e20dd8d4",
+    "core_commit": "11873584f838ba29fd2a2327ca15016192c3f3e1",
     "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic",
-    "adapter_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic/tree/c976ee5786fbb89fba71dfd8114137833d3e260b",
-    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/4abc8215e73b4bf9f1cf9d70442c5bcb3f2ceb9f",
+    "adapter_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-mosaic/tree/2599069bc7a9cbebd88915c9f4d28e76e20dd8d4",
+    "core_code_url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/tree/11873584f838ba29fd2a2327ca15016192c3f3e1",
     "checkpoint_sha256": "d6e124126a1b3e4fd3cc75e820fc0a4e170aa66ab297290fa1a3f1495fa07f3d",
     "commands": [
       "git clone --recurse-submodules https://github.com/MotionChallenge-Project/MotionChallenge-mosaic.git",
       "cd MotionChallenge-mosaic",
-      "git checkout c976ee5786fbb89fba71dfd8114137833d3e260b",
+      "git checkout 2599069bc7a9cbebd88915c9f4d28e76e20dd8d4",
       "git submodule update --init --recursive",
       "uv sync --frozen",
-      "uv run evaluate.py --track ideal-proprioception"
+      "uv run evaluate.py"
     ]
   }
 }

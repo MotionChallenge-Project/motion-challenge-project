@@ -1142,7 +1142,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "2599069bc7a9cbebd88915c9f4d28e76e20dd8d4"
+      "published_adapter_commit": "2599069bc7a9cbebd88915c9f4d28e76e20dd8d4",
+      "evaluation_progress": "accepted"
     }
   }
 }
