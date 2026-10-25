@@ -32,9 +32,9 @@
   showBenchmark();
  }
  const table=document.querySelector('#leaderboard');if(!table)return;
- const $=s=>document.querySelector(s),body=table.querySelector('tbody'),search=$('#model-search'),empty=$('#empty'),size=$('#page-size'),prev=[...document.querySelectorAll('[data-page=previous]')],next=[...document.querySelectorAll('[data-page=next]')],ranges=[...document.querySelectorAll('[data-page-range]')];
+ const $=s=>document.querySelector(s),body=table.querySelector('tbody'),search=$('#model-search'),empty=$('#empty'),size=$('#page-size');
  const benchmark=$('#benchmark-select'),robot=$('#robot-select');
- let data=[],tracks=[],sort='passed',page=1;
+ let data=[],tracks=[],sort='passed';
  try{const response=await fetch(base+'/data/results.json?v='+encodeURIComponent(document.querySelector('meta[name="results-revision"]')?.content||''),{cache:'no-cache'});if(!response.ok)throw new Error();const payload=await response.json();data=payload.rows;tracks=payload.tracks;if(!tracks.length)throw new Error();}
  catch{empty.hidden=false;empty.textContent='Results could not be loaded. Please reload or download the summary JSON.';table.hidden=true;return;}
  const query=new URLSearchParams(location.search);
@@ -70,12 +70,10 @@
    if(av==null&&bv!=null)return 1;if(av!=null&&bv==null)return -1;
    return (av==null?0:descending?bv-av:av-bv)||(b.completion_pct-a.completion_pct||a.label.localeCompare(b.label));
   });
-  const pages=Math.max(1,Math.ceil(filtered.length/limit));page=Math.min(page,pages);
-  const start=(page-1)*limit,rows=filtered.slice(start,start+limit);
+  const rows=filtered.slice(0,limit);
   body.replaceChildren();table.hidden=!rows.length;empty.hidden=!!rows.length;empty.textContent=trackData.length?'No models match your search.':'No completed results for this protocol yet. Batch evaluation is in progress.';
-  for(const range of ranges)range.textContent=filtered.length?(size.value==='all'?`${filtered.length} models`:`${start+1}–${Math.min(start+limit,filtered.length)} of ${filtered.length} · Page ${page}/${pages}`):'0 models';prev.forEach(b=>{b.disabled=page<=1;b.hidden=pages<=1});next.forEach(b=>{b.disabled=page>=pages;b.hidden=pages<=1});
   for(const [rowIndex,r] of rows.entries()){const tr=document.createElement('tr');
-   const rank=start+rowIndex+1,medal=rank<=3?['gold','silver','bronze'][rank-1]:null;
+   const rank=rowIndex+1,medal=rank<=3?['gold','silver','bronze'][rank-1]:null;
    if(medal)tr.className='podium-'+medal;
    [rank,r.label,r.controller_type,r.organization||'Not listed',r.passed,r.completion_pct,r.mpjpe_xy_yaw_aligned_m,r.mpjpe_xy_aligned_m,r.mpjpe_world_m,r.full_mpjpe_xy_yaw_aligned_m,r.full_mpjpe_xy_aligned_m,r.full_mpjpe_world_m].forEach((v,i)=>{const td=document.createElement('td');
     if(i===0){td.className='rank';td.setAttribute('aria-label','Rank '+v);const badge=document.createElement('span');badge.className='rank-badge';if(medal){const icon=document.createElement('span');icon.className='rank-medal';icon.setAttribute('aria-hidden','true');icon.textContent=['🥇','🥈','🥉'][rank-1];badge.append(icon);td.title='Top '+rank+' by '+sortingLabel;}const number=document.createElement('span');number.className='rank-number';number.textContent=String(v);badge.append(number);td.append(badge);}
@@ -91,7 +89,7 @@
    });body.append(tr);
   }
  }
- benchmark.addEventListener('change',()=>{setRobots(robot.value);page=1;render()});robot.addEventListener('change',()=>{page=1;render()});
- search.addEventListener('input',()=>{page=1;render()});size.addEventListener('change',()=>{page=1;render()});prev.forEach(b=>b.addEventListener('click',()=>{page--;render()}));next.forEach(b=>b.addEventListener('click',()=>{page++;render()}));
- document.querySelectorAll('[data-sort]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.sort;if(sort===key)return;sort=key;page=1;render();}));render();
+ benchmark.addEventListener('change',()=>{setRobots(robot.value);render()});robot.addEventListener('change',()=>{render()});
+ search.addEventListener('input',render);size.addEventListener('change',render);
+ document.querySelectorAll('[data-sort]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.sort;if(sort===key)return;sort=key;render();}));render();
 })();
