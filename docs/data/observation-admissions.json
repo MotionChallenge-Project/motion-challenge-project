@@ -620,7 +620,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "022de7d11e8066687d2f456c8c01c86dd292d251"
+      "published_adapter_commit": "022de7d11e8066687d2f456c8c01c86dd292d251",
+      "evaluation_progress": "accepted"
     },
     "teleopit": {
       "schema": "MotionChallenge/observation-admission-v1",
