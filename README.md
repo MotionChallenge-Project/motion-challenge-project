@@ -9,7 +9,7 @@ SITE_BASE_PATH='' python3 build.py
 python3 -m http.server 8768 --directory docs
 ```
 
-GitHub Pages serves `website:/docs`. Run `python3 build.py` before publishing.
+GitHub Pages serves `website:/docs`. Run `python3 build.py` before publishing. The homepage and page footers show the build timestamp in UTC; it stays fixed until the next publication.
 
 `content/` contains published model records, result summaries and trace receipts. Full traces, weights and datasets remain outside Git. Each checkpoint version has a separate entry; scores never transfer between versions. The evaluation kernel and model adapters remain independent repositories.
 
