@@ -874,7 +874,8 @@
         "cases": 160,
         "resets": 4
       },
-      "published_adapter_commit": "086159679be4c5a03fe30074b3fdb9aa259bb9ff"
+      "published_adapter_commit": "086159679be4c5a03fe30074b3fdb9aa259bb9ff",
+      "evaluation_progress": "accepted"
     },
     "humanoid-gpt-transformer-216": {
       "schema": "MotionChallenge/observation-admission-v1",
