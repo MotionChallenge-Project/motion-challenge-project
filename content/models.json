@@ -466,9 +466,9 @@
     "organization": "Amazon FAR",
     "organization_source": "https://github.com/amazon-far/TWIST2",
     "runtime": {
-      "id": "twist2-g1-v1",
+      "id": "twist2-g1-sim2real-v1",
       "entrypoint": "restricted:create",
-      "control_period_s": 0.01,
+      "control_period_s": 0.02,
       "reference_step_s": 0.02,
       "reference_steps": [
         0
@@ -481,7 +481,7 @@
       "state_access": "ideal-proprioceptive-no-position-v1",
       "action_mode": "joint-pd-feedforward",
       "inference_config": "policy.json",
-      "inference_config_sha256": "57d7d9c1f4b793ccf076f0260c9d249a7cdb99560814b7f0f4ad316f7655b17a",
+      "inference_config_sha256": "d53fc73223c7c729cc5e7030b6ca745b2a3cc3566bc34034e171e613ba97ca19",
       "weights": "checkpoints/policy.onnx",
       "weights_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
       "virtual_bodies": {
@@ -502,14 +502,14 @@
           ]
         }
       },
-      "provenance_status": "Author inference comparison passed; see validation/native-parity.json",
+      "provenance_status": "Pinned sim2real deployment comparison; see validation/deployment-parity.json",
       "official": false,
       "source_repository": "https://github.com/amazon-far/TWIST2",
       "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
       "weights_url": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
       "observation_contract": {
         "admission_record": "admission.json",
-        "admission_sha256": "3300237490bcff9d5e127716da3a0494d99831058262c6d81d36ef4ecd0ad79b"
+        "admission_sha256": "dff97cc3e99ca6acf8feecd8d4eb619c98528c5ab5a6af05f948e0624735ac5a"
       },
       "batch_entrypoint": "parallel:create",
       "inference_workers": 2
@@ -521,7 +521,7 @@
       "upstream": "https://github.com/amazon-far/TWIST2",
       "source_commit": "b06178f19a22f2138cbd31f60c6d494bc263f67d",
       "checkpoint_sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061",
-      "author_inference_review": "Numerical comparison against pinned author inference: validation/native-parity.json",
+      "author_inference_review": "Original author network identity plus pinned sim2real deployment comparison: validation/deployment-parity.json",
       "benchmark_physics": "Shared canonical G1 nominal physics and initialization.",
       "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
       "checkpoint_origin": {
@@ -535,8 +535,25 @@
         "download_url": "https://raw.githubusercontent.com/amazon-far/TWIST2/b06178f19a22f2138cbd31f60c6d494bc263f67d/assets/ckpts/twist2_1017_20k.onnx",
         "sha256": "2d1fb3a31e4e967f70ecfefc3ad1e7b2ac491677068b89f60b565a94e7735061"
       },
-      "native_validation": "validation/native-parity.json",
-      "correction": "Wrist PD gains match the original author sim2sim release: Kp 4 and Kd 0.2, replacing 40 and 5. Full benchmark rerun is required."
+      "native_validation": "validation/deployment-parity.json",
+      "deployment_configuration": "Original TWIST2 1017-20k network with the pinned sim2real deployment: 50 Hz, first-observation history fill, wrist Kp 40/Kd 5, and unclipped network actions. The author sim2sim route instead uses 100 Hz, zero history, wrist Kp 4/Kd 0.2 and action clipping at +/-10. Benchmark reference preparation, reset, 2 ms physics and scoring stay in Core.",
+      "deployment_source": {
+        "repository": "https://github.com/egalahad/sim2real",
+        "commit": "287ac157e6a7143340da7a9fc2fa5ff552031bc8",
+        "files": {
+          "sim2real/rl_policy/observations/twist2.py": "3d8e22247786742313abef6982a31c2e272b5a43bfdf317abfc786a878331b2a",
+          "sim2real/utils/math.py": "79b5f4e1475532cbd703dc6eef5fecafe44dc155c4d6e04e243251ca4092ebcb",
+          "sim2real/sim_env/integrated_sim2sim.py": "4b1ca72a1737e175fa715f0c8b030b250ffd9c46d3ca148fea5147ce961ea66b"
+        },
+        "policy_yaml": {
+          "url": "https://drive.google.com/file/d/1iwhj65CyCzXBHWF0z8SlXuyMNc1LOcgB/view",
+          "sha256": "4f79adbb7c587754519453d4dd82e25464759099c759dab8a8c2aa9b94d45061"
+        },
+        "wrapped_onnx": {
+          "url": "https://drive.google.com/file/d/1rKqu8Wqm68-KpLHsyBav3xmsvYDKeymW/view",
+          "sha256": "29c60ad0ac4d2fff46b86133f13fdf1bad2c77e401b1a89aa685b27175d86167"
+        }
+      }
     },
     "repository_available": true,
     "version": "1017 \u00b7 20k",
@@ -557,7 +574,8 @@
     "icon_label": "Amazon FAR",
     "icon_source": "https://github.com/amazon-far",
     "project_url": "https://yanjieze.com/projects/TWIST2/",
-    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2"
+    "adapter_repository": "https://github.com/MotionChallenge-Project/MotionChallenge-twist2",
+    "description": "Author TWIST2 1017-20k network evaluated with the sim2real deployment configuration: 50 Hz, first-frame history, wrist Kp 40 / Kd 5 and unclipped actions."
   },
   "grit": {
     "organization": "GRIT Team",
