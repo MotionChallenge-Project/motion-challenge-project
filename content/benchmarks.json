@@ -1,7 +1,7 @@
 [
   {
     "id": "lafan40",
-    "label": "LAFAN40",
+    "label": "LAFAN1",
     "task": "Whole-body motion tracking",
     "summary": "One controller tracks a complete set of retargeted human motions, from the first frame to the exact endpoint.",
     "extent": "40 full-length motions",

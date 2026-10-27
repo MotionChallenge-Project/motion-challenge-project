@@ -23,7 +23,7 @@
       "id": "dataset",
       "title": "01 · Dataset",
       "paragraphs": [
-        "LAFAN40 uses all 40 G1 sequences from the LAFAN1 Retargeting Dataset. Motions are used as supplied, without filtering by difficulty."
+        "This LAFAN1 benchmark uses all 40 G1 sequences from the LAFAN1 Retargeting Dataset. Motions are used as supplied, without filtering by difficulty."
       ],
       "table": {
         "headers": [

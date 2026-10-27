@@ -2,7 +2,7 @@
   {
     "id": "lafan40-g1-ideal-proprioception-v2",
     "benchmark_id": "lafan40",
-    "benchmark_label": "LAFAN40",
+    "benchmark_label": "LAFAN1",
     "robot_id": "g1-29dof",
     "robot_label": "Unitree G1 \u00b7 29 DoF",
     "label": "Ideal proprioception \u00b7 no global position",

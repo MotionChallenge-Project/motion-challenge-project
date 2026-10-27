@@ -1373,7 +1373,7 @@
     ],
     "description": "The released low-level universal motion tracker from TextOp. This entry evaluates reference-motion tracking, without the high-level text-to-motion generator.",
     "training_data": {
-      "description": "The authors describe a mixture of public motion data and a small private dataset. Their README names AMASS, BABEL, TEACH and LAFAN1; exact overlap with this retargeted LAFAN40 suite is not established.",
+      "description": "The authors describe a mixture of public motion data and a small private dataset. Their README names AMASS, BABEL, TEACH and LAFAN1; exact overlap with this retargeted LAFAN1 suite is not established.",
       "source": "https://github.com/TeleHuman/TextOp/blob/ef6555fb174c9b5c44945a62c7ffc77b5ddbbf22/README.md"
     },
     "runtime": {
