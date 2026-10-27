@@ -55,7 +55,7 @@ class PublicationTests(unittest.TestCase):
                 validate_row(self.row,self.models['grit'],self.tracks[0],evidence)
 
     def test_restricted_admission_and_protocol_are_bound_to_evidence(self):
-        row=next(r for r in self.rows if r['track_id']=='lafan40-g1-ideal-proprioception-v1')
+        row=next(r for r in self.rows if r['track_id']==self.tracks[0]['id'])
         evidence=json.loads((CONTENT/'evidence'/row['evidence_file']).read_text())
         track=next(t for t in self.tracks if t['id']==row['track_id'])
         altered=copy.deepcopy(evidence)
@@ -65,3 +65,11 @@ class PublicationTests(unittest.TestCase):
         altered_track=dict(track,protocol_sha256='0'*64)
         with self.assertRaisesRegex(ValueError,'protocol identity'):
             validate_row(row,self.models[row['model']],altered_track,evidence)
+
+    def test_rescoring_cannot_replace_the_original_rollout_identity(self):
+        if self.evidence['result'].get('execution')!='rescored_full_trajectory':
+            self.skipTest('Rescored evidence has not been imported yet')
+        evidence=copy.deepcopy(self.evidence);row=copy.deepcopy(self.row)
+        row['scoring_core_commit']='0'*40
+        with self.assertRaisesRegex(ValueError,'scoring source identity'):
+            validate_row(row,self.models['grit'],self.tracks[0],evidence)

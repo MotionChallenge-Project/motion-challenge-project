@@ -1,21 +1,15 @@
 {
-  "id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-v1",
+  "id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-v2",
   "official": false,
   "metric_period_s": 0.02,
   "initialization": "raw reference frame zero and canonical finite-difference velocities",
   "reference_velocity": "centered generalized-position difference at plus/minus one source interval; one-sided at endpoints",
   "failure": {
-    "anchor_body": "torso_link",
+    "anchor_body": "pelvis",
     "anchor_height_m": 0.25,
     "gravity_z": 0.8,
-    "end_effector_bodies": [
-      "left_ankle_roll_link",
-      "right_ankle_roll_link",
-      "left_wrist_yaw_link",
-      "right_wrist_yaw_link"
-    ],
-    "end_effector_height_m": 0.25,
-    "comparison": "strict greater-than; absolute world-z errors; gravity z is normalized projected gravity, not angle"
+    "comparison": "strict greater-than; absolute world-z error and absolute projected unit-gravity z difference in robot/reference root frames; no end-effector termination",
+    "source": "https://arxiv.org/pdf/2610.28480#page=13"
   },
   "metric_bodies": [
     "pelvis",
@@ -76,5 +70,10 @@
     "memory_rule": "Native history/recurrent state is allowed; explicit position-estimation code is not. This does not prove absence of implicit displacement inference inside a network.",
     "admission": "Exact weight and auxiliary-artifact hashes, pinned author source, full reset/history/action audit, forbidden-input dependency test, inference parity and independently verified fresh full-suite run.",
     "scope": "Ideal noise-free proprioception, not a claim of real-world sensor feasibility; training critic/reward/teacher privilege is outside deployment input restrictions."
+  },
+  "primary_metric": {
+    "scope": "full_motion",
+    "field": "mpjpe_xy_aligned_m",
+    "order": "ascending"
   }
 }

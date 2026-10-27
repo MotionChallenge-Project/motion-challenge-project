@@ -1,23 +1,24 @@
 [
   {
-    "id": "lafan40-g1-ideal-proprioception-v1",
+    "id": "lafan40-g1-ideal-proprioception-v2",
     "benchmark_id": "lafan40",
     "benchmark_label": "LAFAN40",
     "robot_id": "g1-29dof",
     "robot_label": "Unitree G1 \u00b7 29 DoF",
     "label": "Ideal proprioception \u00b7 no global position",
-    "protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-v1",
+    "protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-v2",
     "clip_count": 40,
     "mujoco_version": "3.17.0",
-    "status": "evaluating",
-    "no_termination_protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-no-termination-v1",
+    "status": "complete",
+    "no_termination_protocol_id": "lafan-g1-29dof/nominal/mujoco317-ideal-proprioception-no-termination-v2",
     "documentation": "benchmarks/lafan40-g1-ideal-proprioception.json",
     "protocol_file": "lafan40-ideal-proprioception-protocol.json",
     "robot_short_label": "G1 29DoF",
     "suite_sha256": "113b15cbb133fc1f8f873ad310a13c433d552f77137bde1b43426a2b55af1060",
     "robot_profile_sha256": "27a89860a47c730b73156d945be9eb28736001afc16530165eccb31d1513b432",
     "state_access": "ideal-proprioceptive-no-position-v1",
-    "protocol_sha256": "35806b6c96e83b82e2f7273f2531114b2b620e7ce0decba86e68e3dfeb810a79",
-    "no_termination_protocol_sha256": "861febec8b0b2b7c77cebde792bbf79c402768d1d270efccc96ac3f90235d09f"
+    "protocol_sha256": "f6de7d3acd06c9b5850027d62c86b716b4da3d6fc4ae1039a825b8fe37854053",
+    "no_termination_protocol_sha256": "2b36435e2953bbad2ec0b743a5be3413474dbacae7876dcf2d3f8f2787a15f52",
+    "primary_metric": "full_mpjpe_xy_aligned_m"
   }
 ]

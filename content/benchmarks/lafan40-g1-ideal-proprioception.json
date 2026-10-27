@@ -50,7 +50,7 @@
       "links": [
         {
           "label": "Robot definition",
-          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/e6e3801ce871531c2459ee5eee64c47018c8e4f8/robots/g1-29dof-cpu-v0.json"
+          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/b08ef12c6898ee866a81bdce055099ee2d0cee4b/robots/g1-29dof-cpu-v0.json"
         },
         {
           "label": "Observation rules and model handling",
@@ -73,7 +73,7 @@
       "id": "failure-conditions",
       "title": "03 \u00b7 Failure configuration",
       "paragraphs": [
-        "Current rules follow SuperMimic Appendix A. Re-evaluation is in progress; published scores retain their recorded protocol until replacement."
+        "Root height and inclination follow SuperMimic Appendix A. End-effector deviation is not a failure condition."
       ],
       "table": {
         "headers": [
@@ -84,12 +84,12 @@
         "rows": [
           [
             "Root height",
-            "pelvis",
+            "{anchor}",
             "> {height:g} m"
           ],
           [
             "Root inclination",
-            "pelvis",
+            "{anchor}",
             "> {tilt:g} \u00b7 dimensionless"
           ]
         ]
@@ -101,7 +101,11 @@
         },
         {
           "label": "Current configuration",
-          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/e6e3801ce871531c2459ee5eee64c47018c8e4f8/suites/lafan/protocol.mujoco317-ideal-proprioception-early-v2.json"
+          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/b08ef12c6898ee866a81bdce055099ee2d0cee4b/suites/lafan/protocol.mujoco317-ideal-proprioception-early-v2.json"
+        },
+        {
+          "label": "SuperMimic Appendix A",
+          "url": "https://arxiv.org/pdf/2610.28480#page=13"
         }
       ],
       "notes": [
@@ -112,7 +116,7 @@
       "id": "reproduction",
       "title": "04 \u00b7 Reproduction",
       "paragraphs": [
-        "Each score links the evaluated adapter commit, core commit, checkpoint hash and per-motion evidence. The core independently recomputes failures and metrics from the recorded poses."
+        "Clone a model repository with its core submodule, run uv sync, then uv run evaluate.py. This evaluates the complete motion set and verifies the saved trajectories."
       ],
       "links": [
         {
@@ -125,7 +129,7 @@
         },
         {
           "label": "Failure implementation",
-          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/e6e3801ce871531c2459ee5eee64c47018c8e4f8/src/motion_challenge/simulation/physics.py"
+          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/b08ef12c6898ee866a81bdce055099ee2d0cee4b/src/motion_challenge/simulation/physics.py"
         }
       ]
     }

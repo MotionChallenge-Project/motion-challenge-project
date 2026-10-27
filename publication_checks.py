@@ -73,6 +73,16 @@ def validate_row(row, model, track, evidence):
                     proof['new_receipt_sha256']==result['components'][mode]['receipt_sha256'], name+': repeat components')
     if 'first_result_sha256' in repeat:
         require(repeat['first_result_sha256']==digest, name+': repeat result identity')
+    if result.get('execution')=='rescored_full_trajectory':
+        scoring=result['scoring_source'];derivation=result['derivation']
+        require(not scoring['core_dirty'] and scoring['core_commit']==row.get('scoring_core_commit')==evidence['reproduction'].get('scoring_core_commit'), name+': scoring source identity')
+        require(scoring['core_commit'] in row.get('scoring_code_url',''),name+': scoring code link')
+        original=repeat['original_repeatability']
+        require(original['status']=='passed' and original['first_result_sha256']==derivation['original_result_sha256'],name+': original trace provenance')
+        require(len(derivation['trace_sha256'])==result['total'] and evidence['raw_trace_hashes_verified']==2*result['total'],name+': rescored trace coverage')
+        for receipt in evidence['receipts'].values():
+            require(receipt['scoring_source']==scoring and receipt['derivation']==derivation,name+': scoring receipt')
+        require(0<=derivation['full_motion_max_abs_delta_m']<1e-7,name+': full-motion metric drift')
     if 'result_sha256' in repeat:
         require(digest in repeat['result_sha256'].values(), name+': repeat result identity')
     clips=result['clips'];count=track['clip_count']

@@ -45,8 +45,6 @@ def evaluation_record(results, track, key, content, github):
     unified = early = full = results[0]
     fields = [('XY only', 'mpjpe_xy_aligned_m'), ('XY + yaw', 'mpjpe_xy_yaw_aligned_m'), ('No alignment', 'mpjpe_world_m')]
     text = '<section class="section evaluation-mode" id="results"><h2>Results</h2>'
-    if track['id'].endswith('-v1'):
-        text += '<p class="table-note">Re-evaluation under the new root-only failure rules is in progress. These scores use the recorded protocol linked below.</p>'
     text += f'<div class="evaluation-score"><strong>{early["passed"]} / {early["total"]}</strong><span>motions passed</span><span>Completion {early["completion_pct"]:.2f}%</span></div>'
     text += '<p>Success and completion use the first declared failure. MPBPE measures position errors over the benchmark’s declared body origins, with three alignments over two time ranges.</p>'
     text += '<div class="table-scroll"><table class="evaluation-metrics"><caption>Mean per-body position error · MPBPE · mm · lower is better</caption><thead><tr><th colspan="3" scope="colgroup" id="none">Entire motion</th><th colspan="3" scope="colgroup" id="early">Until first failure</th></tr><tr>'
@@ -59,8 +57,8 @@ def evaluation_record(results, track, key, content, github):
               ('Checkpoint SHA256', '<code>'+esc(early['checkpoint_sha256'])+'</code>')]
     repo = repository_location(early.get('adapter_repository', github+'/MotionChallenge-'+key))
     evidence = json.loads((content/'evidence'/unified['evidence_file']).read_text())
-    common += [('Evaluated adapter', link(unified['adapter_code_url'], unified['adapter_commit'])),
-               ('Evaluated core', link(unified['core_code_url'], unified['core_commit'])),
+    common += [('Evaluation code', link(repo, 'MotionChallenge-'+key)),
+               ('Core', link(github+'/MotionChallenge-Core', 'MotionChallenge-Core')),
                ('Verification', 'Both trajectory ranges recomputed · repeatability checked')]
     catalog = json.loads((content/'inference_checks.json').read_text())
     check = catalog.get('tracks',{}).get(track['id'],{}).get(key,catalog['models'][key])
@@ -74,9 +72,7 @@ def evaluation_record(results, track, key, content, github):
                 'uv run evaluate.py']
     downloads = link('/data/evidence/'+unified['evidence_file'], 'Complete results, source & verification (JSON) ↗', 'text-link')
     title = 'Reproduce this run'
-    note = 'Runs the maintained main branch. The evaluated source commits and complete result remain linked alongside.'
-    if track['id'].endswith('-v1'):
-        note = 'This command runs the new root-only protocol. The displayed scores were produced by the linked earlier commits; their exact commands are included in the complete results JSON.'
+    note = 'Runs the full benchmark and verifies the saved trajectories.'
     text += '<div class="evaluation-details">'+facts(common)+'<div><h3>'+title+'</h3><pre><code>'+esc('\n'.join(commands))+'</code></pre><p class="small">'+note+'</p>'+downloads+'</div></div></section>'
     return text
 

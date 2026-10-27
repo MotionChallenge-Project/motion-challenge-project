@@ -5,7 +5,7 @@ import admission_pages
 
 def render(content, page, intro, github):
     data = json.loads((content / 'observation_admissions.json').read_text())
-    core = github + '/MotionChallenge-Core/blob/e6e3801ce871531c2459ee5eee64c47018c8e4f8'
+    core = github + '/MotionChallenge-Core/blob/b08ef12c6898ee866a81bdce055099ee2d0cee4b'
     body = intro('EVALUATION PROTOCOL', 'Evaluation protocol',
                  'Evaluation conditions, permitted observations and scoring.')
     body += '''<div class="docs-layout"><aside>
