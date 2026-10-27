@@ -5,7 +5,7 @@ import admission_pages
 
 def render(content, page, intro, github):
     data = json.loads((content / 'observation_admissions.json').read_text())
-    core = github + '/MotionChallenge-Core/blob/' + data['core_commit']
+    core = github + '/MotionChallenge-Core/blob/e6e3801ce871531c2459ee5eee64c47018c8e4f8'
     body = intro('EVALUATION PROTOCOL', 'Evaluation protocol',
                  'Evaluation conditions, permitted observations and scoring.')
     body += '''<div class="docs-layout"><aside>
@@ -42,8 +42,8 @@ def render(content, page, intro, github):
 <tr><th scope="row">MPBPE ↓ · mm</th><td>Mean per-body position error over the benchmark’s declared body origins; average bodies and samples within each motion, then weight motions equally.</td></tr>
 </tbody></table>
 <table class="rules-table"><thead><tr><th scope="col">Alignment</th><th scope="col">Removed before measuring error</th></tr></thead><tbody>
-<tr><th scope="row">XY + yaw</th><td>Per-frame horizontal root translation and the closest relative rotation about world Z</td></tr>
 <tr><th scope="row">XY only</th><td>Per-frame horizontal root translation</td></tr>
+<tr><th scope="row">XY + yaw</th><td>Per-frame horizontal root translation and the closest relative rotation about world Z</td></tr>
 <tr><th scope="row">None</th><td>Nothing; compare world positions directly</td></tr>
 </tbody></table>
 <p>Height and tilt are retained in all three views. Alignment does not change success or completion.</p>

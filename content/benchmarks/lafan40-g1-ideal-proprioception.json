@@ -3,8 +3,6 @@
     "anchor": "failure.anchor_body",
     "height": "failure.anchor_height_m",
     "tilt": "failure.gravity_z",
-    "ee_height": "failure.end_effector_height_m",
-    "end_effectors": "failure.end_effector_bodies",
     "metric_bodies": "metric_bodies",
     "friction": "nominal.sliding_friction",
     "metric_period": "metric_period_s"
@@ -52,7 +50,7 @@
       "links": [
         {
           "label": "Robot definition",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/robots/g1-29dof-cpu-v0.json"
+          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/e6e3801ce871531c2459ee5eee64c47018c8e4f8/robots/g1-29dof-cpu-v0.json"
         },
         {
           "label": "Observation rules and model handling",
@@ -75,7 +73,7 @@
       "id": "failure-conditions",
       "title": "03 \u00b7 Failure configuration",
       "paragraphs": [
-        "Re-evaluation is in progress: root (pelvis) height difference > 0.25 m or projected-gravity Z difference > 0.8; end-effector deviation is excluded. The table below records the previous configuration used by the currently displayed results."
+        "Current rules follow SuperMimic Appendix A. Re-evaluation is in progress; published scores retain their recorded protocol until replacement."
       ],
       "table": {
         "headers": [
@@ -85,19 +83,14 @@
         ],
         "rows": [
           [
-            "Torso height",
-            "{anchor}",
+            "Root height",
+            "pelvis",
             "> {height:g} m"
           ],
           [
-            "Torso inclination",
-            "{anchor}",
+            "Root inclination",
+            "pelvis",
             "> {tilt:g} \u00b7 dimensionless"
-          ],
-          [
-            "End-effector height",
-            "{end_effectors}",
-            "> {ee_height:g} m"
           ]
         ]
       },
@@ -105,7 +98,14 @@
         {
           "label": "Shared tracking-failure rules",
           "url": "/protocol/#failure-conditions"
+        },
+        {
+          "label": "Current configuration",
+          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/e6e3801ce871531c2459ee5eee64c47018c8e4f8/suites/lafan/protocol.mujoco317-ideal-proprioception-early-v2.json"
         }
+      ],
+      "notes": [
+        "End-effector deviation does not trigger failure. No XY or yaw alignment is applied to failure checks."
       ]
     },
     {
@@ -117,7 +117,7 @@
       "links": [
         {
           "label": "Evaluation core",
-          "url": "https://github.com/motion-challenge-project/motion-challenge"
+          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core"
         },
         {
           "label": "Submit a controller",
@@ -125,7 +125,7 @@
         },
         {
           "label": "Failure implementation",
-          "url": "https://github.com/motion-challenge-project/motion-challenge/blob/f7e35e000f2076d6cfa0e4a1b75cf6be068e2876/src/motion_challenge/physics.py"
+          "url": "https://github.com/MotionChallenge-Project/MotionChallenge-Core/blob/e6e3801ce871531c2459ee5eee64c47018c8e4f8/src/motion_challenge/simulation/physics.py"
         }
       ]
     }
