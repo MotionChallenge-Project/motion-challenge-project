@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "cases": 160,
+  "resets": 4,
+  "endpoint_cases": 32,
+  "shuffled_joint_order": true,
+  "quaternion_sign_flips": true,
+  "max_abs_errors": {
+    "reference_qpos": 0.0,
+    "reference_cvel": 5.960464477539063e-08,
+    "observation": 6.67572021484375e-06,
+    "action": 6.67572021484375e-06,
+    "motor_target": 2.9206275939941406e-06,
+    "history": 6.67572021484375e-06,
+    "same_action_motor_target": 0.0
+  },
+  "tolerance": 2e-05,
+  "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "comparison": "Unmodified author infer_onnx_real, EMA, reference FK, observation, CPU ONNX inference and motor mapping; independently maintained action histories. Adapter receives only the Core proprioceptive packet.",
+  "deployment": "Author offline-motion hardware route: fixed synthetic root [0,0,0.78], no robot position or position integration.",
+  "adaptations": "Canonical reference arrives at50Hz; EMA is policy-input-only. Fresh inference instance per clip; hold the final feature at endpoint. Author FK inertials retained, benchmark physics unchanged.",
+  "review": {
+    "schema": "MotionChallenge/inference-review-v1",
+    "reviewed_at": "2026-10-27T07:41:40.030291+00:00",
+    "core_commit": "4bf520618f25f72d371117326edb01f4645eaa3f",
+    "base_adapter_commit": "72a97fd7c868958786006e8509b2ceaea245349f",
+    "control_hz": 50.0,
+    "reference_offsets_s": [
+      0.0,
+      0.02
+    ],
+    "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+    "auxiliary_sha256": {},
+    "deployment_route": "Author infer_onnx_real hardware route with fixed synthetic root and native reference EMA/FK; the simulator-privileged route is not used.",
+    "production_files_sha256": {
+      "adapter.py": "cface7fc94a9286ff15f1ac20adfd4af6f5707f71d58392089000f553d29250b",
+      "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
+      "parallel.py": "4c1e1e89b116d7418147225054f024d338971bf838f5f6d6c28ebecc741d013a",
+      "reference.py": "eca6466f3bbcf094750144eaa2de4eeb3fd7850f6a882e77b0e8e389fb50b55b"
+    },
+    "inference_config_sha256": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
+    "comparison_script_sha256": "707a548efce3d164b512b4b347346f583a4b99b76a59704c5c1160ddecda8aaa",
+    "default_batch": {
+      "status": "passed",
+      "cases": 103,
+      "reset_slots": 20,
+      "max_command_abs_error": 0.0,
+      "exact": true,
+      "tolerance": 1e-05,
+      "wall_s": 0.4284352846443653,
+      "checks": [
+        "default PolicyBatch array transport",
+        "1/3/8 active slots",
+        "reordered slots",
+        "independent partial resets and seeded RNG",
+        "reference endpoint clamping",
+        "all five motor command fields"
+      ],
+      "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9"
+    },
+    "restricted_access": {
+      "status": "passed",
+      "method": "Forbidden-state checks included in this fresh author hardware/deployment comparator",
+      "cases": 160,
+      "resets": 4
+    },
+    "default_batch_script_url": "https://github.com/MotionChallenge-Project/motionchallenge/blob/2ef7ecab3b3a06bb4a53fa137de2d7f9365d6b50/tools/check_adapter_inference.py",
+    "default_batch_script_sha256": "2cb7984c27f4bbca2355ed2e05b5a48ca2e5ceb865850e1b6f2445f06b594241",
+    "scope": "Matched-input inference, observation boundary, deployment configuration and default batch path. No benchmark rollouts or scores were changed."
+  }
+}
