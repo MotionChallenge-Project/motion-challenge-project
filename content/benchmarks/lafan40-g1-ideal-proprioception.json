@@ -75,7 +75,7 @@
       "id": "failure-conditions",
       "title": "03 \u00b7 Failure configuration",
       "paragraphs": [
-        "Uses the shared tracking-failure rules with these body mappings and thresholds."
+        "Re-evaluation is in progress: root (pelvis) height difference > 0.25 m or projected-gravity Z difference > 0.8; end-effector deviation is excluded. The table below records the previous configuration used by the currently displayed results."
       ],
       "table": {
         "headers": [

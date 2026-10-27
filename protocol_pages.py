@@ -20,14 +20,14 @@ def render(content, page, intro, github):
 <p><a class="text-link" href="/benchmarks/">Dataset &amp; benchmark conditions ↗</a></p>
 </section>
 <section id="failure-conditions"><h2>Tracking failure rules</h2>
-<p>Default conditions for motion tracking. Compare actual and reference states at the same timestamp; any exceeded limit marks a failure.</p>
+<p>Root height and tilt conditions follow SuperMimic Appendix A. Compare robot and reference states at the same timestamp; any exceeded limit marks a failure.</p>
 <table class="rules-table"><thead><tr><th scope="col">Condition</th><th scope="col">Measurement</th><th scope="col">Default limit</th></tr></thead><tbody>
-<tr><th scope="row">Torso height</th><td>Absolute world-Z position difference</td><td>&gt; 0.25 m</td></tr>
-<tr><th scope="row">Torso inclination</th><td>Absolute difference between the local Z components of projected unit gravity</td><td>&gt; 0.8</td></tr>
-<tr><th scope="row">End-effector height</th><td>Maximum absolute world-Z difference across designated end effectors</td><td>&gt; 0.25 m</td></tr>
+<tr><th scope="row">Root height</th><td>Absolute world-Z position difference</td><td>&gt; 0.25 m</td></tr>
+<tr><th scope="row">Root inclination</th><td>Absolute difference between the local Z components of projected unit gravity</td><td>&gt; 0.8</td></tr>
 </tbody></table>
 <p>Height is relative to the reference. Inclination is dimensionless and does not measure yaw or the full relative rotation. No XY or yaw alignment is applied to failure checks.</p>
-<p class="small">Equality passes; a failure at the final sample still counts. Each benchmark declares its torso and end-effector bodies and freezes its thresholds. Different thresholds require a separately versioned configuration.</p>
+<p class="small">Equality passes; a failure at the final sample still counts. Each benchmark declares its root body and freezes its thresholds. End-effector deviation does not trigger failure. Different thresholds require a separately versioned configuration.</p>
+<p><a class="text-link" href="https://arxiv.org/pdf/2610.28480#page=13">SuperMimic · Appendix A ↗</a></p>
 </section>
 <section id="observations"><h2>Policy observations</h2>
 <p>Ideal proprioception and reference motion, without robot world-position or contact feedback. Rules apply to initialization, preprocessing, history and inference.</p>'''
@@ -35,6 +35,7 @@ def render(content, page, intro, github):
     body += ('<div class="actions"><a class="text-link" href="' + core + '/docs/OBSERVATIONS.md">Frozen rules ↗</a>'
              '<a class="text-link" href="/models/">Model-specific handling ↗</a></div></section>')
     body += '''<section id="alignment"><h2>Metrics</h2>
+<p><strong>Primary metric:</strong> No termination · XY only MPBPE, in mm. Lower is better; yaw and height errors are retained.</p>
 <table class="rules-table"><thead><tr><th scope="col">Metric</th><th scope="col">Definition</th></tr></thead><tbody>
 <tr><th scope="row">Success ↑</th><td>Fraction of complete motions without failure</td></tr>
 <tr><th scope="row">Completion ↑</th><td>Last valid sample time before first failure divided by motion duration; averaged equally across motions. Successful motions count as 100%.</td></tr>
